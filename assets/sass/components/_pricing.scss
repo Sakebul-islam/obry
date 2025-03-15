@@ -1,0 +1,89 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.pricing {
+  &.section {
+    background-color: rgba($color-1, 0.7);
+  }
+}
+
+.pricing-box {
+  border-radius: 10px;
+  border-top-left-radius: 40px;
+  border: 2px solid rgba($color-white, 0.15);
+  background: $color-body;
+  padding-inline: 14px;
+  padding-block: 14px 40px;
+
+  .pricing-header {
+    border-radius: 10px;
+    border-top-left-radius: 30px;
+    border: 2px solid rgba($color-white, 0.15);
+    background: rgba($color-body, 0.7);
+    @extend %d-flex, %justify-between;
+
+    .header-info {
+      @extend %d-flex, %flex-col;
+      gap: 5px;
+      padding: 19.5px 30px;
+      .plan-type {
+        color: $color-white;
+        text-transform: uppercase;
+      }
+      .plan-price {
+        color: $color-primary;
+        text-transform: uppercase;
+      }
+    }
+    .header-icon {
+      min-height: 100%;
+      @extend %shrink-0, %d-grid, %place-center;
+      border-left: 2px solid rgba($color-white, 0.15);
+      padding: 19.5px 30px;
+
+      svg {
+        width: 55px;
+        height: 55px;
+        color: $color-primary;
+      }
+    }
+  }
+  .pricing-body {
+    padding-block: 27px;
+    ul {
+      li {
+        color: $color-white;
+        font-family: $ff-title;
+        letter-spacing: 0.48px;
+        text-transform: capitalize;
+
+        &::before {
+          font: var(--fa-font-solid);
+          content: "\f00c";
+          padding-right: 10px;
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 16px;
+
+          @include breakpoint(max-md) {
+            margin-bottom: 10px;
+          }
+        }
+
+        &.disabled {
+          color: $color-paragraph;
+        }
+      }
+    }
+  }
+  .pricing-footer {
+    border-top: 4px double rgba($color-white, 0.15);
+    padding-top: 30px;
+
+    @include breakpoint(max-md) {
+      padding-top: 20px;
+    }
+  }
+}
