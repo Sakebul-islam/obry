@@ -1,5 +1,30 @@
 "use strict";
 
+function setBackgroundImages() {
+  var elements = document.querySelectorAll("[data-bg-src]");
+  if (elements?.length > 0) {
+    elements.forEach(function (element) {
+      var src = element.getAttribute("data-bg-src");
+      element.style.backgroundImage = "url(" + src + ")";
+      element.classList.add("background-image");
+      element.removeAttribute("data-bg-src");
+    });
+  }
+}
+function odometerCounter() {
+  $(".counter-item").each(function () {
+    var $counterItem = $(this);
+    $counterItem.isInViewport(function (status) {
+      if (status === "entered") {
+        $counterItem.find(".odometer").each(function () {
+          var el = this;
+          el.innerHTML = el.getAttribute("data-odometer-final");
+        });
+      }
+    });
+  });
+}
+
 const brandSliderOptions = {
   loop: true,
   speed: 2000,
@@ -11,7 +36,6 @@ const brandSliderOptions = {
   slidesPerView: 2,
   spaceBetween: 20,
   breakpoints: {
-
     // When the viewport width is 480px or more
     480: {
       slidesPerView: 3,
@@ -105,4 +129,6 @@ function initializeSwiper(containerSelector, options) {
 document.addEventListener("DOMContentLoaded", () => {
   initializeVideoPlayers(".video-player", ".play-btn");
   initializeSwiper(".brandSlider", brandSliderOptions);
+  setBackgroundImages();
+  odometerCounter();
 });
