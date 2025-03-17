@@ -4,22 +4,68 @@
 @use "../abstracts/container" as *;
 
 .btn-primary {
-  @extend %d-inline-block, %text-center;
-  width: 100%;
+  @extend %d-inline-flex, %text-center;
   border-radius: 50px;
   padding: 3px;
   background: linear-gradient(to right, $color-primary, $color-white);
   overflow: hidden;
 
   .btn-wrapper {
+    @extend %d-flex, %item-center;
+    gap: 12px;
     border-radius: 50px;
     background: $color-primary;
     color: $color-2;
     overflow: hidden;
     font-family: $ff-title;
     font-weight: 800;
-    line-height: 1;
+    line-height: 350%;
     text-transform: uppercase;
-    padding: 17.5px;
+    padding-inline: 17.5px;
+
+    span {
+      @extend %p-relative, %d-inline-flex, %justify-center, %item-center;
+      overflow: hidden;
+      width: 15px;
+      height: 15px;
+
+      i {
+        @include transition($transition-3-ease);
+        &:nth-of-type(2) {
+          opacity: 0;
+          visibility: hidden;
+        }
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+          @extend %p-absolute;
+        }
+        &:nth-of-type(1) {
+          left: 50%;
+          top: 50%;
+          @include transform(translate(-50%, -50%));
+        }
+        &:nth-of-type(3) {
+          left: -30px;
+          top: 30px;
+        }
+      }
+    }
+  }
+  &:hover {
+    .btn-wrapper {
+      span {
+        i {
+          &:nth-of-type(1) {
+            left: 30px;
+            top: -30px;
+          }
+          &:nth-of-type(3) {
+            left: 50%;
+            top: 50%;
+            @include transform(translate(-50%, -50%));
+          }
+        }
+      }
+    }
   }
 }
