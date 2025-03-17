@@ -5,7 +5,29 @@
 
 .pricing {
   &.section {
+    @extend %p-relative;
     background-color: rgba($color-1, 0.7);
+    z-index: 1;
+  }
+  &__icon {
+    @extend %p-absolute;
+    bottom: 77px;
+    right: 120px;
+    z-index: -1;
+    animation: rotate 5s linear infinite;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+
+    @include breakpoint(max-xxxl) {
+      bottom: 30px;
+      right: 50px;
+      width: 110px;
+      height: 100px;
+    }
+    @include breakpoint(max-md) {
+      display: none;
+    }
   }
 }
 
