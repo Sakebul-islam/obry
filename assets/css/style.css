@@ -1484,6 +1484,11 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   border: 1.5px solid rgba(255, 255, 255, 0.08);
 }
+@media only screen and (max-width: 767.98px) {
+  .faq__thumb img {
+    border-radius: 20px;
+  }
+}
 .faq__thumb .info {
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
@@ -1578,12 +1583,18 @@ body::-webkit-scrollbar-thumb {
 }
 .faq__accordion .accordion-item .accordion-body {
   padding-inline: 30px;
-  padding-block: 30px 20px;
+  padding-block: 30px 24px;
   color: #9d9d9d;
   font-size: 16px;
   font-weight: 500;
   line-height: 175%;
   text-transform: capitalize;
+}
+@media only screen and (max-width: 767.98px) {
+  .faq__accordion .accordion-item .accordion-body {
+    padding-inline: 15px;
+    padding-block: 15px 9px;
+  }
 }
 .faq__accordion .accordion-item .accordion-body ul {
   margin-top: 6px;
