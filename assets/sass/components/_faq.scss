@@ -16,7 +16,7 @@
         @extend %p-absolute;
         top: 0;
         right: 0;
-        animation: carve-rotate 5s linear infinite alternate;
+        animation: carve-rotate 2.5s linear infinite alternate;
         -webkit-transform-origin: top left;
         -ms-transform-origin: top left;
         transform-origin: top left;
