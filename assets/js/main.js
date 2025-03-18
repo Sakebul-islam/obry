@@ -53,6 +53,18 @@ const brandSliderOptions = {
     },
   },
 };
+const quoteSliderOptions = {
+  loop: true,
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
+  pagination: {
+    el: ".quote__pagination",
+    clickable: true,
+  },
+  speed: 1000,
+};
 
 function initializeVideoPlayers(videoSelector, playBtnSelector) {
   const videos = document.querySelectorAll(videoSelector);
@@ -93,21 +105,25 @@ function initializeSwiper(containerSelector, options) {
   if (!container) {
     return;
   }
-
-  // Pagination: If 'pagination' is true or a custom class, enable pagination
+  
   if (options.pagination) {
     options.pagination = {
-      el:
+      el: 
         options.pagination === true
           ? `${containerSelector} .swiper-pagination`
-          : options.pagination,
+          : options.pagination.el,
       clickable: true,
     };
+
+    const paginationEl = document.querySelector(options.pagination.el);
+    if (!paginationEl) {
+      console.error('Pagination element not found');
+      return;
+    }
   } else {
-    delete options.pagination; // If false, remove pagination
+    delete options.pagination;
   }
 
-  // Navigation: If 'navigation' is true or a custom class, enable navigation
   if (options.navigation) {
     options.navigation = {
       nextEl:
@@ -120,15 +136,15 @@ function initializeSwiper(containerSelector, options) {
           : options.navigation.prevEl,
     };
   } else {
-    delete options.navigation; // If false, remove navigation
+    delete options.navigation;
   }
-  // Initialize Swiper with the final options
   return new Swiper(containerSelector, options);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeVideoPlayers(".video-player", ".play-btn");
   initializeSwiper(".brandSlider", brandSliderOptions);
+  initializeSwiper(".quote__slider", quoteSliderOptions);
   setBackgroundImages();
   odometerCounter();
 });
