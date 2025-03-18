@@ -138,6 +138,11 @@ body::-webkit-scrollbar-thumb {
   @include breakpoint(max-md) {
     margin-top: 6px;
   }
+
+  .highlight {
+    @extend %d-inline-block;
+    color: $color-primary;
+  }
 }
 /*
 ============= Section Header END ================
