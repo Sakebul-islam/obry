@@ -1,0 +1,192 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.footer {
+  &.common {
+    &.section {
+    }
+  }
+  &__top {
+    &.common {
+    }
+  }
+  &__center {
+    &.common {
+      background: rgba($color-1, 0.7);
+
+      .footer-info {
+        @include breakpoint(xl) {
+          max-width: 348px;
+          width: 100%;
+        }
+        .footer-logo {
+          @extend %d-inline-block;
+          margin-bottom: 22px;
+          @include breakpoint(max-md) {
+            margin-bottom: 15px;
+          }
+        }
+        p {
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 0.45px;
+          text-transform: capitalize;
+        }
+        .contact-info {
+          @extend %d-flex, %item-center;
+          margin-top: 20px;
+
+          @include breakpoint(max-md) {
+            margin-top: 10px;
+          }
+
+          .contact-icon {
+            padding-right: 15px;
+            color: $color-primary;
+            border-right: 1px solid rgba(16, 156, 61, 0.5);
+          }
+          .contact {
+            @extend %d-flex, %flex-col;
+            padding-left: 15px;
+
+            a {
+              font-family: $ff-title;
+              font-size: 22px;
+              font-weight: 700;
+              line-height: 190.909%;
+              letter-spacing: 0.66px;
+              text-transform: capitalize;
+
+              @include breakpoint(max-md) {
+                font-size: 18px;
+              }
+            }
+            .open-time {
+              @extend %d-inline-block;
+              color: $color-primary;
+              font-family: $ff-title;
+              font-size: 15px;
+              font-weight: 700;
+              line-height: 1;
+              letter-spacing: 0.45px;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+
+      .footer-widgets {
+        &.links {
+          max-width: 460px;
+        }
+      }
+    }
+  }
+  &__bottom {
+    &.common {
+      background-color: red;
+      padding-block: 30px;
+
+      .copyright {
+        color: $color-white;
+        font-family: $ff-title;
+        font-weight: 700;
+        line-height: 175%;
+        letter-spacing: 0.48px;
+        text-transform: capitalize;
+
+        @include breakpoint(max-sm) {
+          font-weight: 500;
+          text-align: center;
+        }
+      }
+      .payments {
+        @extend %text-right;
+
+        @include breakpoint(max-sm) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.footer-links {
+  ul {
+    @extend %d-flex, %flex-col;
+    row-gap: 15px;
+    
+    @include breakpoint(max-md){
+      row-gap: 10px;
+    }
+    li {
+      a {
+        @extend %d-flex, %item-baseline;
+        gap: 12px;
+        color: $color-paragraph;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.45px;
+        text-transform: capitalize;
+
+        i {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+.footer-widgets {
+  .widgets-title {
+    @extend %p-relative;
+    line-height: 175%;
+    letter-spacing: 0.72px;
+    line-height: 175%;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    padding-bottom: 9px;
+    margin-bottom: 35px;
+    border-bottom: 2.5px solid rgba($color-white, 0.2);
+
+    &::before {
+      @extend %p-absolute;
+      left: 0;
+      bottom: -2.5px;
+      width: 80px;
+      height: 2.5px;
+      background-color: $color-primary;
+    }
+  }
+
+  .instagram {
+    @extend %d-grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 13px;
+    row-gap: 12px;
+
+    a {
+      @extend %d-block, %p-relative;
+      border: 3px solid $color-primary;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &::before {
+        @extend %p-absolute;
+        inset: 0;
+        background: rgba(226, 197, 93, 0.3);
+        opacity: 0;
+        @include transform(scale(0.5));
+        @include transition($transition-3);
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+          @include transform(scale(1));
+        }
+      }
+    }
+  }
+}
