@@ -182,6 +182,7 @@ p {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  color: $color-paragraph;
 }
 ul {
   @extend %p-0;

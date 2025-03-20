@@ -1,0 +1,181 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.service {
+  &.section {
+  }
+  &__header {
+    @include breakpoint(xl) {
+      max-width: 410px;
+      width: 100%;
+    }
+  }
+  &__shapes {
+    @extend %d-flex, %flex-col;
+    color: $color-primary;
+    svg {
+      &:first-of-type {
+        margin-left: 20px;
+      }
+      &:last-of-type {
+        margin-left: 80px;
+        margin-top: -20px;
+      }
+    }
+
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+  &__content {
+  }
+}
+
+.service-box {
+  border-radius: 22px;
+  padding-inline: 33px;
+  padding-block: 35px 48px;
+  border-radius: 22px;
+  border: 1.5px solid rgba($color-white, 0.08);
+
+  background-image: url("../images/service/service-box-bg-1-1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .service-header {
+    @extend %d-flex, %justify-between, %item-center;
+    gap: 15px;
+    .service-icon {
+      color: $color-primary;
+
+      svg {
+        width: 75px;
+        height: 72px;
+
+        @include breakpoint(max-xl) {
+          width: 60px;
+          height: 58px;
+        }
+      }
+    }
+    .service-number {
+      color: $color-primary;
+      font-family: $ff-title;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 437.5%;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+  }
+  .service-body {
+    margin-top: 10px;
+    .title {
+      line-height: 233.333%;
+    }
+    p {
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+  }
+  .service-footer {
+    @extend %d-flex, %item-center;
+    gap: 17px;
+    margin-top: 25px;
+
+    .circle {
+      @extend %shrink-0, %d-grid, %place-center;
+      width: 41px;
+      height: 41px;
+      border-radius: 100%;
+      border: 2px solid rgba($color-white, 0.2);
+      color: $color-primary;
+      @include transition($transition);
+    }
+    .line {
+      @extend %d-inline-block;
+      width: 100%;
+      height: 2px;
+      background: rgba(217, 217, 217, 0.2);
+    }
+  }
+
+  &:hover {
+    .service-footer {
+      @extend %d-flex, %item-center;
+      gap: 17px;
+
+      .circle {
+        color: $color-1;
+        background-color: $color-primary;
+        border-color: rgba($color-primary, 0.2);
+      }
+    }
+  }
+
+  &.v2 {
+    @extend %d-flex;
+    padding: 0;
+    border-radius: 21px;
+    border: 1.5px solid $color-5;
+    overflow: hidden;
+
+    @include breakpoint(max-md){
+      flex-direction: column;
+    }
+    
+    .service-thumb {
+      @extend %d-block;
+      max-width: 320px;
+      width: 100%;
+      img {
+       height: 100%;
+       object-fit: cover;
+      }
+
+      @include breakpoint(max-md){
+        max-width: 100%;
+      }
+    }
+    .service-content {
+      background: $color-primary;
+      border-left: 1.5px solid $color-5;
+      padding-inline: 43px 33px;
+      padding-block: 50px 42px;
+
+      .service-header {
+        .service-number {
+          color: $color-6;
+        }
+      }
+      
+      .service-body {
+        .title,p {
+          color: $color-6;
+        }
+      }
+      .service-footer {
+        @extend %d-flex, %item-center;
+        gap: 17px;
+        margin-top: 25px;
+    
+        .circle {
+          border: 2px solid rgba($color-white, 0.2);
+          background-color: $color-6;
+        }
+        .line {
+          background: $color-6;
+        }
+      }
+
+
+      @include breakpoint(max-md){
+        padding-inline: 33px;
+        padding-block: 35px 48px;
+      }
+    }
+  }
+}

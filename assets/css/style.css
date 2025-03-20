@@ -20,7 +20,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .btn-primary .btn-wrapper, .preloader {
+.service__shapes, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .btn-primary .btn-wrapper, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -30,7 +30,7 @@
   display: inline-flex;
 }
 
-.pricing-box .pricing-header .header-info {
+.service__shapes, .pricing-box .pricing-header .header-info {
   flex-direction: column;
   -webkit-flex-direction: column;
   -webkit-box-orient: vertical;
@@ -38,7 +38,7 @@
   -ms-flex-direction: column;
 }
 
-.faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .pricing-box .pricing-header .header-icon {
+.service-box .service-footer .circle, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .pricing-box .pricing-header .header-icon {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -86,17 +86,17 @@ h6 {
   justify-content: center;
 }
 
-.pricing-box .pricing-header {
+.service-box .service-header, .pricing-box .pricing-header {
   -webkit-box-pack: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
 }
 
-.faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon {
+.service-box .service-footer .circle, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon {
   place-content: center;
 }
 
-.statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .brands__slider .swiper-wrapper, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .preloader {
+.service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .brands__slider .swiper-wrapper, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -108,19 +108,19 @@ h6 {
   align-items: baseline;
 }
 
-.video__player-wrapper .video-player {
+.service-box.v2 .service-thumb, .video__player-wrapper .video-player {
   display: -webkit-block;
   display: -ms-block;
   display: block;
 }
 
-.statistic__box .content .info, .section-sub-title, .section-title .highlight {
+.service-box .service-footer .line, .statistic__box .content .info, .section-sub-title, .section-title .highlight {
   display: -webkit-inline-block;
   display: -ms-inline-block;
   display: inline-block;
 }
 
-.faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon {
+.service-box .service-footer .circle, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon {
   display: -webkit-grid;
   display: -ms-grid;
   display: grid;
@@ -742,6 +742,7 @@ p {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  color: #9d9d9d;
 }
 
 /*--------------------------------------------------------------
@@ -1612,6 +1613,156 @@ body::-webkit-scrollbar-thumb {
   color: #e2c55d;
   padding-right: 10px;
   font-size: 9px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .service__header {
+    max-width: 410px;
+    width: 100%;
+  }
+}
+.service__shapes {
+  color: #e2c55d;
+}
+.service__shapes svg:first-of-type {
+  margin-left: 20px;
+}
+.service__shapes svg:last-of-type {
+  margin-left: 80px;
+  margin-top: -20px;
+}
+@media only screen and (max-width: 991.98px) {
+  .service__shapes {
+    display: none;
+  }
+}
+.service-box {
+  border-radius: 22px;
+  padding-inline: 33px;
+  padding-block: 35px 48px;
+  border-radius: 22px;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  background-image: url("../images/service/service-box-bg-1-1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.service-box .service-header {
+  gap: 15px;
+}
+.service-box .service-header .service-icon {
+  color: #e2c55d;
+}
+.service-box .service-header .service-icon svg {
+  width: 75px;
+  height: 72px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .service-box .service-header .service-icon svg {
+    width: 60px;
+    height: 58px;
+  }
+}
+.service-box .service-header .service-number {
+  color: #e2c55d;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 437.5%;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+.service-box .service-body {
+  margin-top: 10px;
+}
+.service-box .service-body .title {
+  line-height: 233.333%;
+}
+.service-box .service-body p {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.service-box .service-footer {
+  gap: 17px;
+  margin-top: 25px;
+}
+.service-box .service-footer .circle {
+  width: 41px;
+  height: 41px;
+  border-radius: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #e2c55d;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.service-box .service-footer .line {
+  width: 100%;
+  height: 2px;
+  background: rgba(217, 217, 217, 0.2);
+}
+.service-box:hover .service-footer {
+  gap: 17px;
+}
+.service-box:hover .service-footer .circle {
+  color: #171a1b;
+  background-color: #e2c55d;
+  border-color: rgba(226, 197, 93, 0.2);
+}
+.service-box.v2 {
+  padding: 0;
+  border-radius: 21px;
+  border: 1.5px solid #2a2e30;
+  overflow: hidden;
+}
+@media only screen and (max-width: 767.98px) {
+  .service-box.v2 {
+    flex-direction: column;
+  }
+}
+.service-box.v2 .service-thumb {
+  max-width: 320px;
+  width: 100%;
+}
+.service-box.v2 .service-thumb img {
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (max-width: 767.98px) {
+  .service-box.v2 .service-thumb {
+    max-width: 100%;
+  }
+}
+.service-box.v2 .service-content {
+  background: #e2c55d;
+  border-left: 1.5px solid #2a2e30;
+  padding-inline: 43px 33px;
+  padding-block: 50px 42px;
+}
+.service-box.v2 .service-content .service-header .service-number {
+  color: #1D2021;
+}
+.service-box.v2 .service-content .service-body .title, .service-box.v2 .service-content .service-body p {
+  color: #1D2021;
+}
+.service-box.v2 .service-content .service-footer {
+  gap: 17px;
+  margin-top: 25px;
+}
+.service-box.v2 .service-content .service-footer .circle {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: #1D2021;
+}
+.service-box.v2 .service-content .service-footer .line {
+  background: #1D2021;
+}
+@media only screen and (max-width: 767.98px) {
+  .service-box.v2 .service-content {
+    padding-inline: 33px;
+    padding-block: 35px 48px;
+  }
 }
 
 /*--------------------------------------------------------------
