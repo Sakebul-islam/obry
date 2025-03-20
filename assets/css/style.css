@@ -1744,7 +1744,8 @@ body::-webkit-scrollbar-thumb {
 .service-box.v2 .service-content .service-header .service-number {
   color: #1D2021;
 }
-.service-box.v2 .service-content .service-body .title, .service-box.v2 .service-content .service-body p {
+.service-box.v2 .service-content .service-body .title,
+.service-box.v2 .service-content .service-body p {
   color: #1D2021;
 }
 .service-box.v2 .service-content .service-footer {
@@ -1763,6 +1764,9 @@ body::-webkit-scrollbar-thumb {
     padding-inline: 33px;
     padding-block: 35px 48px;
   }
+}
+.service-box.v2:hover .service-content .service-footer .circle {
+  color: #e2c55d;
 }
 
 /*--------------------------------------------------------------

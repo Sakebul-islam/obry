@@ -123,20 +123,20 @@
     border: 1.5px solid $color-5;
     overflow: hidden;
 
-    @include breakpoint(max-md){
+    @include breakpoint(max-md) {
       flex-direction: column;
     }
-    
+
     .service-thumb {
       @extend %d-block;
       max-width: 320px;
       width: 100%;
       img {
-       height: 100%;
-       object-fit: cover;
+        height: 100%;
+        object-fit: cover;
       }
 
-      @include breakpoint(max-md){
+      @include breakpoint(max-md) {
         max-width: 100%;
       }
     }
@@ -151,9 +151,10 @@
           color: $color-6;
         }
       }
-      
+
       .service-body {
-        .title,p {
+        .title,
+        p {
           color: $color-6;
         }
       }
@@ -161,7 +162,7 @@
         @extend %d-flex, %item-center;
         gap: 17px;
         margin-top: 25px;
-    
+
         .circle {
           border: 2px solid rgba($color-white, 0.2);
           background-color: $color-6;
@@ -171,10 +172,19 @@
         }
       }
 
-
-      @include breakpoint(max-md){
+      @include breakpoint(max-md) {
         padding-inline: 33px;
         padding-block: 35px 48px;
+      }
+    }
+
+    &:hover {
+      .service-content {
+        .service-footer {
+          .circle {
+            color: $color-primary;
+          }
+        }
       }
     }
   }
