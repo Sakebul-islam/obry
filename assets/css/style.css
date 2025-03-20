@@ -1116,7 +1116,6 @@ body::-webkit-scrollbar-thumb {
   max-width: 460px;
 }
 .footer__bottom.common {
-  background-color: red;
   padding-block: 30px;
 }
 .footer__bottom.common .copyright {
