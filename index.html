@@ -35,13 +35,557 @@
 
   <body>
     <main>
-      <!-- ================= About-us Section Start ================= -->
+      <!-- ================= About Section Start ================= -->
       <section
-        class="about-us section bg-color-1 section-padding-top-bottom overflow-hidden"
+        class="about section section-padding-bottom position-relative overflow-hidden"
+        data-bg-src="./assets/images/about/about-bg-1.png"
       >
-        <div class="container"></div>
+        <div class="shape-1">
+          <img src="./assets/images/about/about-shape-1-1.png" alt="shape" />
+        </div>
+        <div class="shape-2">
+          <img src="./assets/images/about/about-shape-1-2.png" alt="shape" />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="section-header text-center text-uppercase row-padding-top"
+              >
+                <h2 class="section-title">Let's work together</h2>
+              </div>
+            </div>
+            <div class="col-12">
+              <ul
+                class="about__tabs nav nav-pills"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-about-me-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-about-me"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-about-me"
+                    aria-selected="true"
+                    disabled
+                  >
+                    About Me
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="pills-experience-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-experience"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-experience"
+                    aria-selected="false"
+                  >
+                    Experience
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-education-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-education"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-education"
+                    aria-selected="false"
+                  >
+                    Education
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-skills-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-skills"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-skills"
+                    aria-selected="false"
+                  >
+                    Skills
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-awards-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-awards"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-awards"
+                    aria-selected="false"
+                  >
+                    Awards
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 row-padding-top">
+              <div
+                class="about__content-container tab-content"
+                id="pills-tabContent"
+              >
+                <div
+                  class="tab-pane fade"
+                  id="pills-about-me"
+                  role="tabpanel"
+                  aria-labelledby="pills-about-me-tab"
+                  tabindex="0"
+                >
+                  About Me
+                </div>
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-experience"
+                  role="tabpanel"
+                  aria-labelledby="pills-experience-tab"
+                  tabindex="0"
+                >
+                  <div class="row align-items-end gy-5">
+                    <div class="col-lg-6">
+                      <div class="about__content">
+                        <span class="section-sub-title text-uppercase"
+                          >About me</span
+                        >
+                        <h2 class="section-title">
+                          Bring Apps, website & branding
+                        </h2>
+
+                        <p>
+                          I am a visionary creative designer, known for my
+                          abilit turn concepts into captivating visual narrtive.
+                          My deep the passion for the world of was design allows
+                          me to craft compelling stories through my artistic
+                          ingenuity known for my compelling storiet.
+                        </p>
+                        <div
+                          class="row g-4 justify-content-between notes-and-info"
+                        >
+                          <div class="col-sm-5 col-lg-12 col-xl-5">
+                            <div class="note">
+                              <h6 class="note-title">Note</h6>
+                              <ul class="note-list">
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  visionary creative designer
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  web and mobile design
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  unlimited design
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-sm-7 col-lg-12 col-xl-7">
+                            <div class="info">
+                              <div class="info-thumb">
+                                <img
+                                  src="./assets/images/about/about-content-thumb-1-1.png"
+                                  alt="thumb"
+                                />
+                              </div>
+                              <div class="info-content">
+                                <h6 class="info-title">I Am A Visionary</h6>
+                                <span>Creative</span>
+                                <div class="avatars">
+                                  <img
+                                    src="./assets/images/about/avatar-1.png"
+                                    alt="avatar"
+                                  />
+                                  <img
+                                    src="./assets/images/about/avatar-2.png"
+                                    alt="avatar"
+                                  />
+                                  <a href="contact.html">
+                                    <i class="fa-solid fa-plus"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="contact.html" class="btn-primary">
+                          <div class="btn-wrapper">
+                            Let's talk
+                            <span>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="about__thumb d-flex justify-content-center">
+                        <img
+                          src="./assets/images/about/about-thumb-1-1.png"
+                          alt="about-thumb"
+                        />
+                        <div class="thumb-bg">
+                          <img
+                            src="./assets/images/about/flower.png"
+                            alt="flower"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-education"
+                  role="tabpanel"
+                  aria-labelledby="pills-education-tab"
+                  tabindex="0"
+                >
+                  <div class="row align-items-end gy-5">
+                    <div class="col-lg-6">
+                      <div class="about__content">
+                        <span class="section-sub-title text-uppercase"
+                          >About me</span
+                        >
+                        <h2 class="section-title">
+                          Bring Apps, website & branding
+                        </h2>
+
+                        <p>
+                          I am a visionary creative designer, known for my
+                          abilit turn concepts into captivating visual narrtive.
+                          My deep the passion for the world of was design allows
+                          me to craft compelling stories through my artistic
+                          ingenuity known for my compelling storiet.
+                        </p>
+                        <div
+                          class="row g-4 justify-content-between notes-and-info"
+                        >
+                          <div class="col-sm-5 col-lg-12 col-xl-5">
+                            <div class="note">
+                              <h6 class="note-title">Note</h6>
+                              <ul class="note-list">
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  visionary creative designer
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  web and mobile design
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  unlimited design
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-sm-7 col-lg-12 col-xl-7">
+                            <div class="info">
+                              <div class="info-thumb">
+                                <img
+                                  src="./assets/images/about/about-content-thumb-1-1.png"
+                                  alt="thumb"
+                                />
+                              </div>
+                              <div class="info-content">
+                                <h6 class="info-title">I Am A Visionary</h6>
+                                <span>Creative</span>
+                                <div class="avatars">
+                                  <img
+                                    src="./assets/images/about/avatar-1.png"
+                                    alt="avatar"
+                                  />
+                                  <img
+                                    src="./assets/images/about/avatar-2.png"
+                                    alt="avatar"
+                                  />
+                                  <a href="contact.html">
+                                    <i class="fa-solid fa-plus"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="contact.html" class="btn-primary">
+                          <div class="btn-wrapper">
+                            Let's talk
+                            <span>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="about__thumb d-flex justify-content-center">
+                        <img
+                          src="./assets/images/about/about-thumb-1-1.png"
+                          alt="about-thumb"
+                        />
+                        <div class="thumb-bg">
+                          <img
+                            src="./assets/images/about/flower.png"
+                            alt="flower"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-skills"
+                  role="tabpanel"
+                  aria-labelledby="pills-skills-tab"
+                  tabindex="0"
+                >
+                  <div class="row align-items-end gy-5">
+                    <div class="col-lg-6">
+                      <div class="about__content">
+                        <span class="section-sub-title text-uppercase"
+                          >About me</span
+                        >
+                        <h2 class="section-title">
+                          Bring Apps, website & branding
+                        </h2>
+
+                        <p>
+                          I am a visionary creative designer, known for my
+                          abilit turn concepts into captivating visual narrtive.
+                          My deep the passion for the world of was design allows
+                          me to craft compelling stories through my artistic
+                          ingenuity known for my compelling storiet.
+                        </p>
+                        <div
+                          class="row g-4 justify-content-between notes-and-info"
+                        >
+                          <div class="col-sm-5 col-lg-12 col-xl-5">
+                            <div class="note">
+                              <h6 class="note-title">Note</h6>
+                              <ul class="note-list">
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  visionary creative designer
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  web and mobile design
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  unlimited design
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-sm-7 col-lg-12 col-xl-7">
+                            <div class="info">
+                              <div class="info-thumb">
+                                <img
+                                  src="./assets/images/about/about-content-thumb-1-1.png"
+                                  alt="thumb"
+                                />
+                              </div>
+                              <div class="info-content">
+                                <h6 class="info-title">I Am A Visionary</h6>
+                                <span>Creative</span>
+                                <div class="avatars">
+                                  <img
+                                    src="./assets/images/about/avatar-1.png"
+                                    alt="avatar"
+                                  />
+                                  <img
+                                    src="./assets/images/about/avatar-2.png"
+                                    alt="avatar"
+                                  />
+                                  <a href="contact.html">
+                                    <i class="fa-solid fa-plus"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="contact.html" class="btn-primary">
+                          <div class="btn-wrapper">
+                            Let's talk
+                            <span>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="about__thumb d-flex justify-content-center">
+                        <img
+                          src="./assets/images/about/about-thumb-1-1.png"
+                          alt="about-thumb"
+                        />
+                        <div class="thumb-bg">
+                          <img
+                            src="./assets/images/about/flower.png"
+                            alt="flower"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-awards"
+                  role="tabpanel"
+                  aria-labelledby="pills-awards-tab"
+                  tabindex="0"
+                >
+                  <div class="row align-items-end gy-5">
+                    <div class="col-lg-6">
+                      <div class="about__content">
+                        <span class="section-sub-title text-uppercase"
+                          >About me</span
+                        >
+                        <h2 class="section-title">
+                          Bring Apps, website & branding
+                        </h2>
+
+                        <p>
+                          I am a visionary creative designer, known for my
+                          abilit turn concepts into captivating visual narrtive.
+                          My deep the passion for the world of was design allows
+                          me to craft compelling stories through my artistic
+                          ingenuity known for my compelling storiet.
+                        </p>
+                        <div
+                          class="row g-4 justify-content-between notes-and-info"
+                        >
+                          <div class="col-sm-5 col-lg-12 col-xl-5">
+                            <div class="note">
+                              <h6 class="note-title">Note</h6>
+                              <ul class="note-list">
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  visionary creative designer
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  web and mobile design
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  unlimited design
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-sm-7 col-lg-12 col-xl-7">
+                            <div class="info">
+                              <div class="info-thumb">
+                                <img
+                                  src="./assets/images/about/about-content-thumb-1-1.png"
+                                  alt="thumb"
+                                />
+                              </div>
+                              <div class="info-content">
+                                <h6 class="info-title">I Am A Visionary</h6>
+                                <span>Creative</span>
+                                <div class="avatars">
+                                  <img
+                                    src="./assets/images/about/avatar-1.png"
+                                    alt="avatar"
+                                  />
+                                  <img
+                                    src="./assets/images/about/avatar-2.png"
+                                    alt="avatar"
+                                  />
+                                  <a href="contact.html">
+                                    <i class="fa-solid fa-plus"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="contact.html" class="btn-primary">
+                          <div class="btn-wrapper">
+                            Let's talk
+                            <span>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="about__thumb d-flex justify-content-center">
+                        <img
+                          src="./assets/images/about/about-thumb-1-1.png"
+                          alt="about-thumb"
+                        />
+                        <div class="thumb-bg">
+                          <img
+                            src="./assets/images/about/flower.png"
+                            alt="flower"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- ================= About-us Section End ================= -->
+      <!-- ================= About Section End ================= -->
 
       <!-- ================= Video Section Start ================= -->
       <div class="video section overflow-hidden">
@@ -174,13 +718,18 @@
       <!-- ================= Brand Slider Section End ================= -->
 
       <!-- ================= Work Section Start ================= -->
-      <section class="work section section-padding-top-bottom position-relative overflow-hidden">
+      <section
+        class="work section section-padding-top-bottom position-relative overflow-hidden"
+      >
         <div class="section-shape">
-          <img src="./assets/images/work/section-shap.png" alt="section-shap">
+          <img src="./assets/images/work/section-shap.png" alt="section-shap" />
         </div>
         <div class="container position-relative">
           <div class="circular-ball">
-            <img src="./assets/images/icons/circular-ball.png" alt="circular-ball">
+            <img
+              src="./assets/images/icons/circular-ball.png"
+              alt="circular-ball"
+            />
           </div>
           <div class="row g-4 align-items-end row-padding-bottom">
             <div class="col-md-5 section-header text-center text-md-start">
@@ -488,7 +1037,7 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="work-box " clip-path="url(#maskShape)">
+                      <div class="work-box" clip-path="url(#maskShape)">
                         <div class="work-thumb">
                           <img
                             src="./assets/images/work/work-thumb-1-2.png"

@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.service__shapes, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .preloader {
+.service__shapes, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -39,7 +39,7 @@
   -ms-flex-direction: column;
 }
 
-.service-box .service-footer .circle, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .pricing-box .pricing-header .header-icon {
+.service-box .service-footer .circle, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .pricing-box .pricing-header .header-icon, .about__tabs .nav-item, .about__content .notes-and-info .info .info-thumb {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -48,11 +48,11 @@
   position: fixed;
 }
 
-.work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .pricing.section, .video__player-wrapper, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
+.work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .pricing.section, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
   position: relative;
 }
 
-.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .pricing__icon, .video__player-wrapper .play-btn, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
+.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .pricing__icon, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
   position: absolute;
   content: "";
 }
@@ -87,7 +87,7 @@ h6 {
   justify-content: center;
 }
 
-.service-box .service-header, .work-box .work-content, .pricing-box .pricing-header {
+.service-box .service-header, .work-box .work-content, .pricing-box .pricing-header, .about__tabs, .about__content .notes-and-info .info {
   -webkit-box-pack: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
@@ -99,11 +99,18 @@ h6 {
   justify-content: flex-end;
 }
 
-.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon {
+.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
+.about__content .notes-and-info .info .info-content .avatars a {
   place-content: center;
 }
 
-.service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .brands__slider .swiper-wrapper, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .preloader {
+.about__content .notes-and-info .info {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -121,13 +128,14 @@ h6 {
   display: block;
 }
 
-.service-box .service-footer .line, .work-box .work-content .work-info .sub-title, .statistic__box .content .info, .footer__center.common .footer-info .footer-logo, .footer__center.common .footer-info .contact-info .contact .open-time, .section-sub-title, .section-title .highlight {
+.service-box .service-footer .line, .work-box .work-content .work-info .sub-title, .statistic__box .content .info, .about__content .notes-and-info .info .info-content span, .footer__center.common .footer-info .footer-logo, .footer__center.common .footer-info .contact-info .contact .open-time, .section-sub-title, .section-title .highlight {
   display: -webkit-inline-block;
   display: -ms-inline-block;
   display: inline-block;
 }
 
-.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon, .footer-widgets .instagram {
+.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
+.about__content .notes-and-info .info .info-content .avatars a, .footer-widgets .instagram {
   display: -webkit-grid;
   display: -ms-grid;
   display: grid;
@@ -1247,7 +1255,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 800;
   line-height: 350%;
   text-transform: uppercase;
-  padding-inline: 17.5px;
+  padding-inline: 41.2px;
 }
 .btn-primary .btn-wrapper span {
   overflow: hidden;
@@ -1286,6 +1294,250 @@ body::-webkit-scrollbar-thumb {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.about.section .shape-1 {
+  left: 117px;
+  bottom: 35px;
+  animation: carve-rotate 2.5s linear infinite alternate;
+}
+.about.section .shape-2 {
+  top: 50px;
+  right: 5px;
+}
+@media only screen and (max-width: 575.98px) {
+  .about.section .shape-1,
+  .about.section .shape-2 {
+    display: none;
+  }
+}
+.about__tabs {
+  margin-top: 40px;
+  row-gap: 10px;
+  column-gap: 20px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 575.98px) {
+  .about__tabs {
+    column-gap: 10px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+.about__tabs .nav-item {
+  z-index: 2;
+}
+.about__tabs .nav-item:not(:last-of-type)::after {
+  left: 95%;
+  top: 50%;
+  width: 500%;
+  height: 3px;
+  background-color: #e2c55d;
+  z-index: -1;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 575.98px) {
+  .about__tabs .nav-item:not(:last-of-type)::after {
+    content: unset;
+  }
+}
+.about__tabs .nav-item .nav-link {
+  color: #9d9d9d;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 41px;
+  text-transform: uppercase;
+  background-color: #0e0e0e;
+  border: 2.5px solid #e2c55d;
+  border-radius: 50px;
+  padding: 0 35px;
+  white-space: nowrap;
+  width: 100%;
+}
+.about__tabs .nav-item .nav-link[disabled] {
+  border-radius: 6px;
+  background-color: #e2c55d;
+  color: #1a1a1a;
+  margin-left: 7px;
+  width: calc(100% - 7px);
+}
+.about__tabs .nav-item .nav-link[disabled]::before {
+  width: 3px;
+  height: 100%;
+  left: -9px;
+  top: 0;
+  border-radius: 6px;
+  background: #e2c55d;
+}
+.about__tabs .nav-item .nav-link[disabled].active {
+  color: #1a1a1a;
+}
+.about__tabs .nav-item .nav-link.active {
+  color: #e2c55d;
+}
+@media only screen and (max-width: 575.98px) {
+  .about__tabs .nav-item {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media only screen and (max-width: 374.98px) {
+  .about__tabs .nav-item {
+    width: 100%;
+  }
+}
+.about__content-container:focus-visible,
+.about__content-container :focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+@media only screen and (min-width: 1200px) {
+  .about__content .section-title {
+    max-width: 490px;
+    width: 100%;
+  }
+}
+.about__content p {
+  max-width: 573px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 175%;
+  text-transform: capitalize;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 767.98px) {
+  .about__content p {
+    margin-top: 20px;
+  }
+}
+.about__content .notes-and-info {
+  padding-top: 32px;
+}
+@media only screen and (max-width: 767.98px) {
+  .about__content .notes-and-info {
+    padding-top: 20px;
+  }
+}
+.about__content .notes-and-info .note .note-title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.about__content .notes-and-info .note .note-list {
+  margin-top: 18px;
+}
+@media only screen and (max-width: 767.98px) {
+  .about__content .notes-and-info .note .note-list {
+    margin-top: 10px;
+  }
+}
+.about__content .notes-and-info .note .note-list li {
+  gap: 10px;
+  color: #9d9d9d;
+  font-weight: 500;
+  line-height: 175%;
+  text-transform: capitalize;
+}
+.about__content .notes-and-info .note .note-list li i {
+  color: #e2c55d;
+}
+.about__content .notes-and-info .note .note-list li:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+.about__content .notes-and-info .info {
+  gap: 40px;
+}
+.about__content .notes-and-info .info .info-thumb {
+  border-radius: 19px;
+  overflow: hidden;
+  max-width: 127px;
+  width: 100%;
+}
+.about__content .notes-and-info .info .info-content .info-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  text-transform: capitalize;
+}
+.about__content .notes-and-info .info .info-content span {
+  color: #9d9d9d;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.about__content .notes-and-info .info .info-content .avatars {
+  margin-top: 10px;
+}
+.about__content .notes-and-info .info .info-content .avatars img,
+.about__content .notes-and-info .info .info-content .avatars a {
+  width: 47.5px;
+  height: 47.5px;
+  border-radius: 100%;
+  border: 3px solid #0e0e0e;
+  color: #282d32;
+  background-color: #e2c55d;
+  overflow: hidden;
+}
+.about__content .notes-and-info .info .info-content .avatars img:not(:first-of-type) {
+  margin-left: -10px;
+}
+.about__content .notes-and-info .info .info-content .avatars a {
+  margin-left: -10px;
+}
+.about__content .btn-primary {
+  margin-top: 40px;
+}
+@media only screen and (max-width: 767.98px) {
+  .about__content .btn-primary {
+    margin-top: 30px;
+  }
+}
+.about__content .btn-primary .btn-wrapper {
+  background: linear-gradient(90deg, #e2c55d 0%, #8e7d3f 100%);
+  color: #282d32;
+}
+.about__content .btn-primary .btn-wrapper span {
+  color: #000;
+}
+.about__thumb {
+  max-width: 580px;
+  width: 100%;
+  margin-left: auto;
+  z-index: 2;
+}
+.about__thumb .thumb-bg {
+  width: 100%;
+  max-height: 523px;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  background: #1e2225;
+  border-radius: 50px 240px 0px 0px;
+}
+.about__thumb .thumb-bg::after {
+  inset: 0;
+  z-index: -2;
+  background-color: #e2c55d;
+  border-radius: 50px 300px 0px 0px;
+}
+.about__thumb .thumb-bg img {
+  top: -60px;
+  left: -60px;
+  animation: rotate 4.5s linear infinite;
+}
+@media only screen and (max-width: 575.98px) {
+  .about__thumb .thumb-bg {
+    border-radius: 50px 100px 0px 0px;
+  }
+  .about__thumb .thumb-bg::after {
+    border-radius: 50px 150px 0px 0px;
+  }
 }
 
 .video__player-wrapper .video-player {
