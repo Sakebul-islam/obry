@@ -143,6 +143,17 @@ body::-webkit-scrollbar-thumb {
     @extend %d-inline-block;
     color: $color-primary;
   }
+  .highlight-bottom-border {
+    @extend %p-relative;
+    &::after {
+      @extend %p-absolute;
+      left: 0;
+      right: 0;
+      bottom: 7px;
+      height: 3px;
+      background-color: $color-primary;
+    }
+  }
 }
 /*
 ============= Section Header END ================

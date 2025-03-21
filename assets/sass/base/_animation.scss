@@ -15,3 +15,12 @@
   }
 }
 
+@keyframes forward-backward {
+  from {
+    @include transform(translateX(-5px));
+  }
+  to {
+    @include transform(translateX(5px));
+  }
+}
+

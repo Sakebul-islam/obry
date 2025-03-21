@@ -23,8 +23,10 @@ $color-4: #141514;
 $color-4-rgb: 20, 21, 20;
 $color-5: #2a2e30;
 $color-5-rgb: 42, 46, 48;
-$color-6: #1D2021;
+$color-6: #1d2021;
 $color-6-rgb: 29, 32, 33;
+$color-7: #292929;
+$color-7-rgb: 41, 41, 41;
 
 $color-white: #ffffff;
 $color-white-rgb: 255, 255, 255;
@@ -60,6 +62,7 @@ $container-padding-right: calc($container-gutters / 2);
 // Font families
 $ff-body: "Poppins", sans-serif;
 $ff-title: "Bricolage Grotesque", sans-serif;
+$ff-rubik: "Rubik", sans-serif;
 
 // Font sizes (Base and Headings)
 $fs-base: 16px !default;

@@ -105,10 +105,10 @@ function initializeSwiper(containerSelector, options) {
   if (!container) {
     return;
   }
-  
+
   if (options.pagination) {
     options.pagination = {
-      el: 
+      el:
         options.pagination === true
           ? `${containerSelector} .swiper-pagination`
           : options.pagination.el,
@@ -117,7 +117,7 @@ function initializeSwiper(containerSelector, options) {
 
     const paginationEl = document.querySelector(options.pagination.el);
     if (!paginationEl) {
-      console.error('Pagination element not found');
+      console.error("Pagination element not found");
       return;
     }
   } else {
@@ -141,10 +141,37 @@ function initializeSwiper(containerSelector, options) {
   return new Swiper(containerSelector, options);
 }
 
+function initMagnificPopup() {
+  // Verify jQuery and Magnific Popup are loaded
+  if (typeof jQuery === "undefined") {
+    return;
+  }
+
+  if (typeof $.fn.magnificPopup === "undefined") {
+    return;
+  }
+
+  // Initialize Magnific Popup
+  $(".thumb-info").each(function () {
+    $(this).magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image...",
+      mainClass: "mfp-img-mobile",
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1],
+      },
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initializeVideoPlayers(".video-player", ".play-btn");
   initializeSwiper(".brandSlider", brandSliderOptions);
   initializeSwiper(".quote__slider", quoteSliderOptions);
   setBackgroundImages();
   odometerCounter();
+  initMagnificPopup();
 });
