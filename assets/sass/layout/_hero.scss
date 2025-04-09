@@ -1,0 +1,29 @@
+@use "../base/fonts" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.hero-one {
+  &.section {
+    padding-block: 25px;
+  }
+  &__slider {
+    .swiper-slide {
+      width: max-content;
+      height: auto;
+      flex-shrink: 0;
+    }
+  }
+  &__slide {
+    @extend %d-flex, %item-center;
+    gap: 40px;
+    height: 100%;
+    .text {
+      color: $color-primary;
+      text-transform: uppercase;
+    }
+    svg {
+      color: $color-primary;
+    }
+  }
+}

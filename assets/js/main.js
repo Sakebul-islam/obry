@@ -65,6 +65,24 @@ const quoteSliderOptions = {
   },
   speed: 1000,
 };
+
+const heroOneSliderOptions = {
+  loop: true,
+  speed: 2000,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+  },
+  effect: "slide",
+  navigation: false,
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  breakpoints: {
+    1200: {
+      spaceBetween: 40,
+    },
+  },
+};
 const testimonialSliderOptions = {
   loop: true,
   spaceBetween: 40,
@@ -184,6 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeVideoPlayers(".video-player", ".play-btn");
   initializeSwiper(".brandSlider", brandSliderOptions);
   initializeSwiper(".quote__slider", quoteSliderOptions);
+  initializeSwiper(".hero-one__slider", heroOneSliderOptions);
   initializeSwiper(".testimonial__slider", testimonialSliderOptions);
   setBackgroundImages();
   odometerCounter();
