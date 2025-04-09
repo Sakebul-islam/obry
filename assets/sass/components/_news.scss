@@ -1,0 +1,95 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.news {
+  &.section {
+  }
+  &__icon {
+  }
+}
+
+.news-box {
+  border-radius: 15px;
+  background: $color-1;
+  overflow: hidden;
+
+  .news-thumb {
+    @extend %d-block;
+    overflow: hidden;
+    img {
+      @include transition($transition);
+    }
+
+    &:hover {
+      img {
+        @include transform(scale(1.25) rotate(5deg));
+      }
+    }
+  }
+  .news-body {
+    padding: 34.5px;
+    
+    @include breakpoint(max-sm){
+      padding: 20.5px;
+    }
+
+    .news-content {
+      .title {
+        text-transform: capitalize;
+        a {
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+      p {
+        margin-top: 12px;
+        text-transform: capitalize;
+      }
+    }
+  }
+  .news-footer {
+    @extend %d-flex, %justify-between, %item-center;
+    margin-top: 20px;
+    border-top: 1px solid rgba($color-white, 0.13);
+    padding-top: 16px;
+
+    .dates {
+      @extend %d-inline-block;
+      color: $color-primary;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .total-views {
+      @extend %d-flex,%item-center;
+      gap: 9px;
+      color: $color-paragraph;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      i,
+      svg {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &:hover {
+    .news-thumb {
+      img {
+        @include transform(scale(1.25) rotate(5deg));
+      }
+    }
+    .news-body {
+      .news-content {
+        .title {
+          a {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}

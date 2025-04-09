@@ -17,7 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 
-  @include breakpoint(sm) {
+  @include breakpoint(max-sm) {
     font-size: $fs-14;
   }
 }

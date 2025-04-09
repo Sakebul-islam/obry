@@ -65,6 +65,19 @@ const quoteSliderOptions = {
   },
   speed: 1000,
 };
+const testimonialSliderOptions = {
+  loop: true,
+  spaceBetween: 40,
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
+  pagination: {
+    el: ".testimonial__pagination",
+    clickable: true,
+  },
+  speed: 1000,
+};
 
 function initializeVideoPlayers(videoSelector, playBtnSelector) {
   const videos = document.querySelectorAll(videoSelector);
@@ -171,6 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeVideoPlayers(".video-player", ".play-btn");
   initializeSwiper(".brandSlider", brandSliderOptions);
   initializeSwiper(".quote__slider", quoteSliderOptions);
+  initializeSwiper(".testimonial__slider", testimonialSliderOptions);
   setBackgroundImages();
   odometerCounter();
   initMagnificPopup();

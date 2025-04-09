@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.service__shapes, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .preloader {
+.service__shapes, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .testimonial-slide, .news-box .news-footer, .news-box .news-footer .total-views, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -39,7 +39,7 @@
   -ms-flex-direction: column;
 }
 
-.service-box .service-footer .circle, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .pricing-box .pricing-header .header-icon, .about__tabs .nav-item, .about__content .notes-and-info .info .info-thumb {
+.service-box .service-footer .circle, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .testimonial-slide .author, .pricing-box .pricing-header .header-icon, .about__tabs .nav-item, .about__content .notes-and-info .info .info-thumb, .social-share ul li a {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -48,11 +48,11 @@
   position: fixed;
 }
 
-.work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .pricing.section, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
+.work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .testimonial__thumb, .pricing.section, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
   position: relative;
 }
 
-.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .pricing__icon, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
+.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
   position: absolute;
   content: "";
 }
@@ -87,7 +87,7 @@ h6 {
   justify-content: center;
 }
 
-.service-box .service-header, .work-box .work-content, .pricing-box .pricing-header, .about__tabs, .about__content .notes-and-info .info {
+.service-box .service-header, .work-box .work-content, .testimonial-slide, .news-box .news-footer, .pricing-box .pricing-header, .about__tabs, .about__content .notes-and-info .info {
   -webkit-box-pack: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
@@ -100,7 +100,7 @@ h6 {
 }
 
 .service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
-.about__content .notes-and-info .info .info-content .avatars a {
+.about__content .notes-and-info .info .info-content .avatars a, .social-share ul li a {
   place-content: center;
 }
 
@@ -110,7 +110,7 @@ h6 {
   align-items: start;
 }
 
-.service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .preloader {
+.service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .news-box .news-footer, .news-box .news-footer .total-views, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -122,28 +122,34 @@ h6 {
   align-items: baseline;
 }
 
-.service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .video__player-wrapper .video-player, .footer-widgets .instagram a {
+.service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .news-box .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
   display: -webkit-block;
   display: -ms-block;
   display: block;
 }
 
-.service-box .service-footer .line, .work-box .work-content .work-info .sub-title, .statistic__box .content .info, .about__content .notes-and-info .info .info-content span, .footer__center.common .footer-info .footer-logo, .footer__center.common .footer-info .contact-info .contact .open-time, .section-sub-title, .section-title .highlight {
+.service-box .service-footer .line, .work-box .work-content .work-info .sub-title, .statistic__box .content .info, .news-box .news-footer .dates, .about__content .notes-and-info .info .info-content span, .footer__center.common .footer-info .footer-logo, .footer__center.common .footer-info .contact-info .contact .open-time, .section-sub-title, .section-title .highlight {
   display: -webkit-inline-block;
   display: -ms-inline-block;
   display: inline-block;
 }
 
 .service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
-.about__content .notes-and-info .info .info-content .avatars a, .footer-widgets .instagram {
+.about__content .notes-and-info .info .info-content .avatars a, .footer-widgets .instagram, .social-share ul li a {
   display: -webkit-grid;
   display: -ms-grid;
   display: grid;
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
+.testimonial-slide .author {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
-.btn-primary {
+.btn-primary, .footer__bottom.common .copyright.v2 {
   text-align: center;
 }
 
@@ -546,7 +552,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-@media only screen and (min-width: 576px) {
+@media only screen and (max-width: 575.98px) {
   body {
     font-size: 14px;
   }
@@ -1146,6 +1152,9 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.45px;
   text-transform: capitalize;
 }
+.footer__center.common .social-share {
+  margin-top: 35px;
+}
 .footer__center.common .footer-widgets.links {
   max-width: 460px;
 }
@@ -1165,6 +1174,9 @@ body::-webkit-scrollbar-thumb {
     font-weight: 500;
     text-align: center;
   }
+}
+.footer__bottom.common .copyright.v2 {
+  color: #9F9F9F;
 }
 @media only screen and (max-width: 575.98px) {
   .footer__bottom.common .payments {
@@ -1189,6 +1201,20 @@ body::-webkit-scrollbar-thumb {
   text-transform: capitalize;
 }
 .footer-links ul li a i {
+  color: #e2c55d;
+}
+.footer-links.v2 ul li a i {
+  color: #9d9d9d;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.footer-links.v2 ul li a:hover i {
+  color: #e2c55d;
+}
+.footer-links.v2 ul li:first-of-type a i {
   color: #e2c55d;
 }
 
@@ -1237,6 +1263,36 @@ body::-webkit-scrollbar-thumb {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+}
+.footer-widgets .instagram-mask {
+  mask-image: url(../images/footer/instagram-mask-shape.png);
+}
+.footer-widgets.v2 .widgets-title {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+.footer-widgets.v2 .widgets-title::before {
+  content: unset;
+}
+
+.social-share ul {
+  gap: 11px;
+}
+.social-share ul li a {
+  background-color: #0e0e0e;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  width: 46px;
+  height: 46px;
+}
+.social-share ul li a i,
+.social-share ul li a svg {
+  opacity: 0.8;
+}
+.social-share ul li a:hover {
+  border-color: #e2c55d;
 }
 
 .btn-primary {
@@ -1702,6 +1758,174 @@ body::-webkit-scrollbar-thumb {
   .pricing-box .pricing-footer {
     padding-top: 20px;
   }
+}
+
+.news-box {
+  border-radius: 15px;
+  background: #171a1b;
+  overflow: hidden;
+}
+.news-box .news-thumb {
+  overflow: hidden;
+}
+.news-box .news-thumb img {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.news-box .news-thumb:hover img {
+  -webkit-transform: scale(1.25) rotate(5deg);
+  -ms-transform: scale(1.25) rotate(5deg);
+  transform: scale(1.25) rotate(5deg);
+}
+.news-box .news-body {
+  padding: 34.5px;
+}
+@media only screen and (max-width: 575.98px) {
+  .news-box .news-body {
+    padding: 20.5px;
+  }
+}
+.news-box .news-body .news-content .title {
+  text-transform: capitalize;
+}
+.news-box .news-body .news-content .title a:hover {
+  color: #e2c55d;
+}
+.news-box .news-body .news-content p {
+  margin-top: 12px;
+  text-transform: capitalize;
+}
+.news-box .news-footer {
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  padding-top: 16px;
+}
+.news-box .news-footer .dates {
+  color: #e2c55d;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.news-box .news-footer .total-views {
+  gap: 9px;
+  color: #9d9d9d;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.news-box .news-footer .total-views i,
+.news-box .news-footer .total-views svg {
+  color: #e2c55d;
+}
+.news-box:hover .news-thumb img {
+  -webkit-transform: scale(1.25) rotate(5deg);
+  -ms-transform: scale(1.25) rotate(5deg);
+  transform: scale(1.25) rotate(5deg);
+}
+.news-box:hover .news-body .news-content .title a {
+  color: #e2c55d;
+}
+
+.testimonial.section .container::after {
+  right: 0;
+  bottom: -120px;
+  width: 80px;
+  height: 12px;
+  background-color: #e2c55d;
+}
+@media only screen and (max-width: 767.98px) {
+  .testimonial.section .container::after {
+    bottom: -60px;
+  }
+}
+.testimonial__icon {
+  top: 0;
+  right: 63px;
+  animation: rotate 4.5s linear infinite;
+}
+@media only screen and (max-width: 767.98px) {
+  .testimonial__icon {
+    display: none;
+  }
+}
+.testimonial__thumb-wrapper {
+  padding-right: 74px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .testimonial__thumb-wrapper {
+    padding-right: 50px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .testimonial__thumb-wrapper {
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .testimonial__thumb-wrapper {
+    padding-right: 10px;
+  }
+}
+.testimonial__thumb {
+  z-index: 0;
+}
+.testimonial__thumb::after {
+  bottom: -20px;
+  right: -20px;
+  width: 177px;
+  height: 153px;
+  background-color: #e2c55d;
+  z-index: -1;
+}
+@media only screen and (max-width: 1439.98px) {
+  .testimonial__thumb::after {
+    bottom: -15px;
+    right: -15px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .testimonial__thumb::after {
+    bottom: -10px;
+    right: -10px;
+  }
+}
+.testimonial__slider {
+  margin-top: 20px;
+}
+.testimonial__slider .testimonial-slide {
+  margin-bottom: 20px;
+}
+.testimonial__pagination .swiper-pagination-bullet {
+  width: 19px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+  border-radius: 0;
+}
+.testimonial__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #e2c55d;
+}
+
+.testimonial-slide {
+  gap: 20px;
+}
+@media only screen and (max-width: 575.98px) {
+  .testimonial-slide {
+    flex-direction: column;
+  }
+}
+.testimonial-slide p {
+  max-width: 497px;
+  color: #9d9d9d;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 150%;
+  text-transform: capitalize;
+}
+.testimonial-slide .author img {
+  border: 4px solid #e2c55d;
 }
 
 .quote__wrapper {
@@ -2616,6 +2840,46 @@ body::-webkit-scrollbar-thumb {
 
 .bg-color-4 {
   background-color: #141514;
+}
+
+.text-color-5 {
+  color: #2a2e30;
+}
+
+.bg-color-5 {
+  background-color: #2a2e30;
+}
+
+.text-color-6 {
+  color: #1d2021;
+}
+
+.bg-color-6 {
+  background-color: #1d2021;
+}
+
+.text-color-7 {
+  color: #292929;
+}
+
+.bg-color-7 {
+  background-color: #292929;
+}
+
+.text-color-8 {
+  color: #1a1a1a;
+}
+
+.bg-color-8 {
+  background-color: #1a1a1a;
+}
+
+.text-color-9 {
+  color: #9F9F9F;
+}
+
+.bg-color-9 {
+  background-color: #9F9F9F;
 }
 
 .text-color-white {
