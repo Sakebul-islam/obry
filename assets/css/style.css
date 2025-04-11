@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.service__shapes, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .team-box .social ul, .testimonial-slide, .news-box .news-footer, .news-box .news-footer .total-views, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
+.service__shapes, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .team-box .social ul, .testimonial-slide, .news-box .news-footer, .news-box .news-footer .total-views, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -48,11 +48,11 @@
   position: fixed;
 }
 
-.work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .pricing.section, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .about2__content, .about2__thumb, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
+.work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .about2__content, .about2__thumb, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
   position: relative;
 }
 
-.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
+.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .pricing2__bg, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
   position: absolute;
   content: "";
 }
@@ -87,7 +87,7 @@ h6 {
   justify-content: center;
 }
 
-.service-box .service-header, .work-box .work-content, .testimonial-slide, .news-box .news-footer, .pricing-box .pricing-header, .about__tabs, .about__content .notes-and-info .info {
+.service-box .service-header, .work-box .work-content, .testimonial-slide, .news-box .news-footer, .pricing-box .pricing-header, .pricing-box2, .about__tabs, .about__content .notes-and-info .info {
   -webkit-box-pack: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
@@ -99,7 +99,7 @@ h6 {
   justify-content: flex-end;
 }
 
-.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
+.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .pricing-box .pricing-header .header-icon, .pricing2__brands-area .brands .img, .about__content .notes-and-info .info .info-content .avatars img,
 .about__content .notes-and-info .info .info-content .avatars a, .social-share ul li a {
   place-content: center;
 }
@@ -110,7 +110,7 @@ h6 {
   align-items: start;
 }
 
-.service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .news-box .news-footer, .news-box .news-footer .total-views, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
+.service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .news-box .news-footer, .news-box .news-footer .total-views, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -134,7 +134,7 @@ h6 {
   display: inline-block;
 }
 
-.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
+.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .pricing-box .pricing-header .header-icon, .pricing2__boxes, .pricing2__brands-area .brands, .pricing2__brands-area .brands .img, .about__content .notes-and-info .info .info-content .avatars img,
 .about__content .notes-and-info .info .info-content .avatars a, .footer-widgets .instagram, .social-share ul li a {
   display: -webkit-grid;
   display: -ms-grid;
@@ -1912,6 +1912,140 @@ body::-webkit-scrollbar-thumb {
   .pricing-box .pricing-footer {
     padding-top: 20px;
   }
+}
+
+.pricing2.section {
+  z-index: 2;
+}
+.pricing2__bg {
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.pricing2__boxes {
+  gap: 25px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media only screen and (max-width: 1199.98px) {
+  .pricing2__boxes {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.pricing2__boxes .pricing-box2 .pricing-thumb img {
+  height: 100%;
+}
+@media only screen and (max-width: 575.98px) {
+  .pricing2__boxes .pricing-box2 {
+    flex-wrap: wrap;
+  }
+  .pricing2__boxes .pricing-box2 .pricing-thumb {
+    order: 1;
+    flex: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+  .pricing2__boxes .pricing-box2 .pricing-thumb img {
+    width: 100%;
+  }
+  .pricing2__boxes .pricing-box2 .pricing-content {
+    order: 2;
+  }
+}
+.pricing2__brands-area {
+  border-top: 1px solid rgba(217, 217, 217, 0.2);
+  border-bottom: 1px solid rgba(217, 217, 217, 0.2);
+}
+.pricing2__brands-area .info {
+  padding-block: 24px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(217, 217, 217, 0.2);
+}
+@media only screen and (max-width: 575.98px) {
+  .pricing2__brands-area .info {
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.2);
+  }
+}
+.pricing2__brands-area .brands {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+@media only screen and (max-width: 767.98px) {
+  .pricing2__brands-area .brands {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 10px;
+    row-gap: 5px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .pricing2__brands-area .brands {
+    padding-block: 10px;
+  }
+}
+.pricing-box2 {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.pricing-box2 .pricing-content {
+  padding: 40px;
+}
+.pricing-box2 .pricing-content .title {
+  text-transform: capitalize;
+  margin-bottom: 23px;
+}
+.pricing-box2 .pricing-content .pricing-info {
+  color: #9d9d9d;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.pricing-box2 .pricing-content .pricing-info li {
+  gap: 10px;
+}
+.pricing-box2 .pricing-content .pricing-info li i {
+  color: #e2c55d;
+}
+.pricing-box2 .pricing-content .pricing-info li:not(:last-of-type) {
+  margin-bottom: 6px;
+}
+.pricing-box2 .pricing-content .price-box {
+  margin-top: 35px;
+}
+@media only screen and (min-width: 1400px) {
+  .pricing-box2 .pricing-content .price-box .price {
+    font-size: 40px;
+  }
+}
+.pricing-box2 .pricing-content .price-box .price span {
+  font-size: 20px;
+}
+.pricing-box2 .pricing-content .price-box a {
+  left: 0;
+  top: 200px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.pricing-box2 .pricing-thumb::before {
+  inset: 0;
+  border-radius: 0px 12px 12px 0px;
+  background: rgba(226, 197, 93, 0.2);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.pricing-box2:hover .pricing-content .price-box a {
+  top: 50%;
+}
+.pricing-box2:hover .pricing-thumb::before {
+  opacity: 1;
 }
 
 .news-box {
