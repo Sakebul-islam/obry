@@ -196,6 +196,19 @@ function initMagnificPopup() {
       },
     });
   });
+  $(".portfolio-box").each(function () {
+    $(this).magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image...",
+      mainClass: "mfp-img-mobile",
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [1, 2],
+      },
+    });
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.service__shapes, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .team-box .social ul, .testimonial-slide, .news-box .news-footer, .news-box .news-footer .total-views, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
+.service__shapes, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .team-box .social ul, .testimonial-slide, .news-box .news-footer, .news-box .news-footer .total-views, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -48,11 +48,11 @@
   position: fixed;
 }
 
-.work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .team-box .team-thumb, .testimonial__thumb, .pricing.section, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
+.work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .pricing.section, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .about2__content, .about2__thumb, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
   position: relative;
 }
 
-.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
+.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
   position: absolute;
   content: "";
 }
@@ -99,7 +99,7 @@ h6 {
   justify-content: flex-end;
 }
 
-.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
+.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
 .about__content .notes-and-info .info .info-content .avatars a, .social-share ul li a {
   place-content: center;
 }
@@ -110,7 +110,7 @@ h6 {
   align-items: start;
 }
 
-.service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .news-box .news-footer, .news-box .news-footer .total-views, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
+.service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .news-box .news-footer, .news-box .news-footer .total-views, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -134,7 +134,7 @@ h6 {
   display: inline-block;
 }
 
-.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
+.service-box .service-footer .circle, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .pricing-box .pricing-header .header-icon, .about__content .notes-and-info .info .info-content .avatars img,
 .about__content .notes-and-info .info .info-content .avatars a, .footer-widgets .instagram, .social-share ul li a {
   display: -webkit-grid;
   display: -ms-grid;
@@ -1640,6 +1640,116 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.about2.section {
+  position: relative;
+  z-index: 2;
+}
+.about2__bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+}
+.about2__bg img {
+  object-fit: cover;
+}
+.about2__content {
+  padding: 0;
+}
+.about2__content p {
+  margin-top: 33px;
+}
+@media only screen and (max-width: 767.98px) {
+  .about2__content p {
+    margin-top: 20px;
+  }
+}
+.about2__content .analysis {
+  margin-top: 25px;
+}
+.about2__content .analysis .title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.about2__content .analysis ul {
+  margin-top: 16px;
+}
+.about2__content .analysis ul li {
+  gap: 10px;
+  color: #9d9d9d;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.about2__content .analysis ul li i {
+  color: #e2c55d;
+}
+.about2__content .shape {
+  right: 0;
+  bottom: 0;
+}
+@media only screen and (max-width: 575.98px) {
+  .about2__content .shape {
+    display: none;
+  }
+}
+.about2__thumb {
+  padding-left: 170px;
+  z-index: 2;
+}
+@media only screen and (max-width: 1199.98px) {
+  .about2__thumb {
+    padding-left: 80px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .about2__thumb {
+    padding-left: 0px;
+  }
+}
+.about2__thumb .thumb-1 img {
+  border-radius: 29px;
+  background: #171a1b;
+  padding: 20px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .about2__thumb .thumb-1 img {
+    padding: 10px;
+  }
+}
+.about2__thumb .thumb-2 {
+  left: 0;
+  bottom: -58px;
+  z-index: -1;
+}
+@media only screen and (max-width: 1199.98px) {
+  .about2__thumb .thumb-2 {
+    max-width: 200px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .about2__thumb .thumb-2 {
+    position: relative;
+    bottom: 0px;
+    max-width: 100%;
+  }
+  .about2__thumb .thumb-2 img {
+    width: 100%;
+  }
+}
+.about2__thumb .thumb-2 img {
+  border-radius: 29px;
+  background: #171a1b;
+  padding: 20px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .about2__thumb .thumb-2 img {
+    padding: 10px;
+  }
+}
+
 .video__player-wrapper .video-player {
   width: 100%;
   height: auto;
@@ -2005,9 +2115,6 @@ body::-webkit-scrollbar-thumb {
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  transform: scale(0.5);
   border-radius: 100%;
   opacity: 0;
 }
@@ -2041,11 +2148,72 @@ body::-webkit-scrollbar-thumb {
   color: #e2c55d;
 }
 .team-box:hover .team-thumb::before {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
   background: linear-gradient(180deg, rgba(226, 197, 93, 0) 0%, rgba(124, 108, 51, 0.7) 100%);
   opacity: 1;
+}
+
+.portfolio-box {
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 767.98px) {
+  .portfolio-box img {
+    min-height: 300px;
+    object-fit: cover;
+  }
+}
+.portfolio-box .icon-box {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  inset: 0;
+  border-radius: 15px;
+  background: rgba(226, 197, 93, 0.4);
+  opacity: 0;
+}
+.portfolio-box .icon-box a {
+  width: 128px;
+  height: 128px;
+  border-radius: 100%;
+  z-index: 0;
+  background-color: rgba(14, 14, 14, 0.2);
+}
+.portfolio-box .icon-box a .icon-wrapper {
+  width: 110px;
+  height: 110px;
+  background-color: rgba(23, 26, 27, 0.9);
+  border-radius: 100%;
+}
+.portfolio-box .content {
+  width: 80%;
+  height: auto;
+  left: 50%;
+  bottom: -200px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #e2c55d;
+  text-align: center;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 10px 10px 0px 0px;
+  background: rgba(23, 26, 27, 0.98);
+  padding: 9px;
+}
+.portfolio-box:hover .icon-box {
+  opacity: 1;
+}
+.portfolio-box:hover .content {
+  bottom: 0px;
 }
 
 .quote__wrapper {
