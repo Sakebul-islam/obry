@@ -5,13 +5,18 @@
 
 @keyframes rotate {
   to {
-    transform: rotate(360deg);
+    @include transform(rotate(360deg));
   }
 }
 
 @keyframes carve-rotate {
   to {
-    transform: rotate(35deg);
+    @include transform(rotate(35deg));
+  }
+}
+@keyframes carve-rotate2 {
+  to {
+    @include transform(rotate(15deg));
   }
 }
 
@@ -23,4 +28,3 @@
     @include transform(translateX(5px));
   }
 }
-

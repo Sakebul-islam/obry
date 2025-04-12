@@ -121,6 +121,34 @@
     bottom: 0;
     z-index: -1;
   }
+  &__arrow {
+    @extend %p-absolute;
+    left: -10%;
+    bottom: 50px;
+
+    @include breakpoint(max-md) {
+      display: none;
+    }
+
+    img {
+      transform-origin: top center;
+      animation: carve-rotate2 2.5s linear infinite alternate;
+    }
+  }
+  &__ball {
+    @extend %p-absolute;
+    top: -80px;
+    right: 10px;
+
+    @include breakpoint(max-md) {
+      display: none;
+    }
+
+    img {
+      transform-origin: center;
+      animation: rotate 5s linear infinite;
+    }
+  }
 
   &__boxes {
     @extend %d-grid;
@@ -226,6 +254,7 @@
       @extend %p-relative;
       margin-top: 35px;
       .price {
+        @include transition($transition);
         @include breakpoint(xxl) {
           font-size: 40px;
         }
@@ -259,6 +288,9 @@
   &:hover {
     .pricing-content {
       .price-box {
+        .price {
+          opacity: 0;
+        }
         a {
           top: 50%;
         }

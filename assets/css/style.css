@@ -52,7 +52,7 @@
   position: relative;
 }
 
-.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .pricing2__bg, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
+.work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
   position: absolute;
   content: "";
 }
@@ -943,12 +943,23 @@ body::-webkit-scrollbar-thumb {
 */
 @keyframes rotate {
   to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 @keyframes carve-rotate {
   to {
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
     transform: rotate(35deg);
+  }
+}
+@keyframes carve-rotate2 {
+  to {
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
   }
 }
 @keyframes forward-backward {
@@ -1922,6 +1933,32 @@ body::-webkit-scrollbar-thumb {
   bottom: 0;
   z-index: -1;
 }
+.pricing2__arrow {
+  left: -10%;
+  bottom: 50px;
+}
+@media only screen and (max-width: 767.98px) {
+  .pricing2__arrow {
+    display: none;
+  }
+}
+.pricing2__arrow img {
+  transform-origin: top center;
+  animation: carve-rotate2 2.5s linear infinite alternate;
+}
+.pricing2__ball {
+  top: -80px;
+  right: 10px;
+}
+@media only screen and (max-width: 767.98px) {
+  .pricing2__ball {
+    display: none;
+  }
+}
+.pricing2__ball img {
+  transform-origin: center;
+  animation: rotate 5s linear infinite;
+}
 .pricing2__boxes {
   gap: 25px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2014,6 +2051,13 @@ body::-webkit-scrollbar-thumb {
 .pricing-box2 .pricing-content .price-box {
   margin-top: 35px;
 }
+.pricing-box2 .pricing-content .price-box .price {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 @media only screen and (min-width: 1400px) {
   .pricing-box2 .pricing-content .price-box .price {
     font-size: 40px;
@@ -2040,6 +2084,9 @@ body::-webkit-scrollbar-thumb {
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+.pricing-box2:hover .pricing-content .price-box .price {
+  opacity: 0;
 }
 .pricing-box2:hover .pricing-content .price-box a {
   top: 50%;
