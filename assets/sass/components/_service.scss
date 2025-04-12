@@ -33,6 +33,99 @@
   }
 }
 
+.service2 {
+  &.section {
+    @extend %p-relative;
+    overflow: hidden;
+    border-bottom: 1px double rgba($color-10, 0.12);
+    z-index: 2;
+  }
+
+  &__bg {
+    @extend %p-absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__boxes {
+    [class^="col-"] {
+      &:nth-child(2) {
+        .service-box2 {
+          @include breakpoint(md) {
+            border-left: 1px solid rgba($color-10, 0.1);
+            border-right: 1px solid rgba($color-10, 0.1);
+          }
+        }
+      }
+    }
+    .service-box2 {
+    }
+  }
+  &__info {
+    @extend %p-relative, %d-flex, %item-center;
+    z-index: 2;
+    gap: 25px;
+    overflow: hidden;
+    background-color: $color-primary;
+    height: 100%;
+    padding: 40px;
+
+    @include breakpoint(max-sm) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .service2-video {
+      @extend %d-grid, %place-center;
+      border-radius: 100%;
+      width: 96px;
+      height: 96px;
+      background-color: $color-1;
+      border: 3px dashed $color-primary;
+      cursor: pointer;
+
+      i {
+        font-size: 23px;
+      }
+    }
+
+    .info {
+      .sub-title {
+        @extend %d-inline-block, %text-uppercase, %p-relative;
+        color: $color-body;
+        font-family: $ff-title;
+        font-size: 18px;
+        font-weight: 700;
+
+        &::after {
+          @extend %p-absolute;
+          left: calc(100% + 10px);
+          top: 50%;
+          @include transform(translateY(-50%));
+          width: 42px;
+          height: 3.004px;
+          border-radius: 5px;
+          background-color: $color-body;
+        }
+      }
+      .title {
+        @extend %text-uppercase;
+        max-width: 284px;
+        color: $color-body;
+      }
+    }
+
+    .info-bg {
+      @extend %p-absolute;
+      z-index: -1;
+      bottom: 0;
+      right: 75px;
+    }
+  }
+}
+
 .service-box {
   border-radius: 22px;
   padding-inline: 33px;
@@ -99,7 +192,7 @@
       @extend %d-inline-block;
       width: 100%;
       height: 2px;
-      background: rgba(217, 217, 217, 0.2);
+      background: rgba($color-10, 0.2);
     }
   }
 
@@ -186,6 +279,45 @@
           }
         }
       }
+    }
+  }
+}
+
+.service-box2 {
+  @extend %text-center;
+  @include transition($transition);
+  padding-block: 60px;
+  padding-inline: 20px;
+  .icon {
+    @extend %d-grid, %place-center;
+    @include transition($transition);
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: $color-1;
+    border: 2px dashed rgba($color-primary, 0.4);
+    margin-inline: auto;
+
+    i,
+    svg {
+      color: $color-primary;
+    }
+  }
+  .service-content {
+    .service-title {
+      @extend %text-capitalize;
+      margin-top: 20px;
+    }
+    p {
+      @extend %text-capitalize;
+      margin-top: 10px;
+    }
+  }
+
+  &:hover {
+    background: rgba($color-1, 0.3);
+    .icon {
+      background-color: transparent;
     }
   }
 }
