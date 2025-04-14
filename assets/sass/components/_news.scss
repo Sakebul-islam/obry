@@ -10,6 +10,11 @@
   }
 }
 
+.news2 {
+  &.section {
+  }
+}
+
 .news-box {
   border-radius: 15px;
   background: $color-1;
@@ -30,8 +35,8 @@
   }
   .news-body {
     padding: 34.5px;
-    
-    @include breakpoint(max-sm){
+
+    @include breakpoint(max-sm) {
       padding: 20.5px;
     }
 
@@ -63,7 +68,7 @@
       text-transform: uppercase;
     }
     .total-views {
-      @extend %d-flex,%item-center;
+      @extend %d-flex, %item-center;
       gap: 9px;
       color: $color-paragraph;
       font-weight: 700;
@@ -89,6 +94,73 @@
             color: $color-primary;
           }
         }
+      }
+    }
+  }
+}
+.news-box2 {
+  .news-meta {
+    @extend %d-flex, %item-center;
+    gap: 20px;
+    a {
+      @extend %p-relative;
+      color: $color-paragraph;
+      font-weight: 600;
+      text-transform: capitalize;
+
+      &.active {
+        color: $color-primary;
+      }
+
+      &:not(:first-of-type) {
+        &::before {
+          font: var(--fa-font-solid);
+          content: "\2f";
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  .news-thumb {
+    @extend %d-block;
+    border-radius: 17px;
+    overflow: hidden;
+
+    img {
+      @include transition($transition);
+      &:hover {
+        @include transform(scale(1.1) rotate(5deg))
+      }
+    }
+  }
+  .news-body {
+    margin-top: 24px;
+    max-width: 340px;
+    .news-content {
+      .title {
+        margin-top: 8px;
+        text-transform: capitalize;
+      }
+    }
+  }
+  .news-footer {
+    margin-top: 30px;
+    line-height: 1;
+    .read-more {
+      @extend %d-flex, %item-center;
+      gap: 10px;
+      color: $color-paragraph;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: capitalize;
+      @include transition($transition);
+    }
+  }
+
+  &:hover {
+    .news-footer {
+      .read-more {
+        color: $color-primary;
       }
     }
   }

@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .team-box .social ul, .testimonial-slide, .news-box .news-footer, .news-box .news-footer .total-views, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
+.service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .team-box .social ul, .testimonial-slide, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -48,7 +48,7 @@
   position: fixed;
 }
 
-.service2.section, .service2__info, .service2__info .info .sub-title, .work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .about2__content, .about2__thumb, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
+.service2.section, .service2__info, .service2__info .info .sub-title, .work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .news-box2 .news-meta a, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .about2__content, .about2__thumb, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
   position: relative;
 }
 
@@ -110,7 +110,7 @@ h6 {
   align-items: start;
 }
 
-.service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .news-box .news-footer, .news-box .news-footer .total-views, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
+.service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -122,7 +122,7 @@ h6 {
   align-items: baseline;
 }
 
-.service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .news-box .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
+.service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .news-box .news-thumb, .news-box2 .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
   display: -webkit-block;
   display: -ms-block;
   display: block;
@@ -2167,6 +2167,66 @@ body::-webkit-scrollbar-thumb {
   transform: scale(1.25) rotate(5deg);
 }
 .news-box:hover .news-body .news-content .title a {
+  color: #e2c55d;
+}
+
+.news-box2 .news-meta {
+  gap: 20px;
+}
+.news-box2 .news-meta a {
+  color: #9d9d9d;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.news-box2 .news-meta a.active {
+  color: #e2c55d;
+}
+.news-box2 .news-meta a:not(:first-of-type)::before {
+  font: var(--fa-font-solid);
+  content: "/";
+  margin-right: 15px;
+}
+.news-box2 .news-thumb {
+  border-radius: 17px;
+  overflow: hidden;
+}
+.news-box2 .news-thumb img {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.news-box2 .news-thumb img:hover {
+  -webkit-transform: scale(1.1) rotate(5deg);
+  -ms-transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) rotate(5deg);
+}
+.news-box2 .news-body {
+  margin-top: 24px;
+  max-width: 340px;
+}
+.news-box2 .news-body .news-content .title {
+  margin-top: 8px;
+  text-transform: capitalize;
+}
+.news-box2 .news-footer {
+  margin-top: 30px;
+  line-height: 1;
+}
+.news-box2 .news-footer .read-more {
+  gap: 10px;
+  color: #9d9d9d;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.news-box2:hover .news-footer .read-more {
   color: #e2c55d;
 }
 
