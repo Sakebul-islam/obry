@@ -172,6 +172,55 @@ function initializeSwiper(containerSelector, options) {
   return new Swiper(containerSelector, options);
 }
 
+function setHoverActiveClass(
+  listenerSelector,
+  targetSelector,
+  activeClass = "active"
+) {
+  if (
+    typeof listenerSelector !== "string" ||
+    typeof targetSelector !== "string"
+  ) {
+    return;
+  }
+
+  const listeners = document.querySelectorAll(listenerSelector);
+
+  if (listeners.length === 0) {
+    return;
+  }
+
+  let currentActiveItem = listeners[0].querySelector(targetSelector); // Initially set the first target as active
+  if (!currentActiveItem) {
+    currentActiveItem = listeners[0]; // If targetSelector doesn't exist, apply active class on the listener itself
+  }
+  currentActiveItem.classList.add(activeClass); // Add active class to the first target initially
+
+  listeners.forEach((listener) => {
+    const targetElement = listener.querySelector(targetSelector) || listener; // If target doesn't exist, use listener itself
+
+    listener.addEventListener("mouseenter", function () {
+      // If there's a previously active item and it's not the current one, remove its 'active' class
+      if (currentActiveItem && currentActiveItem !== targetElement) {
+        currentActiveItem.classList.remove(activeClass);
+      }
+
+      // Add the 'active' class to the current hovered target element
+      targetElement.classList.add(activeClass);
+
+      // Update the currentActiveItem to the newly hovered target element
+      currentActiveItem = targetElement;
+    });
+
+    // Optionally: Do nothing on mouseleave (or you can choose to remove the active class)
+    listener.addEventListener("mouseleave", function () {
+      // Keep the active class on the last hovered item
+      // (no need to remove it on mouseleave if you want it to stay active until another hover happens)
+    });
+  });
+}
+
+
 function initMagnificPopup() {
   // Verify jQuery and Magnific Popup are loaded
   if (typeof jQuery === "undefined") {
@@ -229,4 +278,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setBackgroundImages();
   odometerCounter();
   initMagnificPopup();
+  setHoverActiveClass(".music-box", ".music-box", "active");
 });

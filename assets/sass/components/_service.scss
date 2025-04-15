@@ -5,6 +5,21 @@
 
 .service {
   &.section {
+    .container {
+      @extend %p-relative;
+    }
+  }
+  &__shape-1 {
+    @extend %p-absolute;
+    left: 300px;
+    top: 0;
+    img {
+      animation: forward-backward 1s linear infinite alternate;
+    }
+
+    @include breakpoint(max-md){
+      display: none;
+    }
   }
   &__header {
     @include breakpoint(xl) {
