@@ -207,7 +207,7 @@
   &:hover {
     .work-thumb {
       img {
-        @include transform(scale(1.1) rotate(5deg));
+        @include transform(scale(1.2) rotate(5deg));
       }
       .thumb-info {
         opacity: 1;
@@ -227,4 +227,123 @@
       }
     }
   }
+
+  &.v2 {
+    border-radius: 40px;
+    padding-block-end: 40px;
+
+    @include breakpoint(max-sm) {
+      padding: 15px;
+      padding-block-end: 15px;
+    }
+
+    .work-thumb {
+      @extend %p-relative;
+      border-radius: 25px;
+
+      @include breakpoint(max-md){
+        border-radius: 10px;
+      }
+      @include breakpoint(max-sm){
+        border-radius: 5px;
+      }
+
+      &::before {
+        @extend %p-absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba($color-primary, 0.65);
+        opacity: 0;
+        z-index: 1;
+        @include transition($transition);
+      }
+    }
+
+    .work-content {
+      .work-link {
+        @include breakpoint(max-sm){
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+
+    &:hover {
+      .work-thumb {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
+
+// .work-box2 {
+//   .work-content {
+//     @extend %d-flex, %justify-between, %item-center;
+//     margin-top: 28px;
+
+//     .work-info {
+//       .sub-title {
+//         @extend %d-inline-block;
+//         color: $color-paragraph;
+//         font-family: $ff-title;
+//         font-size: $fs-base;
+//         font-weight: 700;
+//         line-height: 1;
+//         letter-spacing: 0.48px;
+//         text-transform: uppercase;
+//         margin-top: 10px;
+//         @include transition($transition);
+//       }
+//     }
+//     .work-link {
+//       @extend %d-grid, %place-center, %shrink-0;
+//       width: 55px;
+//       height: 55px;
+//       border-radius: 100%;
+//       border: 2px solid rgba($color-white, 0.1);
+//       color: $color-primary;
+//       background-color: $color-body;
+//       overflow: hidden;
+
+//       svg {
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+
+//     @include breakpoint(max-sm) {
+//       margin-top: 15px;
+
+//       .work-info {
+//         .sub-title {
+//           font-size: 15px;
+//         }
+//       }
+//     }
+//   }
+//   &:hover {
+//     .work-thumb {
+//       img {
+//         @include transform(scale(1.1) rotate(5deg));
+//       }
+//       .thumb-info {
+//         opacity: 1;
+//         @include transform(scale(1));
+//       }
+//     }
+//     .work-content {
+//       .work-info {
+//         .sub-title {
+//           color: $color-primary;
+//         }
+//       }
+//       .work-link {
+//         svg {
+//           animation: forward-backward 1s linear infinite alternate;
+//         }
+//       }
+//     }
+//   }
+// }
