@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.error__content .title, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
+.service-details__content .service-list ul li, .service-details__content .share-links .tags, .service-details__content .share-links .tags .tags-list, .service-details__content .share-links .share, .service-details__content .share-links .share .share-list, .error__content .title, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -40,7 +40,7 @@
 }
 
 .service-box .service-footer .circle, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-player__player .music-player .volume-controller .voluom-track, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-velum, .music-box .music-content .music-footer .voluom-track, .testimonial2__navigation .testimonial2-next,
-.testimonial2__navigation .testimonial2-prev, .testimonial-slide .author, .pricing-box .pricing-header .header-icon, .contact__content .contact-list li svg, .about__tabs .nav-item, .about__content .notes-and-info .info .info-thumb, .social-share ul li a {
+.testimonial2__navigation .testimonial2-prev, .testimonial-slide .author, .pricing-box .pricing-header .header-icon, .contact__content .contact-list li svg, .social-share ul li a {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -49,15 +49,15 @@
   position: fixed;
 }
 
-.error.section, .error__content .sub-title, .service.section .container, .service2.section, .service2__info, .service2__info .info .sub-title, .work.section, .work-box .work-thumb, .work-box.v2 .work-thumb, .faq.section .section-header, .faq__thumb, .skill-box .skill .skill-bar, .skill-box .skill .skill-bar .skill-progress, .statistic-box2 .counter-item, .music-player__player .music-player .music-controller .music-length,
+.service-details__content .service-video, .error.section, .error__content .sub-title, .service.section .container, .service2.section, .service2__info, .service2__info .info .sub-title, .work.section, .work-box .work-thumb, .work-box.v2 .work-thumb, .faq.section .section-header, .faq__thumb, .skill-box .skill .skill-bar, .skill-box .skill .skill-bar .skill-progress, .statistic-box2 .counter-item, .music-player__player .music-player .music-controller .music-length,
 .music-player__player .music-player .music-controller .music-duration, .music.section, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-length,
-.music-box .music-content .music-footer .music-duration, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .news-box2 .news-meta a, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .about2.section, .about2__content, .about2__thumb, .about3.section, .about3__content, .about3__main-content, .about3__thumb, .about3__thumb .thumb-1, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
+.music-box .music-content .music-footer .music-duration, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .news-box2 .news-meta a, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
   position: relative;
 }
 
-.error__content .sub-title::before, .error__content .sub-title::after, .service__shape-1, .service2__bg, .service2__info .info .sub-title::after, .service2__info .info-bg, .work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .work-box.v2 .work-thumb::before, .faq.section .section-header img, .faq__thumb .info, .skill-box .skill .skill-bar .skill-progress .skill-count, .statistic-box2 .counter-item::before, .quote__slider .quote__pagination, .music-player__player .music-player .music-controller .music-length span,
+.service-details__content .service-video .play-btn, .error__content .sub-title::before, .error__content .sub-title::after, .service__shape-1, .service2__bg, .service2__info .info .sub-title::after, .service2__info .info-bg, .work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .work-box.v2 .work-thumb::before, .faq.section .section-header img, .faq__thumb .info, .skill-box .skill .skill-bar .skill-progress .skill-count, .statistic-box2 .counter-item::before, .quote__slider .quote__pagination, .music-player__player .music-player .music-controller .music-length span,
 .music-player__player .music-player .music-controller .music-duration span, .music__shape, .music-box .music-content .music-footer .play i, .music-box .music-content .music-footer .music-length span,
-.music-box .music-content .music-footer .music-duration span, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .about3__content .shape, .about3__thumb .thumb-1::before, .about3__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
+.music-box .music-content .music-footer .music-duration span, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .play-btn, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
   position: absolute;
   content: "";
 }
@@ -92,7 +92,7 @@ h6 {
   justify-content: center;
 }
 
-.service-box .service-header, .work-box .work-content, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .testimonial-slide, .news-box .news-footer, .pricing-box .pricing-header, .pricing-box2, .about__tabs, .about__content .notes-and-info .info {
+.service-box .service-header, .work-box .work-content, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .testimonial-slide, .news-box .news-footer, .pricing-box .pricing-header, .pricing-box2 {
   -webkit-box-pack: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
@@ -105,18 +105,17 @@ h6 {
 }
 
 .service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .testimonial2__navigation .testimonial2-next,
-.testimonial2__navigation .testimonial2-prev, .pricing-box .pricing-header .header-icon, .pricing2__brands-area .brands .img, .about__content .notes-and-info .info .info-content .avatars img,
-.about__content .notes-and-info .info .info-content .avatars a, .social-share ul li a {
+.testimonial2__navigation .testimonial2-prev, .pricing-box .pricing-header .header-icon, .pricing2__brands-area .brands .img, .social-share ul li a {
   place-content: center;
 }
 
-.music-box .music-content .music-heder, .about__content .notes-and-info .info {
+.music-box .music-content .music-heder {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
 }
 
-.error__content .title, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .contact__content .contact-list li, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
+.service-details__content .service-list ul li, .service-details__content .share-links .tags, .service-details__content .share-links .share, .error__content .title, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .contact__content .contact-list li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -128,7 +127,7 @@ h6 {
   align-items: baseline;
 }
 
-.service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .skill-box .skill .title, .testimonial-slide2 .author .author-info .designation, .news-box .news-thumb, .news-box2 .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
+.service-details__content .service-video video, .service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .skill-box .skill .title, .testimonial-slide2 .author .author-info .designation, .news-box .news-thumb, .news-box2 .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
   display: -webkit-block;
   display: -ms-block;
   display: block;
@@ -136,15 +135,14 @@ h6 {
 
 .error__content .sub-title, .service2__info .info .sub-title, .service-box .service-footer .line, .work-box .work-content .work-info .sub-title, .skill-box .skill .skill-bar .skill-progress .skill-count, .statistic__box .content .info, .music-player__player .music-player .music-controller .music-length,
 .music-player__player .music-player .music-controller .music-duration, .music-box .music-content .music-footer .music-length,
-.music-box .music-content .music-footer .music-duration, .team-box .team-content .designation, .news-box .news-footer .dates, .about__content .notes-and-info .info .info-content span, .footer__center.common .footer-info .footer-logo, .footer__center.common .footer-info .contact-info .contact .open-time, .section-sub-title, .section-title .highlight {
+.music-box .music-content .music-footer .music-duration, .team-box .team-content .designation, .news-box .news-footer .dates, .footer__center.common .footer-info .footer-logo, .footer__center.common .footer-info .contact-info .contact .open-time, .section-sub-title, .section-title .highlight {
   display: -webkit-inline-block;
   display: -ms-inline-block;
   display: inline-block;
 }
 
 .service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .testimonial2__navigation .testimonial2-next,
-.testimonial2__navigation .testimonial2-prev, .pricing-box .pricing-header .header-icon, .pricing2__boxes, .pricing2__brands-area .brands, .pricing2__brands-area .brands .img, .about__content .notes-and-info .info .info-content .avatars img,
-.about__content .notes-and-info .info .info-content .avatars a, .footer-widgets .instagram, .social-share ul li a {
+.testimonial2__navigation .testimonial2-prev, .pricing-box .pricing-header .header-icon, .pricing2__boxes, .pricing2__brands-area .brands, .pricing2__brands-area .brands .img, .footer-widgets .instagram, .social-share ul li a {
   display: -webkit-grid;
   display: -ms-grid;
   display: grid;
@@ -167,7 +165,7 @@ h6 {
   text-transform: uppercase;
 }
 
-.service-box2 .service-content .service-title, .service-box2 .service-content p {
+.service-details__content p, .service-details__content .service-title, .service-details__content .service-list ul li, .service-box2 .service-content .service-title, .service-box2 .service-content p {
   text-transform: capitalize;
 }
 
@@ -1494,480 +1492,6 @@ body::-webkit-scrollbar-thumb {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-
-.about.section .shape-1 {
-  left: 117px;
-  bottom: 35px;
-  animation: carve-rotate 2.5s linear infinite alternate;
-}
-.about.section .shape-2 {
-  top: 50px;
-  right: 5px;
-}
-@media only screen and (max-width: 575.98px) {
-  .about.section .shape-1,
-  .about.section .shape-2 {
-    display: none;
-  }
-}
-.about__tabs {
-  margin-top: 40px;
-  row-gap: 10px;
-  column-gap: 20px;
-  overflow: hidden;
-}
-@media only screen and (max-width: 575.98px) {
-  .about__tabs {
-    column-gap: 10px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-}
-.about__tabs .nav-item {
-  z-index: 2;
-}
-.about__tabs .nav-item:not(:last-of-type)::after {
-  left: 95%;
-  top: 50%;
-  width: 500%;
-  height: 3px;
-  background-color: #e2c55d;
-  z-index: -1;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-@media only screen and (max-width: 575.98px) {
-  .about__tabs .nav-item:not(:last-of-type)::after {
-    content: unset;
-  }
-}
-.about__tabs .nav-item .nav-link {
-  color: #9d9d9d;
-  font-family: "Rubik", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 41px;
-  text-transform: uppercase;
-  background-color: #0e0e0e;
-  border: 2.5px solid #e2c55d;
-  border-radius: 50px;
-  padding: 0 35px;
-  white-space: nowrap;
-  width: 100%;
-}
-.about__tabs .nav-item .nav-link[disabled] {
-  border-radius: 6px;
-  background-color: #e2c55d;
-  color: #1a1a1a;
-  margin-left: 7px;
-  width: calc(100% - 7px);
-}
-.about__tabs .nav-item .nav-link[disabled]::before {
-  width: 3px;
-  height: 100%;
-  left: -9px;
-  top: 0;
-  border-radius: 6px;
-  background: #e2c55d;
-}
-.about__tabs .nav-item .nav-link[disabled].active {
-  color: #1a1a1a;
-}
-.about__tabs .nav-item .nav-link.active {
-  color: #e2c55d;
-}
-@media only screen and (max-width: 575.98px) {
-  .about__tabs .nav-item {
-    width: calc((100% - 20px) / 2);
-  }
-}
-@media only screen and (max-width: 374.98px) {
-  .about__tabs .nav-item {
-    width: 100%;
-  }
-}
-.about__content-container:focus-visible,
-.about__content-container :focus {
-  border: none;
-  box-shadow: none;
-  outline: none;
-}
-@media only screen and (min-width: 1200px) {
-  .about__content .section-title {
-    max-width: 490px;
-    width: 100%;
-  }
-}
-.about__content p {
-  max-width: 573px;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 175%;
-  text-transform: capitalize;
-  margin-top: 30px;
-}
-@media only screen and (max-width: 767.98px) {
-  .about__content p {
-    margin-top: 20px;
-  }
-}
-.about__content .notes-and-info {
-  padding-top: 32px;
-}
-@media only screen and (max-width: 767.98px) {
-  .about__content .notes-and-info {
-    padding-top: 20px;
-  }
-}
-.about__content .notes-and-info .note .note-title {
-  font-size: 20px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.about__content .notes-and-info .note .note-list {
-  margin-top: 18px;
-}
-@media only screen and (max-width: 767.98px) {
-  .about__content .notes-and-info .note .note-list {
-    margin-top: 10px;
-  }
-}
-.about__content .notes-and-info .note .note-list li {
-  gap: 10px;
-  color: #9d9d9d;
-  font-weight: 500;
-  line-height: 175%;
-  text-transform: capitalize;
-}
-.about__content .notes-and-info .note .note-list li i {
-  color: #e2c55d;
-}
-.about__content .notes-and-info .note .note-list li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-.about__content .notes-and-info .info {
-  gap: 40px;
-}
-.about__content .notes-and-info .info .info-thumb {
-  border-radius: 19px;
-  overflow: hidden;
-  max-width: 127px;
-  width: 100%;
-}
-.about__content .notes-and-info .info .info-content .info-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 150%;
-  text-transform: capitalize;
-}
-.about__content .notes-and-info .info .info-content span {
-  color: #9d9d9d;
-  font-weight: 500;
-  line-height: 24px;
-  text-transform: capitalize;
-}
-.about__content .notes-and-info .info .info-content .avatars {
-  margin-top: 10px;
-}
-.about__content .notes-and-info .info .info-content .avatars img,
-.about__content .notes-and-info .info .info-content .avatars a {
-  width: 47.5px;
-  height: 47.5px;
-  border-radius: 100%;
-  border: 3px solid #0e0e0e;
-  color: #282d32;
-  background-color: #e2c55d;
-  overflow: hidden;
-}
-.about__content .notes-and-info .info .info-content .avatars img:not(:first-of-type) {
-  margin-left: -10px;
-}
-.about__content .notes-and-info .info .info-content .avatars a {
-  margin-left: -10px;
-}
-.about__content .btn-primary {
-  margin-top: 40px;
-}
-@media only screen and (max-width: 767.98px) {
-  .about__content .btn-primary {
-    margin-top: 30px;
-  }
-}
-.about__content .btn-primary .btn-wrapper {
-  background: linear-gradient(90deg, #e2c55d 0%, #8e7d3f 100%);
-  color: #282d32;
-}
-.about__content .btn-primary .btn-wrapper span {
-  color: #000;
-}
-.about__thumb {
-  max-width: 580px;
-  width: 100%;
-  margin-left: auto;
-  z-index: 2;
-}
-.about__thumb .thumb-bg {
-  width: 100%;
-  max-height: 523px;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  background: #1e2225;
-  border-radius: 50px 240px 0px 0px;
-}
-.about__thumb .thumb-bg::after {
-  inset: 0;
-  z-index: -2;
-  background-color: #e2c55d;
-  border-radius: 50px 300px 0px 0px;
-}
-.about__thumb .thumb-bg img {
-  top: -60px;
-  left: -60px;
-  animation: rotate 4.5s linear infinite;
-}
-@media only screen and (max-width: 575.98px) {
-  .about__thumb .thumb-bg {
-    border-radius: 50px 100px 0px 0px;
-  }
-  .about__thumb .thumb-bg::after {
-    border-radius: 50px 150px 0px 0px;
-  }
-}
-
-.about2.section {
-  z-index: 2;
-}
-.about2__bg {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  width: 100%;
-}
-.about2__bg img {
-  object-fit: cover;
-}
-.about2__content {
-  padding: 0;
-}
-.about2__content p {
-  margin-top: 33px;
-}
-@media only screen and (max-width: 767.98px) {
-  .about2__content p {
-    margin-top: 20px;
-  }
-}
-.about2__content .analysis {
-  margin-top: 25px;
-}
-.about2__content .analysis .title {
-  font-size: 20px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.about2__content .analysis ul {
-  margin-top: 16px;
-}
-.about2__content .analysis ul li {
-  gap: 10px;
-  color: #9d9d9d;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: capitalize;
-}
-.about2__content .analysis ul li i {
-  color: #e2c55d;
-}
-.about2__content .shape {
-  right: 0;
-  bottom: 0;
-}
-@media only screen and (max-width: 575.98px) {
-  .about2__content .shape {
-    display: none;
-  }
-}
-.about2__thumb {
-  padding-left: 170px;
-  z-index: 2;
-}
-@media only screen and (max-width: 1199.98px) {
-  .about2__thumb {
-    padding-left: 80px;
-  }
-}
-@media only screen and (max-width: 991.98px) {
-  .about2__thumb {
-    padding-left: 0px;
-  }
-}
-.about2__thumb .thumb-1 img {
-  border-radius: 29px;
-  background: #171a1b;
-  padding: 20px;
-}
-@media only screen and (min-width: 1400px) {
-  .about2__thumb .thumb-1 img {
-    max-width: 450px;
-  }
-}
-@media only screen and (max-width: 1199.98px) {
-  .about2__thumb .thumb-1 img {
-    padding: 10px;
-  }
-}
-.about2__thumb .thumb-2 {
-  left: 0;
-  bottom: -58px;
-  z-index: -1;
-}
-@media only screen and (min-width: 1400px) {
-  .about2__thumb .thumb-2 {
-    left: 20px;
-    max-width: 280px;
-  }
-}
-@media only screen and (max-width: 1199.98px) {
-  .about2__thumb .thumb-2 {
-    max-width: 200px;
-  }
-}
-@media only screen and (max-width: 991.98px) {
-  .about2__thumb .thumb-2 {
-    position: relative;
-    bottom: 0px;
-    max-width: 100%;
-  }
-  .about2__thumb .thumb-2 img {
-    width: 100%;
-  }
-}
-.about2__thumb .thumb-2 img {
-  border-radius: 29px;
-  background: #171a1b;
-  padding: 20px;
-}
-@media only screen and (max-width: 1199.98px) {
-  .about2__thumb .thumb-2 img {
-    padding: 10px;
-  }
-}
-
-.about3.section {
-  z-index: 2;
-  overflow: hidden;
-}
-.about3__content {
-  padding: 0;
-}
-.about3__content p {
-  margin-top: 33px;
-}
-@media only screen and (max-width: 767.98px) {
-  .about3__content p {
-    margin-top: 20px;
-  }
-}
-.about3__content .analysis {
-  margin-top: 25px;
-}
-.about3__content .analysis .title {
-  font-size: 20px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.about3__content .analysis ul {
-  margin-top: 16px;
-}
-.about3__content .analysis ul li {
-  gap: 10px;
-  color: #9d9d9d;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: capitalize;
-}
-.about3__content .analysis ul li i {
-  color: #e2c55d;
-}
-.about3__content .shape {
-  right: -120px;
-  bottom: 0;
-}
-@media only screen and (max-width: 991.98px) {
-  .about3__content .shape {
-    display: none;
-  }
-}
-.about3__main-content {
-  padding-left: 75px;
-}
-@media only screen and (max-width: 991.98px) {
-  .about3__main-content {
-    padding-left: 40px;
-  }
-}
-@media only screen and (max-width: 575.98px) {
-  .about3__main-content {
-    padding-left: 30px;
-  }
-}
-.about3__thumb {
-  height: 100%;
-}
-.about3__thumb .thumb-1 {
-  padding-top: 10px;
-  padding-left: 10px;
-  z-index: 2;
-  padding-bottom: 50px;
-}
-@media only screen and (max-width: 991.98px) {
-  .about3__thumb .thumb-1 {
-    margin-bottom: 15px;
-    padding-bottom: 0px;
-  }
-}
-.about3__thumb .thumb-1 img {
-  width: 100%;
-  max-width: 475px;
-}
-@media only screen and (max-width: 767.98px) {
-  .about3__thumb .thumb-1 img {
-    max-width: 100%;
-  }
-}
-.about3__thumb .thumb-1::before {
-  z-index: -1;
-  width: 154px;
-  height: 152px;
-  left: 0;
-  top: 0;
-  background-color: #e2c55d;
-}
-.about3__thumb .thumb-2 {
-  z-index: 2;
-  bottom: 0;
-  right: 0;
-  border-right: 8px solid #e2c55d;
-}
-@media only screen and (max-width: 991.98px) {
-  .about3__thumb .thumb-2 {
-    position: unset;
-  }
-}
-.about3__thumb .thumb-2 img {
-  width: 100%;
-}
-@media only screen and (max-width: 767.98px) {
-  .about3__thumb .thumb-2 img {
-    max-width: 100%;
-  }
 }
 
 .contact__content {
@@ -4422,6 +3946,219 @@ body::-webkit-scrollbar-thumb {
   .error__content a {
     margin-top: 20px;
   }
+}
+
+.service-details__content .p-mb {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 767.98px) {
+  .service-details__content .p-mb {
+    margin-bottom: 20px;
+  }
+}
+.service-details__content p {
+  font-weight: 500;
+}
+.service-details__content .service-title {
+  margin-bottom: 12px;
+}
+@media only screen and (max-width: 767.98px) {
+  .service-details__content .service-title {
+    margin-bottom: 10px;
+  }
+}
+.service-details__content .service-thumb {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+@media only screen and (max-width: 767.98px) {
+  .service-details__content .service-thumb {
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+}
+.service-details__content .service-list {
+  margin-block: 20px 30px;
+}
+@media only screen and (max-width: 767.98px) {
+  .service-details__content .service-list {
+    margin-block: 10px 20px;
+  }
+}
+.service-details__content .service-list ul li {
+  gap: 10px;
+  color: #9d9d9d;
+}
+.service-details__content .service-list ul li:not(:last-of-type) {
+  margin-bottom: 3px;
+}
+.service-details__content .service-list ul li i,
+.service-details__content .service-list ul li svg {
+  color: #e2c55d;
+}
+.service-details__content .service-sub-title {
+  margin-bottom: 22px;
+}
+@media only screen and (max-width: 767.98px) {
+  .service-details__content .service-sub-title {
+    margin-bottom: 15px;
+  }
+}
+.service-details__content .service-video video {
+  width: 100%;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 991.98px) {
+  .service-details__content .service-video video {
+    border-radius: 10px;
+  }
+}
+.service-details__content .service-video video.pointer {
+  cursor: pointer;
+}
+.service-details__content .service-video .play-btn {
+  left: 50%;
+  top: 50%;
+  border: none;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  color: #ffffff;
+  background-color: rgba(226, 197, 93, 0.2);
+  backdrop-filter: blur(45px);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.service-details__content .service-video .play-btn i,
+.service-details__content .service-video .play-btn svg {
+  font-size: 36px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .service-details__content .service-video .play-btn {
+    width: 100px;
+    height: 100px;
+  }
+  .service-details__content .service-video .play-btn i,
+  .service-details__content .service-video .play-btn svg {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .service-details__content .service-video .play-btn {
+    width: 80px;
+    height: 80px;
+  }
+  .service-details__content .service-video .play-btn i,
+  .service-details__content .service-video .play-btn svg {
+    font-size: 25px;
+  }
+}
+.service-details__content .service-video .play-btn.disabled {
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+}
+.service-details__content .share-links {
+  padding-top: 27px;
+  border-top: 4px double rgba(255, 255, 255, 0.15);
+  margin-top: 85px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .service-details__content .share-links {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .service-details__content .share-links {
+    margin-top: 40px;
+  }
+}
+.service-details__content .share-links .tags {
+  gap: 12px;
+}
+.service-details__content .share-links .tags .title {
+  color: #e2c55d;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 575.98px) {
+  .service-details__content .share-links .tags .title {
+    font-size: 14px;
+  }
+}
+.service-details__content .share-links .tags .tags-list {
+  gap: 10px;
+}
+.service-details__content .share-links .tags .tags-list a {
+  color: #9d9d9d;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 575.98px) {
+  .service-details__content .share-links .tags .tags-list a {
+    font-size: 14px;
+  }
+}
+.service-details__content .share-links .tags .tags-list a:hover {
+  color: #e2c55d;
+}
+.service-details__content .share-links .share {
+  gap: 12px;
+}
+.service-details__content .share-links .share .title {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #9d9d9d;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 575.98px) {
+  .service-details__content .share-links .share .title {
+    font-size: 14px;
+  }
+}
+.service-details__content .share-links .share .share-list {
+  gap: 10px;
+}
+.service-details__content .share-links .share .share-list a {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #9d9d9d;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 575.98px) {
+  .service-details__content .share-links .share .share-list a {
+    font-size: 14px;
+  }
+}
+.service-details__content .share-links .share .share-list a:hover {
+  color: #e2c55d;
 }
 
 /*--------------------------------------------------------------
