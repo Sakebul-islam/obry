@@ -289,7 +289,7 @@
 
 .about2 {
   &.section {
-    position: relative;
+    @extend %p-relative;
     z-index: 2;
   }
   &__bg {
@@ -356,10 +356,9 @@
     @include breakpoint(max-xl) {
       padding-left: 80px;
     }
-    @include breakpoint(max-lg){
+    @include breakpoint(max-lg) {
       padding-left: 0px;
     }
-
 
     .thumb-1 {
       img {
@@ -367,6 +366,9 @@
         background: $color-1;
         padding: 20px;
 
+        @include breakpoint(xxl) {
+          max-width: 450px;
+        }
         @include breakpoint(max-xl) {
           padding: 10px;
         }
@@ -377,11 +379,15 @@
       left: 0;
       bottom: -58px;
       z-index: -1;
-      
+
+      @include breakpoint(xxl) {
+        left: 20px;
+        max-width: 280px;
+      }
       @include breakpoint(max-xl) {
         max-width: 200px;
       }
-      @include breakpoint(max-lg){
+      @include breakpoint(max-lg) {
         position: relative;
         bottom: 0px;
         max-width: 100%;
@@ -398,7 +404,124 @@
         @include breakpoint(max-xl) {
           padding: 10px;
         }
-  
+      }
+    }
+  }
+}
+
+.about3 {
+  &.section {
+    @extend %p-relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+  &__content {
+    @extend %p-relative;
+    padding: 0;
+
+    p {
+      margin-top: 33px;
+
+      @include breakpoint(max-md) {
+        margin-top: 20px;
+      }
+    }
+    .analysis {
+      margin-top: 25px;
+      .title {
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      ul {
+        margin-top: 16px;
+        li {
+          @extend %d-flex, %item-center;
+          gap: 10px;
+          color: $color-paragraph;
+          font-size: 16px;
+          font-weight: 500;
+          text-transform: capitalize;
+
+          i {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+    .shape {
+      @extend %p-absolute;
+      right: -120px;
+      bottom: 0;
+
+      @include breakpoint(max-lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__main-content {
+    @extend %p-relative;
+    padding-left: 75px;
+
+    @include breakpoint(max-lg) {
+      padding-left: 40px;
+    }
+    @include breakpoint(max-sm) {
+      padding-left: 30px;
+    }
+  }
+
+  &__thumb {
+    @extend %p-relative;
+    height: 100%;
+
+    .thumb-1 {
+      @extend %p-relative;
+      padding-top: 10px;
+      padding-left: 10px;
+      z-index: 2;
+      padding-bottom: 50px;
+      @include breakpoint(max-lg) {
+        margin-bottom: 15px;
+        padding-bottom: 0px;
+      }
+      img {
+        width: 100%;
+        max-width: 475px;
+
+        @include breakpoint(max-md) {
+          max-width: 100%;
+        }
+      }
+
+      &::before {
+        @extend %p-absolute;
+        z-index: -1;
+        width: 154px;
+        height: 152px;
+        left: 0;
+        top: 0;
+        background-color: $color-primary;
+      }
+    }
+    .thumb-2 {
+      @extend %p-absolute;
+      z-index: 2;
+      bottom: 0;
+      right: 0;
+      border-right: 8px solid $color-primary;
+
+      @include breakpoint(max-lg) {
+        position: unset;
+      }
+
+      img {
+        width: 100%;
+        @include breakpoint(max-md) {
+          max-width: 100%;
+        }
       }
     }
   }

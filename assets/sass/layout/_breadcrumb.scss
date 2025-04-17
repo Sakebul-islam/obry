@@ -1,0 +1,64 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.breadcrumb {
+  &.section {
+    padding-block: 250px 185px;
+    margin: 0;
+    
+    @include breakpoint(max-xl){
+        padding-block: 200px 130px;
+        background-position: left;
+    }
+    @include breakpoint(max-md){
+        padding-block: 150px 100px;
+        background-position: right center;
+    }
+  }
+  &-title {
+    @extend %text-uppercase;
+    font-size: $fs-h2;
+    // $fs-h2: 50px;
+
+    @include breakpoint(max-xxl) {
+      font-size: calc($fs-h2 - 5px); // 45px
+    }
+    @include breakpoint(max-xl) {
+      font-size: calc($fs-h2 - 10px); // 40px
+    }
+    @include breakpoint(max-lg) {
+      font-size: calc($fs-h2 - 15px); // 35px
+    }
+    @include breakpoint(max-md) {
+      font-size: calc($fs-h2 - 20px); // 30px
+    }
+    @include breakpoint(max-sm) {
+      font-size: calc($fs-h2 - 25px); // 25px
+    }
+  }
+
+  &-nav {
+    .breadcrumb {
+      li {
+        color: $color-paragraph;
+        font-family: $ff-title;
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        a {
+          @include transition($transition);
+          &:hover {
+            color: $color-primary;
+          }
+        }
+
+        &.active {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
+.service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -31,7 +31,7 @@
   display: inline-flex;
 }
 
-.service__shapes, .pricing-box .pricing-header .header-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul {
+.service__shapes, .testimonial-slide2, .pricing-box .pricing-header .header-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul {
   flex-direction: column;
   -webkit-flex-direction: column;
   -webkit-box-orient: vertical;
@@ -39,7 +39,8 @@
   -ms-flex-direction: column;
 }
 
-.service-box .service-footer .circle, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-velum, .music-box .music-content .music-footer .voluom-track, .testimonial-slide .author, .pricing-box .pricing-header .header-icon, .about__tabs .nav-item, .about__content .notes-and-info .info .info-thumb, .social-share ul li a {
+.service-box .service-footer .circle, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-player__player .music-player .volume-controller .voluom-track, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-velum, .music-box .music-content .music-footer .voluom-track, .testimonial2__navigation .testimonial2-next,
+.testimonial2__navigation .testimonial2-prev, .testimonial-slide .author, .pricing-box .pricing-header .header-icon, .about__tabs .nav-item, .about__content .notes-and-info .info .info-thumb, .social-share ul li a {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -48,13 +49,15 @@
   position: fixed;
 }
 
-.service.section .container, .service2.section, .service2__info, .service2__info .info .sub-title, .work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .music.section, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-length,
-.music-box .music-content .music-footer .music-duration, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .news-box2 .news-meta a, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .about2__content, .about2__thumb, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
+.service.section .container, .service2.section, .service2__info, .service2__info .info .sub-title, .work.section, .work-box .work-thumb, .faq.section .section-header, .faq__thumb, .skill-box .skill .skill-bar, .skill-box .skill .skill-bar .skill-progress, .statistic-box2 .counter-item, .music-player__player .music-player .music-controller .music-length,
+.music-player__player .music-player .music-controller .music-duration, .music.section, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-length,
+.music-box .music-content .music-footer .music-duration, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .news-box2 .news-meta a, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .about2.section, .about2__content, .about2__thumb, .about3.section, .about3__content, .about3__main-content, .about3__thumb, .about3__thumb .thumb-1, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
   position: relative;
 }
 
-.service__shape-1, .service2__bg, .service2__info .info .sub-title::after, .service2__info .info-bg, .work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .quote__slider .quote__pagination, .music__shape, .music-box .music-content .music-footer .play i, .music-box .music-content .music-footer .music-length span,
-.music-box .music-content .music-footer .music-duration span, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
+.service__shape-1, .service2__bg, .service2__info .info .sub-title::after, .service2__info .info-bg, .work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .faq.section .section-header img, .faq__thumb .info, .skill-box .skill .skill-bar .skill-progress .skill-count, .statistic-box2 .counter-item::before, .quote__slider .quote__pagination, .music-player__player .music-player .music-controller .music-length span,
+.music-player__player .music-player .music-controller .music-duration span, .music__shape, .music-box .music-content .music-footer .play i, .music-box .music-content .music-footer .music-length span,
+.music-box .music-content .music-footer .music-duration span, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .about3__content .shape, .about3__thumb .thumb-1::before, .about3__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
   position: absolute;
   content: "";
 }
@@ -101,7 +104,8 @@ h6 {
   justify-content: flex-end;
 }
 
-.service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .pricing-box .pricing-header .header-icon, .pricing2__brands-area .brands .img, .about__content .notes-and-info .info .info-content .avatars img,
+.service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .testimonial2__navigation .testimonial2-next,
+.testimonial2__navigation .testimonial2-prev, .pricing-box .pricing-header .header-icon, .pricing2__brands-area .brands .img, .about__content .notes-and-info .info .info-content .avatars img,
 .about__content .notes-and-info .info .info-content .avatars a, .social-share ul li a {
   place-content: center;
 }
@@ -112,7 +116,7 @@ h6 {
   align-items: start;
 }
 
-.service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .statistic__box, .statistic__box .content .counter-item, .quote-box .quote-footer .author, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
+.service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -124,20 +128,22 @@ h6 {
   align-items: baseline;
 }
 
-.service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .news-box .news-thumb, .news-box2 .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
+.service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .skill-box .skill .title, .testimonial-slide2 .author .author-info .designation, .news-box .news-thumb, .news-box2 .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
   display: -webkit-block;
   display: -ms-block;
   display: block;
 }
 
-.service2__info .info .sub-title, .service-box .service-footer .line, .work-box .work-content .work-info .sub-title, .statistic__box .content .info, .music-box .music-content .music-footer .music-length,
+.service2__info .info .sub-title, .service-box .service-footer .line, .work-box .work-content .work-info .sub-title, .skill-box .skill .skill-bar .skill-progress .skill-count, .statistic__box .content .info, .music-player__player .music-player .music-controller .music-length,
+.music-player__player .music-player .music-controller .music-duration, .music-box .music-content .music-footer .music-length,
 .music-box .music-content .music-footer .music-duration, .team-box .team-content .designation, .news-box .news-footer .dates, .about__content .notes-and-info .info .info-content span, .footer__center.common .footer-info .footer-logo, .footer__center.common .footer-info .contact-info .contact .open-time, .section-sub-title, .section-title .highlight {
   display: -webkit-inline-block;
   display: -ms-inline-block;
   display: inline-block;
 }
 
-.service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .statistic__box .icon-box, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .pricing-box .pricing-header .header-icon, .pricing2__boxes, .pricing2__brands-area .brands, .pricing2__brands-area .brands .img, .about__content .notes-and-info .info .info-content .avatars img,
+.service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .testimonial2__navigation .testimonial2-next,
+.testimonial2__navigation .testimonial2-prev, .pricing-box .pricing-header .header-icon, .pricing2__boxes, .pricing2__brands-area .brands, .pricing2__brands-area .brands .img, .about__content .notes-and-info .info .info-content .avatars img,
 .about__content .notes-and-info .info .info-content .avatars a, .footer-widgets .instagram, .social-share ul li a {
   display: -webkit-grid;
   display: -ms-grid;
@@ -145,19 +151,19 @@ h6 {
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
-.testimonial-slide .author {
+.statistic-box2 .counter-item, .testimonial-slide .author {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 
-.music-box .music-thumb, .music-box .music-content, .music-box .music-content .music-footer .music-track, .music-box .music-content .music-footer .music-controller {
+.music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .music-controller .music-track, .music-box .music-thumb, .music-box .music-content, .music-box .music-content .music-footer .music-track, .music-box .music-content .music-footer .music-controller {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.service2__info .info .sub-title, .service2__info .info .title {
+.service2__info .info .sub-title, .service2__info .info .title, .breadcrumb-title {
   text-transform: uppercase;
 }
 
@@ -226,13 +232,13 @@ ul {
   }
 }
 @media only screen and (min-width: 1400px) {
-  .container-xxl.hero-container,
-  .container-xl.hero-container,
-  .container-lg.hero-container,
-  .container-md.hero-container,
-  .container-sm.hero-container,
-  .container.hero-container {
-    max-width: 1669px;
+  .container-xxl.container-testimonial,
+  .container-xl.container-testimonial,
+  .container-lg.container-testimonial,
+  .container-md.container-testimonial,
+  .container-sm.container-testimonial,
+  .container.container-testimonial {
+    max-width: 1464px;
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -1131,6 +1137,71 @@ body::-webkit-scrollbar-thumb {
 # Components CSS
 # Pages CSS
 --------------------------------------------------------------*/
+.breadcrumb.section {
+  padding-block: 250px 185px;
+  margin: 0;
+}
+@media only screen and (max-width: 1199.98px) {
+  .breadcrumb.section {
+    padding-block: 200px 130px;
+    background-position: left;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .breadcrumb.section {
+    padding-block: 150px 100px;
+    background-position: right center;
+  }
+}
+.breadcrumb-title {
+  font-size: 50px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .breadcrumb-title {
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width: 1199.98px) {
+  .breadcrumb-title {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .breadcrumb-title {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .breadcrumb-title {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .breadcrumb-title {
+    font-size: 25px;
+  }
+}
+.breadcrumb-nav .breadcrumb li {
+  color: #9d9d9d;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.breadcrumb-nav .breadcrumb li a {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.breadcrumb-nav .breadcrumb li a:hover {
+  color: #e2c55d;
+}
+.breadcrumb-nav .breadcrumb li.active {
+  color: #e2c55d;
+}
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -1669,7 +1740,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about2.section {
-  position: relative;
   z-index: 2;
 }
 .about2__bg {
@@ -1742,6 +1812,11 @@ body::-webkit-scrollbar-thumb {
   background: #171a1b;
   padding: 20px;
 }
+@media only screen and (min-width: 1400px) {
+  .about2__thumb .thumb-1 img {
+    max-width: 450px;
+  }
+}
 @media only screen and (max-width: 1199.98px) {
   .about2__thumb .thumb-1 img {
     padding: 10px;
@@ -1751,6 +1826,12 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   bottom: -58px;
   z-index: -1;
+}
+@media only screen and (min-width: 1400px) {
+  .about2__thumb .thumb-2 {
+    left: 20px;
+    max-width: 280px;
+  }
 }
 @media only screen and (max-width: 1199.98px) {
   .about2__thumb .thumb-2 {
@@ -1775,6 +1856,116 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 1199.98px) {
   .about2__thumb .thumb-2 img {
     padding: 10px;
+  }
+}
+
+.about3.section {
+  z-index: 2;
+  overflow: hidden;
+}
+.about3__content {
+  padding: 0;
+}
+.about3__content p {
+  margin-top: 33px;
+}
+@media only screen and (max-width: 767.98px) {
+  .about3__content p {
+    margin-top: 20px;
+  }
+}
+.about3__content .analysis {
+  margin-top: 25px;
+}
+.about3__content .analysis .title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.about3__content .analysis ul {
+  margin-top: 16px;
+}
+.about3__content .analysis ul li {
+  gap: 10px;
+  color: #9d9d9d;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.about3__content .analysis ul li i {
+  color: #e2c55d;
+}
+.about3__content .shape {
+  right: -120px;
+  bottom: 0;
+}
+@media only screen and (max-width: 991.98px) {
+  .about3__content .shape {
+    display: none;
+  }
+}
+.about3__main-content {
+  padding-left: 75px;
+}
+@media only screen and (max-width: 991.98px) {
+  .about3__main-content {
+    padding-left: 40px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .about3__main-content {
+    padding-left: 30px;
+  }
+}
+.about3__thumb {
+  height: 100%;
+}
+.about3__thumb .thumb-1 {
+  padding-top: 10px;
+  padding-left: 10px;
+  z-index: 2;
+  padding-bottom: 50px;
+}
+@media only screen and (max-width: 991.98px) {
+  .about3__thumb .thumb-1 {
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+  }
+}
+.about3__thumb .thumb-1 img {
+  width: 100%;
+  max-width: 475px;
+}
+@media only screen and (max-width: 767.98px) {
+  .about3__thumb .thumb-1 img {
+    max-width: 100%;
+  }
+}
+.about3__thumb .thumb-1::before {
+  z-index: -1;
+  width: 154px;
+  height: 152px;
+  left: 0;
+  top: 0;
+  background-color: #e2c55d;
+}
+.about3__thumb .thumb-2 {
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  border-right: 8px solid #e2c55d;
+}
+@media only screen and (max-width: 991.98px) {
+  .about3__thumb .thumb-2 {
+    position: unset;
+  }
+}
+.about3__thumb .thumb-2 img {
+  width: 100%;
+}
+@media only screen and (max-width: 767.98px) {
+  .about3__thumb .thumb-2 img {
+    max-width: 100%;
   }
 }
 
@@ -2319,6 +2510,28 @@ body::-webkit-scrollbar-thumb {
   background-color: #e2c55d;
 }
 
+.testimonial2__slider {
+  max-width: 1022.13px;
+}
+.testimonial2__navigation .testimonial2-next,
+.testimonial2__navigation .testimonial2-prev {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #0e0e0e;
+}
+.testimonial2__navigation .testimonial2-next.active,
+.testimonial2__navigation .testimonial2-prev.active {
+  background-color: #e2c55d;
+}
+@media only screen and (max-width: 575.98px) {
+  .testimonial2__navigation .testimonial2-next,
+  .testimonial2__navigation .testimonial2-prev {
+    display: none;
+  }
+}
+
 .testimonial-slide {
   gap: 20px;
 }
@@ -2338,6 +2551,52 @@ body::-webkit-scrollbar-thumb {
 }
 .testimonial-slide .author img {
   border: 4px solid #e2c55d;
+}
+
+.testimonial-slide2 {
+  text-align: center;
+}
+.testimonial-slide2 .quote-shape {
+  color: #e2c55d;
+  margin-bottom: 40px;
+}
+.testimonial-slide2 .quote {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.testimonial-slide2 .quote .quote-icon {
+  color: #e2c55d;
+}
+.testimonial-slide2 .author {
+  text-align: center;
+  margin-top: 40px;
+}
+.testimonial-slide2 .author .author-thumb {
+  border-radius: 100%;
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+  border: 3px solid #e2c55d;
+  margin-inline: auto;
+}
+.testimonial-slide2 .author .author-thumb img {
+  height: 100%;
+  width: 100%;
+}
+.testimonial-slide2 .author .author-info {
+  margin-top: 25px;
+}
+.testimonial-slide2 .author .author-info .name {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.testimonial-slide2 .author .author-info .designation {
+  color: #e2c55d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .team-box {
@@ -2745,6 +3004,186 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
+@media only screen and (max-width: 575.98px) {
+  .music-player__player {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    gap: 20px;
+  }
+}
+.music-player__player .play-btn {
+  background-color: #e2c55d;
+  width: 119px;
+  height: 140px;
+  font-size: 45px;
+  color: #171a1b;
+  border: none;
+}
+@media only screen and (max-width: 575.98px) {
+  .music-player__player .play-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+  }
+}
+.music-player__player .music-player {
+  padding-left: 30px;
+}
+@media only screen and (max-width: 767.98px) {
+  .music-player__player .music-player {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .music-player__player .music-player {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+.music-player__player .music-player .music-info {
+  padding-right: 80px;
+}
+@media only screen and (max-width: 991.98px) {
+  .music-player__player .music-player .music-info {
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .music-player__player .music-player .music-info {
+    padding-right: 0px;
+    width: 100%;
+  }
+}
+.music-player__player .music-player .music-info .music-name {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.music-player__player .music-player .music-info .singer {
+  color: #9d9d9d;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.music-player__player .music-player .music-controller {
+  width: 100%;
+}
+.music-player__player .music-player .music-controller .music-length,
+.music-player__player .music-player .music-controller .music-duration {
+  width: 100%;
+  min-width: 45px;
+  max-width: 50px;
+  color: #ffffff;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  user-select: none;
+}
+.music-player__player .music-player .music-controller .music-length span,
+.music-player__player .music-player .music-controller .music-duration span {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.music-player__player .music-player .music-controller .music-length span:nth-child(2),
+.music-player__player .music-player .music-controller .music-duration span:nth-child(2) {
+  opacity: 0;
+}
+.music-player__player .music-player .music-controller .music-track {
+  background: rgba(255, 255, 255, 0.1);
+  height: 7px;
+  margin-inline: 13px;
+  cursor: pointer;
+}
+.music-player__player .music-player .music-controller .music-track .music-progress {
+  width: 50%;
+  height: 100%;
+  background-color: #e2c55d;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 767.98px) {
+  .music-player__player .music-player .volume-controller {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .music-player__player .music-player .volume-controller {
+    gap: 20px;
+  }
+}
+.music-player__player .music-player .volume-controller .music-velum {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #0e0e0e;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px 0px #000 inset;
+  font-size: 14px;
+  color: #e2c55d;
+  margin-inline: 28px 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767.98px) {
+  .music-player__player .music-player .volume-controller .music-velum {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .music-player__player .music-player .volume-controller .music-velum {
+    margin: 0;
+  }
+}
+.music-player__player .music-player .volume-controller .voluom-track {
+  width: 37px;
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767.98px) {
+  .music-player__player .music-player .volume-controller .voluom-track {
+    width: 120px;
+  }
+}
+.music-player__player .music-player .volume-controller .voluom-track .voluom-progress {
+  width: 100%;
+  height: 100%;
+  background-color: #e2c55d;
+  border-radius: 3px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 .quote__wrapper {
   border-radius: 40px 10px 10px 10px;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -2936,6 +3375,169 @@ body::-webkit-scrollbar-thumb {
 }
 .statistic__box:hover .icon-box {
   color: #e2c55d;
+}
+
+.statistic-box2 .counter-item {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.statistic-box2 .counter-item::before {
+  left: calc(100% + 20px);
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #e2c55d;
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 767.98px) {
+  .statistic-box2 .counter-item::before {
+    left: calc(100% + 10px);
+    width: 15px;
+    height: 15px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .statistic-box2 .counter-item::before {
+    width: 12px;
+    height: 12px;
+  }
+}
+.statistic-box2 .info {
+  color: #9d9d9d;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 767.98px) {
+  .statistic-box2 .info {
+    font-size: 16px;
+  }
+}
+.statistic-box2:hover .counter-item, .statistic-box2.active .counter-item {
+  color: #e2c55d;
+}
+.statistic-box2:hover .counter-item::before, .statistic-box2.active .counter-item::before {
+  opacity: 1;
+}
+
+.skills.section {
+  padding-block: 65px;
+}
+@media only screen and (min-width: 1600px) {
+  .skills.section {
+    background-size: 100% 100%;
+  }
+}
+
+.skill-box {
+  border-radius: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 5.72px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.skill-box__inner {
+  border-radius: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 28.53px 34.5px 40px 35.5px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 767.98px) {
+  .skill-box__inner {
+    padding-inline: 20px;
+    padding-block-start: 15px;
+    padding-block-end: 20px;
+  }
+}
+.skill-box .skill-header {
+  gap: 20px;
+}
+.skill-box .skill-header .skill-icon {
+  width: 75.5px;
+  height: 75.5px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.skill-box .skill-header .skill-name {
+  text-transform: capitalize;
+}
+.skill-box .skill {
+  margin-top: 20px;
+}
+.skill-box .skill .title {
+  color: #e2c55d;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.skill-box .skill .skill-bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.skill-box .skill .skill-bar .skill-progress {
+  width: 50%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #e2c55d;
+  margin-top: 5px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.skill-box .skill .skill-bar .skill-progress .skill-count {
+  bottom: 15px;
+  right: 0;
+  color: #ffffff;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.skill-box:hover, .skill-box.active {
+  border-color: #e2c55d;
+}
+.skill-box:hover .skill-box__inner, .skill-box.active .skill-box__inner {
+  border-color: #e2c55d;
+}
+.skill-box:hover .skill-box__inner .skill-header .skill-icon, .skill-box.active .skill-box__inner .skill-header .skill-icon {
+  background-color: #e2c55d;
 }
 
 @media only screen and (min-width: 1200px) {

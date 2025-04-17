@@ -96,6 +96,50 @@ const testimonialSliderOptions = {
   },
   speed: 1000,
 };
+const testimonial2SliderOptions = {
+  loop: true,
+  spaceBetween: 40,
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
+  navigation: {
+    nextEl: ".testimonial2__navigation .testimonial2-next",
+    prevEl: ".testimonial2__navigation .testimonial2-prev",
+  },
+  speed: 1000,
+
+  on: {
+    slideChange: function () {
+      const isNext = this.activeIndex > this.previousIndex;
+      initTestimonialNavActiveToggle(isNext ? "right" : "left");
+    },
+  },
+};
+
+// Function to initialize active class toggle based on direction
+function initTestimonialNavActiveToggle(direction = "right") {
+  const nextBtn = document.querySelector(
+    ".testimonial2__navigation .testimonial2-next"
+  );
+  const prevBtn = document.querySelector(
+    ".testimonial2__navigation .testimonial2-prev"
+  );
+
+  if (!nextBtn || !prevBtn) return;
+
+  const setActiveNav = (direction) => {
+    nextBtn.classList.toggle("active", direction === "right");
+    prevBtn.classList.toggle("active", direction === "left");
+  };
+
+  // Set active class on initial load (based on direction)
+  setActiveNav(direction);
+
+  // Add event listeners for button clicks and update the active class
+  nextBtn.addEventListener("click", () => setActiveNav("right"));
+  prevBtn.addEventListener("click", () => setActiveNav("left"));
+}
 
 function initializeVideoPlayers(videoSelector, playBtnSelector) {
   const videos = document.querySelectorAll(videoSelector);
@@ -220,7 +264,6 @@ function setHoverActiveClass(
   });
 }
 
-
 function initMagnificPopup() {
   // Verify jQuery and Magnific Popup are loaded
   if (typeof jQuery === "undefined") {
@@ -269,14 +312,37 @@ function initMagnificPopup() {
   });
 }
 
+function updateSkills() {
+  const skillCounts = document.querySelectorAll(".skill-box .skill-count");
+
+  skillCounts.forEach((countEl) => {
+    const count = countEl.getAttribute("data-skill-count");
+
+    if (count) {
+      // Set text content
+      countEl.textContent = `${count}%`;
+
+      // Set width of skill-progress
+      const progressEl = countEl.closest(".skill-progress");
+      if (progressEl) {
+        progressEl.style.width = `${count}%`;
+      }
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initializeVideoPlayers(".video-player", ".play-btn");
   initializeSwiper(".brandSlider", brandSliderOptions);
   initializeSwiper(".quote__slider", quoteSliderOptions);
   initializeSwiper(".hero-one__slider", heroOneSliderOptions);
   initializeSwiper(".testimonial__slider", testimonialSliderOptions);
+  initializeSwiper(".testimonial2__slider", testimonial2SliderOptions);
+  initTestimonialNavActiveToggle();
   setBackgroundImages();
   odometerCounter();
   initMagnificPopup();
+  updateSkills();
   setHoverActiveClass(".music-box", ".music-box", "active");
+  setHoverActiveClass(".statistic-box2", ".statistic-box2", "active");
 });
