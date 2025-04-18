@@ -1,0 +1,135 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.widget {
+}
+
+.widget-services {
+  .title {
+    @extend %p-relative;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding-left: 18px;
+    margin-bottom: 30px;
+
+    @include breakpoint(max-xl) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      @extend %p-absolute;
+      left: 0;
+      top: 50%;
+      width: 6px;
+      height: 100%;
+      background-color: $color-primary;
+      @include transform(translateY(-50%));
+    }
+  }
+  .service-items {
+    ul {
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+        a {
+          @extend %d-flex, %justify-between, %item-center;
+          gap: 20px;
+          border-radius: 20px;
+          border: 1.5px solid rgba($color-white, 0.08);
+          background: $color-1;
+          color: $color-paragraph;
+          font-weight: 700;
+          text-transform: capitalize;
+          padding-inline: 23px;
+          padding-block: 22px;
+
+          @include breakpoint(max-xl) {
+            padding-inline: 20px;
+            padding-block: 15px;
+          }
+
+          i,
+          svg {
+            @include transition($transition);
+          }
+          &:hover {
+            i,
+            svg {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.widget-contact {
+  border-radius: 20px;
+  border: 1.5px solid rgba($color-white, 0.08);
+  background: $color-1;
+  padding-inline: 35.5px;
+  padding-block: 48px;
+  
+  @include breakpoint(max-xl){
+    padding-inline: 20px;
+    padding-block: 30px;
+  }
+
+  .title {
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include breakpoint(max-xl) {
+      margin-bottom: 20px;
+    }
+  }
+  .contact-thumb {
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 33px;
+
+    @include breakpoint(max-xl) {
+      margin-bottom: 20px;
+    }
+  }
+  .contact-list {
+    ul {
+      li {
+        @extend %d-flex, %item-center;
+        gap: 20px;
+        color: $color-paragraph;
+        font-weight: 600;
+        text-transform: capitalize;
+
+        a {
+          color: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+          text-transform: initial;
+        }
+
+        svg,
+        i {
+          @extend %shrink-0;
+          color: $color-primary;
+        }
+
+        &:not(:last-of-type) {
+          padding-bottom: 22px;
+          margin-bottom: 22px;
+          border-bottom: 1.5px solid rgba($color-white, 0.08);
+
+          @include breakpoint(max-xl) {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}

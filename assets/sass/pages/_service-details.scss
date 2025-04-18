@@ -5,6 +5,9 @@
 
 .service-details {
   &__content {
+    @include breakpoint(xl){
+      margin-left: 20px;
+    }
     .p-mb {
       margin-bottom: 30px;
 
@@ -207,6 +210,16 @@
             }
           }
         }
+      }
+    }
+  }
+
+  &__sidebar {
+    .widget-services{
+      margin-bottom: 35px;
+      
+      @include breakpoint(max-xl){
+        margin-bottom: 20px;
       }
     }
   }
