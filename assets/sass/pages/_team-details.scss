@@ -3,36 +3,16 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/container" as *;
 
-.work-details {
+.team-details {
   &.section {
   }
   &__content {
-    .work-thumb {
-      padding: 25px;
-      border: 1.5px solid rgba($color-white, 0.08);
-      overflow: hidden;
-      border-radius: 50px;
-      margin-bottom: 40px;
-
-      .work-thumb-wrapper {
-        border-radius: 25px;
-        overflow: hidden;
-      }
-
-      @include breakpoint(max-lg) {
-        padding: 10px;
-        border-radius: 25px;
-
-        .work-thumb-wrapper {
-          border-radius: 15px;
-        }
-      }
-    }
-
-    .work-title {
+    .team-title {
       @extend %d-flex, %justify-between, %item-center, %flex-wrap;
       text-transform: capitalize;
       margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid rgba($color-white, 0.08);
 
       @include breakpoint(max-lg) {
         row-gap: 8px;
@@ -98,9 +78,25 @@
       margin-bottom: 15px;
     }
 
-    .key-feature {
+    .skills-area {
+      padding-block: 35px;
+
+      @include breakpoint(max-xl) {
+        padding-block: 25px;
+      }
+
+      .team-thumb {
+        border-radius: 14px !important;
+        overflow: hidden;
+
+        @include breakpoint(xl) {
+          margin-left: 25px;
+        }
+      }
+    }
+    .award {
       &__content {
-        .key-feature-title {
+        .award-title {
           text-transform: capitalize;
           margin-bottom: 16px;
         }
@@ -216,6 +212,13 @@
         @include breakpoint(xl) {
           margin-left: 25px;
         }
+      }
+    }
+    .contact__form {
+      margin-top: 70px;
+
+      @include breakpoint(max-xl) {
+        margin-top: 40px;
       }
     }
   }

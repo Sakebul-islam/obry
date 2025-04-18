@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .error__content .title, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
+.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .team-title .tags a, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .error__content .title, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-links ul li a, .social-share ul, .hero-one__slide, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -39,14 +39,14 @@
   -ms-flex-direction: column;
 }
 
-.widget-contact .contact-list ul li svg,
+.widget__recent-post .recent-post .post .post-thumb, .widget-contact .contact-list ul li svg,
 .widget-contact .contact-list ul li i, .service-box .service-footer .circle, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-player__player .music-player .volume-controller .voluom-track, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-velum, .music-box .music-content .music-footer .voluom-track, .testimonial2__navigation .testimonial2-next,
 .testimonial2__navigation .testimonial2-prev, .testimonial-slide .author, .pricing-box .pricing-header .header-icon, .contact__content .contact-list li svg, .about__tabs .nav-item, .about__content .notes-and-info .info .info-thumb, .social-share ul li a {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.work-details__content .work-title, .work-masonry__filter {
+.team-details__content .team-title, .work-details__content .work-title, .widget__tags .tags, .work-masonry__filter {
   flex-wrap: wrap;
 }
 
@@ -54,13 +54,13 @@
   position: fixed;
 }
 
-.work-details__content .work-title .tags a, .service-details__content .service-video, .error.section, .error__content .sub-title, .widget-services .title, .service.section .container, .service2.section, .service2__info, .service2__info .info .sub-title, .work.section, .work-box .work-thumb, .work-box.v2 .work-thumb, .faq.section .section-header, .faq__thumb, .skill-box .skill .skill-bar, .skill-box .skill .skill-bar .skill-progress, .statistic-box2 .counter-item, .music-player__player .music-player .music-controller .music-length,
+.team-details__content .team-title .tags a, .work-details__content .work-title .tags a, .service-details__content .service-video, .error.section, .error__content .sub-title, .widget .widget-title, .widget-services .title, .service.section .container, .service2.section, .service2__info, .service2__info .info .sub-title, .work.section, .work-box .work-thumb, .work-box.v2 .work-thumb, .faq.section .section-header, .faq__thumb, .skill .skill-bar, .skill .skill-bar .skill-progress, .statistic-box2 .counter-item, .music-player__player .music-player .music-controller .music-length,
 .music-player__player .music-player .music-controller .music-duration, .music.section, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-length,
 .music-box .music-content .music-footer .music-duration, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .news-box2 .news-meta a, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__thumb, .about__thumb img, .about2.section, .about2__content, .about2__thumb, .about3.section, .about3__content, .about3__main-content, .about3__thumb, .about3__thumb .thumb-1, .btn-primary .btn-wrapper span, .footer-widgets .widgets-title, .footer-widgets .instagram a, .section-title .highlight-bottom-border {
   position: relative;
 }
 
-.work-details__content .work-title .tags a::before, .service-details__content .service-video .play-btn, .error__content .sub-title::before, .error__content .sub-title::after, .widget-services .title::before, .service__shape-1, .service2__bg, .service2__info .info .sub-title::after, .service2__info .info-bg, .work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .work-box.v2 .work-thumb::before, .faq.section .section-header img, .faq__thumb .info, .skill-box .skill .skill-bar .skill-progress .skill-count, .statistic-box2 .counter-item::before, .quote__slider .quote__pagination, .music-player__player .music-player .music-controller .music-length span,
+.team-details__content .team-title .tags a::before, .work-details__content .work-title .tags a::before, .service-details__content .service-video .play-btn, .error__content .sub-title::before, .error__content .sub-title::after, .widget .widget-title::after, .widget-services .title::before, .service__shape-1, .service2__bg, .service2__info .info .sub-title::after, .service2__info .info-bg, .work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .work-box.v2 .work-thumb::before, .faq.section .section-header img, .faq__thumb .info, .skill .skill-bar .skill-progress .skill-count, .statistic-box2 .counter-item::before, .quote__slider .quote__pagination, .music-player__player .music-player .music-controller .music-length span,
 .music-player__player .music-player .music-controller .music-duration span, .music__shape, .music-box .music-content .music-footer .play i, .music-box .music-content .music-footer .music-length span,
 .music-box .music-content .music-footer .music-duration span, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .play-btn, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__thumb .thumb-bg, .about__thumb .thumb-bg::after, .about__thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .about3__content .shape, .about3__thumb .thumb-1::before, .about3__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
   position: absolute;
@@ -97,7 +97,7 @@ h6 {
   justify-content: center;
 }
 
-.work-details__content .work-title, .widget-services .service-items ul li a, .service-box .service-header, .work-box .work-content, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .testimonial-slide, .news-box .news-footer, .pricing-box .pricing-header, .pricing-box2, .about__tabs, .about__content .notes-and-info .info {
+.team-details__content .team-title, .work-details__content .work-title, .widget__categories .categories ul li a, .widget-services .service-items ul li a, .service-box .service-header, .work-box .work-content, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .testimonial-slide, .news-box .news-footer, .pricing-box .pricing-header, .pricing-box2, .about__tabs, .about__content .notes-and-info .info {
   -webkit-box-pack: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
@@ -121,7 +121,7 @@ h6 {
   align-items: start;
 }
 
-.work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .share, .error__content .title, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .contact__content .contact-list li, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
+.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .share, .error__content .title, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .contact__content .contact-list li, .about__content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .social-share ul, .hero-one__slide, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -133,13 +133,13 @@ h6 {
   align-items: baseline;
 }
 
-.service-details__content .service-video video, .service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .skill-box .skill .title, .testimonial-slide2 .author .author-info .designation, .news-box .news-thumb, .news-box2 .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
+.service-details__content .service-video video, .widget__follow-us .follow-us a, .service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .skill .title, .testimonial-slide2 .author .author-info .designation, .news-box .news-thumb, .news-box2 .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
   display: -webkit-block;
   display: -ms-block;
   display: block;
 }
 
-.error__content .sub-title, .service2__info .info .sub-title, .service-box .service-footer .line, .work-box .work-content .work-info .sub-title, .skill-box .skill .skill-bar .skill-progress .skill-count, .statistic__box .content .info, .music-player__player .music-player .music-controller .music-length,
+.team-details__content .award__accordion .accordion-button span, .team-details__content .award__accordion .accordion-body span, .work-details__content .key-feature__accordion .accordion-button span, .work-details__content .key-feature__accordion .accordion-body span, .error__content .sub-title, .widget__recent-post .recent-post .post .post-content .post-date, .widget__tags .tags a, .service2__info .info .sub-title, .service-box .service-footer .line, .work-box .work-content .work-info .sub-title, .skill .skill-bar .skill-progress .skill-count, .statistic__box .content .info, .music-player__player .music-player .music-controller .music-length,
 .music-player__player .music-player .music-controller .music-duration, .music-box .music-content .music-footer .music-length,
 .music-box .music-content .music-footer .music-duration, .team-box .team-content .designation, .news-box .news-footer .dates, .about__content .notes-and-info .info .info-content span, .footer__center.common .footer-info .footer-logo, .footer__center.common .footer-info .contact-info .contact .open-time, .section-sub-title, .section-title .highlight {
   display: -webkit-inline-block;
@@ -147,7 +147,7 @@ h6 {
   display: inline-block;
 }
 
-.service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .testimonial2__navigation .testimonial2-next,
+.widget__follow-us .follow-us, .service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .testimonial2__navigation .testimonial2-next,
 .testimonial2__navigation .testimonial2-prev, .pricing-box .pricing-header .header-icon, .pricing2__boxes, .pricing2__brands-area .brands, .pricing2__brands-area .brands .img, .about__content .notes-and-info .info .info-content .avatars img,
 .about__content .notes-and-info .info .info-content .avatars a, .footer-widgets .instagram, .social-share ul li a {
   display: -webkit-grid;
@@ -156,7 +156,7 @@ h6 {
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
-.statistic-box2 .counter-item, .testimonial-slide .author {
+.widget .widget-title, .statistic-box2 .counter-item, .testimonial-slide .author {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -168,11 +168,11 @@ h6 {
   flex: 1;
 }
 
-.error__content .sub-title, .service2__info .info .sub-title, .service2__info .info .title, .breadcrumb-title {
+.error__content .sub-title, .widget__recent-post .recent-post .post .post-content .post-date, .service2__info .info .sub-title, .service2__info .info .title, .breadcrumb-title {
   text-transform: uppercase;
 }
 
-.service-details__content p, .service-details__content .service-title, .service-details__content .service-list ul li, .service-box2 .service-content .service-title, .service-box2 .service-content p {
+.service-details__content p, .service-details__content .service-title, .service-details__content .service-list ul li, .widget .widget-title, .widget__search .search-form input, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post .post-content .post-title a, .widget__tags .tags a, .service-box2 .service-content .service-title, .service-box2 .service-content p {
   text-transform: capitalize;
 }
 
@@ -2033,6 +2033,15 @@ body::-webkit-scrollbar-thumb {
 .contact__content .contact-list li a:hover {
   color: #e2c55d;
 }
+.contact__form .form-title {
+  text-transform: capitalize;
+  margin-bottom: 35px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .contact__form .form-title {
+    margin-bottom: 25px;
+  }
+}
 .contact__form .contact-form .form-control {
   border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.1);
@@ -3583,17 +3592,27 @@ body::-webkit-scrollbar-thumb {
 .skill-box .skill-header .skill-name {
   text-transform: capitalize;
 }
-.skill-box .skill {
+.skill-box:hover, .skill-box.active {
+  border-color: #e2c55d;
+}
+.skill-box:hover .skill-box__inner, .skill-box.active .skill-box__inner {
+  border-color: #e2c55d;
+}
+.skill-box:hover .skill-box__inner .skill-header .skill-icon, .skill-box.active .skill-box__inner .skill-header .skill-icon {
+  background-color: #e2c55d;
+}
+
+.skill {
   margin-top: 20px;
 }
-.skill-box .skill .title {
+.skill .title {
   color: #e2c55d;
   font-family: "Bricolage Grotesque", sans-serif;
   font-size: 18px;
   font-weight: 700;
   text-transform: capitalize;
 }
-.skill-box .skill .skill-bar {
+.skill .skill-bar {
   width: 100%;
   height: 6px;
   border-radius: 4px;
@@ -3603,20 +3622,20 @@ body::-webkit-scrollbar-thumb {
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  margin-top: 5px;
 }
-.skill-box .skill .skill-bar .skill-progress {
+.skill .skill-bar .skill-progress {
   width: 50%;
   height: 100%;
   border-radius: 4px;
   background-color: #e2c55d;
-  margin-top: 5px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.skill-box .skill .skill-bar .skill-progress .skill-count {
+.skill .skill-bar .skill-progress .skill-count {
   bottom: 15px;
   right: 0;
   color: #ffffff;
@@ -3630,14 +3649,26 @@ body::-webkit-scrollbar-thumb {
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.skill-box:hover, .skill-box.active {
-  border-color: #e2c55d;
+.skill.v2 .title {
+  text-transform: uppercase;
+  color: #9d9d9d;
 }
-.skill-box:hover .skill-box__inner, .skill-box.active .skill-box__inner {
-  border-color: #e2c55d;
+.skill.v2 .skill-bar {
+  height: 12.5px;
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  background-color: #171a1b;
+  border-radius: 10px;
 }
-.skill-box:hover .skill-box__inner .skill-header .skill-icon, .skill-box.active .skill-box__inner .skill-header .skill-icon {
-  background-color: #e2c55d;
+.skill.v2 .skill-bar .skill-progress {
+  height: calc(100% - 2px);
+  top: 50%;
+  left: 1px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.skill.v2 .skill-bar .skill-progress .skill-count {
+  color: #9d9d9d;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -4333,6 +4364,229 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
+.widget {
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background-color: #171a1b;
+  padding-inline: 36px;
+  padding-block: 33px 45px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget {
+    border-radius: 5px;
+    padding-inline: 20px;
+    padding-block: 20px 25px;
+  }
+}
+.widget:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+.widget .widget-title {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.widget .widget-title::after {
+  content: "//";
+  top: calc(50% - 3px);
+  left: calc(100% + 10px);
+  transform: translateY(-50%);
+  width: 21px;
+  height: 21px;
+  color: #e2c55d;
+}
+.widget__search .search-form {
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-inline-end: 18px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget__search .search-form {
+    padding-inline-end: 12px;
+    border-radius: 4px;
+  }
+}
+.widget__search .search-form input {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  height: 60px;
+  padding-inline: 18px 10px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget__search .search-form input {
+    padding-inline: 12px 8px;
+  }
+}
+.widget__search .search-form input::placeholder {
+  color: #9d9d9d;
+  opacity: 1;
+}
+.widget__search .search-form input:focus, .widget__search .search-form input:active {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget__search .search-form input {
+    height: 50px;
+  }
+}
+.widget__search .search-form button {
+  background-color: transparent;
+  border: none;
+  color: #9d9d9d;
+}
+.widget__categories .categories ul li a {
+  gap: 15px;
+  color: #fff;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.widget__categories .categories ul li a.active, .widget__categories .categories ul li a:hover {
+  color: #e2c55d;
+}
+.widget__categories .categories ul li:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .widget__categories .categories ul li:not(:last-of-type) {
+    margin-bottom: 6px;
+  }
+}
+.widget__recent-post .recent-post .post {
+  gap: 20px;
+}
+.widget__recent-post .recent-post .post .post-thumb {
+  width: 89px;
+  height: 89px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget__recent-post .recent-post .post .post-thumb {
+    border-radius: 5px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .widget__recent-post .recent-post .post .post-thumb {
+    width: 70px;
+    height: 70px;
+  }
+}
+.widget__recent-post .recent-post .post .post-thumb img {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 100%;
+}
+.widget__recent-post .recent-post .post .post-content .post-date {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  line-height: 1;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.widget__recent-post .recent-post .post .post-content .post-title {
+  line-height: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.widget__recent-post .recent-post .post .post-content .post-title a {
+  color: #9d9d9d;
+  line-height: 1.5;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+}
+.widget__recent-post .recent-post .post:hover .post-thumb img, .widget__recent-post .recent-post .post.active .post-thumb img {
+  -webkit-transform: rotate(5deg) scale(1.2);
+  -ms-transform: rotate(5deg) scale(1.2);
+  transform: rotate(5deg) scale(1.2);
+}
+.widget__recent-post .recent-post .post:hover .post-content .post-date, .widget__recent-post .recent-post .post.active .post-content .post-date {
+  color: #e2c55d;
+}
+.widget__recent-post .recent-post .post:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget__recent-post .recent-post .post:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+.widget__follow-us .follow-us {
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.widget__follow-us .follow-us a {
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget__follow-us .follow-us a {
+    border-radius: 5px;
+  }
+}
+.widget__follow-us .follow-us a img {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.widget__follow-us .follow-us a:hover img {
+  -webkit-transform: rotate(5deg) scale(1.2);
+  -ms-transform: rotate(5deg) scale(1.2);
+  transform: rotate(5deg) scale(1.2);
+}
+.widget__tags .tags {
+  gap: 6.25px;
+}
+.widget__tags .tags a {
+  background-color: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  color: #9d9d9d;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  border-radius: 8px;
+  padding-inline: 18px;
+  padding-block: 8px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget__tags .tags a {
+    border-radius: 5px;
+    padding-inline: 10px;
+    padding-block: 5px;
+  }
+}
+.widget__tags .tags a:hover, .widget__tags .tags a.active {
+  border-color: rgba(226, 197, 93, 0.5);
+}
+
 .widget-services .title {
   font-size: 26px;
   text-transform: uppercase;
@@ -4394,18 +4648,43 @@ body::-webkit-scrollbar-thumb {
   padding-inline: 35.5px;
   padding-block: 48px;
 }
-@media only screen and (max-width: 1199.98px) {
+@media only screen and (max-width: 1439.98px) {
   .widget-contact {
     padding-inline: 20px;
     padding-block: 30px;
   }
+}
+.widget-contact.v2 {
+  padding: 20px;
+  padding-block-end: 45px;
+  border-radius: 45px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget-contact.v2 {
+    border-radius: 30px;
+    padding: 15px;
+    padding-block-end: 30px;
+  }
+}
+.widget-contact.v2 .contact-thumb {
+  border-radius: 25px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .widget-contact.v2 .contact-thumb {
+    border-radius: 15px;
+  }
+}
+.widget-contact.v2 .title {
+  text-transform: capitalize;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 13px;
 }
 .widget-contact .title {
   font-size: 26px;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-@media only screen and (max-width: 1199.98px) {
+@media only screen and (max-width: 1439.98px) {
   .widget-contact .title {
     margin-bottom: 20px;
   }
@@ -4415,7 +4694,7 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   margin-bottom: 33px;
 }
-@media only screen and (max-width: 1199.98px) {
+@media only screen and (max-width: 1439.98px) {
   .widget-contact .contact-thumb {
     margin-bottom: 20px;
   }
@@ -4442,7 +4721,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 22px;
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.08);
 }
-@media only screen and (max-width: 1199.98px) {
+@media only screen and (max-width: 1439.98px) {
   .widget-contact .contact-list ul li:not(:last-of-type) {
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -4908,7 +5187,7 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 .work-details__content .key-feature__accordion .accordion-button {
-  gap: 60px;
+  gap: 40px;
   background-color: transparent;
   padding: 0;
   color: #ffffff;
@@ -4924,7 +5203,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 991.98px) {
   .work-details__content .key-feature__accordion .accordion-button {
-    gap: 40px;
+    gap: 30px;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -4948,8 +5227,12 @@ body::-webkit-scrollbar-thumb {
 .work-details__content .key-feature__accordion .accordion-button:focus {
   box-shadow: none;
 }
+.work-details__content .key-feature__accordion .accordion-button span {
+  max-width: 25px;
+  width: 100px;
+}
 .work-details__content .key-feature__accordion .accordion-body {
-  gap: 60px;
+  gap: 40px;
   padding: 0;
   color: #9d9d9d;
   font-size: 15px;
@@ -4958,7 +5241,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 991.98px) {
   .work-details__content .key-feature__accordion .accordion-body {
-    gap: 40px;
+    gap: 30px;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -4970,6 +5253,8 @@ body::-webkit-scrollbar-thumb {
   font-size: 20px;
   font-weight: 700;
   opacity: 0;
+  max-width: 25px;
+  width: 100px;
 }
 .work-details__content .key-feature__thumb {
   border-radius: 14px !important;
@@ -4978,6 +5263,210 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (min-width: 1200px) {
   .work-details__content .key-feature__thumb {
     margin-left: 25px;
+  }
+}
+
+.team-details__content .team-title {
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.08);
+}
+@media only screen and (max-width: 991.98px) {
+  .team-details__content .team-title {
+    row-gap: 8px;
+    margin-bottom: 20px;
+  }
+}
+.team-details__content .team-title .tags {
+  gap: 10px;
+}
+.team-details__content .team-title .tags a {
+  border-radius: 30px;
+  border: 1px solid #2a2e30;
+  background: #171a1b;
+  color: #9d9d9d;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-inline: 15px;
+  padding-inline-start: 35px;
+  padding-block: 9.42px;
+}
+@media only screen and (max-width: 991.98px) {
+  .team-details__content .team-title .tags a {
+    font-size: 11px;
+    padding-inline: 15px;
+    padding-inline-start: 22px;
+    padding-block: 5px;
+  }
+}
+.team-details__content .team-title .tags a::before {
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1.5px #292929;
+  background-color: #0e0e0e;
+}
+@media only screen and (max-width: 991.98px) {
+  .team-details__content .team-title .tags a::before {
+    width: 6px;
+    height: 6px;
+    left: 10px;
+  }
+}
+.team-details__content .team-title .tags a.active::before {
+  box-shadow: none;
+  background-color: #e2c55d;
+}
+.team-details__content p {
+  text-transform: capitalize;
+}
+.team-details__content .p-mb {
+  margin-bottom: 15px;
+}
+.team-details__content .skills-area {
+  padding-block: 35px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .team-details__content .skills-area {
+    padding-block: 25px;
+  }
+}
+.team-details__content .skills-area .team-thumb {
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1200px) {
+  .team-details__content .skills-area .team-thumb {
+    margin-left: 25px;
+  }
+}
+.team-details__content .award__content .award-title {
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+.team-details__content .award__accordion {
+  background-color: transparent;
+}
+.team-details__content .award__accordion .accordion-item {
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.team-details__content .award__accordion .accordion-item:first-of-type > .accordion-header .accordion-button, .team-details__content .award__accordion .accordion-item:last-of-type > .accordion-header .accordion-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.team-details__content .award__accordion .accordion-item:not(:last-of-type) {
+  border-bottom: 2px solid #e2c55d;
+  padding-bottom: 28px;
+}
+@media only screen and (max-width: 991.98px) {
+  .team-details__content .award__accordion .accordion-item:not(:last-of-type) {
+    padding-bottom: 15px;
+  }
+}
+.team-details__content .award__accordion .accordion-item:not(:first-of-type) {
+  margin-top: 22px;
+}
+.team-details__content .award__accordion .accordion-header {
+  background-color: transparent;
+}
+.team-details__content .award__accordion .accordion-button {
+  gap: 40px;
+  background-color: transparent;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 991.98px) {
+  .team-details__content .award__accordion .accordion-button {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .team-details__content .award__accordion .accordion-button {
+    gap: 20px;
+  }
+}
+.team-details__content .award__accordion .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  padding-bottom: 10px;
+  color: #e2c55d;
+}
+@media only screen and (max-width: 991.98px) {
+  .team-details__content .award__accordion .accordion-button:not(.collapsed) {
+    padding-bottom: 5px;
+  }
+}
+.team-details__content .award__accordion .accordion-button::after {
+  content: unset;
+}
+.team-details__content .award__accordion .accordion-button:focus {
+  box-shadow: none;
+}
+.team-details__content .award__accordion .accordion-button span {
+  max-width: 25px;
+  width: 100px;
+}
+.team-details__content .award__accordion .accordion-body {
+  gap: 40px;
+  padding: 0;
+  color: #9d9d9d;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 991.98px) {
+  .team-details__content .award__accordion .accordion-body {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .team-details__content .award__accordion .accordion-body {
+    gap: 20px;
+  }
+}
+.team-details__content .award__accordion .accordion-body span {
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0;
+  max-width: 25px;
+  width: 100px;
+}
+.team-details__content .award__thumb {
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1200px) {
+  .team-details__content .award__thumb {
+    margin-left: 25px;
+  }
+}
+.team-details__content .contact__form {
+  margin-top: 70px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .team-details__content .contact__form {
+    margin-top: 40px;
   }
 }
 
