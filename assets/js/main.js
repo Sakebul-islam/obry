@@ -331,6 +331,80 @@ function updateSkills() {
   });
 }
 
+// var gridfilter = $(".work-masonry__items");
+// if (gridfilter.length) {
+//   $(".work-masonry__items").imagesLoaded(function () {
+//     $(".masonry-active").on("click", "button", function () {
+//       var filterValue = $(this).attr("data-filter");
+//       $grid.isotope({
+//         filter: filterValue,
+//       });
+//     });
+//     var $grid = $(".work-masonry__items").isotope({
+//       itemSelector: ".masonry-item",
+//       percentPosition: true,
+//       masonry: {
+//         columnWidth: ".masonry-item",
+//       },
+//     });
+//   });
+// }
+
+// $(".work-masonry__filter button").on("click", function (event) {
+//   event.preventDefault();
+//   if (!$(this).hasClass("active")) {
+//     $(this).addClass("active").siblings(".active").removeClass("active");
+//   }
+// });
+
+const initMasonryFilter = () => {
+  if (typeof imagesLoaded !== "function") {
+    return;
+  }
+  if (typeof Isotope === "undefined") {
+    return;
+  }
+
+  const gridElem = document.querySelector(".work-masonry__items");
+  if (!gridElem) {
+    return;
+  }
+
+  imagesLoaded(gridElem, function () {
+    const iso = new Isotope(gridElem, {
+      itemSelector: ".masonry-item",
+      percentPosition: true,
+      masonry: {
+        columnWidth: ".masonry-item",
+      },
+    });
+
+    const filterContainer = document.querySelector(".masonry-active");
+    if (filterContainer) {
+      filterContainer.addEventListener("click", function (e) {
+        if (e.target && e.target.tagName === "BUTTON") {
+          const filterValue = e.target.getAttribute("data-filter");
+          iso.arrange({ filter: filterValue });
+        }
+      });
+    }
+
+    const filterButtons = document.querySelectorAll(
+      ".work-masonry__filter button"
+    );
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (!this.classList.contains("active")) {
+          const activeButton = this.parentElement.querySelector(".active");
+          if (activeButton) activeButton.classList.remove("active");
+          this.classList.add("active");
+        }
+      });
+    });
+  });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   initializeVideoPlayers(".video-player", ".play-btn");
   initializeSwiper(".brandSlider", brandSliderOptions);
@@ -345,4 +419,5 @@ document.addEventListener("DOMContentLoaded", () => {
   updateSkills();
   setHoverActiveClass(".music-box", ".music-box", "active");
   setHoverActiveClass(".statistic-box2", ".statistic-box2", "active");
+  initMasonryFilter();
 });
