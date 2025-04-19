@@ -40,4 +40,11 @@
       padding-right: $container-padding-right;
     }
   }
+  &.hero-container {
+    @include breakpoint(xxl) {
+      max-width: 1646px + $container-gutters;
+      padding-left: $container-padding-left;
+      padding-right: $container-padding-right;
+    }
+  }
 }

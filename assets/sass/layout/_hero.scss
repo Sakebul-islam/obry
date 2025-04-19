@@ -5,7 +5,95 @@
 
 .hero-one {
   &.section {
+    @extend %d-flex, %flex-col, %p-relative;
+  }
+
+  &__main {
+    @extend %flex-1, %d-flex, %flex-col, %justify-end, %p-relative;
+    min-height: 100vh;
+
+    .container {
+      height: 100%;
+    }
+
+    .hero-shape {
+      @extend %p-relative;
+
+      .circle-shape {
+        @extend %p-absolute;
+        z-index: 10;
+        top: -100px;
+        right: 400px;
+
+        @include breakpoint(max-xl) {
+          right: 150px;
+        }
+        
+        @include breakpoint(max-md) {
+          display: none;
+        }
+        img {
+          animation: rotate 5s linear infinite;
+          transform-origin: center center;
+        }
+      }
+    }
+
+    .hero-info {
+      color: $color-white;
+      font-family: $ff-rubik;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      margin-top: 30px;
+
+      @include breakpoint(max-xl) {
+        margin-top: 20px;
+      }
+    }
+    .brands {
+      @extend %d-flex, %flex-wrap;
+      margin-top: 40px;
+      column-gap: 40px;
+
+      @include breakpoint(max-xl) {
+        margin-top: 20px;
+        column-gap: 20px;
+      }
+      @include breakpoint(max-sm) {
+        img {
+          max-width: 100px;
+        }
+      }
+    }
+
+    .hro-icon {
+      @extend %p-absolute;
+      color: $color-primary;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__main-thumb {
+    @extend %p-absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+
+    @include breakpoint(max-xxxl) {
+      img {
+        max-width: 80%;
+      }
+    }
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+  &__slider-area {
     padding-block: 25px;
+    border-top: 1px solid rgba($color-white, 0.1);
   }
   &__slider {
     .swiper-slide {
