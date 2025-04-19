@@ -27,3 +27,74 @@
     }
   }
 }
+
+.hero-three {
+  &.section {
+    @extend %d-flex, %flex-col, %justify-center;
+    min-height: 100vh;
+  }
+  &__content {
+    .welcome-text {
+      text-transform: capitalize;
+      font-weight: 800;
+    }
+    .welcome-text,
+    .event-info {
+      @include breakpoint(max-sm) {
+        font-size: 20px;
+      }
+    }
+    .hero-title {
+      text-transform: capitalize;
+      font-weight: 700;
+      line-height: 1;
+      margin-block: 8px 5px;
+
+      font-size: 130px;
+      // $fs-h1: 90px;
+
+      @include breakpoint(max-xxl) {
+        font-size: 120px; // 85px
+      }
+      @include breakpoint(max-xl) {
+        font-size: 100px; // 80px
+      }
+      @include breakpoint(max-lg) {
+        font-size: 85px; // 70px
+      }
+      @include breakpoint(max-md) {
+        font-size: 70px; // 60px
+      }
+      @include breakpoint(max-sm) {
+        font-size: 60px; // 50px
+      }
+    }
+    .event-info {
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+      border-top: 1px solid rgba($color-primary, 0.5);
+      border-bottom: 1px solid rgba($color-primary, 0.5);
+      width: max-content;
+      margin-inline: auto;
+      padding-inline: 50px;
+      padding-block: 5px;
+
+      @include breakpoint(max-sm) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .btn-primary {
+      margin-top: 50px;
+
+      @include breakpoint(max-xl) {
+        margin-top: 40px;
+      }
+      @include breakpoint(max-md) {
+        margin-top: 30px;
+      }
+    }
+  }
+}

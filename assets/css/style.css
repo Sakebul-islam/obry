@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .team-title .tags a, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .blog-details__content blockquote, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .media-body .author-name, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .blog-box .blog-footer .blog-share .share-list, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-three__top .footer-links ul, .footer-three__center .newsletter .newsletter-email, .footer-links ul, .footer-links ul li a, .footer-widgets .contact-info, .social-share ul, .hero-one__slide, .preloader {
+.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .team-title .tags a, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .blog-details__content blockquote, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .media-body .author-name, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .blog-box .blog-footer .blog-share .share-list, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__content .notes-and-info .note .note-list li, .about__content .notes-and-info .info, .about__content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-three__top .footer-links ul, .footer-three__center .newsletter .newsletter-email, .footer-links ul, .footer-links ul li a, .footer-widgets .contact-info, .social-share ul, .hero-one__slide, .hero-three.section, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -31,7 +31,7 @@
   display: inline-flex;
 }
 
-.blog-details__content blockquote, .instagram2__info, .service__shapes, .testimonial-slide2, .pricing-box .pricing-header .header-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-widgets .contact-info {
+.blog-details__content blockquote, .instagram2__info, .service__shapes, .testimonial-slide2, .pricing-box .pricing-header .header-info, .footer__center.common .footer-info .contact-info .contact, .footer-links ul, .footer-widgets .contact-info, .hero-three.section {
   flex-direction: column;
   -webkit-flex-direction: column;
   -webkit-box-orient: vertical;
@@ -103,7 +103,7 @@ h6 {
   font-weight: 700;
 }
 
-.error__content .title, .instagram2__info, .work-masonry__filter, .team-box .social ul, .btn-primary .btn-wrapper span, .preloader {
+.error__content .title, .instagram2__info, .work-masonry__filter, .team-box .social ul, .btn-primary .btn-wrapper span, .hero-three.section, .preloader {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1255,6 +1255,82 @@ body::-webkit-scrollbar-thumb {
 }
 .hero-one__slide svg {
   color: #e2c55d;
+}
+
+.hero-three.section {
+  min-height: 100vh;
+}
+.hero-three__content .welcome-text {
+  text-transform: capitalize;
+  font-weight: 800;
+}
+@media only screen and (max-width: 575.98px) {
+  .hero-three__content .welcome-text,
+  .hero-three__content .event-info {
+    font-size: 20px;
+  }
+}
+.hero-three__content .hero-title {
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 1;
+  margin-block: 8px 5px;
+  font-size: 130px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .hero-three__content .hero-title {
+    font-size: 120px;
+  }
+}
+@media only screen and (max-width: 1199.98px) {
+  .hero-three__content .hero-title {
+    font-size: 100px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .hero-three__content .hero-title {
+    font-size: 85px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .hero-three__content .hero-title {
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .hero-three__content .hero-title {
+    font-size: 60px;
+  }
+}
+.hero-three__content .event-info {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  border-top: 1px solid rgba(226, 197, 93, 0.5);
+  border-bottom: 1px solid rgba(226, 197, 93, 0.5);
+  width: max-content;
+  margin-inline: auto;
+  padding-inline: 50px;
+  padding-block: 5px;
+}
+@media only screen and (max-width: 575.98px) {
+  .hero-three__content .event-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.hero-three__content .btn-primary {
+  margin-top: 50px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .hero-three__content .btn-primary {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .hero-three__content .btn-primary {
+    margin-top: 30px;
+  }
 }
 
 .footer__center.common {
