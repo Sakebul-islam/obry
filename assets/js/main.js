@@ -83,6 +83,19 @@ const heroOneSliderOptions = {
     },
   },
 };
+const instagram2SliderOptions = {
+  loop: true,
+  speed: 2000,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+
+  },
+  effect: "slide",
+  navigation: false,
+  slidesPerView: "auto",
+};
 const testimonialSliderOptions = {
   loop: true,
   spaceBetween: 40,
@@ -410,6 +423,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeSwiper(".brandSlider", brandSliderOptions);
   initializeSwiper(".quote__slider", quoteSliderOptions);
   initializeSwiper(".hero-one__slider", heroOneSliderOptions);
+  initializeSwiper(".instagram2__slider", instagram2SliderOptions);
   initializeSwiper(".testimonial__slider", testimonialSliderOptions);
   initializeSwiper(".testimonial2__slider", testimonial2SliderOptions);
   initTestimonialNavActiveToggle();

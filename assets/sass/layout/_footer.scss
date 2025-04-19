@@ -121,6 +121,133 @@
   }
 }
 
+.footer-three {
+  &.section {
+  }
+
+  &__top {
+    margin-bottom: 24px;
+    .container {
+      @extend %p-relative;
+
+      &::after {
+        @extend %p-absolute;
+        left: 0;
+        bottom: -24px;
+        width: 100%;
+        height: 1px;
+        background: rgba($color-white, 0.17);
+        z-index: 2;
+      }
+    }
+    .footer-links {
+      ul {
+        @extend %d-flex, %flex-row, %justify-end;
+        gap: 40px;
+
+        @include breakpoint(max-md) {
+          gap: 20px;
+          justify-content: center;
+        }
+
+        li {
+          a {
+            @extend %text-uppercase;
+            font-family: $ff-rubik;
+            font-size: $fs-base;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+
+            &.active,
+            &:hover {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__center {
+    .newsletter {
+      .newsletter-email {
+        @extend %d-flex, %item-center;
+
+        &>i,svg{
+          color: $color-primary;
+        }
+        .form-control {
+          color: $color-white;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          text-transform: capitalize;
+          background-color: transparent;
+          border: none;
+
+          &::placeholder {
+            color: $color-paragraph;
+            opacity: 1;
+          }
+
+          &:focus {
+            box-shadow: none;
+            border: none;
+          }
+        }
+        .btn-primary {
+          background: none !important;
+          color: $color-white;
+        }
+        border-bottom: 1px solid rgba($color-white, 0.17);
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+      }
+      .newsletter-checkbox {
+        // @extend
+        input {
+          display: none;
+        }
+        label {
+          @extend %p-relative;
+          padding-left: 30px;
+          text-transform: capitalize;
+          color: $color-paragraph;
+          font-size: 14px;
+          font-weight: 600;
+          user-select: none;
+          cursor: pointer;
+          a {
+            color: $color-white;
+            text-decoration: underline;
+          }
+
+          &::before {
+            @extend %p-absolute, %d-grid, %place-center;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            background-color: $color-1;
+            border: 1.5px solid rgba($color-white, 0.1);
+            box-shadow: 0px 4px 4px 0px rgba($color-black, 0.25);
+            top: 50%;
+            left: 0;
+            @include transform(translateY(-50%));
+          }
+        }
+        input[type="checkbox"]:checked ~ label {
+          &::before {
+            background-color: $color-primary;
+            content: "\f00c";
+            font: var(--fa-font-solid);
+            color: $color-body;
+            font-size: $fs-14;
+          }
+        }
+      }
+    }
+  }
+}
+
 .footer-links {
   ul {
     @extend %d-flex, %flex-col;
@@ -191,6 +318,25 @@
       width: 80px;
       height: 2.5px;
       background-color: $color-primary;
+    }
+  }
+
+  address {
+    color: $color-paragraph;
+    font-family: $ff-body;
+    font-size: $fs-base;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  .contact-info {
+    @extend %d-flex, %flex-col;
+    a {
+      color: $color-paragraph;
+      font-weight: 600;
+
+      &[href^="tel:"] {
+        font-weight: 700;
+      }
     }
   }
 
