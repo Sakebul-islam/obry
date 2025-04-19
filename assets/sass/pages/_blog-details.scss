@@ -1,0 +1,8 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.blog-box {
+    .blog-thumb {}
+}
