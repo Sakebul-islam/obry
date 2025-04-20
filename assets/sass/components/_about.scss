@@ -113,7 +113,7 @@
       outline: none;
     }
   }
-  &__content {
+  &__tab-content {
     .section-title {
       @include breakpoint(xl) {
         max-width: 490px;
@@ -239,7 +239,7 @@
     }
   }
 
-  &__thumb {
+  &__tab-thumb {
     // background-color: $color-primary;
 
     @extend %p-relative;
@@ -286,6 +286,7 @@
     }
   }
 }
+
 
 .about2 {
   &.section {
