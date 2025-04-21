@@ -1,0 +1,20 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.education {
+  &__tab-thumb {
+  }
+  &__tab-content {
+    .info {
+      @extend %text-capitalize;
+      font-size: $fs-18;
+      font-weight: 600;
+      margin-top: 18px;
+      @include breakpoint(max-lg) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
