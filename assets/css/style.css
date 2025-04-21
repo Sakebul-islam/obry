@@ -21,7 +21,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .team-title .tags a, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .blog-details__content blockquote, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .media-body .author-name, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .blog-box .blog-footer .blog-share .share-list, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__tab-content .notes-and-info .note .note-list li, .about__tab-content .notes-and-info .info, .about__tab-content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-three__top .footer-links ul, .footer-three__center .newsletter .newsletter-email, .footer-links ul, .footer-links ul li a, .footer-widgets .contact-info, .social-share ul, .hero-one.section, .hero-one__main, .hero-one__main .brands, .hero-one__slide, .hero-three.section, .preloader {
+.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .team-title .tags a, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .blog-details__content blockquote, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .media-body .author-name, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .blog-box .blog-footer .blog-share .share-list, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__tab-content .notes-and-info .note .note-list li, .about__tab-content .notes-and-info .info, .about__tab-content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-three__top .footer-links ul, .footer-three__center .newsletter .newsletter-email, .footer-links ul, .footer-links ul li a, .footer-widgets .contact-info, .social-share ul, .hero-one.section, .hero-one__main, .hero-one__main .brands, .hero-one__slide, .hero-three.section, .moblide-header, .moblide-header .header-right, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -68,7 +68,7 @@
 
 .team-details__content .team-title .tags a, .work-details__content .work-title .tags a, .service-details__content .service-video, .blog-details__content blockquote cite, .blog-details__content blockquote cite::before, .blog-single .comment-form .comment-respond .custom-checkbox label, .error.section, .error__content .sub-title, .instagram2.section, .widget .widget-title, .widget-services .title, .service.section .container, .service2.section, .service2__info, .service2__info .info .sub-title, .work.section, .work-box .work-thumb, .work-box.v2 .work-thumb, .faq.section .section-header, .faq__thumb, .skill .skill-bar, .skill .skill-bar .skill-progress, .statistic-box2 .counter-item, .music-player__player .music-player .music-controller .music-length,
 .music-player__player .music-player .music-controller .music-duration, .music.section, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-length,
-.music-box .music-content .music-footer .music-duration, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .blog-box .blog-content .blog-meta span, .news-box2 .news-meta a, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__tab-thumb, .about__tab-thumb img, .about2.section, .about2__content, .about2__thumb, .about3.section, .about3__content, .about3__main-content, .about3__thumb, .about3__thumb .thumb-1, .btn-primary .btn-wrapper span, .footer-three__top .container, .footer-three__center .newsletter .newsletter-checkbox label, .footer-widgets .widgets-title, .footer-widgets .instagram a, .hero-one.section, .hero-one__main, .hero-one__main .hero-shape, .section-title .highlight-bottom-border {
+.music-box .music-content .music-footer .music-duration, .portfolio-box, .portfolio-box .icon-box a, .team-box .team-thumb, .testimonial__thumb, .blog-box .blog-content .blog-meta span, .news-box2 .news-meta a, .pricing.section, .pricing2.section, .pricing-box2 .pricing-content .price-box, .pricing-box2 .pricing-thumb, .video__player-wrapper, .about.section, .about__tabs .nav-item, .about__tabs .nav-item .nav-link[disabled], .about__tab-thumb, .about__tab-thumb img, .about2.section, .about2__content, .about2__thumb, .about3.section, .about3__content, .about3__main-content, .about3__thumb, .about3__thumb .thumb-1, .btn-primary .btn-wrapper span, .footer-three__top .container, .footer-three__center .newsletter .newsletter-checkbox label, .footer-widgets .widgets-title, .footer-widgets .instagram a, .hero-one.section, .hero-one__main, .hero-one__main .hero-shape, .main-menu > ul > li > a, .section-title .highlight-bottom-border {
   position: relative;
 }
 
@@ -109,13 +109,13 @@ h6 {
   justify-content: center;
 }
 
-.team-details__content .team-title, .work-details__content .work-title, .blog-single .post-pagination, .widget__categories .categories ul li a, .widget-services .service-items ul li a, .service-box .service-header, .work-box .work-content, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .testimonial-slide, .blog-box .blog-footer, .news-box .news-footer, .pricing-box .pricing-header, .pricing-box2, .about__tabs, .about__tab-content .notes-and-info .info {
+.team-details__content .team-title, .work-details__content .work-title, .blog-single .post-pagination, .widget__categories .categories ul li a, .widget-services .service-items ul li a, .service-box .service-header, .work-box .work-content, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .testimonial-slide, .blog-box .blog-footer, .news-box .news-footer, .pricing-box .pricing-header, .pricing-box2, .about__tabs, .about__tab-content .notes-and-info .info, .moblide-header {
   -webkit-box-pack: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
 }
 
-.work__tabs, .footer-three__top .footer-links ul, .hero-one__main {
+.work__tabs, .footer-three__top .footer-links ul, .hero-one__main, .moblide-header .header-right {
   -webkit-box-pack: flex-end;
   -ms-flex-pack: flex-end;
   justify-content: flex-end;
@@ -133,7 +133,7 @@ h6 {
   align-items: start;
 }
 
-.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .share, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .contact__content .contact-list li, .about__tab-content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .footer-three__center .newsletter .newsletter-email, .social-share ul, .hero-one__slide, .preloader {
+.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .share, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .contact__content .contact-list li, .about__tab-content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .footer-three__center .newsletter .newsletter-email, .social-share ul, .hero-one__slide, .moblide-header, .moblide-header .header-right, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -274,6 +274,18 @@ ul {
   .container-sm.hero-container,
   .container.hero-container {
     max-width: 1670px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .container-xxl.header-container,
+  .container-xl.header-container,
+  .container-lg.header-container,
+  .container-md.header-container,
+  .container-sm.header-container,
+  .container.header-container {
+    max-width: 1544px;
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -1172,6 +1184,543 @@ body::-webkit-scrollbar-thumb {
 # Components CSS
 # Pages CSS
 --------------------------------------------------------------*/
+@media only screen and (max-width: 991.98px) {
+  .moblide-header {
+    padding-block: 15px;
+  }
+}
+.moblide-header .vs-menu-toggle {
+  width: auto;
+  height: 50px;
+  padding: 0;
+  font-size: 24px;
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.moblide-header .vs-menu-toggle:hover {
+  color: #e2c55d;
+}
+.moblide-header .header-right {
+  gap: 10px;
+}
+@media only screen and (max-width: 767.98px) {
+  .moblide-header .header-right {
+    gap: 5px;
+  }
+}
+.moblide-header .header-right .search-btn {
+  color: #e2c55d;
+  background-color: #0e0e0e;
+  border: none;
+  padding: 18.5px 26px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+}
+@media only screen and (max-width: 1439.98px) {
+  .moblide-header .header-right .search-btn {
+    padding: 15px 20px;
+  }
+}
+@media only screen and (max-width: 1439.98px) {
+  .moblide-header .header-right .btn-primary .btn-wrapper {
+    padding-inline: 20px;
+    line-height: 280%;
+  }
+}
+@media only screen and (max-width: 1199.98px) {
+  .moblide-header .header-right .btn-primary .btn-wrapper {
+    padding-inline: 25px;
+    line-height: 300%;
+  }
+}
+
+.header-sticky.sticky-active {
+  background-color: rgba(14, 14, 14, 0.8) !important;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.03);
+}
+.header-sticky.sticky-active .main-menu > ul > li > a {
+  padding: 30px 0;
+}
+.header-sticky.sticky-active .main-menu > ul > li > a svg {
+  bottom: 20px;
+}
+.header-sticky.sticky-active .main-menu ul.sub-menu,
+.header-sticky.sticky-active .main-menu ul.mega-menu {
+  top: 100%;
+}
+.header-sticky.sticky-active .moblide-header .header-right .search-btn {
+  background-color: #ffffff;
+  color: #0e0e0e;
+}
+
+.main-menu a {
+  display: block;
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0e0e0e;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+@media only screen and (max-width: 1199.98px) {
+  .main-menu a {
+    font-size: 14px;
+  }
+}
+.main-menu > ul > li {
+  margin: 0 27px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .main-menu > ul > li {
+    margin: 0 10px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .main-menu > ul > li {
+    margin: 0 10px;
+  }
+}
+.main-menu > ul > li > a {
+  padding: 55px 0;
+  color: #ffffff;
+}
+@media only screen and (max-width: 1199.98px) {
+  .main-menu > ul > li > a {
+    padding: 30px 0;
+  }
+}
+.main-menu > ul > li > a svg {
+  position: absolute;
+  left: 50%;
+  bottom: 45px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@media only screen and (max-width: 1199.98px) {
+  .main-menu > ul > li > a svg {
+    bottom: 20px;
+  }
+}
+.main-menu > ul > li > a svg path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.6s ease;
+}
+.main-menu > ul > li:hover > a, .main-menu > ul > li.active > a {
+  color: #e2c55d;
+}
+.main-menu > ul > li:hover svg path, .main-menu > ul > li.active svg path {
+  stroke-dashoffset: 0; /* Show the stroke when hovering */
+  transition: stroke-dashoffset 1s ease;
+}
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.main-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+}
+.main-menu ul li.menu-item-has-children > a:after {
+  content: "\f078";
+  position: relative;
+  font-family: "Font Awesome 6 Pro";
+  margin-left: 5px;
+  font-size: 0.8rem;
+  display: none;
+}
+.main-menu ul li:last-child {
+  margin-right: 0;
+}
+.main-menu ul li:first-child {
+  margin-left: 0;
+}
+.main-menu ul li:hover > ul.sub-menu, .main-menu ul li:hover > ul.mega-menu {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0;
+  z-index: 9;
+  top: 85%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.main-menu ul.sub-menu,
+.main-menu ul.mega-menu {
+  position: absolute;
+  text-align: left;
+  top: 150%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  min-width: 190px;
+  width: max-content;
+  padding: 7px;
+  left: -14px;
+  margin-top: 0px;
+  opacity: 0;
+  z-index: -1;
+  border-bottom: 3px solid #e2c55d;
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.09), 0px 3px 0px 0px rgba(231, 13, 60, 0.004);
+  transform-origin: top center;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.main-menu ul.sub-menu a,
+.main-menu ul.mega-menu a {
+  line-height: 30px;
+}
+.main-menu ul.sub-menu a:hover:not(.page-title),
+.main-menu ul.mega-menu a:hover:not(.page-title) {
+  -webkit-transform: translateX(8px);
+  -ms-transform: translateX(8px);
+  transform: translateX(8px);
+}
+.main-menu ul.sub-menu:hover li svg path,
+.main-menu ul.mega-menu:hover li svg path {
+  stroke-dashoffset: 0; /* Show the stroke when hovering */
+  transition: stroke-dashoffset 1s ease;
+}
+.main-menu ul.sub-menu {
+  padding: 18px 20px;
+  left: -27px;
+}
+.main-menu ul.sub-menu:before {
+  content: "";
+  position: absolute;
+  left: 34.5px;
+  top: 30px;
+  width: 1px;
+  background-color: #ededed;
+  height: calc(100% - 60px);
+  opacity: 0;
+  display: none;
+}
+.main-menu ul.sub-menu li {
+  display: block;
+  margin: 0 0;
+  padding: 3px 0px;
+}
+.main-menu ul.sub-menu li.menu-item-has-children > a:after {
+  content: "\f105";
+  float: right;
+  top: 3px;
+}
+.main-menu ul.sub-menu li a {
+  position: relative;
+  padding-left: 0px;
+}
+.main-menu ul.sub-menu li a:before {
+  content: "\f105";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+  margin: 0 10px 0 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.main-menu ul.sub-menu li ul.sub-menu {
+  left: 100%;
+  right: auto;
+  top: 0;
+  margin: 0 0;
+  margin-left: 20px;
+}
+.main-menu ul.sub-menu li ul.sub-menu li ul {
+  left: 100%;
+  right: auto;
+}
+.main-menu .mega-menu-wrap {
+  position: static;
+}
+.main-menu ul.mega-menu {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px 15px 23px 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-menu ul.mega-menu .main-menu ul.mega-menu > li > ul > li > a {
+  position: relative;
+}
+.main-menu ul.mega-menu li {
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+}
+.main-menu ul.mega-menu li li {
+  padding: 4px 0;
+}
+.main-menu ul.mega-menu li a {
+  display: inline-block;
+}
+.main-menu ul.mega-menu > li > a {
+  display: block;
+  padding: 0;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #0e0e0e;
+  border-color: #e2c55d;
+}
+.main-menu ul.mega-menu > li > a::after, .main-menu ul.mega-menu > li > a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  height: 1px;
+  background-color: #e2c55d;
+}
+.main-menu ul.mega-menu > li > a::after {
+  width: calc(100% - 20px);
+  left: 20px;
+}
+.main-menu ul.mega-menu > li > a:hover {
+  padding-left: 0;
+}
+.main-menu ul.mega-menu > li > ul > li > a:before {
+  content: "\f105";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+  margin: 0 10px 0 0;
+}
+
+#navbars {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  right: 0;
+  left: 0;
+  background: transparent;
+  transition: all 0.15s ease;
+}
+#navbars .logo {
+  max-width: 192px;
+  width: 100%;
+}
+@media only screen and (max-width: 1199.98px) {
+  #navbars .logo {
+    max-width: 130px;
+  }
+}
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Fonts
+# Configuration
+# Normalize
+# Typography
+# Global CSS
+# Layout CSS
+# Components CSS
+# Pages CSS
+--------------------------------------------------------------*/
+.vs-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999999;
+  width: 0;
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.8s;
+  opacity: 0;
+  visibility: hidden;
+}
+.vs-menu-wrapper .mobile-logo {
+  padding-bottom: 30px;
+  padding-top: 40px;
+  display: block;
+  text-align: center;
+  background-color: #171a1b;
+}
+.vs-menu-wrapper .mobile-logo img {
+  max-width: 155px;
+}
+.vs-menu-wrapper .vs-menu-toggle {
+  border: none;
+  font-size: 22px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 0;
+  line-height: 1;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  font-size: 18px;
+  z-index: 1;
+  border-radius: 50%;
+}
+.vs-menu-wrapper .vs-menu-toggle:hover {
+  background-color: #171a1b;
+  color: #e2c55d;
+}
+.vs-menu-wrapper .vs-menu-area {
+  width: 100%;
+  max-width: 310px;
+  background-color: #fff;
+  border-right: 3px solid #e2c55d;
+  height: 100%;
+  position: relative;
+  left: -110%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 1s;
+  z-index: 1;
+}
+.vs-menu-wrapper.vs-body-visible {
+  opacity: 1;
+  visibility: visible;
+}
+.vs-menu-wrapper.vs-body-visible .vs-menu-area {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.vs-mobile-menu {
+  overflow-y: scroll;
+  max-height: calc(100vh - 200px);
+  padding-bottom: 40px;
+  margin-top: 33px;
+  text-align: left;
+}
+.vs-mobile-menu .new-label {
+  margin-left: 5px;
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vs-mobile-menu ul {
+  margin: 0;
+  padding: 0 0;
+}
+.vs-mobile-menu ul li {
+  border-bottom: 1px solid #fdedf1;
+  list-style-type: none;
+}
+.vs-mobile-menu ul li li:first-child {
+  border-top: 1px solid #fdedf1;
+}
+.vs-mobile-menu ul li a {
+  display: block;
+  position: relative;
+  padding: 12px 0;
+  line-height: 1;
+  font-size: 17px;
+  text-transform: capitalize;
+  color: #171a1b;
+  font-weight: 600;
+}
+.vs-mobile-menu ul li a:before {
+  content: "\f105";
+  font-family: "Font Awesome 6 Pro";
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-right: 10px;
+  display: inline-block;
+}
+.vs-mobile-menu ul li.vs-active > a {
+  color: #e2c55d;
+}
+.vs-mobile-menu ul li.vs-active > a:before {
+  transform: rotate(90deg);
+}
+.vs-mobile-menu ul li ul li {
+  padding-left: 10px;
+}
+.vs-mobile-menu ul li ul li:last-child {
+  border-bottom: none;
+}
+.vs-mobile-menu ul .vs-item-has-children > a .vs-mean-expand {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-weight: 400;
+  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin-top: -12.5px;
+  display: inline-block;
+  text-align: center;
+  background-color: #171a1b;
+  color: #ffffff;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.vs-mobile-menu ul .vs-item-has-children > a .vs-mean-expand:before {
+  content: "\f067";
+  font-family: "Font Awesome 6 Pro";
+}
+.vs-mobile-menu ul .vs-item-has-children.vs-active > a .vs-mean-expand:before {
+  content: "\f068";
+}
+.vs-mobile-menu ul .vs-item-has-children.vs-active .vs-mean-expand {
+  background-color: #e2c55d;
+}
+.vs-mobile-menu > ul {
+  padding: 0 40px;
+}
+.vs-mobile-menu > ul > li:last-child {
+  border-bottom: none;
+}
+
+.vs-menu-toggle {
+  width: auto;
+  height: 50px;
+  padding: 0;
+  font-size: 24px;
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.vs-menu-toggle:hover {
+  color: #e2c55d;
+}
+.vs-menu-toggle.style2 {
+  color: #171a1b;
+}
+
+@media (max-width: 400px) {
+  .vs-menu-wrapper .vs-menu-area {
+    width: 100%;
+    max-width: 270px;
+  }
+  .vs-mobile-menu > ul {
+    padding: 0 20px;
+  }
+}
 .breadcrumb.section {
   padding-block: 250px 185px;
   margin: 0;
@@ -1249,6 +1798,9 @@ body::-webkit-scrollbar-thumb {
 # Components CSS
 # Pages CSS
 --------------------------------------------------------------*/
+.hero-one.section img {
+  -webkit-user-drag: none;
+}
 .hero-one__main {
   min-height: 100vh;
 }
@@ -1271,7 +1823,10 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .hero-one__main .hero-shape .circle-shape img {
+  -webkit-animation: rotate 5s linear infinite;
   animation: rotate 5s linear infinite;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
   transform-origin: center center;
 }
 .hero-one__main .hero-info {
@@ -1344,8 +1899,15 @@ body::-webkit-scrollbar-thumb {
   color: #e2c55d;
 }
 
+.hero-two.section img {
+  -webkit-user-drag: none;
+}
+
 .hero-three.section {
   min-height: 100vh;
+}
+.hero-three.section img {
+  -webkit-user-drag: none;
 }
 .hero-three__content .welcome-text {
   text-transform: capitalize;
@@ -1789,6 +2351,108 @@ body::-webkit-scrollbar-thumb {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.popup-search-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.4s;
+}
+.popup-search-box button.searchClose {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border: none;
+  background-color: #e2c55d;
+  color: #0e0e0e;
+  font-size: 30px;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+.popup-search-box button.searchClose i {
+  line-height: inherit;
+}
+.popup-search-box button.searchClose:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.popup-search-box form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  padding-bottom: 40px;
+  cursor: auto;
+  width: 100%;
+  max-width: 700px;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform ease 0.4s;
+}
+@media only screen and (max-width: 991.98px) {
+  .popup-search-box form {
+    max-width: 600px;
+  }
+}
+.popup-search-box form input {
+  font-size: 14px;
+  height: 70px;
+  width: 100%;
+  border: 2px solid #e2c55d;
+  background-color: transparent;
+  padding-left: 30px;
+  color: #fff;
+  border-radius: 50px;
+}
+.popup-search-box form input::-moz-placeholder {
+  color: #fff;
+}
+.popup-search-box form input::-webkit-input-placeholder {
+  color: #fff;
+}
+.popup-search-box form input:-ms-input-placeholder {
+  color: #fff;
+}
+.popup-search-box form input::placeholder {
+  color: #fff;
+}
+.popup-search-box form button {
+  position: absolute;
+  top: 0px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  right: 13px;
+  color: #ffffff;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  transition: all ease 0.4s;
+  transform: scale(1.001);
+}
+.popup-search-box form button:hover {
+  transform: scale(1.1);
+}
+.popup-search-box.show {
+  opacity: 1;
+  visibility: visible;
+  width: 100.1%;
+  transition: all ease 0.4s;
+}
+.popup-search-box.show form {
+  transition-delay: 0.5s;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .about.section .shape-1 {

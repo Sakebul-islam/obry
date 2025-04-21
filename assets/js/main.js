@@ -90,7 +90,6 @@ const instagram2SliderOptions = {
     delay: 1,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
-
   },
   effect: "slide",
   navigation: false,
@@ -418,6 +417,151 @@ const initMasonryFilter = () => {
   });
 };
 
+function popupSearchBox(
+  searchBoxSelector,
+  searchOpenSelector,
+  searchCloseSelector,
+  toggleClass
+) {
+  const searchBox = document.querySelector(searchBoxSelector);
+  const searchOpen = document.querySelector(searchOpenSelector);
+  const searchClose = document.querySelector(searchCloseSelector);
+
+  if (!searchBox || !searchOpen || !searchClose) {
+    console.warn("popupSearchBox: One or more elements not found.");
+    return;
+  }
+
+  searchOpen.addEventListener("click", function (e) {
+    e.preventDefault();
+    searchBox.classList.add(toggleClass);
+  });
+
+  searchBox.addEventListener("click", function (e) {
+    e.stopPropagation();
+    searchBox.classList.remove(toggleClass);
+  });
+
+  const form = searchBox.querySelector("form");
+  if (form) {
+    form.addEventListener("click", function (e) {
+      e.stopPropagation();
+      searchBox.classList.add(toggleClass);
+    });
+  }
+
+  searchClose.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    searchBox.classList.remove(toggleClass);
+  });
+}
+
+/**************************************
+ ***** 05. Data Navbar Stick *****
+ **************************************/
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+const navbar = document.querySelector("#navbars");
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: navbar,
+    start: "top+=250",
+    end: "+=1",
+    toggleActions: "play reverse play reverse",
+    scrub: false,
+    onEnter: () => navbar.classList.add("sticky-active"),
+    onLeaveBack: () => navbar.classList.remove("sticky-active"),
+  },
+});
+
+$.fn.vsmobilemenu = function (options) {
+  var opt = $.extend(
+    {
+      menuToggleBtn: ".vs-menu-toggle",
+      bodyToggleClass: "vs-body-visible",
+      subMenuClass: "vs-submenu",
+      subMenuParent: "vs-item-has-children",
+      subMenuParentToggle: "vs-active",
+      meanExpandClass: "vs-mean-expand",
+      appendElement: '<span class="vs-mean-expand"></span>',
+      subMenuToggleClass: "vs-open",
+      toggleSpeed: 400,
+    },
+    options
+  );
+
+  return this.each(function () {
+    var menu = $(this); // Select menu
+
+    // Menu Show & Hide
+    function menuToggle() {
+      menu.toggleClass(opt.bodyToggleClass);
+
+      // collapse submenu on menu hide or show
+      var subMenu = "." + opt.subMenuClass;
+      $(subMenu).each(function () {
+        if ($(this).hasClass(opt.subMenuToggleClass)) {
+          $(this).removeClass(opt.subMenuToggleClass);
+          $(this).css("display", "none");
+          $(this).parent().removeClass(opt.subMenuParentToggle);
+        }
+      });
+    }
+
+    // Class Set Up for every submenu
+    menu.find("li").each(function () {
+      var submenu = $(this).find("ul");
+      submenu.addClass(opt.subMenuClass);
+      submenu.css("display", "none");
+      submenu.parent().addClass(opt.subMenuParent);
+      submenu.prev("a").append(opt.appendElement);
+      submenu.next("a").append(opt.appendElement);
+    });
+
+    // Toggle Submenu
+    function toggleDropDown($element) {
+      if ($($element).next("ul").length > 0) {
+        $($element).parent().toggleClass(opt.subMenuParentToggle);
+        $($element).next("ul").slideToggle(opt.toggleSpeed);
+        $($element).next("ul").toggleClass(opt.subMenuToggleClass);
+      } else if ($($element).prev("ul").length > 0) {
+        $($element).parent().toggleClass(opt.subMenuParentToggle);
+        $($element).prev("ul").slideToggle(opt.toggleSpeed);
+        $($element).prev("ul").toggleClass(opt.subMenuToggleClass);
+      }
+    }
+
+    // Submenu toggle Button
+    var expandToggler = "." + opt.meanExpandClass;
+    $(expandToggler).each(function () {
+      $(this).on("click", function (e) {
+        e.preventDefault();
+        toggleDropDown($(this).parent());
+      });
+    });
+
+    // Menu Show & Hide On Toggle Btn click
+    $(opt.menuToggleBtn).each(function () {
+      $(this).on("click", function () {
+        menuToggle();
+      });
+    });
+
+    // Hide Menu On out side click
+    menu.on("click", function (e) {
+      e.stopPropagation();
+      menuToggle();
+    });
+
+    // Stop Hide full menu on menu click
+    menu.find("div").on("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   initializeVideoPlayers(".video-player", ".play-btn");
   initializeSwiper(".brandSlider", brandSliderOptions);
@@ -434,4 +578,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setHoverActiveClass(".music-box", ".music-box", "active");
   setHoverActiveClass(".statistic-box2", ".statistic-box2", "active");
   initMasonryFilter();
+  popupSearchBox(".popup-search-box", ".search-btn", ".searchClose", "show");
+  $(".vs-menu-wrapper").vsmobilemenu();
 });

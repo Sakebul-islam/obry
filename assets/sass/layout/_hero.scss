@@ -6,6 +6,9 @@
 .hero-one {
   &.section {
     @extend %d-flex, %flex-col, %p-relative;
+    img {
+      -webkit-user-drag: none;
+    }
   }
 
   &__main {
@@ -28,12 +31,15 @@
         @include breakpoint(max-xl) {
           right: 150px;
         }
-        
+
         @include breakpoint(max-md) {
           display: none;
         }
         img {
+          -webkit-animation: rotate 5s linear infinite;
           animation: rotate 5s linear infinite;
+          -webkit-transform-origin: center center;
+          -ms-transform-origin: center center;
           transform-origin: center center;
         }
       }
@@ -115,11 +121,21 @@
     }
   }
 }
+.hero-two {
+  &.section {
+    img {
+      -webkit-user-drag: none;
+    }
+  }
+}
 
 .hero-three {
   &.section {
     @extend %d-flex, %flex-col, %justify-center;
     min-height: 100vh;
+    img {
+      -webkit-user-drag: none;
+    }
   }
   &__content {
     .welcome-text {

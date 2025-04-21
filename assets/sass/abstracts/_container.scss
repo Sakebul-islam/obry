@@ -47,4 +47,11 @@
       padding-right: $container-padding-right;
     }
   }
+  &.header-container {
+    @include breakpoint(xxl) {
+      max-width: 1520px + $container-gutters;
+      padding-left: $container-padding-left;
+      padding-right: $container-padding-right;
+    }
+  }
 }
