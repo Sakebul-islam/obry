@@ -72,6 +72,7 @@ const heroOneSliderOptions = {
   autoplay: {
     delay: 1,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
   effect: "slide",
   navigation: false,

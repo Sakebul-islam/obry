@@ -120,7 +120,16 @@
     background: $color-16;
     overflow: hidden;
     padding: 26px 30px 30px 24px;
+    z-index: 1;
 
+    &::before {
+      @extend %p-absolute;
+      inset: 0;
+      background-color: $color-primary;
+      opacity: 0;
+      z-index: -1;
+      @include transition(opacity 1s ease 0s);
+    }
     &::after {
       @extend %p-absolute;
       width: 75px;
@@ -129,6 +138,8 @@
       border-radius: 50%;
       bottom: calc(100% - 35px);
       left: calc(100% - 35px);
+      @include transition(transform 1.5s ease-in !important);
+      z-index: -1;
     }
 
     .box-top {
@@ -153,6 +164,44 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+      }
+
+      .box-header {
+        .stack-title {
+          @include transition(all 1s ease 0s);
+        }
+        .stack-year {
+          @include transition(all 1s ease 0s);
+        }
+      }
+    }
+    .box-bottom {
+      p {
+        @include transition(all 1s ease 0s);
+      }
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+      &::before {
+        opacity: 1;
+      }
+      .box-top {
+        .box-header {
+          .stack-title {
+            color: $color-12;
+          }
+          .stack-year {
+            color: $color-12;
+          }
+        }
+      }
+      .box-bottom {
+        p {
+          color: $color-12;
+        }
       }
     }
   }

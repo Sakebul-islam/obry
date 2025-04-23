@@ -85,18 +85,22 @@
       }
     }
 
-    .moblide-header {
-      .header-right {
-        .search-btn {
-          background-color: $color-white;
-          color: $color-body;
-        }
-      }
-    }
+    // .moblide-header {
+    //   .header-right {
+    //     .search-btn {
+    //       background-color: $color-white;
+    //       color: $color-body;
+    //     }
+    //   }
+    // }
   }
 }
 
 .main-menu {
+  padding-left: 119px;
+  @include breakpoint(max-xxl) {
+    padding-left: 80px;
+  }
   a {
     display: block;
     position: relative;

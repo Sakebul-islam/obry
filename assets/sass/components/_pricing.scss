@@ -74,6 +74,12 @@
   }
   .pricing-body {
     padding-block: 27px;
+    padding-inline: 24px;
+    
+    @include breakpoint(max-sm){
+      padding-inline: 15px;
+    }
+
     ul {
       li {
         color: $color-white;
