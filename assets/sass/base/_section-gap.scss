@@ -59,50 +59,50 @@
 
 //  section row-gap start here
 .row-padding-top-bottom {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 
   @include breakpoint(max-lg) {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 .row-padding-top {
-  padding-top: 60px;
+  padding-top: 35px;
 
   @include breakpoint(max-lg) {
-    padding-top: 30px;
+    padding-top: 20px;
   }
 }
 .row-padding-bottom {
-  padding-bottom: 60px;
+  padding-bottom: 35px;
 
   @include breakpoint(max-lg) {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 }
 
 .row-margin-top-bottom {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 
   @include breakpoint(max-lg) {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 .row-margin-top {
-  margin-top: 60px;
+  margin-top: 35px;
 
   @include breakpoint(max-lg) {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 .row-margin-bottom {
-  margin-bottom: 60px;
+  margin-bottom: 35px;
 
   @include breakpoint(max-lg) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 //  section row-gap end here

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -21,7 +22,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .team-title .tags a, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .blog-details__content blockquote, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .media-body .author-name, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .blog-box .blog-footer .blog-share .share-list, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .skills__tab-thumb, .stack-box.v1, .stack-box.v2 .box-top, .about__tab-content .notes-and-info .note .note-list li, .about__tab-content .notes-and-info .info, .about__tab-content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer-three__top .footer-links ul, .footer-three__center .newsletter .newsletter-email, .footer-links ul, .footer-links ul li a, .footer-widgets .contact-info, .social-share ul, .hero-one.section, .hero-one__main, .hero-one__main .brands, .hero-one__slide, .hero-three.section, .moblide-header, .moblide-header .header-right, .preloader {
+.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .team-title .tags a, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .blog-details__content blockquote, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .media-body .author-name, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .blog-box .blog-footer .blog-share .share-list, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .skills__tab-thumb, .stack-box.v1, .stack-box.v2 .box-top, .about__tab-content .notes-and-info .note .note-list li, .about__tab-content .notes-and-info .info, .about__tab-content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer__center.common .footer-info .social-info, .footer__center.common .footer-info .social-info ul, .footer-three__top .footer-links ul, .footer-three__center .newsletter .newsletter-email, .footer-links ul, .footer-links ul li a, .footer-widgets .contact-info, .social-share ul, .hero-one.section, .hero-one__main, .hero-one__main .brands, .hero-one__slide, .hero-three.section, .moblide-header, .moblide-header .header-right, .preloader {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -49,7 +50,7 @@
 
 .blog-single .blog-single-author .media-img, .post-comment .comment-avater, .instagram2__slider .swiper-slide, .widget__recent-post .recent-post .post .post-thumb, .widget-contact .contact-list ul li svg,
 .widget-contact .contact-list ul li i, .service-box .service-footer .circle, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .quote-box .quote-footer .author .author-avatar, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-player__player .music-player .volume-controller .voluom-track, .music-box .music-content .music-footer .play, .music-box .music-content .music-footer .music-velum, .music-box .music-content .music-footer .voluom-track, .testimonial2__navigation .testimonial2-next,
-.testimonial2__navigation .testimonial2-prev, .testimonial-slide .author, .blog-main__pagination .pagination .page-item .page-link, .pricing-box .pricing-header .header-icon, .contact__content .contact-list li svg, .stack-box .box-thumb, .about__tabs .nav-item, .about__tab-content .notes-and-info .info .info-thumb, .social-share ul li a {
+.testimonial2__navigation .testimonial2-prev, .testimonial-slide .author, .blog-main__pagination .pagination .page-item .page-link, .pricing-box .pricing-header .header-icon, .contact__content .contact-list li svg, .stack-box .box-thumb, .about__tabs .nav-item, .about__tab-content .notes-and-info .info .info-thumb, .footer__center.common .footer-info .social-info ul li, .social-share ul li a {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -74,7 +75,7 @@
 
 .team-details__content .team-title .tags a::before, .work-details__content .work-title .tags a::before, .service-details__content .service-video .play-btn, .blog-single .comment-form .comment-respond .custom-checkbox label::after, .error__content .sub-title::before, .error__content .sub-title::after, .instagram2.section::after, .instagram2__info, .widget .widget-title::after, .widget-services .title::before, .service__shape-1, .service2__bg, .service2__info .info .sub-title::after, .service2__info .info-bg, .work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .work-box.v2 .work-thumb::before, .faq.section .section-header img, .faq__thumb .info, .skill .skill-bar .skill-progress .skill-count, .statistic-box2 .counter-item::before, .quote__slider .quote__pagination, .music-player__player .music-player .music-controller .music-length span,
 .music-player__player .music-player .music-controller .music-duration span, .music__shape, .music-box .music-content .music-footer .play i, .music-box .music-content .music-footer .music-length span,
-.music-box .music-content .music-footer .music-duration span, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .testimonial-slide2 .author .author-thumb::before, .blog-box .blog-content .blog-meta span:not(:last-of-type)::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .play-btn, .stack-box.v1::before, .stack-box.v2::before, .stack-box.v2::after, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__tab-thumb .thumb-bg, .about__tab-thumb .thumb-bg::after, .about__tab-thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .about3__content .shape, .about3__thumb .thumb-1::before, .about3__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-three__top .container::after, .footer-three__center .newsletter .newsletter-checkbox label::before, .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .hero-one__main .hero-shape .circle-shape, .hero-one__main .hro-icon, .hero-one__main-thumb, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
+.music-box .music-content .music-footer .music-duration span, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .testimonial-slide2 .author .author-thumb::before, .blog-box .blog-content .blog-meta span:not(:last-of-type)::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .popup-youtube, .stack-box.v1::before, .stack-box.v2::before, .stack-box.v2::after, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__tab-thumb .thumb-bg, .about__tab-thumb .thumb-bg::after, .about__tab-thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .about3__content .shape, .about3__thumb .thumb-1::before, .about3__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-three__top .container::after, .footer-three__center .newsletter .newsletter-checkbox label::before, .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .hero-one__main .hero-shape .circle-shape, .hero-one__main .hro-icon, .hero-one__main-thumb, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
   position: absolute;
   content: "";
 }
@@ -109,7 +110,7 @@ h6 {
   justify-content: center;
 }
 
-.team-details__content .team-title, .work-details__content .work-title, .blog-single .post-pagination, .widget__categories .categories ul li a, .widget-services .service-items ul li a, .service-box .service-header, .work-box .work-content, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .testimonial-slide, .blog-box .blog-footer, .news-box .news-footer, .pricing-box .pricing-header, .pricing-box2, .about__tabs, .about__tab-content .notes-and-info .info, .moblide-header {
+.team-details__content .team-title, .work-details__content .work-title, .blog-single .post-pagination, .widget__categories .categories ul li a, .widget-services .service-items ul li a, .service-box .service-header, .work-box .work-content, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .testimonial-slide, .blog-box .blog-footer, .news-box .news-footer, .pricing-box .pricing-header, .pricing-box2, .about__tabs, .moblide-header {
   -webkit-box-pack: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
@@ -122,8 +123,8 @@ h6 {
 }
 
 .blog-single .comment-form .comment-respond .custom-checkbox label::after, .service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .testimonial2__navigation .testimonial2-next,
-.testimonial2__navigation .testimonial2-prev, .blog-main__pagination .pagination .page-item .page-link, .pricing-box .pricing-header .header-icon, .pricing2__brands-area .brands .img, .stack-box .box-thumb, .about__tab-content .notes-and-info .info .info-content .avatars img,
-.about__tab-content .notes-and-info .info .info-content .avatars a, .footer-three__center .newsletter .newsletter-checkbox label::before, .social-share ul li a {
+.testimonial2__navigation .testimonial2-prev, .blog-main__pagination .pagination .page-item .page-link, .pricing-box .pricing-header .header-icon, .pricing2__brands-area .brands .img, .brands__slider .brand-slide, .video__player-wrapper .popup-youtube, .stack-box .box-thumb, .about__tab-content .notes-and-info .info .info-content .avatars img,
+.about__tab-content .notes-and-info .info .info-content .avatars a, .footer__center.common .footer-info .social-info ul li a, .footer-three__center .newsletter .newsletter-checkbox label::before, .social-share ul li a {
   place-content: center;
 }
 
@@ -133,7 +134,7 @@ h6 {
   align-items: start;
 }
 
-.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .share, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .brands__slider .swiper-wrapper, .contact__content .contact-list li, .about__tab-content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .footer-three__center .newsletter .newsletter-email, .social-share ul, .hero-one__slide, .moblide-header, .moblide-header .header-right, .preloader {
+.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .share, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__tab-content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .social-info, .footer__center.common .footer-info .social-info ul, .footer-three__center .newsletter .newsletter-email, .social-share ul, .hero-one__slide, .moblide-header, .moblide-header .header-right, .preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -151,7 +152,7 @@ h6 {
   align-items: baseline;
 }
 
-.service-details__content .service-video video, .blog-details__content .blog-thumbs .figure, .widget__follow-us .follow-us a, .service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .skill .title, .testimonial-slide2 .author .author-info .designation, .news-box .news-thumb, .news-box2 .news-thumb, .video__player-wrapper .video-player, .footer-widgets .instagram a {
+.service-details__content .service-video video, .blog-details__content .blog-thumbs .figure, .widget__follow-us .follow-us a, .service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .skill .title, .testimonial-slide2 .author .author-info .designation, .news-box .news-thumb, .news-box2 .news-thumb, .footer-widgets .instagram a {
   display: -webkit-block;
   display: -ms-block;
   display: block;
@@ -166,8 +167,8 @@ h6 {
 }
 
 .blog-single .comment-form .comment-respond .custom-checkbox label::after, .widget__follow-us .follow-us, .service2__info .service2-video, .service-box .service-footer .circle, .service-box2 .icon, .work-box .work-thumb .thumb-info, .work-box .work-thumb .thumb-info .icon, .work-box .work-content .work-link, .faq__accordion .accordion-item .accordion-header .accordion-button::after, .skill-box .skill-header .skill-icon, .statistic__box .icon-box, .music-player__player .play-btn, .music-player__player .music-player .volume-controller .music-velum, .music-box .music-content .music-footer .music-velum, .portfolio-box .icon-box, .portfolio-box .icon-box a, .portfolio-box .icon-box a .icon-wrapper, .testimonial2__navigation .testimonial2-next,
-.testimonial2__navigation .testimonial2-prev, .blog-main__pagination .pagination .page-item .page-link, .pricing-box .pricing-header .header-icon, .pricing2__boxes, .pricing2__brands-area .brands, .pricing2__brands-area .brands .img, .stack-box .box-thumb, .about__tab-content .notes-and-info .info .info-content .avatars img,
-.about__tab-content .notes-and-info .info .info-content .avatars a, .footer-three__center .newsletter .newsletter-checkbox label::before, .footer-widgets .instagram, .social-share ul li a {
+.testimonial2__navigation .testimonial2-prev, .blog-main__pagination .pagination .page-item .page-link, .pricing-box .pricing-header .header-icon, .pricing2__boxes, .pricing2__brands-area .brands, .pricing2__brands-area .brands .img, .brands__slider, .brands__slider .brand-slide, .video__player-wrapper .popup-youtube, .stack-box .box-thumb, .about__tab-content .notes-and-info .info .info-content .avatars img,
+.about__tab-content .notes-and-info .info .info-content .avatars a, .footer__center.common .footer-info .social-info ul li a, .footer-three__center .newsletter .newsletter-checkbox label::before, .footer-widgets .instagram, .social-share ul li a {
   display: -webkit-grid;
   display: -ms-grid;
   display: grid;
@@ -180,7 +181,7 @@ h6 {
   width: max-content;
 }
 
-.music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .music-controller .music-track, .music-box .music-thumb, .music-box .music-content, .music-box .music-content .music-footer .music-track, .music-box .music-content .music-footer .music-controller, .hero-one__main {
+.music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .music-controller .music-track, .music-box .music-thumb, .music-box .music-content, .music-box .music-content .music-footer .music-track, .music-box .music-content .music-footer .music-controller, .brands__slider .brand-slide img, .hero-one__main {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1115,60 +1116,60 @@ body::-webkit-scrollbar-thumb {
 }
 
 .row-padding-top-bottom {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 @media only screen and (max-width: 991.98px) {
   .row-padding-top-bottom {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
 .row-padding-top {
-  padding-top: 60px;
+  padding-top: 35px;
 }
 @media only screen and (max-width: 991.98px) {
   .row-padding-top {
-    padding-top: 30px;
+    padding-top: 20px;
   }
 }
 
 .row-padding-bottom {
-  padding-bottom: 60px;
+  padding-bottom: 35px;
 }
 @media only screen and (max-width: 991.98px) {
   .row-padding-bottom {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 }
 
 .row-margin-top-bottom {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 @media only screen and (max-width: 991.98px) {
   .row-margin-top-bottom {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
 .row-margin-top {
-  margin-top: 60px;
+  margin-top: 35px;
 }
 @media only screen and (max-width: 991.98px) {
   .row-margin-top {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 
 .row-margin-bottom {
-  margin-bottom: 60px;
+  margin-bottom: 35px;
 }
 @media only screen and (max-width: 991.98px) {
   .row-margin-bottom {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1805,8 +1806,15 @@ body::-webkit-scrollbar-thumb {
 .hero-one.section img {
   -webkit-user-drag: none;
 }
-.hero-one__main {
-  min-height: 100vh;
+@media only screen and (min-width: 768px) {
+  .hero-one__main {
+    min-height: 100vh;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .hero-one__main {
+    padding-top: 150px;
+  }
 }
 .hero-one__main .container {
   height: 100%;
@@ -1885,6 +1893,11 @@ body::-webkit-scrollbar-thumb {
 .hero-one__slider-area {
   padding-block: 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media only screen and (max-width: 1199.98px) {
+  .hero-one__slider-area {
+    padding-block: 20px;
+  }
 }
 .hero-one__slider .swiper-slide {
   width: max-content;
@@ -2047,6 +2060,36 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.45px;
   text-transform: capitalize;
 }
+.footer__center.common .footer-info .social-info {
+  column-gap: 8px;
+  margin-top: 26px;
+}
+@media only screen and (max-width: 767.98px) {
+  .footer__center.common .footer-info .social-info {
+    margin-top: 15px;
+  }
+}
+.footer__center.common .footer-info .social-info .social-title {
+  color: #e2c55d;
+  font-family: "Bricolage Grotesque";
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.footer__center.common .footer-info .social-info ul {
+  gap: 3px;
+  margin-left: 5px;
+}
+.footer__center.common .footer-info .social-info ul li a {
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  color: #ffffff;
+}
+.footer__center.common .footer-info .social-info ul li a:hover {
+  color: #e2c55d;
+}
 .footer__center.common .social-share {
   margin-top: 35px;
 }
@@ -2113,7 +2156,8 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
-.footer-three__center .newsletter .newsletter-email > i, .footer-three__center .newsletter .newsletter-email svg {
+.footer-three__center .newsletter .newsletter-email > i,
+.footer-three__center .newsletter .newsletter-email svg {
   color: #e2c55d;
 }
 .footer-three__center .newsletter .newsletter-email .form-control {
@@ -2464,6 +2508,16 @@ body::-webkit-scrollbar-thumb {
   bottom: 35px;
   animation: carve-rotate 2.5s linear infinite alternate;
 }
+@media only screen and (max-width: 1439.98px) {
+  .about.section .shape-1 {
+    left: 320px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .about.section .shape-1 {
+    left: 80%;
+  }
+}
 .about.section .shape-2 {
   top: 50px;
   right: 5px;
@@ -2615,6 +2669,11 @@ body::-webkit-scrollbar-thumb {
 .about__tab-content .notes-and-info .info {
   gap: 40px;
 }
+@media only screen and (max-width: 1439.98px) {
+  .about__tab-content .notes-and-info .info {
+    gap: 20px;
+  }
+}
 .about__tab-content .notes-and-info .info .info-thumb {
   border-radius: 19px;
   overflow: hidden;
@@ -2627,6 +2686,12 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   line-height: 150%;
   text-transform: capitalize;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 1439.98px) {
+  .about__tab-content .notes-and-info .info .info-content .info-title {
+    white-space: wrap;
+  }
 }
 .about__tab-content .notes-and-info .info .info-content span {
   color: #9d9d9d;
@@ -2669,10 +2734,15 @@ body::-webkit-scrollbar-thumb {
   color: #000;
 }
 .about__tab-thumb {
-  max-width: 580px;
+  max-width: 550px;
   width: 100%;
   margin-left: auto;
   z-index: 2;
+}
+@media only screen and (max-width: 991.98px) {
+  .about__tab-thumb {
+    margin-left: 0;
+  }
 }
 .about__tab-thumb .thumb-bg {
   width: 100%;
@@ -2694,6 +2764,21 @@ body::-webkit-scrollbar-thumb {
   top: -60px;
   left: -60px;
   animation: rotate 4.5s linear infinite;
+}
+@media only screen and (max-width: 1199.98px) {
+  .about__tab-thumb .thumb-bg img {
+    left: -10px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .about__tab-thumb .thumb-bg img {
+    left: -60px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .about__tab-thumb .thumb-bg img {
+    display: none;
+  }
 }
 @media only screen and (max-width: 575.98px) {
   .about__tab-thumb .thumb-bg {
@@ -2752,8 +2837,17 @@ body::-webkit-scrollbar-thumb {
 .about2__content .shape {
   right: 0;
   bottom: 0;
+  animation: carve-rotate 2.5s linear infinite alternate;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
 }
-@media only screen and (max-width: 575.98px) {
+@media only screen and (min-width: 1400px) {
+  .about2__content .shape {
+    margin-right: 50px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
   .about2__content .shape {
     display: none;
   }
@@ -2772,15 +2866,15 @@ body::-webkit-scrollbar-thumb {
     padding-left: 0px;
   }
 }
-.about2__thumb .thumb-1 img {
-  border-radius: 29px;
-  background: #171a1b;
-  padding: 20px;
-}
-@media only screen and (min-width: 1400px) {
-  .about2__thumb .thumb-1 img {
-    max-width: 450px;
+@media only screen and (min-width: 1200px) {
+  .about2__thumb .thumb-1 {
+    padding-bottom: 58px;
   }
+}
+.about2__thumb .thumb-1 img {
+  border-radius: 21px;
+  background: #171a1b;
+  padding: 17px;
 }
 @media only screen and (max-width: 1199.98px) {
   .about2__thumb .thumb-1 img {
@@ -2788,14 +2882,21 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .about2__thumb .thumb-2 {
+  border-radius: 14px;
   left: 0;
   bottom: -58px;
   z-index: -1;
+  overflow: hidden;
 }
 @media only screen and (min-width: 1400px) {
   .about2__thumb .thumb-2 {
     left: 20px;
     max-width: 280px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about2__thumb .thumb-2 {
+    bottom: 0;
   }
 }
 @media only screen and (max-width: 1199.98px) {
@@ -2814,9 +2915,8 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .about2__thumb .thumb-2 img {
-  border-radius: 29px;
   background: #171a1b;
-  padding: 20px;
+  padding: 15px;
 }
 @media only screen and (max-width: 1199.98px) {
   .about2__thumb .thumb-2 img {
@@ -2863,8 +2963,22 @@ body::-webkit-scrollbar-thumb {
 .about3__content .shape {
   right: -120px;
   bottom: 0;
+  animation: carve-rotate 2.5s linear infinite alternate;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
 }
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 1599.98px) {
+  .about3__content .shape {
+    right: -80px;
+  }
+}
+@media only screen and (max-width: 1439.98px) {
+  .about3__content .shape {
+    right: -21px;
+  }
+}
+@media only screen and (max-width: 1199.98px) {
   .about3__content .shape {
     display: none;
   }
@@ -3323,14 +3437,11 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.video__player-wrapper .video-player {
-  width: 100%;
-  height: auto;
+.video__player-wrapper img {
+  min-height: 400px;
+  object-fit: cover;
 }
-.video__player-wrapper .video-player.pointer {
-  cursor: pointer;
-}
-.video__player-wrapper .play-btn {
+.video__player-wrapper .popup-youtube {
   top: 50%;
   left: 50%;
   width: 92px;
@@ -3344,7 +3455,7 @@ body::-webkit-scrollbar-thumb {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.video__player-wrapper .play-btn.disabled {
+.video__player-wrapper .popup-youtube.disabled {
   -webkit-transform: translate(-50%, -50%) scale(0.4);
   -ms-transform: translate(-50%, -50%) scale(0.4);
   transform: translate(-50%, -50%) scale(0.4);
@@ -3353,7 +3464,7 @@ body::-webkit-scrollbar-thumb {
   opacity: 0;
 }
 @media only screen and (max-width: 1199.98px) {
-  .video__player-wrapper .play-btn {
+  .video__player-wrapper .popup-youtube {
     width: 80px;
     height: 80px;
     font-size: 20px;
@@ -3361,7 +3472,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media only screen and (max-width: 991.98px) {
-  .video__player-wrapper .play-btn {
+  .video__player-wrapper .popup-youtube {
     width: 70px;
     height: 70px;
     font-size: 18px;
@@ -3376,17 +3487,27 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background: #171a1b;
   overflow: hidden;
-  padding: 67px;
+  padding: 67px 47px;
+  column-gap: 20px;
+  row-gap: 10px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 1199.98px) {
   .brands__slider {
-    padding: 50px;
-    border-radius: 10px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 40px;
   }
 }
 @media only screen and (max-width: 767.98px) {
   .brands__slider {
-    padding: 40px 30px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .brands__slider {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 30px;
   }
 }
 .pricing.section {
@@ -4416,8 +4537,11 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.5s ease;
   font-size: 14px;
 }
-.music-box .music-content .music-footer .play i:nth-of-type(2) {
-  opacity: 0;
+.music-box .music-content .music-footer .play.now-play {
+  background-color: #e2c55d;
+}
+.music-box .music-content .music-footer .play.now-play i::before {
+  --fa: "";
 }
 .music-box .music-content .music-footer .music-length,
 .music-box .music-content .music-footer .music-duration {
@@ -4456,9 +4580,9 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 .music-box .music-content .music-footer .music-track .music-progress {
-  width: 1px;
+  width: 0px;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #e2c55d;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -4481,6 +4605,9 @@ body::-webkit-scrollbar-thumb {
   .music-box .music-content .music-footer .music-velum {
     margin: 0;
   }
+}
+.music-box .music-content .music-footer .music-velum.muted i {
+  --fa: "";
 }
 .music-box .music-content .music-footer .voluom-track {
   width: 37px;
@@ -4514,37 +4641,11 @@ body::-webkit-scrollbar-thumb {
     gap: 20px;
   }
 }
-.music-box:hover .music-content .music-heder .music-buy, .music-box.active .music-content .music-heder .music-buy {
+.music-box:hover .music-content .music-heder .music-buy {
   color: #e2c55d;
 }
-.music-box:hover .music-content .music-heder .music-buy i, .music-box.active .music-content .music-heder .music-buy i {
+.music-box:hover .music-content .music-heder .music-buy i {
   color: #e2c55d;
-}
-.music-box:hover .music-content .music-footer .play, .music-box.active .music-content .music-footer .play {
-  background-color: #e2c55d;
-}
-.music-box:hover .music-content .music-footer .play i:nth-of-type(1), .music-box.active .music-content .music-footer .play i:nth-of-type(1) {
-  opacity: 0;
-}
-.music-box:hover .music-content .music-footer .play i:nth-of-type(2), .music-box.active .music-content .music-footer .play i:nth-of-type(2) {
-  opacity: 1;
-}
-.music-box:hover .music-content .music-footer .music-length span:nth-child(1),
-.music-box:hover .music-content .music-footer .music-duration span:nth-child(1), .music-box.active .music-content .music-footer .music-length span:nth-child(1),
-.music-box.active .music-content .music-footer .music-duration span:nth-child(1) {
-  opacity: 0;
-}
-.music-box:hover .music-content .music-footer .music-length span:nth-child(2),
-.music-box:hover .music-content .music-footer .music-duration span:nth-child(2), .music-box.active .music-content .music-footer .music-length span:nth-child(2),
-.music-box.active .music-content .music-footer .music-duration span:nth-child(2) {
-  opacity: 1;
-}
-.music-box:hover .music-content .music-footer .music-track .music-progress, .music-box.active .music-content .music-footer .music-track .music-progress {
-  width: 50%;
-  background-color: #e2c55d;
-}
-.music-box:hover .music-content .music-footer .voluom-track .voluom-progress, .music-box.active .music-content .music-footer .voluom-track .voluom-progress {
-  width: 100%;
 }
 
 @media only screen and (max-width: 575.98px) {
@@ -4573,6 +4674,9 @@ body::-webkit-scrollbar-thumb {
     height: 100px;
     font-size: 30px;
   }
+}
+.music-player__player .play-btn.now-play i {
+  --fa:"";
 }
 .music-player__player .music-player {
   padding-left: 30px;
@@ -4661,7 +4765,7 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 .music-player__player .music-player .music-controller .music-track .music-progress {
-  width: 50%;
+  width: 0%;
   height: 100%;
   background-color: #e2c55d;
   -webkit-transition: all 0.5s ease;
@@ -4701,6 +4805,9 @@ body::-webkit-scrollbar-thumb {
   .music-player__player .music-player .volume-controller .music-velum {
     margin: 0;
   }
+}
+.music-player__player .music-player .volume-controller .music-velum.muted i {
+  --fa: "";
 }
 .music-player__player .music-player .volume-controller .voluom-track {
   width: 37px;
@@ -5530,7 +5637,13 @@ body::-webkit-scrollbar-thumb {
 .service__shape-1 img {
   animation: forward-backward 1s linear infinite alternate;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1199.98px) {
+  .service__shape-1 {
+    top: -50px;
+    left: 200px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
   .service__shape-1 {
     display: none;
   }
@@ -5579,6 +5692,11 @@ body::-webkit-scrollbar-thumb {
   background-color: #e2c55d;
   height: 100%;
   padding: 40px;
+}
+@media only screen and (max-width: 767.98px) {
+  .service2__info {
+    margin-top: 20px;
+  }
 }
 @media only screen and (max-width: 575.98px) {
   .service2__info {
@@ -5738,6 +5856,10 @@ body::-webkit-scrollbar-thumb {
 .service-box.v2 .service-content .service-body p {
   color: #1d2021;
 }
+.service-box.v2 .service-content .service-body .title a {
+  color: inherit;
+  font-size: inherit;
+}
 .service-box.v2 .service-content .service-footer {
   gap: 17px;
   margin-top: 25px;
@@ -5767,6 +5889,16 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.5s ease;
   padding-block: 60px;
   padding-inline: 20px;
+}
+@media only screen and (max-width: 1439.98px) {
+  .service-box2 {
+    padding-block: 30px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .service-box2 {
+    padding-block: 20px;
+  }
 }
 .service-box2 .icon {
   -webkit-transition: all 0.5s ease;

@@ -25,40 +25,42 @@ function odometerCounter() {
   });
 }
 
-const brandSliderOptions = {
-  loop: true,
-  speed: 2000,
-  autoplay: {
-    delay: 1,
-  },
-  effect: "slide",
-  navigation: false,
-  slidesPerView: 2,
-  spaceBetween: 20,
-  breakpoints: {
-    // When the viewport width is 480px or more
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    // When the viewport width is 768px or more
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-    },
-    // When the viewport width is 1024px or more
-    1024: {
-      slidesPerView: 5,
-      spaceBetween: 85,
-    },
-  },
-};
+// const brandSliderOptions = {
+//   loop: true,
+//   speed: 2000,
+//   autoplay: {
+//     delay: 1,
+//   },
+//   effect: "slide",
+//   navigation: false,
+//   slidesPerView: 2,
+//   spaceBetween: 20,
+//   breakpoints: {
+//     // When the viewport width is 480px or more
+//     480: {
+//       slidesPerView: 3,
+//       spaceBetween: 30,
+//     },
+//     // When the viewport width is 768px or more
+//     768: {
+//       slidesPerView: 4,
+//       spaceBetween: 40,
+//     },
+//     // When the viewport width is 1024px or more
+//     1024: {
+//       slidesPerView: 5,
+//       spaceBetween: 85,
+//     },
+//   },
+// };
 const quoteSliderOptions = {
   loop: true,
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  direction: "horizontal",
+  effect: "flip",
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".quote__pagination",
     clickable: true,
@@ -154,38 +156,6 @@ function initTestimonialNavActiveToggle(direction = "right") {
   prevBtn.addEventListener("click", () => setActiveNav("left"));
 }
 
-function initializeVideoPlayers(videoSelector, playBtnSelector) {
-  const videos = document.querySelectorAll(videoSelector);
-  const playBtns = document.querySelectorAll(playBtnSelector);
-
-  videos.forEach((video, index) => {
-    const playBtn = playBtns[index];
-    if (video && playBtn) {
-      video.pause();
-
-      playBtn.addEventListener("click", () => {
-        if (video.paused) {
-          video.play();
-          playBtn.classList.add("disabled");
-          video.classList.add("pointer");
-        } else {
-          video.pause();
-          playBtn.classList.remove("disabled");
-          video.classList.remove("pointer");
-        }
-      });
-
-      video.addEventListener("click", () => {
-        console.log("clicked");
-        if (playBtn.classList.contains("disabled")) {
-          video.pause();
-          playBtn.classList.remove("disabled");
-          video.classList.remove("pointer");
-        }
-      });
-    }
-  });
-}
 
 function initializeSwiper(containerSelector, options) {
   // Check if the container exists
@@ -563,9 +533,218 @@ $.fn.vsmobilemenu = function (options) {
   });
 };
 
+function initMagnificPopups(
+  selector = ".popup-youtube, .popup-vimeo, .popup-gmaps, .video__player-play-btn"
+) {
+  $(selector).magnificPopup({
+    type: "iframe",
+    mainClass: "mfp-fade",
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false,
+  });
+}
+
+// function initObryPlayers() {
+//   const players = document.querySelectorAll('.obry-player');
+
+//   players.forEach(player => {
+//     const audio = player.querySelector('audio');
+//     if (!audio) return;
+
+//     const playBtn = player.querySelector('.play, .play-btn');
+//     const currentTimeEl = player.querySelector('.music-length span');
+//     const totalTimeEl = player.querySelector('.music-duration span');
+//     const progressBar = player.querySelector('.music-progress');
+//     const volumeBtn = player.querySelector('.music-velum');
+//     const volumeTrack = player.querySelector('.voluom-track');
+//     const volumeProgress = player.querySelector('.voluom-progress');
+//     const musicTrack = player.querySelector('.music-track');
+
+//     const formatTime = time => {
+//       const min = String(Math.floor(time / 60)).padStart(2, '0');
+//       const sec = String(Math.floor(time % 60)).padStart(2, '0');
+//       return `${min}:${sec}`;
+//     };
+
+//     // ⏱ Total time display
+//     audio.addEventListener('loadedmetadata', () => {
+//       if (totalTimeEl) {
+//         totalTimeEl.textContent = formatTime(audio.duration);
+//       }
+//     });
+
+//     // ⏱ Update progress and current time
+//     audio.addEventListener('timeupdate', () => {
+//       if (currentTimeEl) {
+//         currentTimeEl.textContent = formatTime(audio.currentTime);
+//       }
+//       if (progressBar && audio.duration) {
+//         const percentage = (audio.currentTime / audio.duration) * 100;
+//         progressBar.style.width = `${percentage}%`;
+//       }
+//     });
+
+//     // ▶️ Play/Pause button
+//     playBtn?.addEventListener('click', () => {
+//       // Pause all other players
+//       players.forEach(p => {
+//         const a = p.querySelector('audio');
+//         if (a && a !== audio) a.pause();
+//       });
+
+//       if (audio.paused) {
+//         audio.play().catch(err => {
+//           console.error('Audio play failed:', err.message);
+//         });
+//         // Add .now-play and remove .now-pause
+//         playBtn.classList.add('now-play');
+//         playBtn.classList.remove('now-pause');
+//       } else {
+//         audio.pause();
+//         // Add .now-pause and remove .now-play
+//         playBtn.classList.add('now-pause');
+//         playBtn.classList.remove('now-play');
+//       }
+//     });
+
+//     // 🔇 Mute/Unmute button
+//     volumeBtn?.addEventListener('click', () => {
+//       audio.muted = !audio.muted;
+//       volumeBtn.classList.toggle('muted', audio.muted);
+//     });
+
+//     // 🔊 Volume adjustment
+//     volumeTrack?.addEventListener('click', (e) => {
+//       const rect = volumeTrack.getBoundingClientRect();
+//       const volume = (e.clientX - rect.left) / rect.width;
+//       audio.volume = volume;
+//       if (volumeProgress) {
+//         volumeProgress.style.width = `${volume * 100}%`;
+//       }
+//     });
+
+//     // ⏩ Click on music track to seek forward/backward
+//     musicTrack?.addEventListener('click', (e) => {
+//       const rect = musicTrack.getBoundingClientRect();
+//       const position = (e.clientX - rect.left) / rect.width; // Position as a percentage (0 to 1)
+//       audio.currentTime = position * audio.duration; // Seek to the new position
+
+//       // Update the current time display
+//       if (currentTimeEl) {
+//         currentTimeEl.textContent = formatTime(audio.currentTime);
+//       }
+
+//       // Update the progress bar
+//       if (progressBar && audio.duration) {
+//         const percentage = (audio.currentTime / audio.duration) * 100;
+//         progressBar.style.width = `${percentage}%`;
+//       }
+//     });
+//   });
+// }
+
+function initObryPlayers() {
+  const players = document.querySelectorAll('.obry-player');
+
+  players.forEach(player => {
+    const audio = player.querySelector('audio');
+    if (!audio) return;
+
+    const playBtn = player.querySelector('.play, .play-btn');
+    const currentTimeEl = player.querySelector('.music-length span');
+    const totalTimeEl = player.querySelector('.music-duration span');
+    const progressBar = player.querySelector('.music-progress');
+    const volumeBtn = player.querySelector('.music-velum');
+    const volumeTrack = player.querySelector('.voluom-track');
+    const volumeProgress = player.querySelector('.voluom-progress');
+    const musicTrack = player.querySelector('.music-track');
+
+    const formatTime = time => {
+      const min = String(Math.floor(time / 60)).padStart(2, '0');
+      const sec = String(Math.floor(time % 60)).padStart(2, '0');
+      return `${min}:${sec}`;
+    };
+
+    // ⏱ Total time display
+    audio.addEventListener('loadedmetadata', () => {
+      if (totalTimeEl) {
+        totalTimeEl.textContent = formatTime(audio.duration);
+      }
+    });
+
+    // ⏱ Update progress and current time
+    audio.addEventListener('timeupdate', () => {
+      if (currentTimeEl) {
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+      }
+      if (progressBar && audio.duration) {
+        const percentage = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = `${percentage}%`;
+      }
+    });
+
+    // ▶️ Play/Pause button
+    playBtn?.addEventListener('click', () => {
+      players.forEach(p => {
+        const a = p.querySelector('audio');
+        const btn = p.querySelector('.play, .play-btn');
+
+        if (a && a !== audio) {
+          a.pause();
+          btn?.classList.remove('now-play');
+          btn?.classList.add('now-pause');
+        }
+      });
+
+      if (audio.paused) {
+        audio.play();
+        playBtn.classList.add('now-play');
+        playBtn.classList.remove('now-pause');
+      } else {
+        audio.pause();
+        playBtn.classList.add('now-pause');
+        playBtn.classList.remove('now-play');
+      }
+    });
+
+    // 🔇 Mute/Unmute button
+    volumeBtn?.addEventListener('click', () => {
+      audio.muted = !audio.muted;
+      volumeBtn.classList.toggle('muted', audio.muted);
+    });
+
+    // 🔊 Volume adjustment
+    volumeTrack?.addEventListener('click', (e) => {
+      const rect = volumeTrack.getBoundingClientRect();
+      const volume = (e.clientX - rect.left) / rect.width;
+      audio.volume = volume;
+      if (volumeProgress) {
+        volumeProgress.style.width = `${volume * 100}%`;
+      }
+    });
+
+    // ⏩ Click on music track to seek forward/backward
+    musicTrack?.addEventListener('click', (e) => {
+      const rect = musicTrack.getBoundingClientRect();
+      const position = (e.clientX - rect.left) / rect.width;
+      audio.currentTime = position * audio.duration;
+
+      if (currentTimeEl) {
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+      }
+
+      if (progressBar && audio.duration) {
+        const percentage = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = `${percentage}%`;
+      }
+    });
+  });
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  initializeVideoPlayers(".video-player", ".play-btn");
-  initializeSwiper(".brandSlider", brandSliderOptions);
+  // initializeSwiper(".brandSlider", brandSliderOptions);
   initializeSwiper(".quote__slider", quoteSliderOptions);
   initializeSwiper(".hero-one__slider", heroOneSliderOptions);
   initializeSwiper(".instagram2__slider", instagram2SliderOptions);
@@ -576,9 +755,10 @@ document.addEventListener("DOMContentLoaded", () => {
   odometerCounter();
   initMagnificPopup();
   updateSkills();
-  setHoverActiveClass(".music-box", ".music-box", "active");
   setHoverActiveClass(".statistic-box2", ".statistic-box2", "active");
   initMasonryFilter();
   popupSearchBox(".popup-search-box", ".search-btn", ".searchClose", "show");
   $(".vs-menu-wrapper").vsmobilemenu();
+  initMagnificPopups();
+  initObryPlayers();
 });

@@ -16,8 +16,12 @@
     img {
       animation: forward-backward 1s linear infinite alternate;
     }
-
-    @include breakpoint(max-md){
+    
+    @include breakpoint(max-xl){
+      top: -50px;
+      left: 200px;
+    }
+    @include breakpoint(max-lg){
       display: none;
     }
   }
@@ -85,6 +89,9 @@
     height: 100%;
     padding: 40px;
 
+    @include breakpoint(max-md) {
+      margin-top: 20px;
+    }
     @include breakpoint(max-sm) {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -265,6 +272,12 @@
         p {
           color: $color-6;
         }
+        .title {
+          a {
+            color: inherit;
+            font-size: inherit;
+          }
+        }
       }
       .service-footer {
         @extend %d-flex, %item-center;
@@ -303,6 +316,13 @@
   @include transition($transition);
   padding-block: 60px;
   padding-inline: 20px;
+  
+  @include breakpoint(max-xxl){
+    padding-block: 30px;
+  }
+  @include breakpoint(max-md){
+    padding-block: 20px;
+  }
   .icon {
     @extend %d-grid, %place-center;
     @include transition($transition);

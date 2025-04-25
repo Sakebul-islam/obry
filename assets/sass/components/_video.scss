@@ -10,17 +10,12 @@
   &__player-wrapper {
     @extend %p-relative;
 
-    .video-player {
-      @extend %d-block;
-      width: 100%;
-      height: auto;
-
-      &.pointer {
-        cursor: pointer;
-      }
+    img {
+      min-height: 400px;
+      object-fit: cover;
     }
-    .play-btn {
-      @extend %p-absolute;
+    .popup-youtube {
+      @extend %p-absolute,%d-grid,%place-center;
       top: 50%;
       left: 50%;
       width: 92px;

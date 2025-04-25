@@ -126,7 +126,7 @@
         @include transition($transition);
         border: none;
         margin-right: 15px;
-
+        
         @include breakpoint(max-sm) {
           margin: 0;
         }
@@ -137,9 +137,13 @@
           @include transform(translate(-50%, -50%));
           @include transition($transition);
           font-size: 14px;
-
-          &:nth-of-type(2) {
-            opacity: 0;
+        }
+        &.now-play{
+          background-color: $color-primary;
+          i {
+            &::before{
+              --fa: '\f04b';
+            }
           }
         }
       }
@@ -178,9 +182,9 @@
         cursor: pointer;
 
         .music-progress {
-          width: 1px;
+          width: 0px;
           height: 100%;
-          background-color: $color-white;
+          background-color: $color-primary;
           @include transition($transition);
         }
       }
@@ -200,6 +204,12 @@
 
         @include breakpoint(max-sm) {
           margin: 0;
+        }
+
+        &.muted{
+          i {
+            --fa: '\f6a9';
+          }
         }
       }
       .voluom-track {
@@ -238,8 +248,7 @@
     }
   }
 
-  &:hover,
-  &.active {
+  &:hover {
     .music-content {
       .music-heder {
         .music-buy {
@@ -247,45 +256,6 @@
 
           i {
             color: $color-primary;
-          }
-        }
-      }
-      .music-footer {
-        .play {
-          background-color: $color-primary;
-          i {
-            &:nth-of-type(1) {
-              opacity: 0;
-            }
-            &:nth-of-type(2) {
-              opacity: 1;
-            }
-          }
-        }
-
-        .music-length,
-        .music-duration {
-          span {
-            &:nth-child(1) {
-              opacity: 0;
-            }
-            &:nth-child(2) {
-              opacity: 1;
-            }
-          }
-        }
-        .music-track {
-          .music-progress {
-            width: 50%;
-            background-color: $color-primary;
-          }
-        }
-
-        .music-velum {
-        }
-        .voluom-track {
-          .voluom-progress {
-            width: 100%;
           }
         }
       }

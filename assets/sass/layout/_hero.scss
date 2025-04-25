@@ -13,7 +13,13 @@
 
   &__main {
     @extend %flex-1, %d-flex, %flex-col, %justify-end, %p-relative;
-    min-height: 100vh;
+
+    @include breakpoint(md) {
+      min-height: 100vh;
+    }
+    @include breakpoint(max-lg) {
+      padding-top: 150px;
+    }
 
     .container {
       height: 100%;
@@ -100,6 +106,10 @@
   &__slider-area {
     padding-block: 25px;
     border-top: 1px solid rgba($color-white, 0.1);
+    
+    @include breakpoint(max-xl){
+      padding-block: 20px;
+    }
   }
   &__slider {
     .swiper-slide {
