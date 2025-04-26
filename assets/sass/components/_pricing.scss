@@ -159,15 +159,29 @@
   &__boxes {
     overflow: hidden;
     .pricing-box2-wrapper {
-      @extend %d-flex,%no-wrap;
+      @extend %d-flex, %no-wrap;
       gap: 25px;
+
+      @include breakpoint(max-lg) {
+        flex-direction: column;
+      }
     }
 
     .pricing-box2 {
       min-width: 602px;
+
+      @include breakpoint(max-lg) {
+        min-width: 100%;
+      }
       .pricing-thumb {
         img {
           height: 100%;
+
+          @include breakpoint(max-sm) {
+            max-height: 400px;
+            object-fit: cover;
+            object-position: left top;
+          }
         }
       }
     }

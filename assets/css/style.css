@@ -3965,11 +3965,28 @@ body::-webkit-scrollbar-thumb {
 .pricing2__boxes .pricing-box2-wrapper {
   gap: 25px;
 }
+@media only screen and (max-width: 991.98px) {
+  .pricing2__boxes .pricing-box2-wrapper {
+    flex-direction: column;
+  }
+}
 .pricing2__boxes .pricing-box2 {
   min-width: 602px;
 }
+@media only screen and (max-width: 991.98px) {
+  .pricing2__boxes .pricing-box2 {
+    min-width: 100%;
+  }
+}
 .pricing2__boxes .pricing-box2 .pricing-thumb img {
   height: 100%;
+}
+@media only screen and (max-width: 575.98px) {
+  .pricing2__boxes .pricing-box2 .pricing-thumb img {
+    max-height: 400px;
+    object-fit: cover;
+    object-position: left top;
+  }
 }
 @media only screen and (max-width: 575.98px) {
   .pricing2__boxes .pricing-box2 {

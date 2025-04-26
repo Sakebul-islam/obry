@@ -25,34 +25,6 @@ function odometerCounter() {
   });
 }
 
-// const brandSliderOptions = {
-//   loop: true,
-//   speed: 2000,
-//   autoplay: {
-//     delay: 1,
-//   },
-//   effect: "slide",
-//   navigation: false,
-//   slidesPerView: 2,
-//   spaceBetween: 20,
-//   breakpoints: {
-//     // When the viewport width is 480px or more
-//     480: {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//     },
-//     // When the viewport width is 768px or more
-//     768: {
-//       slidesPerView: 4,
-//       spaceBetween: 40,
-//     },
-//     // When the viewport width is 1024px or more
-//     1024: {
-//       slidesPerView: 5,
-//       spaceBetween: 85,
-//     },
-//   },
-// };
 const quoteSliderOptions = {
   loop: true,
   direction: "horizontal",
@@ -323,32 +295,6 @@ function updateSkills() {
   });
 }
 
-// var gridfilter = $(".work-masonry__items");
-// if (gridfilter.length) {
-//   $(".work-masonry__items").imagesLoaded(function () {
-//     $(".masonry-active").on("click", "button", function () {
-//       var filterValue = $(this).attr("data-filter");
-//       $grid.isotope({
-//         filter: filterValue,
-//       });
-//     });
-//     var $grid = $(".work-masonry__items").isotope({
-//       itemSelector: ".masonry-item",
-//       percentPosition: true,
-//       masonry: {
-//         columnWidth: ".masonry-item",
-//       },
-//     });
-//   });
-// }
-
-// $(".work-masonry__filter button").on("click", function (event) {
-//   event.preventDefault();
-//   if (!$(this).hasClass("active")) {
-//     $(this).addClass("active").siblings(".active").removeClass("active");
-//   }
-// });
-
 const initMasonryFilter = () => {
   if (typeof imagesLoaded !== "function") {
     return;
@@ -554,103 +500,6 @@ function initMagnificPopups(
   });
 }
 
-// function initObryPlayers() {
-//   const players = document.querySelectorAll('.obry-player');
-
-//   players.forEach(player => {
-//     const audio = player.querySelector('audio');
-//     if (!audio) return;
-
-//     const playBtn = player.querySelector('.play, .play-btn');
-//     const currentTimeEl = player.querySelector('.music-length span');
-//     const totalTimeEl = player.querySelector('.music-duration span');
-//     const progressBar = player.querySelector('.music-progress');
-//     const volumeBtn = player.querySelector('.music-velum');
-//     const volumeTrack = player.querySelector('.voluom-track');
-//     const volumeProgress = player.querySelector('.voluom-progress');
-//     const musicTrack = player.querySelector('.music-track');
-
-//     const formatTime = time => {
-//       const min = String(Math.floor(time / 60)).padStart(2, '0');
-//       const sec = String(Math.floor(time % 60)).padStart(2, '0');
-//       return `${min}:${sec}`;
-//     };
-
-//     // ⏱ Total time display
-//     audio.addEventListener('loadedmetadata', () => {
-//       if (totalTimeEl) {
-//         totalTimeEl.textContent = formatTime(audio.duration);
-//       }
-//     });
-
-//     // ⏱ Update progress and current time
-//     audio.addEventListener('timeupdate', () => {
-//       if (currentTimeEl) {
-//         currentTimeEl.textContent = formatTime(audio.currentTime);
-//       }
-//       if (progressBar && audio.duration) {
-//         const percentage = (audio.currentTime / audio.duration) * 100;
-//         progressBar.style.width = `${percentage}%`;
-//       }
-//     });
-
-//     // ▶️ Play/Pause button
-//     playBtn?.addEventListener('click', () => {
-//       players.forEach(p => {
-//         const a = p.querySelector('audio');
-//         const btn = p.querySelector('.play, .play-btn');
-
-//         if (a && a !== audio) {
-//           a.pause();
-//           btn?.classList.remove('now-play');
-//           btn?.classList.add('now-pause');
-//         }
-//       });
-
-//       if (audio.paused) {
-//         audio.play();
-//         playBtn.classList.add('now-play');
-//         playBtn.classList.remove('now-pause');
-//       } else {
-//         audio.pause();
-//         playBtn.classList.add('now-pause');
-//         playBtn.classList.remove('now-play');
-//       }
-//     });
-
-//     // 🔇 Mute/Unmute button
-//     volumeBtn?.addEventListener('click', () => {
-//       audio.muted = !audio.muted;
-//       volumeBtn.classList.toggle('muted', audio.muted);
-//     });
-
-//     // 🔊 Volume adjustment
-//     volumeTrack?.addEventListener('click', (e) => {
-//       const rect = volumeTrack.getBoundingClientRect();
-//       const volume = (e.clientX - rect.left) / rect.width;
-//       audio.volume = volume;
-//       if (volumeProgress) {
-//         volumeProgress.style.width = `${volume * 100}%`;
-//       }
-//     });
-
-//     // ⏩ Click on music track to seek forward/backward
-//     musicTrack?.addEventListener('click', (e) => {
-//       const rect = musicTrack.getBoundingClientRect();
-//       const position = (e.clientX - rect.left) / rect.width;
-//       audio.currentTime = position * audio.duration;
-
-//       if (currentTimeEl) {
-//         currentTimeEl.textContent = formatTime(audio.currentTime);
-//       }
-
-//       if (progressBar && audio.duration) {
-//         const percentage = (audio.currentTime / audio.duration) * 100;
-//         progressBar.style.width = `${percentage}%`;
-//       }
-//     });
-//   });
-// }
 
 function initObryPlayers() {
   const players = document.querySelectorAll(".obry-player");
@@ -773,12 +622,24 @@ function initHeroTwoSlider() {
 
   if (!slider) return;
 
+  const slides = slider.querySelectorAll(".swiper-slide");
+  if (!slides.length) return;
+
+  slides.forEach(slide => {
+    const images = slide.querySelectorAll(".slide-image");
+    if (images.length >= 2) {
+      images.forEach(img => img.classList.remove("active"));
+      images[1].classList.add("active");
+    }
+  });
+
+
   const slideImages = slider.querySelectorAll(".slide-image");
   if (!slideImages.length) return;
 
   slideImages.forEach((image) => {
     image.addEventListener("click", function () {
-      const slideContainer = this.closest(".hero-two__slide-container");
+      const slideContainer = this.closest(".slide-container");
       if (!slideContainer) return;
 
       const imagesInSlide = slideContainer.querySelectorAll(".slide-image");
@@ -848,8 +709,74 @@ function initDragButton() {
   swiperElement.addEventListener("click", handleClick);
 }
 
+// const horizontalScroll = () => {
+//   const races = document.querySelector(".pricing-box2-wrapper");
+
+//   function getScrollAmount() {
+//     if (!races) {
+//       return;
+//     }
+//     let racesWidth = races?.scrollWidth;
+//     let containerWidth = window.innerWidth;
+//     let offsetLeft = races.getBoundingClientRect().left;
+//     const extraPadding = 15;
+//     return -(racesWidth - containerWidth + offsetLeft + extraPadding);
+//   }
+//   const tween = gsap.to(races, {
+//     x: getScrollAmount,
+//     duration: 3,
+//     ease: "none",
+//   });
+
+//   ScrollTrigger.create({
+//     trigger: ".pricing2",
+//     start: "top 20%",
+//     end: () => `+=${getScrollAmount() * -1}`,
+//     pin: true,
+//     animation: tween,
+//     scrub: 1,
+//     invalidateOnRefresh: true,
+//     markers: false,
+//   });
+// };
+
+const horizontalScroll = () => {
+  ScrollTrigger.matchMedia({
+    // Only run when screen is 992px and above
+    "(min-width: 992px)": function () {
+      const races = document.querySelector(".pricing-box2-wrapper");
+
+      function getScrollAmount() {
+        if (!races) return;
+        let racesWidth = races.scrollWidth;
+        let containerWidth = window.innerWidth;
+        let offsetLeft = races.getBoundingClientRect().left;
+        const extraPadding = 15;
+        return -(racesWidth - containerWidth + offsetLeft + extraPadding);
+      }
+
+      const tween = gsap.to(races, {
+        x: getScrollAmount,
+        duration: 3,
+        ease: "none",
+      });
+
+      ScrollTrigger.create({
+        trigger: ".pricing2",
+        start: "top 20%",
+        end: () => `+=${getScrollAmount() * -1}`,
+        pin: true,
+        animation: tween,
+        scrub: 1,
+        invalidateOnRefresh: true,
+        markers: false,
+      });
+    }
+  });
+};
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  // initializeSwiper(".brandSlider", brandSliderOptions);
   initializeSwiper(".quote__slider", quoteSliderOptions);
   initializeSwiper(".hero-one__slider", heroOneSliderOptions);
   initializeSwiper(".instagram2__slider", instagram2SliderOptions);
@@ -869,39 +796,10 @@ document.addEventListener("DOMContentLoaded", () => {
   $(".vs-menu-wrapper").vsmobilemenu();
   initMagnificPopups();
   initObryPlayers();
+  horizontalScroll();
 });
-
-const races = document.querySelector(".pricing-box2-wrapper");
-
-function getScrollAmount() {
-  if (!races) {
-    return;
-  }
-  let racesWidth = races?.scrollWidth;
-  let containerWidth = window.innerWidth;
-  let offsetLeft = races.getBoundingClientRect().left;
-  const extraPadding = 15;
-  return -(racesWidth - containerWidth + offsetLeft + extraPadding);
-}
 
 // Update the scroll amount on resize
 window.addEventListener("resize", () => {
   ScrollTrigger.refresh();
-});
-
-const tween = gsap.to(races, {
-  x: getScrollAmount,
-  duration: 3,
-  ease: "none",
-});
-
-ScrollTrigger.create({
-  trigger: ".pricing2",
-  start: "top 20%",
-  end: () => `+=${getScrollAmount() * -1}`,
-  pin: true,
-  animation: tween,
-  scrub: 1,
-  invalidateOnRefresh: true,
-  markers: false,
 });
