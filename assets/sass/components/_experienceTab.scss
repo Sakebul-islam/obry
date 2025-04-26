@@ -122,23 +122,15 @@
     padding: 26px 30px 30px 24px;
     z-index: 1;
 
-    &::before {
-      @extend %p-absolute;
-      inset: 0;
-      background-color: $color-primary;
-      opacity: 0;
-      z-index: -1;
-      @include transition(opacity 1s ease 0s);
-    }
-    &::after {
-      @extend %p-absolute;
+    .shape {
+      @extend %p-absolute,%d-block;
       width: 75px;
       height: 75px;
       background-color: $color-primary;
       border-radius: 50%;
       bottom: calc(100% - 35px);
       left: calc(100% - 35px);
-      @include transition(transform 1.5s ease-in !important);
+      @include transition(all .5s ease-in !important);
       z-index: -1;
     }
 
@@ -182,11 +174,12 @@
     }
 
     &:hover {
-      &::after {
-        opacity: 0;
-      }
-      &::before {
-        opacity: 1;
+      .shape{
+        width: 800px;
+        height: 800px;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
       }
       .box-top {
         .box-header {

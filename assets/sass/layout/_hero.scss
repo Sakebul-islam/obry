@@ -41,13 +41,6 @@
         @include breakpoint(max-md) {
           display: none;
         }
-        img {
-          -webkit-animation: rotate 5s linear infinite;
-          animation: rotate 5s linear infinite;
-          -webkit-transform-origin: center center;
-          -ms-transform-origin: center center;
-          transform-origin: center center;
-        }
       }
     }
 
@@ -165,7 +158,6 @@
     @extend %p-absolute;
     top: 0;
     right: -80px;
-    animation: rotate 4.5s linear infinite;
     transform-origin: center center;
     @include breakpoint(max-xxxxl) {
       right: 0px;
@@ -239,6 +231,7 @@
       font-weight: 700;
       max-width: 900px;
       margin-inline: auto;
+      transition: none;
 
       span {
         color: $color-primary;
@@ -415,6 +408,7 @@
     }
     .welcome-text,
     .event-info {
+      transition: none;
       @include breakpoint(max-sm) {
         font-size: 20px;
       }
@@ -424,6 +418,7 @@
       font-weight: 700;
       line-height: 1;
       margin-block: 8px 5px;
+      transition: none;
 
       font-size: 130px;
       // $fs-h1: 90px;

@@ -48,62 +48,6 @@ body::-webkit-scrollbar-thumb {
 /* Custom Cursor End */
 
 /*
-============= Preloader CSS ================
-*/
-.preloader {
-  @extend %p-fixed, %d-flex, %item-center, %justify-center;
-  z-index: 10;
-  height: 100vh;
-  width: 100%;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  background: transparent;
-  z-index: 99999999999999;
-
-  svg {
-    @extend %p-absolute;
-    top: 0;
-    width: 100vw;
-    height: 110vh;
-    fill: red;
-  }
-
-  .preloader-text {
-    @extend %p-absolute;
-    top: 50%;
-    left: 50%;
-    @include transform(translate(-50%, -50%));
-    font-size: 100px;
-    color: $color-white;
-
-    @media (max-width: 1040px) {
-      font-size: 60px;
-    }
-
-    &::after {
-      content: attr(data-content);
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: $color-white;
-      -webkit-animation: move 2s infinite alternate;
-      animation: move 2s infinite alternate;
-    }
-  }
-  &.dark {
-    .preloader-text {
-      &::after {
-        color: red;
-      }
-    }
-  }
-}
-
-/*
-============= Preloader CSS END ================
-*/
-/*
 ============= odometer CSS START ================
 */
 .odometer-inside {

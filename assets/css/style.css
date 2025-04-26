@@ -22,7 +22,7 @@
 /*=====================****===================== */
 /* browser prefix adding  */
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .team-title .tags a, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .blog-details__content blockquote, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .media-body .author-name, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .blog-box .blog-footer .blog-share .share-list, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing2__boxes .pricing-box2-wrapper, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .skills__tab-thumb, .stack-box.v1, .stack-box.v2 .box-top, .about__tab-content .notes-and-info .note .note-list li, .about__tab-content .notes-and-info .info, .about__tab-content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer__center.common .footer-info .social-info, .footer__center.common .footer-info .social-info ul, .footer-three__top .footer-links ul, .footer-three__center .newsletter .newsletter-email, .footer-links ul, .footer-links ul li a, .footer-widgets .contact-info, .social-share ul, .hero-one.section, .hero-one__main, .hero-one__main .brands, .hero-one__slide, .hero-two__sidebar, .hero-two__slider .slide-container, .hero-three.section, .moblide-header, .moblide-header .header-right, .preloader {
+.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .team-title .tags a, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .work-title .tags a, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .tags .tags-list, .share-links .share, .share-links .share .share-list, .blog-details__content blockquote, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .media-body .author-name, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service__shapes, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .faq__accordion .accordion-item .accordion-body ul li, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .music-controller, .music-player__player .music-player .volume-controller, .music-box, .music-box .music-content .music-heder, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .music-controller, .music-box .music-content .music-footer .volume-controller, .team-box .social ul, .testimonial-slide, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .blog-box .blog-footer .blog-share .share-list, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box .pricing-header, .pricing-box .pricing-header .header-info, .pricing2__boxes .pricing-box2-wrapper, .pricing-box2, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .skills__tab-thumb, .stack-box.v1, .stack-box.v2 .box-top, .about__tab-content .notes-and-info .note .note-list li, .about__tab-content .notes-and-info .info, .about__tab-content .notes-and-info .info .info-content .avatars, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .contact-info .contact, .footer__center.common .footer-info .social-info, .footer__center.common .footer-info .social-info ul, .footer-three__top .footer-links ul, .footer-three__center .newsletter .newsletter-email, .footer-links ul, .footer-links ul li a, .footer-widgets .contact-info, .social-share ul, .hero-one.section, .hero-one__main, .hero-one__main .brands, .hero-one__slide, .hero-two__sidebar, .hero-two__slider .slide-container, .hero-three.section, .moblide-header, .moblide-header .header-right {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -67,7 +67,7 @@
   flex-wrap: nowrap;
 }
 
-.hero-two__drag-button, .cursor, .preloader {
+.hero-two__drag-button, .cursor {
   position: fixed;
 }
 
@@ -79,7 +79,7 @@
 
 .team-details__content .team-title .tags a::before, .work-details__content .work-title .tags a::before, .service-details__content .service-video .play-btn, .blog-single .comment-form .comment-respond .custom-checkbox label::after, .error__content .sub-title::before, .error__content .sub-title::after, .instagram2.section::after, .instagram2__info, .widget .widget-title::after, .widget-services .title::before, .service__shape-1, .service2__bg, .service2__info .info .sub-title::after, .service2__info .info-bg, .work.section .circular-ball, .work.section .section-shape, .work-box .work-thumb .thumb-info, .work-box.v2 .work-thumb::before, .faq.section .section-header img, .faq__thumb .info, .skill .skill-bar .skill-progress .skill-count, .statistic-box2 .counter-item::before, .quote__slider .quote__pagination, .music-player__player .music-player .music-controller .music-length span,
 .music-player__player .music-player .music-controller .music-duration span, .music__shape, .music-box .music-content .music-footer .play i, .music-box .music-content .music-footer .music-length span,
-.music-box .music-content .music-footer .music-duration span, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .testimonial-slide2 .author .author-thumb::before, .blog-box .blog-content .blog-meta span:not(:last-of-type)::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .popup-youtube, .stack-box.v1::before, .stack-box.v2::before, .stack-box.v2::after, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__tab-thumb .thumb-bg, .about__tab-thumb .thumb-bg::after, .about__tab-thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .about3__content .shape, .about3__thumb .thumb-1::before, .about3__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-three__top .container::after, .footer-three__center .newsletter .newsletter-checkbox label::before, .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .hero-one__main .hero-shape .circle-shape, .hero-one__main .hro-icon, .hero-one__main-thumb, .hero-two__shape1, .hero-two__shape2, .hero-two__shape3, .hero-two__sidebar, .hero-two__bottom-content, .preloader svg, .preloader .preloader-text, .section-title .highlight-bottom-border::after {
+.music-box .music-content .music-footer .music-duration span, .portfolio-box .icon-box, .portfolio-box .content, .team-box .team-thumb::before, .testimonial.section .container::after, .testimonial__icon, .testimonial__thumb::after, .testimonial-slide2 .author .author-thumb::before, .blog-box .blog-content .blog-meta span:not(:last-of-type)::after, .pricing__icon, .pricing2__bg, .pricing2__arrow, .pricing2__ball, .pricing-box2 .pricing-content .price-box a, .pricing-box2 .pricing-thumb::before, .video__player-wrapper .popup-youtube, .stack-box.v1::before, .stack-box.v2 .shape, .about.section .shape-1, .about.section .shape-2, .about__tabs .nav-item:not(:last-of-type)::after, .about__tabs .nav-item .nav-link[disabled]::before, .about__tab-thumb .thumb-bg, .about__tab-thumb .thumb-bg::after, .about__tab-thumb .thumb-bg img, .about2__content .shape, .about2__thumb .thumb-2, .about3__content .shape, .about3__thumb .thumb-1::before, .about3__thumb .thumb-2, .btn-primary .btn-wrapper span i:nth-of-type(1), .btn-primary .btn-wrapper span i:nth-of-type(3), .footer-three__top .container::after, .footer-three__center .newsletter .newsletter-checkbox label::before, .footer-widgets .widgets-title::before, .footer-widgets .instagram a::before, .hero-one__main .hero-shape .circle-shape, .hero-one__main .hro-icon, .hero-one__main-thumb, .hero-two__shape1, .hero-two__shape2, .hero-two__shape3, .hero-two__sidebar, .hero-two__bottom-content, .section-title .highlight-bottom-border::after {
   position: absolute;
   content: "";
 }
@@ -108,7 +108,7 @@ h6 {
   font-weight: 700;
 }
 
-.error__content .title, .instagram2__info, .work-masonry__filter, .team-box .social ul, .btn-primary .btn-wrapper span, .hero-three.section, .preloader {
+.error__content .title, .instagram2__info, .work-masonry__filter, .team-box .social ul, .btn-primary .btn-wrapper span, .hero-three.section {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -138,7 +138,7 @@ h6 {
   align-items: start;
 }
 
-.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .share, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__tab-content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .social-info, .footer__center.common .footer-info .social-info ul, .footer-three__center .newsletter .newsletter-email, .social-share ul, .hero-one__slide, .hero-two__sidebar, .hero-two__content .hero-sub-title, .moblide-header, .moblide-header .header-right, .preloader {
+.team-details__content .team-title, .team-details__content .team-title .tags, .team-details__content .award__accordion .accordion-button, .team-details__content .award__accordion .accordion-body, .work-details__content .work-title, .work-details__content .work-title .tags, .work-details__content .key-feature__accordion .accordion-button, .work-details__content .key-feature__accordion .accordion-body, .service-details__content .service-list ul li, .share-links .tags, .share-links .share, .blog-details__content blockquote cite, .blog-single .blog-single-author, .blog-single .blog-single-author .social-share-list, .blog-single .post-pagination, .blog-single .post-pagination .post-pagi-box, .blog-single .comment-form .comment-respond .custom-checkbox, .post-comment, .post-comment .comment-avater, .post-comment .comment-content .content-header, .post-comment .comment-content .replay-btn, .error__content .title, .instagram2__info, .widget__search .search-form, .widget__categories .categories ul li a, .widget__recent-post .recent-post .post, .widget__tags .tags, .widget-services .service-items ul li a, .widget-contact .contact-list ul li, .service2__info, .service-box .service-header, .service-box .service-footer, .service-box:hover .service-footer, .service-box.v2 .service-content .service-footer, .work__tabs .work-tab button, .work-masonry__filter, .work-box .work-content, .skill-box .skill-header, .statistic__box, .statistic__box .content .counter-item, .statistic-box2 .counter-item, .quote-box .quote-footer .author, .music-player__player, .music-player__player .music-player, .music-player__player .music-player .volume-controller, .music-box .music-content .music-heder .music-buy, .music-box .music-content .music-footer, .music-box .music-content .music-footer .volume-controller, .testimonial-slide2, .blog-box .blog-content .blog-meta, .blog-box .blog-footer, .blog-box .blog-footer .blog-share, .news-box .news-footer, .news-box .news-footer .total-views, .news-box2 .news-meta, .news-box2 .news-footer .read-more, .pricing-box2 .pricing-content .pricing-info li, .contact__content .contact-list li, .about__tab-content .notes-and-info .note .note-list li, .about2__content .analysis ul li, .about3__content .analysis ul li, .btn-primary .btn-wrapper, .btn-primary .btn-wrapper span, .footer__center.common .footer-info .contact-info, .footer__center.common .footer-info .social-info, .footer__center.common .footer-info .social-info ul, .footer-three__center .newsletter .newsletter-email, .social-share ul, .hero-one__slide, .hero-two__sidebar, .hero-two__content .hero-sub-title, .moblide-header, .moblide-header .header-right {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -156,7 +156,7 @@ h6 {
   align-items: baseline;
 }
 
-.service-details__content .service-video video, .blog-details__content .blog-thumbs .figure, .widget__follow-us .follow-us a, .service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .skill .title, .testimonial-slide2 .author .author-info .designation, .news-box .news-thumb, .news-box2 .news-thumb, .footer-widgets .instagram a {
+.service-details__content .service-video video, .blog-details__content .blog-thumbs .figure, .widget__follow-us .follow-us a, .service-box.v2 .service-thumb, .work__tabs .work-tab button .dot, .skill .title, .testimonial-slide2 .author .author-info .designation, .news-box .news-thumb, .news-box2 .news-thumb, .stack-box.v2 .shape, .footer-widgets .instagram a {
   display: -webkit-block;
   display: -ms-block;
   display: block;
@@ -919,55 +919,6 @@ body::-webkit-scrollbar-thumb {
 
 /* Custom Cursor End */
 /*
-============= Preloader CSS ================
-*/
-.preloader {
-  z-index: 10;
-  height: 100vh;
-  width: 100%;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  background: transparent;
-  z-index: 99999999999999;
-}
-.preloader svg {
-  top: 0;
-  width: 100vw;
-  height: 110vh;
-  fill: red;
-}
-.preloader .preloader-text {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 100px;
-  color: #ffffff;
-}
-@media (max-width: 1040px) {
-  .preloader .preloader-text {
-    font-size: 60px;
-  }
-}
-.preloader .preloader-text::after {
-  content: attr(data-content);
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #ffffff;
-  -webkit-animation: move 2s infinite alternate;
-  animation: move 2s infinite alternate;
-}
-.preloader.dark .preloader-text::after {
-  color: red;
-}
-
-/*
-============= Preloader CSS END ================
-*/
-/*
 ============= odometer CSS START ================
 */
 .odometer-inside {
@@ -1328,6 +1279,11 @@ body::-webkit-scrollbar-thumb {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 @media only screen and (max-width: 1199.98px) {
   .main-menu > ul > li > a svg {
@@ -1855,13 +1811,6 @@ body::-webkit-scrollbar-thumb {
     display: none;
   }
 }
-.hero-one__main .hero-shape .circle-shape img {
-  -webkit-animation: rotate 5s linear infinite;
-  animation: rotate 5s linear infinite;
-  -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
-  transform-origin: center center;
-}
 .hero-one__main .hero-info {
   color: #ffffff;
   font-family: "Rubik", sans-serif;
@@ -1968,7 +1917,6 @@ body::-webkit-scrollbar-thumb {
 .hero-two__shape3 {
   top: 0;
   right: -80px;
-  animation: rotate 4.5s linear infinite;
   transform-origin: center center;
 }
 @media only screen and (max-width: 1699.98px) {
@@ -2046,6 +1994,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   max-width: 900px;
   margin-inline: auto;
+  transition: none;
 }
 .hero-two__content .hero-title span {
   color: #e2c55d;
@@ -2241,6 +2190,10 @@ body::-webkit-scrollbar-thumb {
   text-transform: capitalize;
   font-weight: 800;
 }
+.hero-three__content .welcome-text,
+.hero-three__content .event-info {
+  transition: none;
+}
 @media only screen and (max-width: 575.98px) {
   .hero-three__content .welcome-text,
   .hero-three__content .event-info {
@@ -2252,6 +2205,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   line-height: 1;
   margin-block: 8px 5px;
+  transition: none;
   font-size: 130px;
 }
 @media only screen and (max-width: 1439.98px) {
@@ -2654,6 +2608,104 @@ body::-webkit-scrollbar-thumb {
   border-color: #e2c55d;
 }
 
+.preloader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: #171a1b;
+}
+.preloader .btn-primary {
+  border-radius: 0;
+}
+.preloader .btn-primary .btn-wrapper {
+  border-radius: 0;
+  padding: 20px 20px;
+  line-height: 1;
+}
+
+.preloader-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.preloader-inner img {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.loader {
+  animation: loaderspin 1.5s infinite;
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+.loader:before, .loader:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1.5s infinite;
+  background-color: #ffffff;
+  box-shadow: 30px 0 0 #e2c55d;
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1.5s infinite;
+  background-color: #e2c55d;
+  box-shadow: 30px 0 0 #171a1b;
+}
+
+@keyframes loaderspin {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(360deg) scale(1);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #e2c55d;
+  }
+  50% {
+    box-shadow: 0 0 0 #e2c55d;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #e2c55d;
+    margin-bottom: 10px;
+  }
+}
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #ffffff;
+  }
+  50% {
+    box-shadow: 0 0 0 #ffffff;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #ffffff;
+    margin-top: 0;
+  }
+}
 .btn-primary {
   border-radius: 50px;
   padding: 3px;
@@ -3466,29 +3518,18 @@ body::-webkit-scrollbar-thumb {
   padding: 26px 30px 30px 24px;
   z-index: 1;
 }
-.stack-box.v2::before {
-  inset: 0;
-  background-color: #e2c55d;
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity 1s ease 0s;
-  -moz-transition: opacity 1s ease 0s;
-  -o-transition: opacity 1s ease 0s;
-  -ms-transition: opacity 1s ease 0s;
-  transition: opacity 1s ease 0s;
-}
-.stack-box.v2::after {
+.stack-box.v2 .shape {
   width: 75px;
   height: 75px;
   background-color: #e2c55d;
   border-radius: 50%;
   bottom: calc(100% - 35px);
   left: calc(100% - 35px);
-  -webkit-transition: transform 1.5s ease-in !important;
-  -moz-transition: transform 1.5s ease-in !important;
-  -o-transition: transform 1.5s ease-in !important;
-  -ms-transition: transform 1.5s ease-in !important;
-  transition: transform 1.5s ease-in !important;
+  -webkit-transition: all 0.5s ease-in !important;
+  -moz-transition: all 0.5s ease-in !important;
+  -o-transition: all 0.5s ease-in !important;
+  -ms-transition: all 0.5s ease-in !important;
+  transition: all 0.5s ease-in !important;
   z-index: -1;
 }
 .stack-box.v2 .box-top {
@@ -3540,11 +3581,12 @@ body::-webkit-scrollbar-thumb {
   -ms-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
 }
-.stack-box.v2:hover::after {
-  opacity: 0;
-}
-.stack-box.v2:hover::before {
-  opacity: 1;
+.stack-box.v2:hover .shape {
+  width: 800px;
+  height: 800px;
+  left: 0;
+  bottom: 0;
+  border-radius: 0;
 }
 .stack-box.v2:hover .box-top .box-header .stack-title {
   color: #101111;
@@ -4976,6 +5018,11 @@ body::-webkit-scrollbar-thumb {
   color: #e2c55d;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .music-player__player {
+    padding-block: 20px;
+  }
+}
 @media only screen and (max-width: 575.98px) {
   .music-player__player {
     -webkit-box-orient: vertical;

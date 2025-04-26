@@ -34,6 +34,24 @@
   </head>
 
   <body>
+    <!--================= Preloader =================-->
+    <div class="preloader">
+      <button class="btn-primary preloaderCls">
+        <div class="btn-wrapper">
+          Cancel Preloader
+          <span>
+            <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+            <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+            <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+          </span>
+        </div>
+      </button>
+      <div class="preloader-inner">
+        <img src="assets/images/logo.svg" alt="logo" />
+        <span class="loader"></span>
+      </div>
+    </div>
+
     <!--================= Header ================= -->
     <div id="navbars" class="header-sticky navbars">
       <div class="container header-container">
@@ -344,7 +362,7 @@
 
     <main>
       <!-- ================= Hero Section Start ================= -->
-      <section class="hero-one section">
+      <section class="hero-one section parallax-wrap">
         <div
           class="hero-one__main"
           data-bg-src="./assets/images/hero/banner-bg-1.png"
@@ -373,20 +391,24 @@
                     <img
                       src="./assets/images/hero/banner-1-shape.png"
                       alt="hero-shape"
+                      class="fade-anim"
+                      data-delay="1.5"
                     />
-                    <div class="circle-shape">
+                    <div class="circle-shape parallax-element">
                       <img
                         src="./assets/images/hero/circle-shape.png"
                         alt="circle-shape"
                       />
                     </div>
                   </div>
-                  <h6 class="hero-info">
+                  <h6
+                    class="hero-info fade-anim">
+                    <!-- data-offset="200" -->
                     LATEST WORK and
                     <img src="./assets/images/hero/hand.png" alt="hand" />
                     <span class="text-color-primary">FEATURED</span>
                   </h6>
-                  <div class="brands">
+                  <div class="brands fade-anim" data-delay="1.6">
                     <img
                       src="/assets/images/hero/banner-1-brand-1.png"
                       alt="brand"
@@ -404,6 +426,10 @@
             <img
               src="./assets/images/hero/banner-1-people.png"
               alt="hero people"
+              class="fade-anim"
+              data-delay="2"
+              data-direction="right"
+              data-offset="200"
             />
           </div>
         </div>
@@ -816,6 +842,7 @@
                   <div class="row g-4 pt-4 pt-lg-5">
                     <div class="col-md-6 col-lg-4">
                       <div class="stack-box v2">
+                        <span class="shape"></span>
                         <div class="box-top">
                           <div class="box-thumb">
                             <img
@@ -840,6 +867,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                       <div class="stack-box v2">
+                        <span class="shape"></span>
                         <div class="box-top">
                           <div class="box-thumb">
                             <img
@@ -864,6 +892,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                       <div class="stack-box v2">
+                        <span class="shape"></span>
                         <div class="box-top">
                           <div class="box-thumb">
                             <img
@@ -941,6 +970,7 @@
                   <div class="row g-4 pt-4 pt-lg-5">
                     <div class="col-md-6 col-lg-4">
                       <div class="stack-box v2">
+                        <span class="shape"></span>
                         <div class="box-top">
                           <div class="box-thumb">
                             <img
@@ -965,6 +995,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                       <div class="stack-box v2">
+                        <span class="shape"></span>
                         <div class="box-top">
                           <div class="box-thumb">
                             <img
@@ -989,6 +1020,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                       <div class="stack-box v2">
+                        <span class="shape"></span>
                         <div class="box-top">
                           <div class="box-thumb">
                             <img
@@ -1212,8 +1244,15 @@
           <div class="row">
             <div class="col-12">
               <div class="video__player-wrapper">
-                <img src="./assets/images/video-section/video-thumb.png" alt="video-thumb" class="w-100">
-                <a href="https://www.youtube.com/watch?v=rkpzYNB6xks" class="popup-youtube">
+                <img
+                  src="./assets/images/video-section/video-thumb.png"
+                  alt="video-thumb"
+                  class="w-100"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=rkpzYNB6xks"
+                  class="popup-youtube"
+                >
                   <i class="fa-duotone fa-solid fa-play"></i>
                 </a>
               </div>

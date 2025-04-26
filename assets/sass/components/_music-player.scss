@@ -10,6 +10,9 @@
   &__player {
     @extend %d-flex, %item-center;
 
+    @include breakpoint(max-md) {
+      padding-block: 20px;
+    }
     @include breakpoint(max-sm) {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;

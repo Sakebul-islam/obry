@@ -1,5 +1,18 @@
 "use strict";
 
+/************************************** Preloader /**************************************/
+$(window).on("load", function () {
+  $(".preloader").delay(800).fadeOut("slow");
+  $(".vs-hero").addClass("animate-elements");
+
+  // Check if preloader exists and handle close event
+  $(".preloader").length &&
+    $(".preloaderCls").on("click", function (e) {
+      e.preventDefault();
+      $(".preloader").hide();
+    });
+});
+
 function setBackgroundImages() {
   var elements = document.querySelectorAll("[data-bg-src]");
   if (elements?.length > 0) {
@@ -500,7 +513,6 @@ function initMagnificPopups(
   });
 }
 
-
 function initObryPlayers() {
   const players = document.querySelectorAll(".obry-player");
 
@@ -625,14 +637,13 @@ function initHeroTwoSlider() {
   const slides = slider.querySelectorAll(".swiper-slide");
   if (!slides.length) return;
 
-  slides.forEach(slide => {
+  slides.forEach((slide) => {
     const images = slide.querySelectorAll(".slide-image");
     if (images.length >= 2) {
-      images.forEach(img => img.classList.remove("active"));
+      images.forEach((img) => img.classList.remove("active"));
       images[1].classList.add("active");
     }
   });
-
 
   const slideImages = slider.querySelectorAll(".slide-image");
   if (!slideImages.length) return;
@@ -771,10 +782,144 @@ const horizontalScroll = () => {
         invalidateOnRefresh: true,
         markers: false,
       });
-    }
+    },
   });
 };
 
+let fadeArray_items = document.querySelectorAll(".fade-anim");
+if (fadeArray_items.length > 0) {
+  const fadeArray = gsap.utils.toArray(".fade-anim");
+  // gsap.set(fadeArray, {opacity:0})
+  fadeArray.forEach((item, i) => {
+    var fade_direction = "bottom";
+    var onscroll_value = 1;
+    var duration_value = 1.15;
+    var fade_offset = 50;
+    var delay_value = 0.15;
+    var ease_value = "power2.out";
+
+    if (item.getAttribute("data-offset")) {
+      fade_offset = item.getAttribute("data-offset");
+    }
+    if (item.getAttribute("data-duration")) {
+      duration_value = item.getAttribute("data-duration");
+    }
+
+    if (item.getAttribute("data-direction")) {
+      fade_direction = item.getAttribute("data-direction");
+    }
+    if (item.getAttribute("data-on-scroll")) {
+      onscroll_value = item.getAttribute("data-on-scroll");
+    }
+    if (item.getAttribute("data-delay")) {
+      delay_value = item.getAttribute("data-delay");
+    }
+    if (item.getAttribute("data-ease")) {
+      ease_value = item.getAttribute("data-ease");
+    }
+
+    let animation_settings = {
+      opacity: 0,
+      ease: ease_value,
+      duration: duration_value,
+      delay: delay_value,
+    };
+
+    if (fade_direction == "top") {
+      animation_settings["y"] = -fade_offset;
+    }
+    if (fade_direction == "left") {
+      animation_settings["x"] = -fade_offset;
+    }
+
+    if (fade_direction == "bottom") {
+      animation_settings["y"] = fade_offset;
+    }
+
+    if (fade_direction == "right") {
+      animation_settings["x"] = fade_offset;
+    }
+
+    if (onscroll_value == 1) {
+      animation_settings["scrollTrigger"] = {
+        trigger: item,
+        start: "top 85%",
+      };
+    }
+    gsap.from(item, animation_settings);
+  });
+}
+
+// parallax effect
+var mouse = { x: 0, y: 0 };
+var pos = { x: 0, y: 0 };
+var ratio = 0.65;
+var active = false;
+
+var allParalax = document.querySelectorAll('.parallax-wrap');
+
+allParalax.forEach(function (e) {
+  e.addEventListener("mousemove", mouseMoveBtn);
+})
+
+function mouseMoveBtn(e) {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  mouse.x = e.pageX;
+  mouse.y = e.pageY - scrollTop;
+
+}
+gsap.ticker.add(updatePosition);
+
+$(".parallax-wrap").mouseenter(function (e) {
+  gsap.to(this, { duration: 0.3 });
+  gsap.to($(this).children(), { duration: 0.3 });
+  active = true;
+});
+
+$(".parallax-wrap").mouseleave(function (e) {
+  gsap.to(this, { duration: 0.3 });
+  gsap.to($(this).children(), { duration: 0.3, x: 0, y: 0 });
+  active = false;
+});
+
+function updatePosition() {
+  pos.x += (mouse.x - pos.x) * ratio;
+  pos.y += (mouse.y - pos.y) * ratio;
+
+}
+
+
+$(".parallax-wrap").mousemove(function (e) {
+  parallaxCursorBtn(e, this, 2);
+  callParallaxBtn(e, this);
+});
+
+function callParallaxBtn(e, parent) {
+  parallaxItBtn(e, parent, parent.querySelector(".parallax-element"), 20);
+}
+
+function parallaxItBtn(e, parent, target, movement) {
+  var boundingRect = parent.getBoundingClientRect();
+  var relX = e.pageX - boundingRect.left;
+  var relY = e.pageY - boundingRect.top;
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  gsap.to(target, {
+    duration: 0.3,
+    x: (relX - boundingRect.width / 2) / boundingRect.width * movement,
+    y: (relY - boundingRect.height / 2 - scrollTop) / boundingRect.height * movement,
+    ease: Power2.easeOut
+  });
+}
+
+function parallaxCursorBtn(e, parent, movement) {
+  var rect = parent.getBoundingClientRect();
+  var relX = e.pageX - rect.left;
+  var relY = e.pageY - rect.top;
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  pos.x = rect.left + rect.width / 2 + (relX - rect.width / 2) / movement;
+  pos.y = rect.top + rect.height / 2 + (relY - rect.height / 2 - scrollTop) / movement;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeSwiper(".quote__slider", quoteSliderOptions);

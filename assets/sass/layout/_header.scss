@@ -140,6 +140,7 @@
           left: 50%;
           bottom: 45px;
           @include transform(translateX(-50%));
+          @include transition($transition);
 
           @include breakpoint(max-xl) {
             bottom: 20px;
