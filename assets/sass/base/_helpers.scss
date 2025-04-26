@@ -144,6 +144,9 @@
 .agx_screenfix_left {
   margin-left: calc((-100vw + 100%) / 2);
 }
+.tns-0 {
+  transition: none;
+}
 
 .background-image,
 [data-bg-src] {

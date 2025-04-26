@@ -8,6 +8,7 @@
     @extend %p-relative;
     background-color: rgba($color-1, 0.7);
     z-index: 1;
+    overflow: hidden;
   }
   &__icon {
     @extend %p-absolute;
@@ -120,6 +121,7 @@
   &.section {
     @extend %p-relative;
     z-index: 2;
+    overflow: hidden;
   }
   &__bg {
     @extend %p-absolute;

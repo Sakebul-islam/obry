@@ -399,8 +399,6 @@ function popupSearchBox(
 /**************************************
  ***** 05. Data Navbar Stick *****
  **************************************/
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
 const navbar = document.querySelector("#navbars");
 
 gsap.timeline({
@@ -775,80 +773,144 @@ const horizontalScroll = () => {
       ScrollTrigger.create({
         trigger: ".pricing2",
         start: "top 20%",
-        end: () => `+=${getScrollAmount() * -1}`,
-        pin: true,
+        end: () => (races ? `+=${getScrollAmount() * -1}` : "bottom 60%"),
+        pin: ".pricing2",
         animation: tween,
-        scrub: 1,
-        invalidateOnRefresh: true,
+        scrub: true,
+        invalidateOnRefresh: false,
         markers: false,
+
+        onEnter: () => {
+          disableFadeUpAnimations();
+        },
+        onLeave: () => {
+          enableFadeUpAnimations();
+        },
+        onLeaveBack: () => {
+          enableFadeUpAnimations();
+        },
       });
     },
   });
 };
 
-let fadeArray_items = document.querySelectorAll(".fade-anim");
-if (fadeArray_items.length > 0) {
-  const fadeArray = gsap.utils.toArray(".fade-anim");
-  // gsap.set(fadeArray, {opacity:0})
-  fadeArray.forEach((item, i) => {
-    var fade_direction = "bottom";
-    var onscroll_value = 1;
-    var duration_value = 1.15;
-    var fade_offset = 50;
-    var delay_value = 0.15;
-    var ease_value = "power2.out";
+// GSAP Fade Animation
+// let fadeArray_items = document.querySelectorAll(".fade-anim");
+// if (fadeArray_items.length > 0) {
+//   const fadeArray = gsap.utils.toArray(".fade-anim");
+//   // gsap.set(fadeArray, {opacity:0})
+//   fadeArray.forEach((item, i) => {
+//     var fade_direction = "bottom";
+//     var onscroll_value = 1;
+//     var duration_value = 1.15;
+//     var fade_offset = 50;
+//     var delay_value = 0.15;
+//     var ease_value = "power2.out";
 
-    if (item.getAttribute("data-offset")) {
-      fade_offset = item.getAttribute("data-offset");
-    }
-    if (item.getAttribute("data-duration")) {
-      duration_value = item.getAttribute("data-duration");
-    }
+//     if (item.getAttribute("data-offset")) {
+//       fade_offset = item.getAttribute("data-offset");
+//     }
+//     if (item.getAttribute("data-duration")) {
+//       duration_value = item.getAttribute("data-duration");
+//     }
 
-    if (item.getAttribute("data-direction")) {
-      fade_direction = item.getAttribute("data-direction");
-    }
-    if (item.getAttribute("data-on-scroll")) {
-      onscroll_value = item.getAttribute("data-on-scroll");
-    }
-    if (item.getAttribute("data-delay")) {
-      delay_value = item.getAttribute("data-delay");
-    }
-    if (item.getAttribute("data-ease")) {
-      ease_value = item.getAttribute("data-ease");
-    }
+//     if (item.getAttribute("data-direction")) {
+//       fade_direction = item.getAttribute("data-direction");
+//     }
+//     if (item.getAttribute("data-on-scroll")) {
+//       onscroll_value = item.getAttribute("data-on-scroll");
+//     }
+//     if (item.getAttribute("data-delay")) {
+//       delay_value = item.getAttribute("data-delay");
+//     }
+//     if (item.getAttribute("data-ease")) {
+//       ease_value = item.getAttribute("data-ease");
+//     }
 
-    let animation_settings = {
-      opacity: 0,
-      ease: ease_value,
-      duration: duration_value,
-      delay: delay_value,
-    };
+//     let animation_settings = {
+//       opacity: 0,
+//       ease: ease_value,
+//       duration: duration_value,
+//       delay: delay_value,
+//     };
 
-    if (fade_direction == "top") {
-      animation_settings["y"] = -fade_offset;
-    }
-    if (fade_direction == "left") {
-      animation_settings["x"] = -fade_offset;
-    }
+//     if (fade_direction == "top") {
+//       animation_settings["y"] = -fade_offset;
+//     }
+//     if (fade_direction == "left") {
+//       animation_settings["x"] = -fade_offset;
+//     }
 
-    if (fade_direction == "bottom") {
-      animation_settings["y"] = fade_offset;
-    }
+//     if (fade_direction == "bottom") {
+//       animation_settings["y"] = fade_offset;
+//     }
 
-    if (fade_direction == "right") {
-      animation_settings["x"] = fade_offset;
-    }
+//     if (fade_direction == "right") {
+//       animation_settings["x"] = fade_offset;
+//     }
 
-    if (onscroll_value == 1) {
-      animation_settings["scrollTrigger"] = {
-        trigger: item,
-        start: "top 85%",
+//     if (onscroll_value == 1) {
+//       animation_settings["scrollTrigger"] = {
+//         trigger: item,
+//         start: "top 85%",
+//       };
+//     }
+//     gsap.from(item, animation_settings);
+//   });
+// }
+let fadeUpTriggers = [];
+
+function setupFadeAnimations() {
+  let fadeArray_items = document.querySelectorAll(".fade-anim");
+  if (fadeArray_items.length > 0) {
+    const fadeArray = gsap.utils.toArray(fadeArray_items);
+
+    fadeArray.forEach((item) => {
+      let fade_offset = item.getAttribute("data-offset") || 50;
+      let duration_value = item.getAttribute("data-duration") || 1.15;
+      let fade_direction = item.getAttribute("data-direction") || "bottom";
+      let onscroll_value = item.getAttribute("data-on-scroll") || 1;
+      let delay_value = item.getAttribute("data-delay") || 0.15;
+      let ease_value = item.getAttribute("data-ease") || "power2.out";
+
+      let animation_settings = {
+        opacity: 0,
+        ease: ease_value,
+        duration: duration_value,
+        delay: delay_value,
       };
-    }
-    gsap.from(item, animation_settings);
-  });
+
+      if (fade_direction == "top") animation_settings["y"] = -fade_offset;
+      if (fade_direction == "left") animation_settings["x"] = -fade_offset;
+      if (fade_direction == "bottom") animation_settings["y"] = fade_offset;
+      if (fade_direction == "right") animation_settings["x"] = fade_offset;
+
+      if (onscroll_value == 1) {
+        animation_settings["scrollTrigger"] = {
+          trigger: item,
+          start: "top 85%",
+        };
+      }
+
+      let tween = gsap.from(item, animation_settings);
+
+      // Save triggers for later
+      if (tween.scrollTrigger) {
+        fadeUpTriggers.push(tween.scrollTrigger);
+      }
+    });
+  }
 }
+function disableFadeUpAnimations() {
+  fadeUpTriggers.forEach((trigger) => trigger.disable());
+}
+
+// Enable all fade triggers
+function enableFadeUpAnimations() {
+  fadeUpTriggers.forEach((trigger) => trigger.enable());
+}
+// horizontalScroll();
+// setupFadeAnimations();
 
 // parallax effect
 var mouse = { x: 0, y: 0 };
@@ -856,17 +918,16 @@ var pos = { x: 0, y: 0 };
 var ratio = 0.65;
 var active = false;
 
-var allParalax = document.querySelectorAll('.parallax-wrap');
+var allParalax = document.querySelectorAll(".parallax-wrap");
 
 allParalax.forEach(function (e) {
   e.addEventListener("mousemove", mouseMoveBtn);
-})
+});
 
 function mouseMoveBtn(e) {
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   mouse.x = e.pageX;
   mouse.y = e.pageY - scrollTop;
-
 }
 gsap.ticker.add(updatePosition);
 
@@ -885,9 +946,7 @@ $(".parallax-wrap").mouseleave(function (e) {
 function updatePosition() {
   pos.x += (mouse.x - pos.x) * ratio;
   pos.y += (mouse.y - pos.y) * ratio;
-
 }
-
 
 $(".parallax-wrap").mousemove(function (e) {
   parallaxCursorBtn(e, this, 2);
@@ -906,9 +965,11 @@ function parallaxItBtn(e, parent, target, movement) {
 
   gsap.to(target, {
     duration: 0.3,
-    x: (relX - boundingRect.width / 2) / boundingRect.width * movement,
-    y: (relY - boundingRect.height / 2 - scrollTop) / boundingRect.height * movement,
-    ease: Power2.easeOut
+    x: ((relX - boundingRect.width / 2) / boundingRect.width) * movement,
+    y:
+      ((relY - boundingRect.height / 2 - scrollTop) / boundingRect.height) *
+      movement,
+    ease: Power2.easeOut,
   });
 }
 
@@ -918,9 +979,11 @@ function parallaxCursorBtn(e, parent, movement) {
   var relY = e.pageY - rect.top;
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   pos.x = rect.left + rect.width / 2 + (relX - rect.width / 2) / movement;
-  pos.y = rect.top + rect.height / 2 + (relY - rect.height / 2 - scrollTop) / movement;
+  pos.y =
+    rect.top +
+    rect.height / 2 +
+    (relY - rect.height / 2 - scrollTop) / movement;
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   initializeSwiper(".quote__slider", quoteSliderOptions);
   initializeSwiper(".hero-one__slider", heroOneSliderOptions);
@@ -942,9 +1005,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initMagnificPopups();
   initObryPlayers();
   horizontalScroll();
+  setupFadeAnimations();
 });
 
 // Update the scroll amount on resize
 window.addEventListener("resize", () => {
   ScrollTrigger.refresh();
 });
+ScrollTrigger.sort();

@@ -3866,6 +3866,7 @@ body::-webkit-scrollbar-thumb {
 .pricing.section {
   background-color: rgba(23, 26, 27, 0.7);
   z-index: 1;
+  overflow: hidden;
 }
 .pricing__icon {
   bottom: 77px;
@@ -3969,6 +3970,7 @@ body::-webkit-scrollbar-thumb {
 
 .pricing2.section {
   z-index: 2;
+  overflow: hidden;
 }
 .pricing2__bg {
   left: 0;
@@ -8017,6 +8019,10 @@ body::-webkit-scrollbar-thumb {
 
 .agx_screenfix_left {
   margin-left: calc((-100vw + 100%) / 2);
+}
+
+.tns-0 {
+  transition: none;
 }
 
 .background-image,
