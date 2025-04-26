@@ -28,3 +28,11 @@
     @include transform(translateX(5px));
   }
 }
+@keyframes up-down {
+  from {
+    @include transform(translate(-15px,-15px));
+  }
+  to {
+    @include transform(translate(15px,15px));
+  }
+}

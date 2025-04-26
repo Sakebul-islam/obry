@@ -106,8 +106,8 @@
   &__slider-area {
     padding-block: 25px;
     border-top: 1px solid rgba($color-white, 0.1);
-    
-    @include breakpoint(max-xl){
+
+    @include breakpoint(max-xl) {
       padding-block: 20px;
     }
   }
@@ -133,8 +133,269 @@
 }
 .hero-two {
   &.section {
+    @extend %p-relative;
+    padding-top: 172px;
+    overflow: hidden;
     img {
       -webkit-user-drag: none;
+    }
+  }
+  &__shape1 {
+    @extend %p-absolute;
+    top: 120px;
+    left: 0;
+    animation: rotate 4.5s linear infinite;
+    transform-origin: center center;
+
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+  &__shape2 {
+    @extend %p-absolute;
+    top: 150px;
+    right: 0;
+    animation: up-down 2.3s linear infinite alternate;
+
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+  &__shape3 {
+    @extend %p-absolute;
+    top: 0;
+    right: -80px;
+    animation: rotate 4.5s linear infinite;
+    transform-origin: center center;
+    @include breakpoint(max-xxxxl) {
+      right: 0px;
+    }
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+  &__sidebar {
+    @extend %p-absolute, %text-uppercase, %d-flex, %item-center;
+    gap: 38px;
+    bottom: 88px;
+    right: 58px;
+    color: $color-white;
+    font-family: $ff-title;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 6.4px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    @include transform(scale(-1));
+
+    @include breakpoint(max-5xl) {
+      right: 30px;
+    }
+    @include breakpoint(max-xxxxl) {
+      display: none;
+    }
+  }
+  &__content {
+    @extend %text-center, %p-relative;
+    .hero-sub-title {
+      @extend %text-uppercase, %p-relative, %d-inline-flex, %item-center;
+      gap: 12px;
+      color: $color-primary;
+      font-family: $ff-title;
+      font-size: $fs-18;
+      font-weight: 800;
+      line-height: 1;
+      background-color: rgba($color-white, 0.15);
+      filter: drop-shadow(0px 4px 4px rgba($color-black, 0.25));
+      backdrop-filter: blur(45px);
+      border-radius: 30px;
+      padding: 15px;
+
+      @include breakpoint(max-lg) {
+        gap: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: $fs-15;
+      }
+
+      &::before,
+      &::after {
+        @extend %p-relative;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: $color-1;
+        box-shadow: 0px 4px 4px 0px rgba($color-black, 0.25) inset;
+        @include breakpoint(max-lg) {
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+    .hero-title {
+      @extend %text-capitalize;
+      color: $color-white;
+      font-weight: 700;
+      max-width: 900px;
+      margin-inline: auto;
+
+      span {
+        color: $color-primary;
+      }
+
+      @include breakpoint(max-xxl) {
+        margin-top: 15px;
+      }
+    }
+  }
+  &__bottom-content {
+    @extend %p-absolute, %text-uppercase, %text-center;
+    left: 50%;
+    bottom: 35px;
+    @include transform(translateX(-50%));
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(max-md) {
+      bottom: 15px;
+    }
+    @include breakpoint(max-sm) {
+      bottom: 30px;
+    }
+
+    h2 {
+      font-family: $ff-title;
+      font-size: 170px;
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(
+        184deg,
+        rgba(34, 34, 37, 0.18) 19.41%,
+        rgba(136, 136, 136, 0.2) 96.83%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include breakpoint(max-xxl) {
+        font-size: calc(170px - 20px);
+      }
+      @include breakpoint(max-xl) {
+        font-size: calc(170px - 40px);
+      }
+      @include breakpoint(max-lg) {
+        font-size: calc(170px - 60px);
+      }
+      @include breakpoint(max-md) {
+        font-size: calc(170px - 90px);
+      }
+      @include breakpoint(max-sm) {
+        font-size: calc(170px - 130px);
+      }
+    }
+  }
+  &__slider {
+    @include breakpoint(lg) {
+      cursor: none;
+      user-select: none;
+    }
+    .swiper-slide {
+      @include breakpoint(lg) {
+        cursor: none;
+        user-select: none;
+      }
+    }
+    .slide-container {
+      @extend %d-flex;
+      gap: 50px;
+      height: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      @include breakpoint(lg) {
+        cursor: none;
+        user-select: none;
+      }
+
+      @include breakpoint(max-xxl) {
+        gap: 30px;
+      }
+      @include breakpoint(max-md) {
+        gap: 10px;
+      }
+
+      .slide-image {
+        position: relative;
+        overflow: hidden;
+        transition: flex-basis 0.5s ease;
+        min-height: 595px;
+        border-radius: 15px;
+        @include breakpoint(max-xl) {
+          min-height: 400px;
+        }
+        @include breakpoint(max-sm) {
+          min-height: 300px;
+        }
+        @include breakpoint(lg) {
+          cursor: none;
+          user-select: none;
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+
+          @include breakpoint(lg) {
+            cursor: none;
+            user-select: none;
+          }
+        }
+        &:not(.active) {
+          flex-basis: calc(100% - (79.6% + 100px));
+
+          @include breakpoint(max-xxl) {
+            flex-basis: calc(100% - (79.6% + 30px));
+          }
+          @include breakpoint(max-xxl) {
+            flex-basis: calc(100% - (75% + 30px));
+          }
+          @include breakpoint(max-md) {
+            flex-basis: calc(100% - (75% + 10px));
+          }
+        }
+        &.active {
+          flex-basis: 79.6%;
+          @include breakpoint(max-xxl) {
+            flex-basis: 75%;
+          }
+        }
+      }
+    }
+  }
+  &__drag-button {
+    @extend %d-grid, %place-center, %text-uppercase, %p-fixed;
+    z-index: 1000;
+    opacity: 0;
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+    background-color: rgba($color-body, 0.2);
+    backdrop-filter: blur(45px);
+    color: $color-white;
+    text-align: center;
+    font-family: $ff-title;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 3.2px;
+
+    @include breakpoint(max-xl) {
+      width: 100px;
+      height: 100px;
+      letter-spacing: 2.2px;
+    }
+    @include breakpoint(max-lg) {
+      display: none;
     }
   }
 }

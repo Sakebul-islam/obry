@@ -47,7 +47,7 @@
       padding-right: $container-padding-right;
     }
   }
-  &.header-container {
+  &.header-container,&.hero-two-container {
     @include breakpoint(xxl) {
       max-width: 1520px + $container-gutters;
       padding-left: $container-padding-left;

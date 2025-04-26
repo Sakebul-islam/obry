@@ -132,6 +132,16 @@ const testimonial2SliderOptions = {
   },
 };
 
+const HeroTwoSliderOptions = {
+  loop: true,
+  speed: 500,
+  spaceBetween: 100,
+
+  keyboard: {
+    enabled: true,
+  },
+};
+
 // Function to initialize active class toggle based on direction
 function initTestimonialNavActiveToggle(direction = "right") {
   const nextBtn = document.querySelector(
@@ -155,7 +165,6 @@ function initTestimonialNavActiveToggle(direction = "right") {
   nextBtn.addEventListener("click", () => setActiveNav("right"));
   prevBtn.addEventListener("click", () => setActiveNav("left"));
 }
-
 
 function initializeSwiper(containerSelector, options) {
   // Check if the container exists
@@ -438,7 +447,7 @@ const navbar = document.querySelector("#navbars");
 gsap.timeline({
   scrollTrigger: {
     trigger: navbar,
-    start: "top+=250",
+    start: "top+=100",
     end: "+=1",
     toggleActions: "play reverse play reverse",
     scrub: false,
@@ -587,22 +596,23 @@ function initMagnificPopups(
 
 //     // ▶️ Play/Pause button
 //     playBtn?.addEventListener('click', () => {
-//       // Pause all other players
 //       players.forEach(p => {
 //         const a = p.querySelector('audio');
-//         if (a && a !== audio) a.pause();
+//         const btn = p.querySelector('.play, .play-btn');
+
+//         if (a && a !== audio) {
+//           a.pause();
+//           btn?.classList.remove('now-play');
+//           btn?.classList.add('now-pause');
+//         }
 //       });
 
 //       if (audio.paused) {
-//         audio.play().catch(err => {
-//           console.error('Audio play failed:', err.message);
-//         });
-//         // Add .now-play and remove .now-pause
+//         audio.play();
 //         playBtn.classList.add('now-play');
 //         playBtn.classList.remove('now-pause');
 //       } else {
 //         audio.pause();
-//         // Add .now-pause and remove .now-play
 //         playBtn.classList.add('now-pause');
 //         playBtn.classList.remove('now-play');
 //       }
@@ -627,15 +637,13 @@ function initMagnificPopups(
 //     // ⏩ Click on music track to seek forward/backward
 //     musicTrack?.addEventListener('click', (e) => {
 //       const rect = musicTrack.getBoundingClientRect();
-//       const position = (e.clientX - rect.left) / rect.width; // Position as a percentage (0 to 1)
-//       audio.currentTime = position * audio.duration; // Seek to the new position
+//       const position = (e.clientX - rect.left) / rect.width;
+//       audio.currentTime = position * audio.duration;
 
-//       // Update the current time display
 //       if (currentTimeEl) {
 //         currentTimeEl.textContent = formatTime(audio.currentTime);
 //       }
 
-//       // Update the progress bar
 //       if (progressBar && audio.duration) {
 //         const percentage = (audio.currentTime / audio.duration) * 100;
 //         progressBar.style.width = `${percentage}%`;
@@ -645,36 +653,36 @@ function initMagnificPopups(
 // }
 
 function initObryPlayers() {
-  const players = document.querySelectorAll('.obry-player');
+  const players = document.querySelectorAll(".obry-player");
 
-  players.forEach(player => {
-    const audio = player.querySelector('audio');
+  players.forEach((player) => {
+    const audio = player.querySelector("audio");
     if (!audio) return;
 
-    const playBtn = player.querySelector('.play, .play-btn');
-    const currentTimeEl = player.querySelector('.music-length span');
-    const totalTimeEl = player.querySelector('.music-duration span');
-    const progressBar = player.querySelector('.music-progress');
-    const volumeBtn = player.querySelector('.music-velum');
-    const volumeTrack = player.querySelector('.voluom-track');
-    const volumeProgress = player.querySelector('.voluom-progress');
-    const musicTrack = player.querySelector('.music-track');
+    const playBtn = player.querySelector(".play, .play-btn");
+    const currentTimeEl = player.querySelector(".music-length span");
+    const totalTimeEl = player.querySelector(".music-duration span");
+    const progressBar = player.querySelector(".music-progress");
+    const volumeBtn = player.querySelector(".music-velum");
+    const volumeTrack = player.querySelector(".voluom-track");
+    const volumeProgress = player.querySelector(".voluom-progress");
+    const musicTrack = player.querySelector(".music-track");
 
-    const formatTime = time => {
-      const min = String(Math.floor(time / 60)).padStart(2, '0');
-      const sec = String(Math.floor(time % 60)).padStart(2, '0');
+    const formatTime = (time) => {
+      const min = String(Math.floor(time / 60)).padStart(2, "0");
+      const sec = String(Math.floor(time % 60)).padStart(2, "0");
       return `${min}:${sec}`;
     };
 
     // ⏱ Total time display
-    audio.addEventListener('loadedmetadata', () => {
+    audio.addEventListener("loadedmetadata", () => {
       if (totalTimeEl) {
         totalTimeEl.textContent = formatTime(audio.duration);
       }
     });
 
     // ⏱ Update progress and current time
-    audio.addEventListener('timeupdate', () => {
+    audio.addEventListener("timeupdate", () => {
       if (currentTimeEl) {
         currentTimeEl.textContent = formatTime(audio.currentTime);
       }
@@ -685,47 +693,65 @@ function initObryPlayers() {
     });
 
     // ▶️ Play/Pause button
-    playBtn?.addEventListener('click', () => {
-      players.forEach(p => {
-        const a = p.querySelector('audio');
-        const btn = p.querySelector('.play, .play-btn');
+    playBtn?.addEventListener("click", () => {
+      players.forEach((p) => {
+        const a = p.querySelector("audio");
+        const btn = p.querySelector(".play, .play-btn");
 
         if (a && a !== audio) {
           a.pause();
-          btn?.classList.remove('now-play');
-          btn?.classList.add('now-pause');
+          btn?.classList.remove("now-play");
+          btn?.classList.add("now-pause");
         }
       });
 
       if (audio.paused) {
         audio.play();
-        playBtn.classList.add('now-play');
-        playBtn.classList.remove('now-pause');
+        playBtn.classList.add("now-play");
+        playBtn.classList.remove("now-pause");
       } else {
         audio.pause();
-        playBtn.classList.add('now-pause');
-        playBtn.classList.remove('now-play');
+        playBtn.classList.add("now-pause");
+        playBtn.classList.remove("now-play");
       }
     });
 
     // 🔇 Mute/Unmute button
-    volumeBtn?.addEventListener('click', () => {
+    volumeBtn?.addEventListener("click", () => {
       audio.muted = !audio.muted;
-      volumeBtn.classList.toggle('muted', audio.muted);
+      volumeBtn.classList.toggle("muted", audio.muted);
     });
 
-    // 🔊 Volume adjustment
-    volumeTrack?.addEventListener('click', (e) => {
+    // 🔊 Volume adjustment with drag
+    let isDragging = false;
+
+    const updateVolume = (e) => {
       const rect = volumeTrack.getBoundingClientRect();
-      const volume = (e.clientX - rect.left) / rect.width;
+      let volume = (e.clientX - rect.left) / rect.width;
+      volume = Math.max(0, Math.min(1, volume)); // clamp between 0 and 1
       audio.volume = volume;
       if (volumeProgress) {
         volumeProgress.style.width = `${volume * 100}%`;
       }
+    };
+
+    volumeTrack?.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      updateVolume(e);
     });
 
-    // ⏩ Click on music track to seek forward/backward
-    musicTrack?.addEventListener('click', (e) => {
+    document.addEventListener("mousemove", (e) => {
+      if (isDragging) {
+        updateVolume(e);
+      }
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+    });
+
+    // ⏩ Seek on music track click
+    musicTrack?.addEventListener("click", (e) => {
       const rect = musicTrack.getBoundingClientRect();
       const position = (e.clientX - rect.left) / rect.width;
       audio.currentTime = position * audio.duration;
@@ -742,6 +768,85 @@ function initObryPlayers() {
   });
 }
 
+function initHeroTwoSlider() {
+  const slider = document.querySelector(".hero-two__slider");
+
+  if (!slider) return;
+
+  const slideImages = slider.querySelectorAll(".slide-image");
+  if (!slideImages.length) return;
+
+  slideImages.forEach((image) => {
+    image.addEventListener("click", function () {
+      const slideContainer = this.closest(".hero-two__slide-container");
+      if (!slideContainer) return;
+
+      const imagesInSlide = slideContainer.querySelectorAll(".slide-image");
+      if (!imagesInSlide.length) return;
+
+      imagesInSlide.forEach((img) => img.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+}
+
+function initDragButton() {
+  const dragButton = document.querySelector(".hero-two__drag-button");
+  const swiperElement = document.querySelector(".hero-two__slider");
+  if (!swiperElement && !dragButton) {
+    return;
+  }
+  let isHovering = false;
+
+  gsap.set(dragButton, { opacity: 0 });
+
+  function handleMouseEnter(e) {
+    isHovering = true;
+    gsap.to(dragButton, {
+      opacity: 1,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+    updateButtonPosition(e);
+  }
+
+  function handleMouseLeave() {
+    isHovering = false;
+    gsap.to(dragButton, {
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.in",
+    });
+  }
+
+  function updateButtonPosition(e) {
+    if (!isHovering) return;
+
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    gsap.to(dragButton, {
+      left: mouseX,
+      top: mouseY,
+      duration: 0.1,
+      ease: "none",
+    });
+  }
+
+  function handleClick() {
+    gsap.to(dragButton, {
+      scale: 0.9,
+      duration: 0.1,
+      yoyo: true,
+      repeat: 1,
+    });
+  }
+
+  swiperElement.addEventListener("mouseenter", handleMouseEnter);
+  swiperElement.addEventListener("mouseleave", handleMouseLeave);
+  swiperElement.addEventListener("mousemove", updateButtonPosition);
+  swiperElement.addEventListener("click", handleClick);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   // initializeSwiper(".brandSlider", brandSliderOptions);
@@ -750,6 +855,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeSwiper(".instagram2__slider", instagram2SliderOptions);
   initializeSwiper(".testimonial__slider", testimonialSliderOptions);
   initializeSwiper(".testimonial2__slider", testimonial2SliderOptions);
+  initializeSwiper(".hero-two__slider", HeroTwoSliderOptions);
+  initHeroTwoSlider();
+  initDragButton();
   initTestimonialNavActiveToggle();
   setBackgroundImages();
   odometerCounter();
@@ -761,4 +869,39 @@ document.addEventListener("DOMContentLoaded", () => {
   $(".vs-menu-wrapper").vsmobilemenu();
   initMagnificPopups();
   initObryPlayers();
+});
+
+const races = document.querySelector(".pricing-box2-wrapper");
+
+function getScrollAmount() {
+  if (!races) {
+    return;
+  }
+  let racesWidth = races?.scrollWidth;
+  let containerWidth = window.innerWidth;
+  let offsetLeft = races.getBoundingClientRect().left;
+  const extraPadding = 15;
+  return -(racesWidth - containerWidth + offsetLeft + extraPadding);
+}
+
+// Update the scroll amount on resize
+window.addEventListener("resize", () => {
+  ScrollTrigger.refresh();
+});
+
+const tween = gsap.to(races, {
+  x: getScrollAmount,
+  duration: 3,
+  ease: "none",
+});
+
+ScrollTrigger.create({
+  trigger: ".pricing2",
+  start: "top 20%",
+  end: () => `+=${getScrollAmount() * -1}`,
+  pin: true,
+  animation: tween,
+  scrub: 1,
+  invalidateOnRefresh: true,
+  markers: false,
 });
