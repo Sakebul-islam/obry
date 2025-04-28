@@ -40,8 +40,10 @@ function odometerCounter() {
 
 const quoteSliderOptions = {
   loop: true,
-  direction: "horizontal",
-  effect: "flip",
+  // direction: "horizontal",
+  // effect: "flip",
+  fadeEffect: { crossFade: true },
+  effect: "fade",
   autoplay: {
     delay: 1500,
     disableOnInteraction: false,
@@ -124,6 +126,32 @@ const HeroTwoSliderOptions = {
 
   keyboard: {
     enabled: true,
+  },
+};
+const pricing2SliderOptions = {
+  loop: true,
+  speed: 2000,
+  spaceBetween: 23,
+  slidesPerView: 1,
+  keyboard: {
+    enabled: true,
+  },
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+
+  breakpoints: {
+    991: {
+      slidesPerView: 1.5,
+    },
+    1200: {
+      slidesPerView: 2,
+    },
+    1700: {
+      slidesPerView: 2.5,
+    },
   },
 };
 
@@ -749,50 +777,50 @@ function initDragButton() {
 //   });
 // };
 
-const horizontalScroll = () => {
-  ScrollTrigger.matchMedia({
-    // Only run when screen is 992px and above
-    "(min-width: 992px)": function () {
-      const races = document.querySelector(".pricing-box2-wrapper");
+// const horizontalScroll = () => {
+//   ScrollTrigger.matchMedia({
+//     // Only run when screen is 992px and above
+//     "(min-width: 992px)": function () {
+//       const races = document.querySelector(".pricing-box2-wrapper");
 
-      function getScrollAmount() {
-        if (!races) return;
-        let racesWidth = races.scrollWidth;
-        let containerWidth = window.innerWidth;
-        let offsetLeft = races.getBoundingClientRect().left;
-        const extraPadding = 15;
-        return -(racesWidth - containerWidth + offsetLeft + extraPadding);
-      }
+//       function getScrollAmount() {
+//         if (!races) return;
+//         let racesWidth = races.scrollWidth;
+//         let containerWidth = window.innerWidth;
+//         let offsetLeft = races.getBoundingClientRect().left;
+//         const extraPadding = 15;
+//         return -(racesWidth - containerWidth + offsetLeft + extraPadding);
+//       }
 
-      const tween = gsap.to(races, {
-        x: getScrollAmount,
-        duration: 3,
-        ease: "none",
-      });
+//       const tween = gsap.to(races, {
+//         x: getScrollAmount,
+//         duration: 3,
+//         ease: "none",
+//       });
 
-      ScrollTrigger.create({
-        trigger: ".pricing2",
-        start: "top 20%",
-        end: () => (races ? `+=${getScrollAmount() * -1}` : "bottom 60%"),
-        pin: ".pricing2",
-        animation: tween,
-        scrub: true,
-        invalidateOnRefresh: false,
-        markers: false,
+//       ScrollTrigger.create({
+//         trigger: ".pricing2",
+//         start: "top 20%",
+//         end: () => (races ? `+=${getScrollAmount() * -1}` : "bottom 60%"),
+//         pin: ".pricing2",
+//         animation: tween,
+//         scrub: true,
+//         invalidateOnRefresh: false,
+//         markers: false,
 
-        onEnter: () => {
-          disableFadeUpAnimations();
-        },
-        onLeave: () => {
-          enableFadeUpAnimations();
-        },
-        onLeaveBack: () => {
-          enableFadeUpAnimations();
-        },
-      });
-    },
-  });
-};
+//         onEnter: () => {
+//           disableFadeUpAnimations();
+//         },
+//         onLeave: () => {
+//           enableFadeUpAnimations();
+//         },
+//         onLeaveBack: () => {
+//           enableFadeUpAnimations();
+//         },
+//       });
+//     },
+//   });
+// };
 
 // GSAP Fade Animation
 // let fadeArray_items = document.querySelectorAll(".fade-anim");
@@ -991,6 +1019,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeSwiper(".testimonial__slider", testimonialSliderOptions);
   initializeSwiper(".testimonial2__slider", testimonial2SliderOptions);
   initializeSwiper(".hero-two__slider", HeroTwoSliderOptions);
+  initializeSwiper(".pricing2__slider", pricing2SliderOptions);
   initHeroTwoSlider();
   initDragButton();
   initTestimonialNavActiveToggle();
@@ -1004,7 +1033,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $(".vs-menu-wrapper").vsmobilemenu();
   initMagnificPopups();
   initObryPlayers();
-  horizontalScroll();
+  // horizontalScroll();
   setupFadeAnimations();
 });
 

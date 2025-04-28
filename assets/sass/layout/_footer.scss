@@ -15,6 +15,13 @@
   &__center {
     &.common {
       background: rgba($color-1, 0.7);
+      &:not(.page-2){
+        padding-block: 105px 78px;
+        
+        @include breakpoint(max-lg){
+          padding-block: 85px 58px;
+        }
+      }
 
       .footer-info {
         @include breakpoint(xl) {
@@ -23,7 +30,7 @@
         }
         .footer-logo {
           @extend %d-inline-block;
-          margin-bottom: 22px;
+          margin-bottom: 27px;
           @include breakpoint(max-md) {
             margin-bottom: 15px;
           }
@@ -79,8 +86,8 @@
           @extend %d-flex, %item-center;
           column-gap: 8px;
           margin-top: 26px;
-          
-          @include breakpoint(max-md){
+
+          @include breakpoint(max-md) {
             margin-top: 15px;
           }
           .social-title {
@@ -97,7 +104,7 @@
 
             li {
               @extend %shrink-0;
-              
+
               a {
                 @extend %d-grid, %place-center;
                 width: 45px;
@@ -125,6 +132,15 @@
         }
       }
     }
+
+    &.page-2 {
+      padding-block: 80px 70px;
+      
+      @include breakpoint(max-lg){
+        padding-block: 60px 50px;
+      }
+    }
+
   }
   &__bottom {
     &.common {
@@ -161,6 +177,11 @@
 
 .footer-three {
   &.section {
+    padding-top: 88px;
+    
+    @include breakpoint(max-lg){
+      padding-top: 60px;
+    }
   }
 
   &__top {
@@ -206,6 +227,10 @@
     }
   }
   &__center {
+    padding-block: 60px 68px;
+    @include breakpoint(max-lg){
+      padding-block: 40px 48px;
+    }
     .newsletter {
       .newsletter-email {
         @extend %d-flex, %item-center;
@@ -349,6 +374,7 @@
     padding-bottom: 9px;
     margin-bottom: 35px;
     border-bottom: 2.5px solid rgba($color-white, 0.2);
+    max-width: 243px;
 
     &::before {
       @extend %p-absolute;
@@ -410,6 +436,21 @@
   }
   .instagram-mask {
     mask-image: url(../images/footer/instagram-mask-shape.png);
+    mask-repeat: no-repeat;
+    @include breakpoint(max-sm) {
+      mask-size: 100% 100%;
+    }
+
+    a {
+      @include breakpoint(max-sm) {
+        display: block;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 
   &.v2 {

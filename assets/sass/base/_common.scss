@@ -77,7 +77,7 @@ body::-webkit-scrollbar-thumb {
 }
 .section-title {
   color: $color-white;
-  margin-top: 8px;
+  // margin-top: 8px;
 
   @include breakpoint(max-md) {
     margin-top: 6px;

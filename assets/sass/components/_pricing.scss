@@ -247,6 +247,10 @@
   border: 1px solid rgba($color-white, 0.1);
   overflow: hidden;
 
+  @include breakpoint(max-sm){
+    flex-direction: column;
+  }
+
   .pricing-content {
     padding: 40px;
 
@@ -295,6 +299,10 @@
   }
   .pricing-thumb {
     @extend %p-relative;
+
+    img {
+      width: 100%;
+    }
 
     &::before {
       @extend %p-absolute;

@@ -6,6 +6,9 @@
 /**
  * Basic typography style for copy text
  */
+html {
+  overflow-x: hidden;
+}
 body {
   @extend %text-regular;
   color: $color-white;

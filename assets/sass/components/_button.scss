@@ -10,7 +10,8 @@
   background: linear-gradient(to right, $color-primary, $color-white);
   overflow: hidden;
   border: none;
-
+  
+  
   .btn-wrapper {
     @extend %d-flex, %item-center;
     gap: 12px;
@@ -23,7 +24,10 @@
     line-height: 350%;
     text-transform: uppercase;
     padding-inline: 41.2px;
-
+    
+    &.v2{
+      background: linear-gradient(90deg, $color-14 0%, #8E7D3F 100%);
+    }
     span {
       @extend %p-relative, %d-inline-flex, %justify-center, %item-center;
       overflow: hidden;

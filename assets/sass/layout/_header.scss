@@ -4,10 +4,13 @@
 @use "../abstracts/container" as *;
 
 .moblide-header {
-  @extend %d-flex, %item-center, %justify-between;
+  @extend %d-flex, %item-center, %justify-end;
 
   @include breakpoint(max-lg) {
     padding-block: 15px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .vs-menu-toggle {
     width: auto;
