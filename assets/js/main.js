@@ -747,37 +747,6 @@ function initDragButton() {
 }
 
 // const horizontalScroll = () => {
-//   const races = document.querySelector(".pricing-box2-wrapper");
-
-//   function getScrollAmount() {
-//     if (!races) {
-//       return;
-//     }
-//     let racesWidth = races?.scrollWidth;
-//     let containerWidth = window.innerWidth;
-//     let offsetLeft = races.getBoundingClientRect().left;
-//     const extraPadding = 15;
-//     return -(racesWidth - containerWidth + offsetLeft + extraPadding);
-//   }
-//   const tween = gsap.to(races, {
-//     x: getScrollAmount,
-//     duration: 3,
-//     ease: "none",
-//   });
-
-//   ScrollTrigger.create({
-//     trigger: ".pricing2",
-//     start: "top 20%",
-//     end: () => `+=${getScrollAmount() * -1}`,
-//     pin: true,
-//     animation: tween,
-//     scrub: 1,
-//     invalidateOnRefresh: true,
-//     markers: false,
-//   });
-// };
-
-// const horizontalScroll = () => {
 //   ScrollTrigger.matchMedia({
 //     // Only run when screen is 992px and above
 //     "(min-width: 992px)": function () {

@@ -4,6 +4,11 @@
  * Marcelo IvÃ¡n Tosco (capynet)
  * Inspired on https://stackoverflow.com/a/40658647/1413049
  * ==================================================== */
+/*
+  Developer: Sakebul Islam
+  Email: mdsakebul66@gmail.com
+  Website: https://sakebul.com/
+*/
 !function ($) {
   'use strict'
 
