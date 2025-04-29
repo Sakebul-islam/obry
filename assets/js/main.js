@@ -40,10 +40,10 @@ function odometerCounter() {
 
 const quoteSliderOptions = {
   loop: true,
-  // direction: "horizontal",
-  // effect: "flip",
-  fadeEffect: { crossFade: true },
-  effect: "fade",
+  direction: "horizontal",
+  effect: "flip",
+  // fadeEffect: { crossFade: true },
+  // effect: "fade",
   autoplay: {
     delay: 1500,
     disableOnInteraction: false,
@@ -57,9 +57,9 @@ const quoteSliderOptions = {
 
 const heroOneSliderOptions = {
   loop: true,
-  speed: 2000,
+  speed: 3000,
   autoplay: {
-    delay: 1,
+    delay: 0,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
@@ -218,7 +218,60 @@ function initializeSwiper(containerSelector, options) {
   } else {
     delete options.navigation;
   }
-  return new Swiper(containerSelector, options);
+  // return new Swiper(containerSelector, options);
+
+  const swiper = new Swiper(containerSelector, options);
+
+  // Access the wrapper directly from swiper instance
+  const wrapper = swiper.wrapperEl;
+
+  let duration;
+  let distanceRatio;
+  let startTimer;
+
+  // stop autoplay
+  const stopAutoplay = () => {
+    if (startTimer) clearTimeout(startTimer);
+
+    // Stop the slide at the current translate.
+    swiper.setTranslate(swiper.getTranslate());
+
+    // Calculate the distance between current slide and next slide
+    const currentSlideWidth = swiper.slides[swiper.activeIndex].offsetWidth;
+    distanceRatio = Math.abs(
+      (currentSlideWidth * swiper.activeIndex + swiper.getTranslate()) /
+        currentSlideWidth
+    );
+
+    duration = swiper.params.speed * distanceRatio;
+    swiper.autoplay.stop();
+  };
+
+  const startAutoplay = () => {
+    swiper.autoplay.start();
+
+    if (wrapper && !wrapper.classList.contains("linear")) {
+      wrapper.classList.add("linear");
+    }
+  };
+
+  if (options.autoplay) {
+    container.addEventListener("mouseenter", () => {
+      stopAutoplay();
+
+      swiper.slideTo(swiper.activeIndex, 0);
+
+      if (wrapper && wrapper.classList.contains("linear")) {
+        wrapper.classList.remove("linear");
+      }
+    });
+
+    container.addEventListener("mouseleave", () => {
+      startAutoplay();
+    });
+  }
+
+  return swiper;
 }
 
 function setHoverActiveClass(
@@ -425,21 +478,24 @@ function popupSearchBox(
 }
 
 /**************************************
- ***** 05. Data Navbar Stick *****
+ ***** Data Navbar Stick *****
  **************************************/
-const navbar = document.querySelector("#navbars");
+function pinned_header() {
+  const scrollThreshold = 100;
+  const navbar = document.querySelector("#navbars");
 
-gsap.timeline({
-  scrollTrigger: {
-    trigger: navbar,
-    start: "top+=100",
-    end: "+=1",
-    toggleActions: "play reverse play reverse",
-    scrub: false,
-    onEnter: () => navbar.classList.add("sticky-active"),
-    onLeaveBack: () => navbar.classList.remove("sticky-active"),
-  },
-});
+  if (navbar) {
+    $(window).on("scroll", function () {
+      const currentScrollTop = $(this).scrollTop();
+
+      if (currentScrollTop > scrollThreshold) {
+        $(navbar).addClass("sticky-active");
+      } else {
+        $(navbar).removeClass("sticky-active");
+      }
+    });
+  }
+}
 
 $.fn.vsmobilemenu = function (options) {
   var opt = $.extend(
@@ -981,7 +1037,34 @@ function parallaxCursorBtn(e, parent, movement) {
     rect.height / 2 +
     (relY - rect.height / 2 - scrollTop) / movement;
 }
+function initBackToTopButton() {
+  const btt = document.querySelector(".scrollToTop");
+  if (!btt) return; // Exit if the button doesn't exist
+
+  // Add click functionality to scroll to the top
+  btt.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    gsap.to(window, { duration: 1, scrollTo: 0 });
+  });
+
+  // Set initial styles
+  gsap.set(btt, { autoAlpha: 0, y: 50 });
+
+  // Animate the button visibility on scroll
+  gsap.to(btt, {
+    autoAlpha: 1,
+    y: 0,
+    scrollTrigger: {
+      trigger: "body",
+      start: "top -20%",
+      end: "top -20%",
+      toggleActions: "play none reverse none",
+    },
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  pinned_header();
   initializeSwiper(".quote__slider", quoteSliderOptions);
   initializeSwiper(".hero-one__slider", heroOneSliderOptions);
   initializeSwiper(".instagram2__slider", instagram2SliderOptions);
@@ -1004,6 +1087,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initObryPlayers();
   // horizontalScroll();
   setupFadeAnimations();
+  initBackToTopButton();
 });
 
 // Update the scroll amount on resize

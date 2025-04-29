@@ -15,10 +15,10 @@
   &__center {
     &.common {
       background: rgba($color-1, 0.7);
-      &:not(.page-2){
+      &:not(.page-2) {
         padding-block: 105px 78px;
-        
-        @include breakpoint(max-lg){
+
+        @include breakpoint(max-lg) {
           padding-block: 85px 58px;
         }
       }
@@ -135,12 +135,11 @@
 
     &.page-2 {
       padding-block: 80px 70px;
-      
-      @include breakpoint(max-lg){
+
+      @include breakpoint(max-lg) {
         padding-block: 60px 50px;
       }
     }
-
   }
   &__bottom {
     &.common {
@@ -178,8 +177,8 @@
 .footer-three {
   &.section {
     padding-top: 88px;
-    
-    @include breakpoint(max-lg){
+
+    @include breakpoint(max-lg) {
       padding-top: 60px;
     }
   }
@@ -228,7 +227,7 @@
   }
   &__center {
     padding-block: 60px 68px;
-    @include breakpoint(max-lg){
+    @include breakpoint(max-lg) {
       padding-block: 40px 48px;
     }
     .newsletter {
@@ -346,6 +345,7 @@
           }
 
           &:hover {
+            color: $color-primary;
             i {
               color: $color-primary;
             }
@@ -437,18 +437,18 @@
   .instagram-mask {
     mask-image: url(../images/footer/instagram-mask-shape.png);
     mask-repeat: no-repeat;
-    @include breakpoint(max-sm) {
-      mask-size: 100% 100%;
-    }
+    mask-size: 100% 100%;
+    // @include breakpoint(xxl) {
+    // }
+    // @include breakpoint(max-sm) {
+    //   mask-size: 100% 100%;
+    // }
 
     a {
-      @include breakpoint(max-sm) {
-        display: block;
+      display: block;
+      width: 100%;
+      img {
         width: 100%;
-
-        img {
-          width: 100%;
-        }
       }
     }
   }
@@ -457,11 +457,15 @@
     .widgets-title {
       border-bottom: none;
       padding-bottom: 0;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-weight: 800;
       &::before {
         content: unset;
       }
+    }
+
+    &.has-margin-left {
+      margin-left: -25px;
     }
   }
 }
