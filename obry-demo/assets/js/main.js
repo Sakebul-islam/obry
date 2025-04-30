@@ -56,35 +56,24 @@ const quoteSliderOptions = {
   speed: 1000,
 };
 
-const heroOneSliderOptions = {
-  loop: true,
-  speed: 3000,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
-  effect: "slide",
-  navigation: false,
-  slidesPerView: "auto",
-  spaceBetween: 20,
-  breakpoints: {
-    1200: {
-      spaceBetween: 40,
-    },
-  },
-};
-const instagram2SliderOptions = {
-  loop: true,
-  speed: 2000,
-  autoplay: {
-    delay: 1,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  effect: "slide",
-  navigation: false,
-  slidesPerView: "auto",
-};
+// const heroOneSliderOptions = {
+//   loop: true,
+//   speed: 3000,
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//   },
+//   effect: "slide",
+//   navigation: false,
+//   slidesPerView: "auto",
+//   spaceBetween: 20,
+//   breakpoints: {
+//     1200: {
+//       spaceBetween: 40,
+//     },
+//   },
+// };
+
 const testimonialSliderOptions = {
   loop: true,
   spaceBetween: 40,
@@ -1154,11 +1143,19 @@ function initBackToTopButton() {
   });
 }
 
+function cloneSlides(sliderSelector, slideSelector, marqueeSelector) {
+  var slideCount = $(sliderSelector + " " + slideSelector).length;
+
+  for (var i = 0; i < slideCount; i++) {
+    $(sliderSelector).clone().prependTo(marqueeSelector);
+  }
+
+  return $(sliderSelector + " " + slideSelector);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   pinned_header();
   initializeSwiper(".quote__slider", quoteSliderOptions);
-  initializeSwiper(".hero-one__slider", heroOneSliderOptions);
-  initializeSwiper(".instagram2__slider", instagram2SliderOptions);
   initializeSwiper(".testimonial__slider", testimonialSliderOptions);
   initializeSwiper(".testimonial2__slider", testimonial2SliderOptions);
   initializeSwiper(".hero-two__slider", HeroTwoSliderOptions);
@@ -1179,6 +1176,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // horizontalScroll();
   setupFadeAnimations();
   initBackToTopButton();
+  cloneSlides(".hero-one__slider", ".hero-one__slide", ".hero-one__marquee");
+  cloneSlides(
+    ".instagram2__slider",
+    ".instagram2__slide",
+    ".instagram2__marquee"
+  );
 });
 
 // Update the scroll amount on resize

@@ -60,10 +60,41 @@
     }
   }
 
-  &__slider {
-    .swiper-slide {
-      @extend %shrink-0, %w-content;
-      height: auto;
+  &__marquee-container {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    padding: 164px 0;
+    
+    @include breakpoint(max-md){
+      padding: 150px 0;
     }
+  }
+  &__marquee {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: scroll_x linear infinite;
+    animation-duration: 20s;
+    justify-content: space-between;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+  &__slider {
+    flex: 0 0 auto;
+    display: flex;
+    min-width: auto;
+    flex-direction: row;
+  }
+  &__slide {
   }
 }

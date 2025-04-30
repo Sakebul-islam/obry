@@ -109,7 +109,7 @@
     position: relative;
     font-weight: 700;
     font-size: $fs-base;
-    color: $color-body;
+    color: $color-white;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.48px;
@@ -221,7 +221,7 @@
     text-align: left;
     top: 150%;
     left: 0;
-    background-color: $color-white;
+    background-color: $color-1;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     visibility: hidden;
     min-width: 190px;
@@ -359,7 +359,8 @@
         text-transform: capitalize;
         letter-spacing: 1px;
         font-weight: 700;
-        color: $color-body;
+        // color: $color-body;
+        color: $color-white;
         border-color: $color-primary;
 
         &::after,

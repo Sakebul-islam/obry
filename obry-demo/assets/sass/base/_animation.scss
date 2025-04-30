@@ -36,3 +36,14 @@
     @include transform(translate(15px,15px));
   }
 }
+
+
+@keyframes scroll_x {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
