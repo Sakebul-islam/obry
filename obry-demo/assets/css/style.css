@@ -2554,9 +2554,6 @@ body::-webkit-scrollbar-thumb {
 .footer-links.v2 ul li a:hover i {
   color: #e2c55d;
 }
-.footer-links.v2 ul li:first-of-type a i {
-  color: #e2c55d;
-}
 
 .footer-widgets .widgets-title {
   line-height: 175%;

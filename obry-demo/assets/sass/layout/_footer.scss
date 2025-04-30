@@ -352,13 +352,13 @@
           }
         }
 
-        &:first-of-type {
-          a {
-            i {
-              color: $color-primary;
-            }
-          }
-        }
+        // &:first-of-type {
+        //   a {
+        //     i {
+        //       color: $color-primary;
+        //     }
+        //   }
+        // }
       }
     }
   }
