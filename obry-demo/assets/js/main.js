@@ -40,12 +40,13 @@ function odometerCounter() {
 
 const quoteSliderOptions = {
   loop: true,
-  direction: "horizontal",
-  effect: "flip",
+  // direction: "horizontal",
+  // effect: "flip",
   // fadeEffect: { crossFade: true },
   // effect: "fade",
+  speed: 3000,
   autoplay: {
-    delay: 1500,
+    delay: 3000,
     disableOnInteraction: false,
   },
   pagination: {
@@ -61,7 +62,6 @@ const heroOneSliderOptions = {
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
-    pauseOnMouseEnter: true,
   },
   effect: "slide",
   navigation: false,
@@ -179,6 +179,101 @@ function initTestimonialNavActiveToggle(direction = "right") {
   prevBtn.addEventListener("click", () => setActiveNav("left"));
 }
 
+// function initializeSwiper(containerSelector, options) {
+//   // Check if the container exists
+//   const container = document.querySelector(containerSelector);
+//   if (!container) {
+//     return;
+//   }
+
+//   if (options.pagination) {
+//     options.pagination = {
+//       el:
+//         options.pagination === true
+//           ? `${containerSelector} .swiper-pagination`
+//           : options.pagination.el,
+//       clickable: true,
+//     };
+
+//     const paginationEl = document.querySelector(options.pagination.el);
+//     if (!paginationEl) {
+//       console.error("Pagination element not found");
+//       return;
+//     }
+//   } else {
+//     delete options.pagination;
+//   }
+
+//   if (options.navigation) {
+//     options.navigation = {
+//       nextEl:
+//         options.navigation === true
+//           ? `${containerSelector} .swiper-button-next`
+//           : options.navigation.nextEl,
+//       prevEl:
+//         options.navigation === true
+//           ? `${containerSelector} .swiper-button-prev`
+//           : options.navigation.prevEl,
+//     };
+//   } else {
+//     delete options.navigation;
+//   }
+//   // return new Swiper(containerSelector, options);
+
+//   const swiper = new Swiper(containerSelector, options);
+
+//   // Access the wrapper directly from swiper instance
+//   const wrapper = swiper.wrapperEl;
+
+//   let duration;
+//   let distanceRatio;
+//   let startTimer;
+
+//   // stop autoplay
+//   const stopAutoplay = () => {
+//     if (startTimer) clearTimeout(startTimer);
+
+//     // Stop the slide at the current translate.
+//     swiper.setTranslate(swiper.getTranslate());
+
+//     // Calculate the distance between current slide and next slide
+//     const currentSlideWidth = swiper.slides[swiper.activeIndex].offsetWidth;
+//     distanceRatio = Math.abs(
+//       (currentSlideWidth * swiper.activeIndex + swiper.getTranslate()) /
+//         currentSlideWidth
+//     );
+
+//     duration = swiper.params.speed * distanceRatio;
+//     swiper.autoplay.stop();
+//   };
+
+//   const startAutoplay = () => {
+//     swiper.autoplay.start();
+
+//     if (wrapper && !wrapper.classList.contains("linear")) {
+//       wrapper.classList.add("linear");
+//     }
+//   };
+
+//   if (options.autoplay) {
+//     container.addEventListener("mouseenter", () => {
+//       stopAutoplay();
+
+//       swiper.slideTo(swiper.activeIndex, 0);
+
+//       if (wrapper && wrapper.classList.contains("linear")) {
+//         wrapper.classList.remove("linear");
+//       }
+//     });
+
+//     container.addEventListener("mouseleave", () => {
+//       startAutoplay();
+//     });
+//   }
+
+//   return swiper;
+// }
+
 function initializeSwiper(containerSelector, options) {
   // Check if the container exists
   const container = document.querySelector(containerSelector);
@@ -218,56 +313,52 @@ function initializeSwiper(containerSelector, options) {
   } else {
     delete options.navigation;
   }
-  // return new Swiper(containerSelector, options);
 
   const swiper = new Swiper(containerSelector, options);
 
   // Access the wrapper directly from swiper instance
   const wrapper = swiper.wrapperEl;
+  if (wrapper) {
+    wrapper.classList.add("linear");
+  }
 
-  let duration;
-  let distanceRatio;
-  let startTimer;
-
-  // stop autoplay
-  const stopAutoplay = () => {
-    if (startTimer) clearTimeout(startTimer);
-
-    // Stop the slide at the current translate.
-    swiper.setTranslate(swiper.getTranslate());
-
-    // Calculate the distance between current slide and next slide
-    const currentSlideWidth = swiper.slides[swiper.activeIndex].offsetWidth;
-    distanceRatio = Math.abs(
-      (currentSlideWidth * swiper.activeIndex + swiper.getTranslate()) /
-        currentSlideWidth
-    );
-
-    duration = swiper.params.speed * distanceRatio;
+  // Force immediate stop
+  const forceStop = () => {
+    const currentTranslate = swiper.getTranslate();
+    swiper.setTranslate(currentTranslate);
     swiper.autoplay.stop();
+    wrapper.classList.remove("linear");
   };
 
-  const startAutoplay = () => {
+  // Force immediate resume with proper transition
+  const forceResume = () => {
+    wrapper.classList.add("linear");
+    swiper.slideTo(swiper.activeIndex, options?.speed || 3000, false);
     swiper.autoplay.start();
-
-    if (wrapper && !wrapper.classList.contains("linear")) {
-      wrapper.classList.add("linear");
-    }
+    console.log(options.speed);
   };
 
   if (options.autoplay) {
     container.addEventListener("mouseenter", () => {
-      stopAutoplay();
-
-      swiper.slideTo(swiper.activeIndex, 0);
-
-      if (wrapper && wrapper.classList.contains("linear")) {
-        wrapper.classList.remove("linear");
-      }
+      forceStop();
     });
 
     container.addEventListener("mouseleave", () => {
-      startAutoplay();
+      forceResume();
+    });
+    container.addEventListener("touchStart", () => {
+      forceStop();
+    });
+
+    container.addEventListener("touchEnd", () => {
+      forceResume();
+    });
+    container.addEventListener("dragStart", () => {
+      forceStop();
+    });
+
+    container.addEventListener("dragEnd", () => {
+      forceResume();
     });
   }
 
