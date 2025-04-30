@@ -1,0 +1,301 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.work {
+  &.section {
+    @extend %p-relative;
+    .btn-primary {
+      padding: 0;
+      background: transparent;
+
+      .btn-wrapper {
+        border-radius: 50%;
+        padding-inline: 44.5px;
+        padding-block: 26.5px;
+
+        @include breakpoint(max-md) {
+          padding-inline: 30px;
+          padding-block: 10px;
+        }
+      }
+    }
+    .circular-ball {
+      @extend %p-absolute;
+      top: -80px;
+      right: -200px;
+      animation: rotate 4.5s linear infinite;
+
+      @include breakpoint(max-xxl) {
+        right: -100px;
+      }
+      @include breakpoint(max-xl) {
+        display: none;
+      }
+    }
+
+    .section-shape {
+      @extend %p-absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__tabs {
+    @extend %justify-end;
+    border: none;
+    gap: 10px;
+
+    @include breakpoint(max-md) {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .work-tab {
+      button {
+        @extend %d-flex, %item-center;
+        gap: 10px;
+        overflow: hidden;
+        padding-inline: 18px;
+        color: $color-paragraph;
+        background: $color-1;
+        border: 1px solid $color-5;
+        border-radius: 30px;
+        font-family: $ff-rubik;
+        font-weight: 700;
+        line-height: 22px;
+        text-transform: uppercase;
+
+        &:active,
+        &:focus,
+        &:focus-visible,
+        &:hover {
+          border-color: $color-5;
+        }
+
+        .dot {
+          @extend %d-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          background-color: $color-body;
+          border: 1.5px solid $color-7;
+        }
+        @include breakpoint(max-sm) {
+          font-size: 12px;
+        }
+
+        &.active {
+          border-color: $color-5;
+          color: $color-paragraph;
+          background-color: $color-1;
+
+          .dot {
+            background-color: $color-primary;
+            border-color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+  &__content-container {
+    &:focus-visible,
+    :focus {
+      border: none;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &__content {
+  }
+}
+
+.work-masonry {
+  &__filter {
+    @extend %d-flex, %justify-center, %item-center,%flex-wrap;
+    column-gap: 48px;
+    row-gap: 15px;
+    .vs-btn {
+      border: none;
+      padding: 0;
+      background-color: transparent;
+      color: $color-white;
+      font-family: $ff-title;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+
+      &.active {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.work-box {
+  background-color: $color-1;
+  border: 1.5px solid rgba($color-white, 0.08);
+  border-radius: 25px;
+  overflow: hidden;
+  padding-inline: 25px;
+  padding-block: 25px 50px;
+
+  @include breakpoint(max-xl) {
+    padding-block: 25px 40px;
+  }
+  @include breakpoint(max-sm) {
+    padding-inline: 15px;
+    padding-block: 15px 30px;
+    border-radius: 15px;
+  }
+
+  .work-thumb {
+    @extend %p-relative;
+    overflow: hidden;
+    border-radius: 25px;
+    @include breakpoint(max-sm) {
+      border-radius: 15px;
+    }
+
+    img {
+      @include transition($transition);
+    }
+
+    .thumb-info {
+      @extend %p-absolute, %d-grid, %place-center;
+      inset: 0;
+      border-radius: 25px;
+      background: rgba($color-primary, 0.7);
+      opacity: 0;
+      @include transform(scale(0.4));
+      @include transition($transition);
+
+      .icon {
+        @extend %d-grid, %place-center;
+        width: 85px;
+        height: 85px;
+        border-radius: 100%;
+        background-color: rgba($color-body, 0.96);
+        font-size: 23px;
+      }
+    }
+  }
+  .work-content {
+    @extend %d-flex, %justify-between, %item-center;
+    margin-top: 28px;
+
+    .work-info {
+      .sub-title {
+        @extend %d-inline-block;
+        color: $color-paragraph;
+        font-family: $ff-title;
+        font-size: $fs-base;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0.48px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        @include transition($transition);
+      }
+    }
+    .work-link {
+      @extend %d-grid, %place-center, %shrink-0;
+      width: 55px;
+      height: 55px;
+      border-radius: 100%;
+      border: 2px solid rgba($color-white, 0.1);
+      color: $color-primary;
+      background-color: $color-body;
+      overflow: hidden;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @include breakpoint(max-sm) {
+      margin-top: 15px;
+
+      .work-info {
+        .sub-title {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  &:hover {
+    .work-thumb {
+      img {
+        @include transform(scale(1.2) rotate(5deg));
+      }
+      .thumb-info {
+        opacity: 1;
+        @include transform(scale(1));
+      }
+    }
+    .work-content {
+      .work-info {
+        .sub-title {
+          color: $color-primary;
+        }
+      }
+      .work-link {
+        svg {
+          animation: forward-backward 1s linear infinite alternate;
+        }
+      }
+    }
+  }
+
+  &.v2 {
+    border-radius: 40px;
+    padding-block-end: 40px;
+
+    @include breakpoint(max-sm) {
+      padding: 15px;
+      padding-block-end: 15px;
+    }
+
+    .work-thumb {
+      @extend %p-relative;
+      border-radius: 25px;
+
+      @include breakpoint(max-md) {
+        border-radius: 10px;
+      }
+      @include breakpoint(max-sm) {
+        border-radius: 5px;
+      }
+
+      &::before {
+        @extend %p-absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba($color-primary, 0.65);
+        opacity: 0;
+        z-index: 1;
+        @include transition($transition);
+      }
+    }
+
+    .work-content {
+      .work-link {
+        @include breakpoint(max-sm) {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+
+    &:hover {
+      .work-thumb {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

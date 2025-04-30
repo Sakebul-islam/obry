@@ -1,0 +1,139 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// --------------------------------------------------
+// Colors
+// --------------------------------------------------
+
+$color-primary: #e2c55d;
+$color-primary-rgb: 226, 197, 93;
+
+$color-body: #0e0e0e;
+$color-body-rgb: 14, 14, 14;
+$color-paragraph: #9d9d9d;
+$color-paragraph-rgb: 157, 157, 157;
+$color-1: #171a1b;
+$color-1-rgb: 23, 26, 27;
+$color-2: #171a1b;
+$color-2-rgb: 23, 27, 28;
+$color-3: #141617;
+$color-3-rgb: 20, 22, 23;
+$color-4: #141514;
+$color-4-rgb: 20, 21, 20;
+$color-5: #2a2e30;
+$color-5-rgb: 42, 46, 48;
+$color-6: #1d2021;
+$color-6-rgb: 29, 32, 33;
+$color-7: #292929;
+$color-7-rgb: 41, 41, 41;
+$color-8: #1a1a1a;
+$color-8-rgb: 26, 26, 26;
+$color-9: #9F9F9F;
+$color-9-rgb: 159, 159, 159;
+$color-10: #d9d9d9;
+$color-10-rgb: 217, 217, 217;
+$color-11: #101111;
+$color-11-rgb: 16, 17, 17;
+$color-12: #101111;
+$color-12-rgb: 16, 17, 17;
+$color-13: #121314;
+$color-13-rgb: 18, 19, 20;
+$color-14: #E2C55D;
+$color-14-rgb: 226, 197, 93;
+$color-15: #7c6c33;
+$color-15-rgb: 124, 108, 51;
+$color-16: #1e2225;
+$color-16-rgb: 30, 34, 37;
+
+$color-white: #ffffff;
+$color-white-rgb: 255, 255, 255;
+$color-black: #000;
+$color-black-rgb: 0, 0, 0;
+
+// Social icon colors
+$facebook: #3b5998;
+$google-plus: #db4437;
+$dribble: #e94c89;
+$vimeo: #23b6ea;
+$pinterest: #cb1f27;
+$twitter: #23b6ea;
+$instagram: #db4437;
+$behance: #0084ff;
+
+// --------------------------------------------------
+// Container
+// --------------------------------------------------
+
+// Container width and gutter variables
+$main-container: 1236px;
+$container-gutters: 24px;
+
+// Padding for containers (left and right)
+$container-padding-left: calc($container-gutters / 2);
+$container-padding-right: calc($container-gutters / 2);
+
+// --------------------------------------------------
+// Typography
+// --------------------------------------------------
+
+// Font families
+$ff-body: "Poppins", sans-serif;
+$ff-title: "Bricolage Grotesque", sans-serif;
+$ff-rubik: "Rubik", sans-serif;
+
+// Font sizes (Base and Headings)
+$fs-base: 16px !default;
+
+$fs-h1: 90px;
+$fs-h2: 50px;
+$fs-h3: 36px;
+$fs-h4: 30px;
+$fs-h5: 26px;
+$fs-h6: 24px;
+
+$fs-23: 23px;
+$fs-22: 22px;
+$fs-21: 21px;
+$fs-20: 20px;
+$fs-19: 19px;
+$fs-18: 18px;
+$fs-17: 17px;
+$fs-16: 16px;
+$fs-15: 15px;
+$fs-14: 14px;
+$fs-13: 13px;
+$fs-12: 12px;
+
+// --------------------------------------------------
+// Transitions
+// --------------------------------------------------
+$transition: all 0.5s ease;
+
+// transition 0.2 seconds
+$transition-2: all 0.2s;
+$transition-2-ease: all 0.2s ease;
+$transition-2-ease-in: all 0.2s ease-in;
+$transition-2-ease-out: all 0.2s ease-out;
+$transition-2-ease-in-out: all 0.2s ease-in-out;
+
+// transition 0.3 seconds
+$transition-3: all 0.3s;
+$transition-3-ease: all 0.3s ease;
+$transition-3-ease-in: all 0.3s ease-in;
+$transition-3-ease-out: all 0.3s ease-out;
+$transition-3-ease-in-out: all 0.3s ease-in-out;
+
+// transition 0.3 seconds
+$transition-4: all 0.4s;
+$transition-4-ease: all 0.4s ease;
+$transition-4-ease-in: all 0.4s ease-in;
+$transition-4-ease-out: all 0.4s ease-out;
+$transition-4-ease-in-out: all 0.4s ease-in-out;
+
+// transition 0.5 seconds
+$transition-5: all 0.5s;
+$transition-5-ease: all 0.5s ease;
+$transition-5-ease-in: all 0.5s ease-in;
+$transition-5-ease-out: all 0.5s ease-out;
+$transition-5-ease-in-out: all 0.5s ease-in-out;

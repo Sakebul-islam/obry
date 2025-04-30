@@ -1,0 +1,123 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.statistic {
+  &.section {
+    padding-block: 65px;
+
+    @include breakpoint(xxxl) {
+      background-size: 100% 100%;
+    }
+  }
+  &__box {
+    @extend %d-flex, %item-center;
+    gap: 15px;
+
+    @include breakpoint(max-sm) {
+      padding-inline: 30px;
+    }
+    .icon-box {
+      @extend %shrink-0, %d-grid, %place-center;
+      width: 95px;
+      height: 95px;
+      color: $color-white;
+      @include transition($transition);
+
+      @include breakpoint(max-xl) {
+        width: 80px;
+        height: 80px;
+      }
+      @include breakpoint(max-sm) {
+        width: 70px;
+        height: 70px;
+      }
+
+      svg {
+        color: inherit;
+        width: inherit;
+        height: inherit;
+      }
+    }
+    .content {
+      .counter-item {
+        @extend %d-flex, %item-center;
+        color: $color-3;
+        line-height: 1;
+        > * {
+          font-size: inherit;
+          line-height: 1;
+        }
+      }
+      .info {
+        @extend %d-inline-block;
+        color: $color-3;
+        line-height: 1;
+        font-weight: 700;
+        font-family: $ff-title;
+
+        @include breakpoint(xl) {
+          font-size: $fs-18;
+        }
+      }
+    }
+
+    &:hover {
+      .icon-box {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.statistic-box2 {
+  .counter-item {
+    @extend %d-flex, %item-center, %p-relative, %w-content;
+    @include transition($transition);
+
+    &::before {
+      @extend %p-absolute;
+      left: calc(100% + 20px);
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: $color-primary;
+      border-radius: 100%;
+      opacity: 0;
+      @include transition($transition);
+      
+      @include breakpoint(max-md){
+        left: calc(100% + 10px);
+        width: 15px;
+        height: 15px;
+      }
+      @include breakpoint(max-sm){
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  .info {
+    color: $color-paragraph;
+    font-family: $ff-body;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+
+    @include breakpoint(max-md){
+      font-size: $fs-base;
+    }
+  }
+
+  &:hover,
+  &.active {
+    .counter-item {
+      color: $color-primary;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

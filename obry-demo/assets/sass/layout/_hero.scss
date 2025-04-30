@@ -1,0 +1,470 @@
+@use "../base/fonts" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.hero-one {
+  &.section {
+    @extend %d-flex, %flex-col, %p-relative;
+    img {
+      -webkit-user-drag: none;
+    }
+  }
+
+  &__main {
+    @extend %flex-1, %d-flex, %flex-col, %justify-end, %p-relative;
+
+    @include breakpoint(md) {
+      min-height: 100vh;
+    }
+    @include breakpoint(max-lg) {
+      padding-top: 150px;
+    }
+
+    .container {
+      height: 100%;
+    }
+
+    .hero-shape {
+      @extend %p-relative;
+
+      .circle-shape {
+        @extend %p-absolute;
+        z-index: 10;
+        top: -100px;
+        right: 400px;
+
+        @include breakpoint(max-xl) {
+          right: 150px;
+        }
+
+        @include breakpoint(max-md) {
+          display: none;
+        }
+      }
+    }
+
+    .hero-info {
+      color: $color-white;
+      font-family: $ff-rubik;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      margin-top: 30px;
+
+      @include breakpoint(max-xl) {
+        margin-top: 20px;
+      }
+    }
+    .brands {
+      @extend %d-flex, %flex-wrap;
+      margin-top: 40px;
+      column-gap: 40px;
+
+      @include breakpoint(max-xl) {
+        margin-top: 20px;
+        column-gap: 20px;
+      }
+      @include breakpoint(max-sm) {
+        img {
+          max-width: 100px;
+        }
+      }
+    }
+
+    .hro-icon {
+      @extend %p-absolute;
+      color: $color-primary;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__main-thumb {
+    @extend %p-absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+
+    @include breakpoint(max-xxxl) {
+      img {
+        max-width: 80%;
+      }
+    }
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+  &__slider-area {
+    padding-block: 25px;
+    border-top: 1px solid rgba($color-white, 0.1);
+
+    @include breakpoint(max-xl) {
+      padding-block: 20px;
+    }
+  }
+  &__slider {
+    .swiper-slide {
+      width: max-content;
+      height: auto;
+      flex-shrink: 0;
+    }
+  }
+  &__slide {
+    @extend %d-flex, %item-center;
+    gap: 40px;
+    height: 100%;
+    .text {
+      color: $color-primary;
+      text-transform: uppercase;
+    }
+    svg {
+      color: $color-primary;
+    }
+  }
+}
+.hero-two {
+  &.section {
+    @extend %p-relative;
+    padding-top: 172px;
+    overflow: hidden;
+    img {
+      -webkit-user-drag: none;
+    }
+  }
+  &__shape1 {
+    @extend %p-absolute;
+    top: 120px;
+    left: 0;
+    animation: rotate 4.5s linear infinite;
+    transform-origin: center center;
+
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+  &__shape2 {
+    @extend %p-absolute;
+    top: 150px;
+    right: 0;
+    animation: up-down 2.3s linear infinite alternate;
+
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+  &__shape3 {
+    @extend %p-absolute;
+    top: 0;
+    right: -80px;
+    transform-origin: center center;
+    @include breakpoint(max-xxxxl) {
+      right: 0px;
+    }
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+  &__sidebar {
+    @extend %p-absolute, %text-uppercase, %d-flex, %item-center;
+    gap: 38px;
+    bottom: 88px;
+    right: 58px;
+    color: $color-white;
+    font-family: $ff-title;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 6.4px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    @include transform(scale(-1));
+
+    @include breakpoint(max-5xl) {
+      right: 30px;
+    }
+    @include breakpoint(max-xxxxl) {
+      display: none;
+    }
+  }
+  &__content {
+    @extend %text-center, %p-relative;
+    .hero-sub-title {
+      @extend %text-uppercase, %p-relative, %d-inline-flex, %item-center;
+      gap: 12px;
+      color: $color-primary;
+      font-family: $ff-title;
+      font-size: $fs-18;
+      font-weight: 800;
+      line-height: 1;
+      background-color: rgba($color-white, 0.15);
+      filter: drop-shadow(0px 4px 4px rgba($color-black, 0.25));
+      backdrop-filter: blur(45px);
+      border-radius: 30px;
+      padding: 15px;
+
+      @include breakpoint(max-lg) {
+        gap: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: $fs-15;
+      }
+
+      &::before,
+      &::after {
+        @extend %p-relative;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: $color-1;
+        box-shadow: 0px 4px 4px 0px rgba($color-black, 0.25) inset;
+        @include breakpoint(max-lg) {
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+    .hero-title {
+      @extend %text-capitalize;
+      color: $color-white;
+      font-weight: 700;
+      max-width: 900px;
+      margin-inline: auto;
+      transition: none;
+
+      span {
+        color: $color-primary;
+      }
+
+      @include breakpoint(max-xxl) {
+        margin-top: 15px;
+      }
+    }
+  }
+  &__bottom-content {
+    @extend %p-absolute, %text-uppercase, %text-center;
+    left: 50%;
+    bottom: 35px;
+    @include transform(translateX(-50%));
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(max-md) {
+      bottom: 15px;
+    }
+    @include breakpoint(max-sm) {
+      bottom: 30px;
+    }
+
+    h2 {
+      font-family: $ff-title;
+      font-size: 170px;
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(
+        184deg,
+        rgba(34, 34, 37, 0.18) 19.41%,
+        rgba(136, 136, 136, 0.2) 96.83%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include breakpoint(max-xxl) {
+        font-size: calc(170px - 20px);
+      }
+      @include breakpoint(max-xl) {
+        font-size: calc(170px - 40px);
+      }
+      @include breakpoint(max-lg) {
+        font-size: calc(170px - 60px);
+      }
+      @include breakpoint(max-md) {
+        font-size: calc(170px - 90px);
+      }
+      @include breakpoint(max-sm) {
+        font-size: calc(170px - 130px);
+      }
+    }
+  }
+  &__slider {
+    @include breakpoint(lg) {
+      cursor: none;
+      user-select: none;
+    }
+    .swiper-slide {
+      @include breakpoint(lg) {
+        cursor: none;
+        user-select: none;
+      }
+    }
+    .slide-container {
+      @extend %d-flex;
+      gap: 50px;
+      height: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      @include breakpoint(lg) {
+        cursor: none;
+        user-select: none;
+      }
+
+      @include breakpoint(max-xxl) {
+        gap: 30px;
+      }
+      @include breakpoint(max-md) {
+        gap: 10px;
+      }
+
+      .slide-image {
+        position: relative;
+        overflow: hidden;
+        transition: flex-basis 0.5s ease;
+        min-height: 595px;
+        border-radius: 15px;
+        @include breakpoint(max-xl) {
+          min-height: 400px;
+        }
+        @include breakpoint(max-sm) {
+          min-height: 300px;
+        }
+        @include breakpoint(lg) {
+          cursor: none;
+          user-select: none;
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+
+          @include breakpoint(lg) {
+            cursor: none;
+            user-select: none;
+          }
+        }
+        &:not(.active) {
+          flex-basis: calc(100% - (79.6% + 100px));
+
+          @include breakpoint(max-xxl) {
+            flex-basis: calc(100% - (79.6% + 30px));
+          }
+          @include breakpoint(max-xxl) {
+            flex-basis: calc(100% - (75% + 30px));
+          }
+          @include breakpoint(max-md) {
+            flex-basis: calc(100% - (75% + 10px));
+          }
+        }
+        &.active {
+          flex-basis: 79.6%;
+          @include breakpoint(max-xxl) {
+            flex-basis: 75%;
+          }
+        }
+      }
+    }
+  }
+  &__drag-button {
+    @extend %d-grid, %place-center, %text-uppercase, %p-fixed;
+    z-index: 1000;
+    opacity: 0;
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+    background-color: rgba($color-body, 0.2);
+    backdrop-filter: blur(45px);
+    color: $color-white;
+    text-align: center;
+    font-family: $ff-title;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 3.2px;
+
+    @include breakpoint(max-xl) {
+      width: 100px;
+      height: 100px;
+      letter-spacing: 2.2px;
+    }
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+}
+
+.hero-three {
+  &.section {
+    @extend %d-flex, %flex-col, %justify-center;
+    min-height: 100vh;
+    img {
+      -webkit-user-drag: none;
+    }
+  }
+  &__content {
+    .welcome-text {
+      text-transform: capitalize;
+      font-weight: 800;
+    }
+    .welcome-text,
+    .event-info {
+      transition: none;
+      @include breakpoint(max-sm) {
+        font-size: 20px;
+      }
+    }
+    .hero-title {
+      text-transform: capitalize;
+      font-weight: 700;
+      line-height: 1;
+      margin-block: 8px 5px;
+      transition: none;
+
+      font-size: 130px;
+      // $fs-h1: 90px;
+
+      @include breakpoint(max-xxl) {
+        font-size: 120px; // 85px
+      }
+      @include breakpoint(max-xl) {
+        font-size: 100px; // 80px
+      }
+      @include breakpoint(max-lg) {
+        font-size: 85px; // 70px
+      }
+      @include breakpoint(max-md) {
+        font-size: 70px; // 60px
+      }
+      @include breakpoint(max-sm) {
+        font-size: 60px; // 50px
+      }
+    }
+    .event-info {
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+      border-top: 1px solid rgba($color-primary, 0.5);
+      border-bottom: 1px solid rgba($color-primary, 0.5);
+      width: max-content;
+      margin-inline: auto;
+      padding-inline: 50px;
+      padding-block: 5px;
+
+      @include breakpoint(max-sm) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .btn-primary {
+      margin-top: 50px;
+
+      @include breakpoint(max-xl) {
+        margin-top: 40px;
+      }
+      @include breakpoint(max-md) {
+        margin-top: 30px;
+      }
+    }
+  }
+}

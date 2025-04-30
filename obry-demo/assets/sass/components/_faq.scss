@@ -1,0 +1,173 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.faq {
+  &.section {
+    .section-header {
+      @extend %p-relative;
+
+      @include breakpoint(xl) {
+        margin-left: 45px;
+      }
+
+      img {
+        @extend %p-absolute;
+        top: 0;
+        right: 0;
+        animation: carve-rotate 2.5s linear infinite alternate;
+        -webkit-transform-origin: top left;
+        -ms-transform-origin: top left;
+        transform-origin: top left;
+
+        @include breakpoint(max-md) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__thumb {
+    @extend %p-relative;
+    img {
+      border-radius: 40px;
+      background: $color-1;
+      overflow: hidden;
+      border: 1.5px solid rgba($color-white, 0.08);
+      
+      @include breakpoint(max-md) {
+        border-radius: 20px;
+      }
+    }
+
+    .info {
+      @extend %p-absolute;
+      -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      top: 50%;
+      left: -50px;
+      @include transform(translateY(-50%) scale(-1));
+
+      color: $color-paragraph;
+      font-family: $ff-body;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      height: 100%;
+      text-align: center;
+    }
+  }
+  &__accordion {
+    @include breakpoint(xl) {
+      margin-left: 45px;
+    }
+    .accordion-item {
+      border: none;
+      background: transparent;
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      &:first-of-type,
+      &:last-of-type {
+        border-radius: 20px;
+        .accordion-header {
+          .accordion-button {
+            border-radius: 20px;
+            @include breakpoint(max-md) {
+              border-radius: 10px;
+            }
+            &.collapsed {
+              border-radius: 20px;
+              @include breakpoint(max-md) {
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+        @include breakpoint(max-md) {
+          border-radius: 10px;
+        }
+      }
+
+      .accordion-header {
+        .accordion-button {
+          border-radius: 20px;
+          padding-inline: 26px;
+          padding-bottom: 17px;
+
+          @include breakpoint(max-md) {
+            border-radius: 10px;
+            padding-inline: 15px;
+            padding-bottom: 10px;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+          &.collapsed,
+          &:not(.collapsed) {
+            box-shadow: none;
+            background-color: transparent;
+            border: 1.5px solid rgba($color-white, 0.08);
+            background: $color-1;
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            font-family: inherit;
+          }
+
+          &::after {
+            @extend %shrink-0, %d-grid, %place-center;
+            width: 45px;
+            height: 45px;
+            background-color: $color-body;
+            border: 2px solid rgba($color-white, 0.1);
+            border-radius: 100%;
+            background: unset;
+            font: var(--fa-font-regular);
+            content: "\f107";
+          }
+        }
+      }
+      .accordion-body {
+        padding-inline: 30px;
+        padding-block: 30px 24px;
+        color: $color-paragraph;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 175%;
+        text-transform: capitalize;
+
+        @include breakpoint(max-md) {
+          padding-inline: 15px;
+          padding-block: 15px 9px;
+        }
+
+        ul {
+          margin-top: 6px;
+          li {
+            @extend %d-flex, %item-baseline;
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            text-transform: inherit;
+
+            &::before {
+              font: var(--fa-font-solid);
+              content: "\e122";
+              color: $color-primary;
+              padding-right: 10px;
+              font-size: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

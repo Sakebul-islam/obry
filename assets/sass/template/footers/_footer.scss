@@ -1,0 +1,27 @@
+.copyright-wrap {
+  text-align: center;
+  padding: 42px 0;
+  position: relative;
+  z-index: 2;
+}
+.copyright-text {
+  margin: 0;
+  font-weight: 500;
+  color: $smoke-color;
+  font-size: 15px;
+  line-height: 24px;
+  text-transform: capitalize;
+  a {
+    color: $smoke-color;
+    font-weight: 700;
+    &:hover {
+      color: $secondary-color;
+      text-decoration: underline;
+    }
+  }
+}
+@include md {
+  .copyright-text {
+    font-size: 14px;
+  }
+}

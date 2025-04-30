@@ -1,0 +1,201 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.experience {
+  &__tab-thumb {
+  }
+  &__tab-content {
+    .info {
+      @extend %text-capitalize;
+      font-size: $fs-18;
+      font-weight: 600;
+      margin-top: 18px;
+      @include breakpoint(max-lg) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.stack-box {
+  .box-thumb {
+    @extend %shrink-0, %d-grid, %place-center;
+    width: 110px;
+    height: 98px;
+    border-radius: 21px;
+    border: 1.5px solid $color-5;
+    background: $color-11;
+    overflow: hidden;
+
+    @include breakpoint(max-xl) {
+      width: 80px;
+      height: 70px;
+      border-radius: 10px;
+      img {
+        max-width: 45px;
+      }
+    }
+  }
+  .box-header {
+    .stack-title {
+      @extend %text-capitalize;
+      font-weight: 700;
+    }
+    .stack-year {
+      @extend %text-capitalize, %d-inline-block;
+      font-weight: 700;
+    }
+    p {
+      @extend %text-capitalize;
+      color: $color-13;
+      font-size: $fs-15;
+      font-weight: 600;
+      margin-top: 8px;
+
+      @include breakpoint(max-lg) {
+        margin-top: 3px;
+      }
+    }
+  }
+  .box-bottom {
+    margin-top: 10px;
+
+    @include breakpoint(max-lg) {
+      margin-top: 5px;
+    }
+
+    p {
+      @extend %text-capitalize;
+      font-size: $fs-15;
+      font-weight: 600;
+    }
+  }
+
+  &.v1 {
+    @extend %d-flex, %item-start, %p-relative;
+    gap: 25px;
+    border-radius: 21px;
+    border: 1.5px solid $color-14;
+    background: linear-gradient(90deg, $color-14 0%, $color-15 100%);
+    padding: 30px 50px 50px 23px;
+    z-index: 2;
+    overflow: hidden;
+
+    @include breakpoint(max-lg) {
+      gap: 15px;
+      padding: 25px;
+      border-radius: 10px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+    @include breakpoint(max-md) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+    @include breakpoint(max-sm) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    &::before {
+      @extend %p-absolute;
+      inset: 0;
+      background: linear-gradient(90deg, $color-14 0%, $color-15 100%);
+      z-index: -1;
+    }
+  }
+
+  &.v2 {
+    @extend %p-relative;
+    border-radius: 21px;
+    border: 1.5px solid $color-5;
+    background: $color-16;
+    overflow: hidden;
+    padding: 26px 30px 30px 24px;
+    z-index: 1;
+
+    .shape {
+      @extend %p-absolute,%d-block;
+      width: 75px;
+      height: 75px;
+      background-color: $color-primary;
+      border-radius: 50%;
+      bottom: calc(100% - 35px);
+      left: calc(100% - 35px);
+      @include transition(all .5s ease-in !important);
+      z-index: -1;
+    }
+
+    .box-top {
+      @extend %d-flex, %item-start;
+      gap: 20px;
+
+      @include breakpoint(max-xl) {
+        gap: 10px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+      @include breakpoint(max-md) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+      @include breakpoint(max-sm) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+
+      .box-header {
+        .stack-title {
+          @include transition(all 1s ease 0s);
+        }
+        .stack-year {
+          @include transition(all 1s ease 0s);
+        }
+      }
+    }
+    .box-bottom {
+      p {
+        @include transition(all 1s ease 0s);
+      }
+    }
+
+    &:hover {
+      .shape{
+        width: 800px;
+        height: 800px;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+      }
+      .box-top {
+        .box-header {
+          .stack-title {
+            color: $color-12;
+          }
+          .stack-year {
+            color: $color-12;
+          }
+        }
+      }
+      .box-bottom {
+        p {
+          color: $color-12;
+        }
+      }
+    }
+  }
+}

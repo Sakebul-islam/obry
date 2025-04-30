@@ -1,0 +1,358 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.service {
+  &.section {
+    .container {
+      @extend %p-relative;
+    }
+  }
+  &__shape-1 {
+    @extend %p-absolute;
+    left: 300px;
+    top: 0;
+    img {
+      animation: forward-backward 1s linear infinite alternate;
+    }
+    
+    @include breakpoint(max-xl){
+      top: -50px;
+      left: 200px;
+    }
+    @include breakpoint(max-lg){
+      display: none;
+    }
+  }
+  &__header {
+    @include breakpoint(xl) {
+      max-width: 410px;
+      width: 100%;
+    }
+  }
+  &__shapes {
+    @extend %d-flex, %flex-col;
+    color: $color-primary;
+    svg {
+      &:first-of-type {
+        margin-left: 20px;
+      }
+      &:last-of-type {
+        margin-left: 80px;
+        margin-top: -20px;
+      }
+    }
+
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+  &__content {
+  }
+}
+
+.service2 {
+  &.section {
+    @extend %p-relative;
+    overflow: hidden;
+    border-bottom: 1px double rgba($color-10, 0.12);
+    z-index: 2;
+  }
+
+  &__bg {
+    @extend %p-absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__boxes {
+    [class^="col-"] {
+      &:nth-child(2) {
+        .service-box2 {
+          @include breakpoint(md) {
+            border-left: 1px solid rgba($color-10, 0.1);
+            border-right: 1px solid rgba($color-10, 0.1);
+          }
+        }
+      }
+    }
+    .service-box2 {
+    }
+  }
+  &__info {
+    @extend %p-relative, %d-flex, %item-center;
+    z-index: 2;
+    gap: 25px;
+    overflow: hidden;
+    background-color: $color-primary;
+    height: 100%;
+    padding: 40px;
+
+    @include breakpoint(max-md) {
+      margin-top: 20px;
+    }
+    @include breakpoint(max-sm) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .service2-video {
+      @extend %d-grid, %place-center;
+      border-radius: 100%;
+      width: 96px;
+      height: 96px;
+      background-color: $color-1;
+      border: 3px dashed $color-primary;
+      cursor: pointer;
+
+      i {
+        font-size: 23px;
+      }
+    }
+
+    .info {
+      .sub-title {
+        @extend %d-inline-block, %text-uppercase, %p-relative;
+        color: $color-body;
+        font-family: $ff-title;
+        font-size: 18px;
+        font-weight: 700;
+
+        &::after {
+          @extend %p-absolute;
+          left: calc(100% + 10px);
+          top: 50%;
+          @include transform(translateY(-50%));
+          width: 42px;
+          height: 3.004px;
+          border-radius: 5px;
+          background-color: $color-body;
+        }
+      }
+      .title {
+        @extend %text-uppercase;
+        max-width: 284px;
+        color: $color-body;
+      }
+    }
+
+    .info-bg {
+      @extend %p-absolute;
+      z-index: -1;
+      bottom: 0;
+      right: 75px;
+    }
+  }
+}
+
+.service-box {
+  border-radius: 22px;
+  padding-inline: 33px;
+  padding-block: 35px 48px;
+  border-radius: 22px;
+  border: 1.5px solid rgba($color-white, 0.08);
+
+  background-image: url("../images/service/service-box-bg-1-1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .service-header {
+    @extend %d-flex, %justify-between, %item-center;
+    gap: 15px;
+    .service-icon {
+      color: $color-primary;
+
+      svg {
+        width: 75px;
+        height: 72px;
+
+        @include breakpoint(max-xl) {
+          width: 60px;
+          height: 58px;
+        }
+      }
+    }
+    .service-number {
+      color: $color-primary;
+      font-family: $ff-title;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 437.5%;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+  }
+  .service-body {
+    margin-top: 10px;
+    .title {
+      line-height: 233.333%;
+    }
+    p {
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+  }
+  .service-footer {
+    @extend %d-flex, %item-center;
+    gap: 17px;
+    margin-top: 25px;
+
+    .circle {
+      @extend %shrink-0, %d-grid, %place-center;
+      width: 41px;
+      height: 41px;
+      border-radius: 100%;
+      border: 2px solid rgba($color-white, 0.2);
+      color: $color-primary;
+      @include transition($transition);
+    }
+    .line {
+      @extend %d-inline-block;
+      width: 100%;
+      height: 2px;
+      background: rgba($color-10, 0.2);
+    }
+  }
+
+  &:hover {
+    .service-footer {
+      @extend %d-flex, %item-center;
+      gap: 17px;
+
+      .circle {
+        color: $color-1;
+        background-color: $color-primary;
+        border-color: rgba($color-primary, 0.2);
+      }
+    }
+  }
+
+  &.v2 {
+    @extend %d-flex;
+    padding: 0;
+    border-radius: 21px;
+    border: 1.5px solid $color-5;
+    overflow: hidden;
+
+    @include breakpoint(max-md) {
+      flex-direction: column;
+    }
+
+    .service-thumb {
+      @extend %d-block;
+      max-width: 320px;
+      width: 100%;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @include breakpoint(max-md) {
+        max-width: 100%;
+      }
+    }
+    .service-content {
+      background: $color-primary;
+      border-left: 1.5px solid $color-5;
+      padding-inline: 43px 33px;
+      padding-block: 50px 42px;
+
+      .service-header {
+        .service-number {
+          color: $color-6;
+        }
+      }
+
+      .service-body {
+        .title,
+        p {
+          color: $color-6;
+        }
+        .title {
+          a {
+            color: inherit;
+            font-size: inherit;
+          }
+        }
+      }
+      .service-footer {
+        @extend %d-flex, %item-center;
+        gap: 17px;
+        margin-top: 25px;
+
+        .circle {
+          border: 2px solid rgba($color-white, 0.2);
+          background-color: $color-6;
+        }
+        .line {
+          background: $color-6;
+        }
+      }
+
+      @include breakpoint(max-md) {
+        padding-inline: 33px;
+        padding-block: 35px 48px;
+      }
+    }
+
+    &:hover {
+      .service-content {
+        .service-footer {
+          .circle {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.service-box2 {
+  @extend %text-center;
+  @include transition($transition);
+  padding-block: 60px;
+  padding-inline: 20px;
+  
+  @include breakpoint(max-xxl){
+    padding-block: 30px;
+  }
+  @include breakpoint(max-md){
+    padding-block: 20px;
+  }
+  .icon {
+    @extend %d-grid, %place-center;
+    @include transition($transition);
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: $color-1;
+    border: 2px dashed rgba($color-primary, 0.4);
+    margin-inline: auto;
+
+    i,
+    svg {
+      color: $color-primary;
+    }
+  }
+  .service-content {
+    .service-title {
+      @extend %text-capitalize;
+      margin-top: 20px;
+    }
+    p {
+      @extend %text-capitalize;
+      margin-top: 10px;
+    }
+  }
+
+  &:hover {
+    background: rgba($color-1, 0.3);
+    .icon {
+      background-color: transparent;
+    }
+  }
+}

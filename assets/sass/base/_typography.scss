@@ -1,202 +1,261 @@
-@use "fonts" as *;
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
-@use "../abstracts/container" as *;
-
-/**
- * Basic typography style for copy text
- */
-html {
-  overflow-x: hidden;
-}
+html,
 body {
-  @extend %text-regular;
-  color: $color-white;
-  font-size: $fs-base;
-  line-height: 1.75;
-  font-family: $ff-body;
-  font-weight: 400;
-  background: $color-body;
-  -webkit-font-smoothing: antialiased;
+  scroll-behavior: auto !important;
+}
+
+body {
+  font-family: $body-font;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  color: $body-color;
+  // background-color: #FDFCE8;
+  line-height: $body-line-Height;
   overflow-x: hidden;
-
-  @include breakpoint(max-sm) {
-    font-size: $fs-14;
-  }
+  -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend %text-bold;
-  @include transition($transition);
-  margin: 0;
-  font-family: $ff-title;
-  color: $color-white;
+iframe {
+  border: none;
+  width: 100%;
 }
 
-h1 {
-  font-size: $fs-h1;
-  // $fs-h1: 90px;
-
-  @include breakpoint(max-xxl) {
-    font-size: calc($fs-h1 - 5px); // 85px
-  }
-  @include breakpoint(max-xl) {
-    font-size: calc($fs-h1 - 10px); // 80px
-  }
-  @include breakpoint(max-lg) {
-    font-size: calc($fs-h1 - 20px); // 70px
-  }
-  @include breakpoint(max-md) {
-    font-size: calc($fs-h1 - 30px); // 60px
-  }
-  @include breakpoint(max-sm) {
-    font-size: calc($fs-h1 - 40px); // 50px
-  }
+.slick-slide:focus,
+button:focus,
+a:focus,
+a:active,
+input,
+input:hover,
+input:focus,
+input:active,
+textarea,
+textarea:hover,
+textarea:focus,
+textarea:active {
+  outline: none;
 }
 
-h2 {
-  font-size: $fs-h2;
-  // $fs-h2: 50px;
-
-  @include breakpoint(max-xxl) {
-    font-size: calc($fs-h2 - 5px); // 45px
-  }
-  @include breakpoint(max-xl) {
-    font-size: calc($fs-h2 - 10px); // 40px
-  }
-  @include breakpoint(max-lg) {
-    font-size: calc($fs-h2 - 15px); // 35px
-  }
-  @include breakpoint(max-md) {
-    font-size: calc($fs-h2 - 20px); // 30px
-  }
-  @include breakpoint(max-sm) {
-    font-size: calc($fs-h2 - 25px); // 25px
-  }
+input:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-h3 {
-  font-size: $fs-h3;
-  // $fs-h3: 36px;
-
-  @include breakpoint(max-xxl) {
-    font-size: calc($fs-h3 - 3px); // 33px
-  }
-  @include breakpoint(max-xl) {
-    font-size: calc($fs-h3 - 6px); // 30px
-  }
-  @include breakpoint(max-lg) {
-    font-size: calc($fs-h3 - 8px); // 28px
-  }
-  @include breakpoint(max-md) {
-    font-size: calc($fs-h3 - 10px); // 26px
-  }
-  @include breakpoint(max-sm) {
-    font-size: calc($fs-h3 - 12px); // 24px
-  }
-}
-
-h4 {
-  font-size: $fs-h4;
-  // $fs-h4: 30px;
-
-  @include breakpoint(max-xxl) {
-    font-size: calc($fs-h4 - 2px); // 28px
-  }
-  @include breakpoint(max-xl) {
-    font-size: calc($fs-h4 - 4px); // 26px
-  }
-  @include breakpoint(max-lg) {
-    font-size: calc($fs-h4 - 6px); // 24px
-  }
-  @include breakpoint(max-md) {
-    font-size: calc($fs-h4 - 7px); // 23px
-  }
-  @include breakpoint(max-sm) {
-    font-size: calc($fs-h4 - 8px); // 22px
-  }
-}
-
-h5 {
-  font-size: $fs-h5;
-  // $fs-h5: 26px;
-
-  @include breakpoint(max-xxl) {
-    font-size: calc($fs-h5 - 1px); // 25px
-  }
-  @include breakpoint(max-xl) {
-    font-size: calc($fs-h5 - 2px); // 24px
-  }
-  @include breakpoint(max-lg) {
-    font-size: calc($fs-h5 - 3px); // 23px
-  }
-  @include breakpoint(max-md) {
-    font-size: calc($fs-h5 - 4px); // 22px
-  }
-  @include breakpoint(max-sm) {
-    font-size: calc($fs-h5 - 5px); // 21px
-  }
-}
-
-h6 {
-  font-size: $fs-h6;
-  // $fs-h6: 24px;
-
-  @include breakpoint(max-xxl) {
-    font-size: calc($fs-h5 - 1px); // 23px
-  }
-  @include breakpoint(max-xl) {
-    font-size: calc($fs-h5 - 2px); // 22px
-  }
-  @include breakpoint(max-lg) {
-    font-size: calc($fs-h5 - 3px); // 21px
-  }
-  @include breakpoint(max-md) {
-    font-size: calc($fs-h5 - 3.5px); // 20.5px
-  }
-  @include breakpoint(max-sm) {
-    font-size: calc($fs-h5 - 4px); // 20px
-  }
-}
-
-img {
+img:not([draggable]),
+embed,
+object,
+video {
   max-width: 100%;
   height: auto;
 }
 
-a {
-  color: $color-white;
-  text-decoration: none;
-  transition: $transition-3;
+ul {
+  list-style-type: disc;
+  padding-left: 0;
+}
 
-  &:hover,
+ol {
+  list-style-type: decimal;
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid $border-color;
+}
+
+th {
+  font-weight: 700;
+  color: $title-color;
+}
+
+td,
+th {
+  border: 1px solid $border-color;
+  padding: 9px 12px;
+}
+
+a {
+  color: $black-color;
+  text-decoration: none;
+  outline: 0;
+  transition: all ease 0.4s;
+
+  &:hover {
+    color: $theme-color;
+  }
+
   &:active,
-  &:focus {
-    color: inherit;
+  &:focus,
+  &:hover,
+  &:visited {
+    text-decoration: none;
+    outline: 0;
   }
 }
-p {
-  line-height: 1.75;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  color: $color-paragraph;
-}
-ul {
-  @extend %p-0;
-  @extend %m-0;
-}
-li {
-  @extend %list-none;
+
+button {
+  transition: all ease 0.4s;
 }
 
-input,
-textarea,
-select {
-  @extend %w-100;
+img {
+  border: none;
+  max-width: 100%;
+}
+
+ins {
+  text-decoration: none;
+}
+
+pre {
+  background: #f5f5f5;
+  color: #666;
+  font-size: 14px;
+  margin: 20px 0;
+  overflow: auto;
+  padding: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+span.ajax-loader:empty,
+p:empty {
+  display: none;
+}
+
+p {
+  margin: 0 0 18px 0;
+  color: $body-color;
+  line-height: $p-line-Height;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+p a,
+span a {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+  font-family: $title-font;
+  color: $title-color;
+  text-transform: none;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+}
+
+.h1,
+h1 {
+  font-size: 45px;
+}
+
+.h2,
+h2 {
+  font-size: 40px;
+}
+
+.h3,
+h3 {
+  font-size: 36px;
+}
+
+.h4,
+h4 {
+  font-size: 30px;
+}
+
+.h5,
+h5 {
+  font-size: 24px;
+  line-height: 100%;
+}
+
+.h6,
+h6 {
+  font-size: 20px;
+}
+
+@include lg {
+  .h1,
+  h1 {
+    font-size: 40px;
+  }
+
+  .h2,
+  h2 {
+    font-size: 36px;
+  }
+
+  .h3,
+  h3 {
+    font-size: 30px;
+  }
+
+  .h4,
+  h4 {
+    font-size: 24px;
+  }
+
+  .h5,
+  h5 {
+    font-size: 20px;
+  }
+
+  .h6,
+  h6 {
+    font-size: 16px;
+  }
+}
+
+@include sm {
+  .h1,
+  h1 {
+    font-size: 36px;
+  }
+
+  .h2,
+  h2 {
+    font-size: 30px;
+  }
+
+  .h3,
+  h3 {
+    font-size: 26px;
+  }
+
+  .h4,
+  h4 {
+    font-size: 22px;
+  }
+
+  .h5,
+  h5 {
+    font-size: 20px;
+  }
+
+  .h6,
+  h6 {
+    font-size: 16px;
+  }
 }

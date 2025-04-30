@@ -1,0 +1,225 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.team-details {
+  &.section {
+  }
+  &__content {
+    .team-title {
+      @extend %d-flex, %justify-between, %item-center, %flex-wrap;
+      text-transform: capitalize;
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid rgba($color-white, 0.08);
+
+      @include breakpoint(max-lg) {
+        row-gap: 8px;
+        margin-bottom: 20px;
+      }
+      .tags {
+        @extend %d-flex, %item-center;
+        gap: 10px;
+
+        a {
+          @extend %p-relative, %d-flex;
+          border-radius: 30px;
+          border: 1px solid $color-5;
+          background: $color-1;
+          color: $color-paragraph;
+          font-family: $ff-rubik;
+          font-size: $fs-base;
+          font-weight: 700;
+          text-transform: uppercase;
+          padding-inline: 15px;
+          padding-inline-start: 35px;
+          padding-block: 9.42px;
+
+          @include breakpoint(max-lg) {
+            font-size: 11px;
+            padding-inline: 15px;
+            padding-inline-start: 22px;
+            padding-block: 5px;
+          }
+
+          &::before {
+            @extend %p-absolute;
+            @include transform(translateY(-50%));
+            top: 50%;
+            left: 15px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            box-shadow: 0 0 0 1.5px #292929;
+            background-color: $color-body;
+
+            @include breakpoint(max-lg) {
+              width: 6px;
+              height: 6px;
+              left: 10px;
+            }
+          }
+
+          &.active {
+            &::before {
+              box-shadow: none;
+              background-color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      text-transform: capitalize;
+    }
+    .p-mb {
+      margin-bottom: 15px;
+    }
+
+    .skills-area {
+      padding-block: 35px;
+
+      @include breakpoint(max-xl) {
+        padding-block: 25px;
+      }
+
+      .team-thumb {
+        border-radius: 14px !important;
+        overflow: hidden;
+
+        @include breakpoint(xl) {
+          margin-left: 25px;
+        }
+      }
+    }
+    .award {
+      &__content {
+        .award-title {
+          text-transform: capitalize;
+          margin-bottom: 16px;
+        }
+      }
+
+      &__accordion {
+        background-color: transparent;
+
+        .accordion-item {
+          border-radius: 0;
+          border: none;
+          background-color: transparent;
+          padding: 0;
+
+          &:first-of-type > .accordion-header .accordion-button,
+          &:last-of-type > .accordion-header .accordion-button {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+
+          &:not(:last-of-type) {
+            border-bottom: 2px solid $color-primary;
+            padding-bottom: 28px;
+
+            @include breakpoint(max-lg) {
+              padding-bottom: 15px;
+            }
+          }
+          &:not(:first-of-type) {
+            margin-top: 22px;
+          }
+        }
+        .accordion-header {
+          background-color: transparent;
+        }
+        .accordion-button {
+          @extend %d-flex, %item-center;
+          gap: 40px;
+          background-color: transparent;
+          padding: 0;
+          color: $color-white;
+          font-family: $ff-title;
+          font-size: 20px;
+          font-weight: 700;
+          text-transform: capitalize;
+          @include transition($transition);
+
+          @include breakpoint(max-lg) {
+            gap: 30px;
+          }
+          @include breakpoint(max-md) {
+            gap: 20px;
+          }
+
+          &:not(.collapsed) {
+            box-shadow: none;
+            padding-bottom: 10px;
+            color: $color-primary;
+
+            @include breakpoint(max-lg) {
+              padding-bottom: 5px;
+            }
+          }
+
+          &::after {
+            content: unset;
+          }
+
+          &:focus {
+            box-shadow: none;
+          }
+
+          span {
+            @extend %d-inline-block;
+            max-width: 25px;
+            width: 100px;
+          }
+        }
+
+        .accordion-body {
+          @extend %d-flex, %item-center;
+          gap: 40px;
+          padding: 0;
+          color: $color-paragraph;
+          font-size: 15px;
+          font-weight: 500;
+          text-transform: capitalize;
+
+          @include breakpoint(max-lg) {
+            gap: 30px;
+          }
+          @include breakpoint(max-md) {
+            gap: 20px;
+          }
+
+          span {
+            @extend %d-inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            opacity: 0;
+            max-width: 25px;
+            width: 100px;
+          }
+        }
+      }
+
+      &__thumb {
+        border-radius: 14px !important;
+        overflow: hidden;
+
+        @include breakpoint(xl) {
+          margin-left: 25px;
+        }
+      }
+    }
+    .contact__form {
+      margin-top: 70px;
+
+      @include breakpoint(max-xl) {
+        margin-top: 40px;
+      }
+    }
+  }
+}

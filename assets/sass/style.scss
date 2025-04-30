@@ -1,79 +1,127 @@
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Fonts
-# Configuration
-# Normalize
-# Typography
-# Global CSS
-# Layout CSS
-# Components CSS
-# Pages CSS
---------------------------------------------------------------*/
+/*
+Template Name: Energiso
+Template URL: https://themeforest.vecuro.com/html/realestate
+Description: TechBiz - IT Solution & Service HTML Template
+Author: Vecuro
+Author URI: https://themeforest.net/user/vecuro_themes/
+Version: 1.0.0
+*/
+/*=================================
+    CSS Index Here
+==================================*/
+/*
 
-@charset "UTF-8";
+01. Theme Base
+    1.1. Mixin
+    1.2. Function
+    1.3. Variable
+    1.4. Typography
+    1.5. Extend
+    1.7. Wordpress Default
+02. Reset
+    2.1. Container
+    2.2. Grid
+    2.3. Input
+    2.4. Slick Slider
+    2.5. Mobile Menu
+03. Utilities
+    3.1. Preloader
+    3.2. Buttons
+    3.3. Titles
+    3.4. Common
+    3.5. Font
+    3.6. Background
+    3.7. Text Color
+    3.8. animation
+04. Template Style
+    4.1. Widget
+    4.2. Header
+    4.3. Footer
+05. Spacing
 
-// 1.Fonts
-@use "base/fonts";
+*/
+/*=================================
+    CSS Index End
+==================================*/
 
-// 2.configuration and helpers
-@use "abstracts/variables";
-@use "abstracts/mixins";
-@use "abstracts/container";
-@use "abstracts/extend";
+/*=================================
+   01. Theme Base
+==================================*/
+/*------------------- 1.1. Mixin -------------------*/
+@import "base/mixin";
 
-//3.vendors
-@use "vendors/normalize";
+/*------------------- 1.2. Function -------------------*/
+@import "base/function";
 
-//4.Base stuff
-@use "base/typography";
-@use "base/common";
-@use "base/animation";
-@use "base/section-gap";
+/*------------------- 1.3. Variable-------------------*/
+@import "base/variable";
 
-// 5.layout-related section
-@use "layout/header";
-@use "layout/menus";
-@use "layout/breadcrumb";
-@use "layout/hero";
-@use "layout/footer";
+/*------------------- 1.5. Typography -------------------*/
+@import "base/typography";
 
-// 6.components
-@use "components/preloader";
-@use "components/button";
-@use "components/popup-search";
-@use "components/about";
-@use "components/experienceTab";
-@use "components/educationTab";
-@use "components/skillsTab";
-@use "components/contact";
-@use "components/video";
-@use "components/brands";
-@use "components/pricing";
-@use "components/news";
-@use "components/blog";
-@use "components/testimonial";
-@use "components/team";
-@use "components/portfolio";
-@use "components/music";
-@use "components/music-player";
-@use "components/quote";
-@use "components/statistic";
-@use "components/skills";
-@use "components/faq";
-@use "components/work";
-@use "components/service";
-@use "components/widget";
-@use "components/instagram";
-@use "components/error";
-@use "components/BackToTop";
+/*------------------- 1.6. Extend -------------------*/
+@import "base/extend";
 
-// 7. Page-specific styles
-@use "pages/portfolio-details";
-@use "pages/blog-details";
-@use "pages/service-details";
-@use "pages/work-details";
-@use "pages/team-details";
+/*------------------- 1.7. Wordpress Default -------------------*/
+// @import 'base/wpdefault';
 
-//4.Helpers CSS
-@use "base/helpers";
+/*=================================
+    02. Reset
+==================================*/
+/*------------------- 2.1. Container -------------------*/
+@import "reset/container";
+
+/*------------------- 2.2. Grid -------------------*/
+@import "reset/grid";
+
+/*------------------- 2.4. Slick Slider -------------------*/
+@import "reset/slick-slider";
+
+/*------------------- 2.5. Mobile Menu -------------------*/
+@import "reset/vsmenu";
+
+/*=================================
+    03. Utilities
+==================================*/
+/*------------------- 3.1. Preloader -------------------*/
+@import "utilities/preloader";
+
+/*------------------- 3.2. Buttons -------------------*/
+@import "utilities/btns";
+
+/*------------------- 3.3. Titles -------------------*/
+@import "utilities/titles";
+
+/*------------------- 3.6. Font -------------------*/
+@import "utilities/font";
+
+/*------------------- 3.7. Background -------------------*/
+@import "utilities/background";
+
+/*------------------- 3.8. Text Color -------------------*/
+@import "utilities/text-color";
+
+/*------------------- 3.9. Animation  -------------------*/
+@import "utilities/animation";
+
+/*=================================
+    04. Template Style
+==================================*/
+/*------------------- 4.1. Widget  -------------------*/
+@import "template/widgets/widget-default-list";
+@import "template/widgets/widget-sidebar";
+@import "template/widgets/widget-footer";
+
+/*------------------- 4.2. Header  -------------------*/
+@import "template/headers/header";
+/*------------------- 4.3. Footer  -------------------*/
+@import "template/footers/footer";
+/*------------------- 4.4. hero  -------------------*/
+@import "template/sections/hero";
+/*------------------- 4.5. hero  -------------------*/
+@import "template/sections/landing-page";
+
+/*=================================
+    05. Spacing
+==================================*/
+@import "spacing/spacing";

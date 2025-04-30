@@ -1,0 +1,268 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.music {
+  &.section {
+    @extend %p-relative;
+    z-index: 2;
+  }
+  &__shape {
+    z-index: -1;
+    @extend %p-absolute;
+    left: 0;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+}
+
+.music-box {
+  @extend %d-flex;
+  border-radius: 10px;
+  border: 1px solid rgba($color-white, 0.05);
+  background: $color-1;
+  overflow: hidden;
+  gap: 30px;
+  
+  @include breakpoint(max-lg){
+    gap: 20px;
+  }
+
+  @include breakpoint(max-md) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .music-thumb {
+    @extend %flex-1;
+    max-width: 265px;
+    width: 100%;
+
+    @include breakpoint(max-md) {
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .music-content {
+    @extend %flex-1;
+    padding-block: 35.5px;
+    padding-inline-end: 35.5px;
+
+    @include breakpoint(max-md) {
+      padding-inline: 35.5px;
+    }
+    @include breakpoint(max-sm) {
+      padding-inline: 25px;
+    }
+
+    .music-heder {
+      @extend %d-flex, %justify-between, %item-start;
+
+      .music-info {
+        .music-name {
+          font-weight: 800;
+          text-transform: uppercase;
+        }
+        .singer {
+          font-family: $ff-title;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $color-paragraph;
+        }
+      }
+
+      .music-buy {
+        @extend %d-flex, %justify-between, %item-center;
+        gap: 9px;
+        color: $color-white;
+        font-family: $ff-title;
+        font-weight: 800;
+        text-transform: uppercase;
+        @include transition($transition);
+
+        i {
+          color: $color-primary;
+        }
+
+        @include breakpoint(max-sm) {
+          gap: 5px;
+          font-size: 12px;
+          white-space: nowrap;
+        }
+        @include breakpoint(max-xsm) {
+          flex-direction: column;
+        }
+      }
+    }
+    .music-divider {
+      height: 6px;
+      border: 1px solid rgba($color-white, 0.06);
+      background: #0e0e0e;
+      box-shadow: 0px 4px 4px 0px rgba(23, 23, 23, 0.25) inset;
+      margin-block: 30px 20px;
+    }
+    .music-footer {
+      @extend %d-flex, %justify-between, %item-center;
+
+      @include breakpoint(max-sm) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .play {
+        @extend %p-relative, %shrink-0;
+        width: 42px;
+        height: 42px;
+        border-radius: 100%;
+        background-color: rgba($color-white, 0.85);
+        @include transition($transition);
+        border: none;
+        margin-right: 15px;
+        
+        @include breakpoint(max-sm) {
+          margin: 0;
+        }
+        i {
+          @extend %p-absolute;
+          left: 50%;
+          top: 50%;
+          @include transform(translate(-50%, -50%));
+          @include transition($transition);
+          font-size: 14px;
+        }
+        &.now-play{
+          background-color: $color-primary;
+          i {
+            &::before{
+              --fa: '\f04b';
+            }
+          }
+        }
+      }
+
+      .music-length,
+      .music-duration {
+        @extend %d-inline-block, %p-relative;
+        width: 100%;
+        min-width: 45px;
+        max-width: 50px;
+        color: $color-white;
+        font-family: $ff-title;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        user-select: none;
+
+        span {
+          @extend %p-absolute;
+          left: 50%;
+          top: 50%;
+          @include transform(translate(-50%, -50%));
+          @include transition($transition);
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+        }
+      }
+      .music-track {
+        @extend %flex-1;
+        background: rgba($color-white, 0.1);
+        height: 7px;
+        margin-inline: 13px;
+        cursor: pointer;
+
+        .music-progress {
+          width: 0px;
+          height: 100%;
+          background-color: $color-primary;
+          @include transition($transition);
+        }
+      }
+
+      .music-velum {
+        width: 48px;
+        height: 48px;
+        @extend %d-grid, %place-center, %shrink-0;
+        border-radius: 100%;
+        background-color: $color-body;
+        border: 2px solid rgba($color-white, 0.1);
+        box-shadow: 0px 4px 4px 0px $color-black inset;
+        font-size: 14px;
+        color: $color-primary;
+        margin-inline: 28px 10px;
+        cursor: pointer;
+
+        @include breakpoint(max-sm) {
+          margin: 0;
+        }
+
+        &.muted{
+          i {
+            --fa: '\f6a9';
+          }
+        }
+      }
+      .voluom-track {
+        @extend %shrink-0;
+        width: 37px;
+        height: 3px;
+        border-radius: 3px;
+        background: rgba($color-white, 0.1);
+        overflow: hidden;
+        cursor: pointer;
+
+        @include breakpoint(max-sm) {
+          width: 100px;
+        }
+
+        .voluom-progress {
+          width: 100%;
+          height: 100%;
+          background-color: $color-primary;
+          border-radius: 3px;
+          @include transition($transition);
+        }
+      }
+
+      .music-controller {
+        @extend %d-flex, %flex-1;
+        width: 100%;
+      }
+      .volume-controller {
+        @extend %d-flex, %item-center;
+
+        @include breakpoint(max-sm) {
+          gap: 20px;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .music-content {
+      .music-heder {
+        .music-buy {
+          color: $color-primary;
+
+          i {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}

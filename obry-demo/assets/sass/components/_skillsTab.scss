@@ -1,0 +1,86 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.skills {
+  &__tab-thumb {
+    @extend %d-flex;
+    gap: 20px;
+
+    .thumb {
+      height: 100%;
+      overflow: hidden;
+
+      @include breakpoint(lg) {
+        flex-shrink: 0;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      
+      img {
+        border-radius: 20px;
+        @include breakpoint(max-xl) {
+          border-radius: 10px;
+        }
+      }
+
+      &:first-of-type {
+        max-width: 198px;
+        @include breakpoint(max-lg) {
+          max-width: unset;
+        }
+      }
+      &:last-of-type {
+        max-width: calc(100% - 198px);
+        @include breakpoint(max-lg) {
+          max-width: unset;
+        }
+      }
+    }
+  }
+  &__tab-content {
+    .info {
+      @extend %text-capitalize;
+      font-size: $fs-18;
+      font-weight: 600;
+      margin-top: 18px;
+      @include breakpoint(max-lg) {
+        margin-top: 10px;
+      }
+    }
+
+    .skills-list {
+      margin-top: 38px;
+
+      @include breakpoint(max-xl) {
+        margin-top: 25px;
+      }
+      .skill {
+        &.v2 {
+          .title {
+            color: $color-white;
+          }
+          .skill-bar {
+            border: 1.5px solid $color-14;
+            border-radius: 0;
+
+            .skill-progress {
+              border-radius: 0;
+              top: 0;
+              left: 0;
+              height: 8px;
+              @include transform(translateY(0));
+
+              .skill-count {
+                color: $color-14;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.contact {
+  &.section {
+  }
+
+  &__content {
+    padding-left: 55px;
+
+    @include breakpoint(max-md) {
+      padding-left: 35px;
+    }
+    @include breakpoint(max-sm) {
+      padding-left: 25px;
+    }
+
+    .section-title {
+      margin: 0;
+      color: $color-primary;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .contact-list {
+      margin-top: 28px;
+      max-width: 326.5px;
+      @include breakpoint(max-lg) {
+        max-width: 426.5px;
+      }
+
+      li {
+        @extend %d-flex, %item-center;
+        gap: 20px;
+        color: $color-paragraph;
+        font-weight: 600;
+        text-transform: capitalize;
+
+        &:not(:last-of-type) {
+          border-bottom: 1.5px solid rgba($color-white, 0.08);
+          padding-bottom: 22px;
+          margin-bottom: 22px;
+
+          @include breakpoint(max-lg) {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+          }
+        }
+
+        svg {
+          color: $color-primary;
+          @extend %shrink-0;
+        }
+
+        a {
+          color: inherit;
+          line-height: inherit;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+  &__form {
+    .form-title{
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      
+      @include breakpoint(max-xl){
+        margin-bottom: 25px;
+      }
+    }
+    .contact-form {
+      .form-control {
+        border-radius: 10px;
+        border: 1.5px solid rgba($color-white, 0.1);
+        background: rgba($color-1, 0.7);
+        box-shadow: 0px 4px 4px 0px rgba($color-black, 0.25);
+        color: $color-white;
+        font-size: $fs-15;
+        font-weight: 600;
+        letter-spacing: 0.45px;
+        text-transform: capitalize;
+        padding-inline: 23px;
+        padding-block: 21.75px;
+        resize: none;
+
+        @include breakpoint(max-xl) {
+          padding-inline: 15px;
+          padding-block: 15.75px;
+        }
+
+        &::placeholder {
+          opacity: 1;
+          color: $color-paragraph;
+        }
+      }
+    }
+  }
+  &__map {
+    iframe {
+      height: 539px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+
+      @include breakpoint(max-md) {
+        height: 480px;
+      }
+    }
+  }
+}

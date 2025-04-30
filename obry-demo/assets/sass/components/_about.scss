@@ -1,0 +1,590 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.about {
+  &.section {
+    @extend %p-relative;
+    // background: linear-gradient(180deg, rgba($color-body, 0) 0%, $color-1 100%);
+    .shape-1 {
+      @extend %p-absolute;
+      left: 117px;
+      bottom: 35px;
+      animation: carve-rotate 2.5s linear infinite alternate;
+
+      @include breakpoint(max-xxl) {
+        left: 320px;
+      }
+      @include breakpoint(max-lg) {
+        left: 80%;
+      }
+    }
+    .shape-2 {
+      @extend %p-absolute;
+      top: 50px;
+      right: 5px;
+      z-index: -1;
+    }
+    .shape-1,
+    .shape-2 {
+      @include breakpoint(max-sm) {
+        display: none;
+      }
+    }
+  }
+  &__tabs {
+    @extend %justify-between;
+    margin-top: 40px;
+    row-gap: 10px;
+    column-gap: 20px;
+    overflow: hidden;
+
+    @include breakpoint(max-sm) {
+      column-gap: 10px;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    .nav-item {
+      @extend %p-relative, %shrink-0;
+      z-index: 2;
+
+      &:not(:last-of-type) {
+        &::after {
+          @extend %p-absolute;
+          left: 95%;
+          top: 50%;
+          width: 500%;
+          height: 3px;
+          background-color: $color-primary;
+          z-index: -1;
+          @include transform(translateY(-50%));
+
+          @include breakpoint(max-sm) {
+            content: unset;
+          }
+        }
+      }
+      .nav-link {
+        color: $color-paragraph;
+        font-family: $ff-rubik;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 41px;
+        text-transform: uppercase;
+        background-color: $color-body;
+        border: 2.5px solid $color-primary;
+        border-radius: 50px;
+        padding: 0 35px;
+        white-space: nowrap;
+        width: 100%;
+
+        &[disabled] {
+          @extend %p-relative;
+          border-radius: 6px;
+          background-color: $color-primary;
+          color: $color-8;
+          margin-left: 7px;
+          width: calc(100% - 7px);
+
+          &::before {
+            @extend %p-absolute;
+            width: 3px;
+            height: 100%;
+            left: -9px;
+            top: 0;
+            border-radius: 6px;
+            background: $color-primary;
+          }
+          &.active {
+            color: $color-8;
+          }
+        }
+        &.active {
+          color: $color-primary;
+        }
+      }
+
+      @include breakpoint(max-sm) {
+        width: calc((100% - 20px) / 2);
+      }
+      @media only screen and (max-width: 374.98px) {
+        width: 100%;
+      }
+    }
+  }
+  &__content-container {
+    margin-top: 63px;
+
+    @include breakpoint(max-lg) {
+      margin-top: 30px;
+    }
+    &:focus-visible,
+    :focus {
+      border: none;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  &__tab-content {
+    .section-title {
+      @include breakpoint(xl) {
+        max-width: 490px;
+        width: 100%;
+      }
+    }
+    p {
+      max-width: 573px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 175%;
+      text-transform: capitalize;
+      margin-top: 30px;
+
+      @include breakpoint(max-md) {
+        margin-top: 20px;
+      }
+    }
+    .notes-and-info {
+      padding-top: 32px;
+
+      @include breakpoint(max-md) {
+        padding-top: 20px;
+      }
+      .note {
+        .note-title {
+          font-size: 20px;
+          font-weight: 800;
+          text-transform: uppercase;
+        }
+        .note-list {
+          margin-top: 18px;
+
+          @include breakpoint(max-md) {
+            margin-top: 10px;
+          }
+          li {
+            @extend %d-flex, %item-center;
+            gap: 10px;
+
+            color: $color-paragraph;
+            font-weight: 500;
+            line-height: 175%;
+            text-transform: capitalize;
+            i {
+              color: $color-primary;
+            }
+
+            &:not(:last-of-type) {
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+      .info {
+        @extend %d-flex, %item-start;
+        gap: 25px;
+
+        @include breakpoint(max-xxl) {
+          gap: 18px;
+        }
+        .info-thumb {
+          @extend %shrink-0;
+          border-radius: 19px;
+          overflow: hidden;
+          max-width: 127px;
+          width: 100%;
+        }
+        .info-content {
+          .info-title {
+            font-family: $ff-body;
+            font-size: $fs-base;
+            font-weight: 700;
+            line-height: 150%;
+            text-transform: capitalize;
+            white-space: nowrap;
+
+            @include breakpoint(max-xxl) {
+              white-space: wrap;
+            }
+          }
+          span {
+            @extend %d-inline-block;
+            color: $color-paragraph;
+            font-weight: 500;
+            line-height: 24px;
+            text-transform: capitalize;
+          }
+          .avatars {
+            @extend %d-flex;
+            margin-top: 10px;
+
+            img,
+            a {
+              @extend %d-grid, %place-center;
+              width: 47.5px;
+              height: 47.5px;
+              border-radius: 100%;
+              border: 3px solid $color-body;
+              color: #282d32;
+              background-color: $color-primary;
+              overflow: hidden;
+            }
+
+            img {
+              &:not(:first-of-type) {
+                margin-left: -10px;
+              }
+            }
+            a {
+              margin-left: -10px;
+            }
+          }
+        }
+      }
+    }
+    .btn-primary {
+      margin-top: 40px;
+
+      @include breakpoint(max-md) {
+        margin-top: 30px;
+      }
+      .btn-wrapper {
+        background: linear-gradient(90deg, $color-primary 0%, #8e7d3f 100%);
+        color: #282d32;
+
+        span {
+          color: $color-black;
+        }
+      }
+    }
+  }
+
+  &__tab-thumb {
+    // background-color: $color-primary;
+
+    @extend %p-relative;
+    max-width: 550px;
+    width: 100%;
+    margin-left: auto;
+    z-index: 2;
+
+    @include breakpoint(max-lg) {
+      margin-left: 0;
+    }
+
+    img {
+      @extend %p-relative;
+    }
+    .thumb-bg {
+      @extend %p-absolute;
+      width: 100%;
+      max-height: 523px;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      background: #1e2225;
+      border-radius: 50px 240px 0px 0px;
+
+      &::after {
+        @extend %p-absolute;
+        inset: 0;
+        z-index: -2;
+        background-color: $color-primary;
+        border-radius: 50px 300px 0px 0px;
+      }
+
+      img {
+        @extend %p-absolute;
+        top: -60px;
+        left: -60px;
+        animation: rotate 4.5s linear infinite;
+
+        @include breakpoint(max-xl) {
+          left: -10px;
+        }
+        @include breakpoint(max-lg) {
+          left: -60px;
+        }
+        @include breakpoint(max-md) {
+          display: none;
+        }
+      }
+
+      @include breakpoint(max-sm) {
+        border-radius: 50px 100px 0px 0px;
+        &::after {
+          border-radius: 50px 150px 0px 0px;
+        }
+      }
+    }
+  }
+}
+
+.about2 {
+  &.section {
+    @extend %p-relative;
+    z-index: 2;
+  }
+  &__bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+    }
+  }
+  &__content {
+    @extend %p-relative;
+    padding: 0;
+
+    p {
+      margin-top: 33px;
+
+      @include breakpoint(max-md) {
+        margin-top: 20px;
+      }
+    }
+    .analysis {
+      margin-top: 25px;
+      .title {
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      ul {
+        margin-top: 16px;
+        li {
+          @extend %d-flex, %item-center;
+          gap: 10px;
+          color: $color-paragraph;
+          font-size: 16px;
+          font-weight: 500;
+          text-transform: capitalize;
+
+          i {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+    .shape {
+      @extend %p-absolute;
+      right: 0;
+      bottom: 0;
+      animation: carve-rotate 2.5s linear infinite alternate;
+      -webkit-transform-origin: top center;
+      -ms-transform-origin: top center;
+      transform-origin: top center;
+
+      @include breakpoint(xxl) {
+        margin-right: 50px;
+      }
+      @include breakpoint(max-lg) {
+        display: none;
+      }
+    }
+  }
+  &__thumb {
+    @extend %p-relative;
+    padding-left: 170px;
+    z-index: 2;
+
+    @include breakpoint(max-xl) {
+      padding-left: 80px;
+    }
+    @include breakpoint(max-lg) {
+      padding-left: 0px;
+    }
+
+    .thumb-1 {
+      @include breakpoint(xl) {
+        padding-bottom: 58px;
+      }
+      img {
+        border-radius: 21px;
+        background: $color-1;
+        padding: 17px;
+
+        @include breakpoint(min-xxl) {
+          width: 525px;
+          height: 524px;
+          max-width: 100%;
+        }
+        @include breakpoint(max-xl) {
+          padding: 10px;
+        }
+      }
+    }
+    .thumb-2 {
+      @extend %p-absolute;
+      border-radius: 14px;
+      left: 0;
+      bottom: -58px;
+      z-index: -1;
+      overflow: hidden;
+
+      @include breakpoint(xxl) {
+        left: 20px;
+        max-width: 280px;
+      }
+      @include breakpoint(xl) {
+        bottom: 0;
+      }
+      @include breakpoint(max-xl) {
+        max-width: 200px;
+      }
+      @include breakpoint(max-lg) {
+        position: relative;
+        bottom: 0px;
+        max-width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+
+      img {
+        background: $color-1;
+        padding: 15px;
+
+        @include breakpoint(max-xl) {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+.about3 {
+  &.section {
+    @extend %p-relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+  &__content {
+    @extend %p-relative;
+    padding: 0;
+
+    p {
+      margin-top: 33px;
+
+      @include breakpoint(max-md) {
+        margin-top: 20px;
+      }
+    }
+    .analysis {
+      margin-top: 25px;
+      .title {
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      ul {
+        margin-top: 16px;
+        li {
+          @extend %d-flex, %item-center;
+          gap: 10px;
+          color: $color-paragraph;
+          font-size: 16px;
+          font-weight: 500;
+          text-transform: capitalize;
+
+          i {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+    .shape {
+      @extend %p-absolute;
+      right: -120px;
+      bottom: 0;
+      animation: carve-rotate 2.5s linear infinite alternate;
+      -webkit-transform-origin: top center;
+      -ms-transform-origin: top center;
+      transform-origin: top center;
+
+      @include breakpoint(max-xxxl) {
+        right: -80px;
+      }
+      @include breakpoint(max-xxl) {
+        right: -21px;
+      }
+      @include breakpoint(max-xl) {
+        display: none;
+      }
+    }
+  }
+
+  &__main-content {
+    @extend %p-relative;
+    padding-left: 75px;
+
+    @include breakpoint(max-lg) {
+      padding-left: 40px;
+    }
+    @include breakpoint(max-sm) {
+      padding-left: 30px;
+    }
+  }
+
+  &__thumb {
+    @extend %p-relative;
+    height: 100%;
+
+    .thumb-1 {
+      @extend %p-relative;
+      padding-top: 10px;
+      padding-left: 10px;
+      z-index: 2;
+      padding-bottom: 50px;
+      @include breakpoint(max-lg) {
+        margin-bottom: 15px;
+        padding-bottom: 0px;
+      }
+      img {
+        width: 100%;
+        max-width: 475px;
+
+        @include breakpoint(max-md) {
+          max-width: 100%;
+        }
+      }
+
+      &::before {
+        @extend %p-absolute;
+        z-index: -1;
+        width: 154px;
+        height: 152px;
+        left: 0;
+        top: 0;
+        background-color: $color-primary;
+      }
+    }
+    .thumb-2 {
+      @extend %p-absolute;
+      z-index: 2;
+      bottom: 0;
+      right: 0;
+      border-right: 8px solid $color-primary;
+
+      @include breakpoint(max-lg) {
+        position: unset;
+      }
+
+      img {
+        width: 100%;
+        @include breakpoint(max-md) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

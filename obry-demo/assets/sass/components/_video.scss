@@ -1,0 +1,51 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.video {
+  &.section {
+  }
+
+  &__player-wrapper {
+    @extend %p-relative;
+
+    img {
+      min-height: 400px;
+      object-fit: cover;
+    }
+    .popup-youtube {
+      @extend %p-absolute,%d-grid,%place-center;
+      top: 50%;
+      left: 50%;
+      width: 92px;
+      height: 92px;
+      border-radius: 100%;
+      background-color: rgba($color-primary, 0.4);
+      border: 5px dashed $color-white;
+      color: $color-white;
+      font-size: 25px;
+      @include transform(translate(-50%, -50%));
+
+      &.disabled {
+        @include transform(translate(-50%, -50%) scale(0.4));
+        visibility: hidden;
+        cursor: initial;
+        opacity: 0;
+      }
+
+      @include breakpoint(max-xl) {
+        width: 80px;
+        height: 80px;
+        font-size: $fs-20;
+        border-width: 3px;
+      }
+      @include breakpoint(max-lg) {
+        width: 70px;
+        height: 70px;
+        font-size: $fs-18;
+        border-width: 2px;
+      }
+    }
+  }
+}

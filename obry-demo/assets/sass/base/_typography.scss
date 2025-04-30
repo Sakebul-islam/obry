@@ -1,0 +1,202 @@
+@use "fonts" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+/**
+ * Basic typography style for copy text
+ */
+html {
+  overflow-x: hidden;
+}
+body {
+  @extend %text-regular;
+  color: $color-white;
+  font-size: $fs-base;
+  line-height: 1.75;
+  font-family: $ff-body;
+  font-weight: 400;
+  background: $color-body;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+
+  @include breakpoint(max-sm) {
+    font-size: $fs-14;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %text-bold;
+  @include transition($transition);
+  margin: 0;
+  font-family: $ff-title;
+  color: $color-white;
+}
+
+h1 {
+  font-size: $fs-h1;
+  // $fs-h1: 90px;
+
+  @include breakpoint(max-xxl) {
+    font-size: calc($fs-h1 - 5px); // 85px
+  }
+  @include breakpoint(max-xl) {
+    font-size: calc($fs-h1 - 10px); // 80px
+  }
+  @include breakpoint(max-lg) {
+    font-size: calc($fs-h1 - 20px); // 70px
+  }
+  @include breakpoint(max-md) {
+    font-size: calc($fs-h1 - 30px); // 60px
+  }
+  @include breakpoint(max-sm) {
+    font-size: calc($fs-h1 - 40px); // 50px
+  }
+}
+
+h2 {
+  font-size: $fs-h2;
+  // $fs-h2: 50px;
+
+  @include breakpoint(max-xxl) {
+    font-size: calc($fs-h2 - 5px); // 45px
+  }
+  @include breakpoint(max-xl) {
+    font-size: calc($fs-h2 - 10px); // 40px
+  }
+  @include breakpoint(max-lg) {
+    font-size: calc($fs-h2 - 15px); // 35px
+  }
+  @include breakpoint(max-md) {
+    font-size: calc($fs-h2 - 20px); // 30px
+  }
+  @include breakpoint(max-sm) {
+    font-size: calc($fs-h2 - 25px); // 25px
+  }
+}
+
+h3 {
+  font-size: $fs-h3;
+  // $fs-h3: 36px;
+
+  @include breakpoint(max-xxl) {
+    font-size: calc($fs-h3 - 3px); // 33px
+  }
+  @include breakpoint(max-xl) {
+    font-size: calc($fs-h3 - 6px); // 30px
+  }
+  @include breakpoint(max-lg) {
+    font-size: calc($fs-h3 - 8px); // 28px
+  }
+  @include breakpoint(max-md) {
+    font-size: calc($fs-h3 - 10px); // 26px
+  }
+  @include breakpoint(max-sm) {
+    font-size: calc($fs-h3 - 12px); // 24px
+  }
+}
+
+h4 {
+  font-size: $fs-h4;
+  // $fs-h4: 30px;
+
+  @include breakpoint(max-xxl) {
+    font-size: calc($fs-h4 - 2px); // 28px
+  }
+  @include breakpoint(max-xl) {
+    font-size: calc($fs-h4 - 4px); // 26px
+  }
+  @include breakpoint(max-lg) {
+    font-size: calc($fs-h4 - 6px); // 24px
+  }
+  @include breakpoint(max-md) {
+    font-size: calc($fs-h4 - 7px); // 23px
+  }
+  @include breakpoint(max-sm) {
+    font-size: calc($fs-h4 - 8px); // 22px
+  }
+}
+
+h5 {
+  font-size: $fs-h5;
+  // $fs-h5: 26px;
+
+  @include breakpoint(max-xxl) {
+    font-size: calc($fs-h5 - 1px); // 25px
+  }
+  @include breakpoint(max-xl) {
+    font-size: calc($fs-h5 - 2px); // 24px
+  }
+  @include breakpoint(max-lg) {
+    font-size: calc($fs-h5 - 3px); // 23px
+  }
+  @include breakpoint(max-md) {
+    font-size: calc($fs-h5 - 4px); // 22px
+  }
+  @include breakpoint(max-sm) {
+    font-size: calc($fs-h5 - 5px); // 21px
+  }
+}
+
+h6 {
+  font-size: $fs-h6;
+  // $fs-h6: 24px;
+
+  @include breakpoint(max-xxl) {
+    font-size: calc($fs-h5 - 1px); // 23px
+  }
+  @include breakpoint(max-xl) {
+    font-size: calc($fs-h5 - 2px); // 22px
+  }
+  @include breakpoint(max-lg) {
+    font-size: calc($fs-h5 - 3px); // 21px
+  }
+  @include breakpoint(max-md) {
+    font-size: calc($fs-h5 - 3.5px); // 20.5px
+  }
+  @include breakpoint(max-sm) {
+    font-size: calc($fs-h5 - 4px); // 20px
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+  transition: $transition-3;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: inherit;
+  }
+}
+p {
+  line-height: 1.75;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: $color-paragraph;
+}
+ul {
+  @extend %p-0;
+  @extend %m-0;
+}
+li {
+  @extend %list-none;
+}
+
+input,
+textarea,
+select {
+  @extend %w-100;
+}

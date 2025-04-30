@@ -1,0 +1,280 @@
+@use "../base/fonts" as *;
+@use "../abstracts/extend" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/container" as *;
+
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.linear {
+  transition-timing-function: linear !important;
+  -webkit-transition-timing-function: linear !important;
+}
+
+.text-initial {
+  text-transform: initial;
+}
+
+.line-clamp-1 {
+  @include line-clamp(1);
+}
+
+.line-clamp-2 {
+  @include line-clamp(2);
+}
+
+.line-clamp-3 {
+  @include line-clamp(3);
+}
+
+.line-clamp-4 {
+  @include line-clamp(4);
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-sm-grid {
+  @include breakpoint(sm) {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+}
+
+.d-md-grid {
+  @include breakpoint(md) {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+}
+
+.d-lg-grid {
+  @include breakpoint(lg) {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+}
+
+.d-mlg-grid {
+  @include breakpoint(mlg) {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+}
+
+.d-xl-grid {
+  @include breakpoint(xl) {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+}
+
+.d-xxl-grid {
+  @include breakpoint(xxL) {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+}
+
+.d-xxxl-grid {
+  @include breakpoint(xxxl) {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+}
+
+.d-xxxxl-grid {
+  @include breakpoint(xxxxl) {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+}
+
+.d-5xl-grid {
+  @include breakpoint(5xl) {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+}
+.agx_screenfix_right {
+  margin-right: calc((-100vw + 100%) / 2);
+}
+
+.agx_screenfix_left {
+  margin-left: calc((-100vw + 100%) / 2);
+}
+.tns-0 {
+  transition: none;
+}
+
+.background-image,
+[data-bg-src] {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+/*=======> utility classes start here <=======*/
+// color utility start
+.text-color-primary {
+  color: $color-primary;
+}
+.bg-color-primary {
+  background-color: $color-primary;
+}
+.text-color-body {
+  color: $color-body;
+}
+.bg-color-body {
+  background-color: $color-body;
+}
+.text-color-1 {
+  color: $color-1;
+}
+.bg-color-1 {
+  background-color: $color-1;
+}
+.text-color-2 {
+  color: $color-2;
+}
+.bg-color-2 {
+  background-color: $color-2;
+}
+.text-color-3 {
+  color: $color-3;
+}
+.bg-color-3 {
+  background-color: $color-3;
+}
+.text-color-4 {
+  color: $color-4;
+}
+.bg-color-4 {
+  background-color: $color-4;
+}
+.text-color-5 {
+  color: $color-5;
+}
+.bg-color-5 {
+  background-color: $color-5;
+}
+.text-color-6 {
+  color: $color-6;
+}
+.bg-color-6 {
+  background-color: $color-6;
+}
+.text-color-7 {
+  color: $color-7;
+}
+.bg-color-7 {
+  background-color: $color-7;
+}
+.text-color-8 {
+  color: $color-8;
+}
+.bg-color-8 {
+  background-color: $color-8;
+}
+.text-color-9 {
+  color: $color-9;
+}
+.bg-color-9 {
+  background-color: $color-9;
+}
+.text-color-10 {
+  color: $color-10;
+}
+.bg-color-10 {
+  background-color: $color-10;
+}
+.text-color-11 {
+  color: $color-11;
+}
+.bg-color-11 {
+  background-color: $color-11;
+}
+.text-color-12 {
+  color: $color-12;
+}
+.bg-color-12 {
+  background-color: $color-12;
+}
+.text-color-13 {
+  color: $color-13;
+}
+.bg-color-13 {
+  background-color: $color-13;
+}
+.text-color-14 {
+  color: $color-14;
+}
+.bg-color-14 {
+  background-color: $color-14;
+}
+.text-color-15 {
+  color: $color-15;
+}
+.bg-color-15 {
+  background-color: $color-15;
+}
+.text-color-16 {
+  color: $color-16;
+}
+.bg-color-16 {
+  background-color: $color-16;
+}
+
+.text-color-white {
+  color: $color-white;
+}
+.bg-color-white {
+  background-color: $color-white;
+}
+.text-color-black {
+  color: $color-black;
+}
+.bg-color-black {
+  background-color: $color-black;
+}
+// color utility end

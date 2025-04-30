@@ -1,0 +1,135 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.quote {
+  &.section {
+  }
+  &__wrapper {
+    border-radius: 40px 10px 10px 10px;
+    border: 2px solid rgba($color-white, 0.3);
+    background: $color-4;
+    overflow: hidden;
+    padding-block: 9px;
+    padding-inline-end: 9px;
+    max-width: 1241px;
+    margin: 0 auto;
+  }
+  &__slider {
+    margin-left: -2px;
+    border-radius: 40px 10px 10px 10px;
+    border: 2px solid rgba($color-white, 0.3);
+    .quote-box {
+    }
+
+    .quote__pagination {
+      @extend %p-absolute;
+      bottom: 80px;
+      text-align: right;
+      padding-right: 60px;
+
+      .swiper-pagination-bullet {
+        background-color: #9d9d9d;
+        opacity: 1;
+        &.swiper-pagination-bullet-active {
+          background-color: $color-primary;
+        }
+      }
+
+      @include breakpoint(max-md) {
+        bottom: 50px;
+      }
+
+      @include breakpoint(max-sm) {
+        text-align: center;
+        bottom: 10px;
+        margin-top: 15px;
+        padding: 0;
+      }
+    }
+  }
+}
+.quote-box {
+  padding: 60px;
+
+  @include breakpoint(max-md) {
+    padding: 30px;
+  }
+  .quote-icon {
+    color: $color-white;
+    font-family: $ff-title;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 0%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    @include breakpoint(max-xxl) {
+      font-size: calc(80px - 5px); // 75px
+    }
+    @include breakpoint(max-xl) {
+      font-size: calc(80px - 10px); // 70px
+    }
+    @include breakpoint(max-lg) {
+      font-size: calc(80px - 20px); // 60px
+    }
+    @include breakpoint(max-md) {
+      font-size: calc(80px - 30px); // 50px
+    }
+    @include breakpoint(max-sm) {
+      font-size: calc(80px - 40px); // 40px
+    }
+  }
+  .quote {
+    color: $color-white;
+    font-weight: 600;
+    line-height: 153.846%;
+    letter-spacing: 0.78px;
+    text-transform: capitalize;
+  }
+  .quote-footer {
+    margin-top: 30px;
+    @include breakpoint(max-lg){
+      margin-top: 20px;
+    }
+    .author {
+      @extend %d-flex, %item-center;
+      gap: 18px;
+      .author-avatar {
+        @extend %shrink-0;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        overflow: hidden;
+        border: 2px solid rgba($color-primary, 0.7);
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      .author-content {
+        .author-name {
+          color: $color-paragraph;
+          font-size: $fs-16;
+          font-weight: 800;
+          line-height: 1;
+          text-transform: capitalize;
+        }
+        .author-designation {
+          color: $color-white;
+          font-weight: 700;
+          text-transform: capitalize;
+          margin-top: 3px;
+
+          @include breakpoint(max-sm) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

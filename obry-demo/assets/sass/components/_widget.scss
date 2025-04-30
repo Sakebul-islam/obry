@@ -1,0 +1,405 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.widget {
+  border: 1.5px solid rgba($color-white, 0.08);
+  border-radius: 20px;
+  background-color: $color-1;
+  padding-inline: 36px;
+  padding-block: 33px 45px;
+
+  @include breakpoint(max-xxl) {
+    border-radius: 5px;
+    padding-inline: 20px;
+    padding-block: 20px 25px;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+
+    @include breakpoint(max-xxl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .widget-title {
+    @extend %p-relative, %w-content, %text-capitalize;
+    color: $color-white;
+    margin-bottom: 20px;
+
+    &::after {
+      @extend %p-absolute;
+      content: "//";
+      top: calc(50% - 3px);
+      left: calc(100% + 10px);
+      transform: translateY(-50%);
+      width: 21px;
+      height: 21px;
+      color: $color-primary;
+    }
+  }
+
+  &__search {
+    .search-form {
+      @extend %d-flex, %item-center;
+      border: 1.5px solid rgba($color-white, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      padding-inline-end: 18px;
+
+      @include breakpoint(max-xxl) {
+        padding-inline-end: 12px;
+        border-radius: 4px;
+      }
+
+      input {
+        @extend %text-capitalize;
+        background-color: transparent;
+        border: none;
+        color: $color-white;
+        font-size: 14px;
+        font-weight: 500;
+        height: 60px;
+        padding-inline: 18px 10px;
+
+        @include breakpoint(max-xxl) {
+          padding-inline: 12px 8px;
+        }
+
+        &::placeholder {
+          color: $color-paragraph;
+          opacity: 1;
+        }
+
+        &:focus,
+        &:active {
+          border: none;
+          box-shadow: none;
+          outline: none;
+        }
+
+        @include breakpoint(max-xxl) {
+          height: 50px;
+        }
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        color: $color-paragraph;
+      }
+    }
+  }
+  &__categories {
+    .categories {
+      ul {
+        li {
+          a {
+            @extend %d-flex, %justify-between, %item-center, %text-capitalize;
+            gap: 15px;
+            color: #fff;
+            font-family: $ff-title;
+            font-size: $fs-18;
+            font-weight: 600;
+
+            &.active,
+            &:hover {
+              color: $color-primary;
+            }
+          }
+
+          &:not(:last-of-type) {
+            margin-bottom: 12px;
+
+            @include breakpoint(max-xl) {
+              margin-bottom: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__recent-post {
+    .recent-post {
+      .post {
+        @extend %d-flex, %item-center;
+        gap: 20px;
+        .post-thumb {
+          @extend %shrink-0;
+          width: 89px;
+          height: 89px;
+          border-radius: 8px;
+          overflow: hidden;
+
+          @include breakpoint(max-xxl) {
+            border-radius: 5px;
+          }
+
+          @include breakpoint(max-sm) {
+            width: 70px;
+            height: 70px;
+          }
+
+          img {
+            @include transition($transition);
+            height: 100%;
+          }
+        }
+        .post-content {
+          .post-date {
+            @extend %d-inline-block, %text-uppercase;
+            @include transition($transition);
+            line-height: 1;
+            color: $color-white;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+          }
+          .post-title {
+            line-height: 0;
+            @include transition($transition);
+            a {
+              @extend %text-capitalize;
+              color: $color-paragraph;
+              line-height: 1.5;
+              font-family: inherit;
+              font-size: $fs-base;
+              font-weight: 700;
+            }
+          }
+        }
+
+        &:hover,
+        &.active {
+          .post-thumb {
+            img {
+              @include transform(rotate(5deg) scale(1.2));
+            }
+          }
+          .post-content {
+            .post-date {
+              color: $color-primary;
+            }
+          }
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+
+          @include breakpoint(max-xxl) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  &__follow-us {
+    .follow-us {
+      @extend %d-grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      a {
+        @extend %d-block;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @include breakpoint(max-xxl) {
+          border-radius: 5px;
+        }
+
+        img {
+          @include transition($transition);
+        }
+        &:hover {
+          img {
+            @include transform(rotate(5deg) scale(1.2));
+          }
+        }
+      }
+    }
+  }
+  &__tags {
+    .tags {
+      @extend %d-flex, %item-center, %flex-wrap;
+      gap: 6.25px;
+
+      a {
+        @extend %d-inline-block, %text-capitalize;
+        background-color: transparent;
+        border: 1.5px solid rgba($color-white, 0.08);
+        color: $color-paragraph;
+        font-family: $ff-title;
+        font-weight: 700;
+        border-radius: 8px;
+        padding-inline: 18px;
+        padding-block: 8px;
+        @include transition($transition);
+
+        @include breakpoint(max-xxl) {
+          border-radius: 5px;
+          padding-inline: 10px;
+          padding-block: 5px;
+        }
+
+        &:hover,
+        &.active {
+          border-color: rgba($color-primary, 0.5);
+        }
+      }
+    }
+  }
+}
+
+.widget-services {
+  .title {
+    @extend %p-relative;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding-left: 18px;
+    margin-bottom: 30px;
+
+    @include breakpoint(max-xl) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      @extend %p-absolute;
+      left: 0;
+      top: 50%;
+      width: 6px;
+      height: 100%;
+      background-color: $color-primary;
+      @include transform(translateY(-50%));
+    }
+  }
+  .service-items {
+    ul {
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+        a {
+          @extend %d-flex, %justify-between, %item-center;
+          gap: 20px;
+          border-radius: 20px;
+          border: 1.5px solid rgba($color-white, 0.08);
+          background: $color-1;
+          color: $color-paragraph;
+          font-weight: 700;
+          text-transform: capitalize;
+          padding-inline: 23px;
+          padding-block: 22px;
+
+          @include breakpoint(max-xl) {
+            padding-inline: 20px;
+            padding-block: 15px;
+          }
+
+          i,
+          svg {
+            @include transition($transition);
+          }
+          &:hover {
+            i,
+            svg {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.widget-contact {
+  border-radius: 20px;
+  border: 1.5px solid rgba($color-white, 0.08);
+  background: $color-1;
+  padding-inline: 35.5px;
+  padding-block: 48px;
+
+  @include breakpoint(max-xxl) {
+    padding-inline: 20px;
+    padding-block: 30px;
+  }
+
+  &.v2 {
+    padding: 20px;
+    padding-block-end: 45px;
+    border-radius: 45px;
+
+    @include breakpoint(max-xxl) {
+      border-radius: 30px;
+      padding: 15px;
+      padding-block-end: 30px;
+    }
+    .contact-thumb {
+      border-radius: 25px;
+
+      @include breakpoint(max-xxl) {
+        border-radius: 15px;
+      }
+    }
+    .title {
+      text-transform: capitalize;
+      border-bottom: 1.5px solid rgba($color-white, 0.08);
+      padding-bottom: 13px;
+    }
+  }
+
+  .title {
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include breakpoint(max-xxl) {
+      margin-bottom: 20px;
+    }
+  }
+  .contact-thumb {
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 33px;
+
+    @include breakpoint(max-xxl) {
+      margin-bottom: 20px;
+    }
+  }
+  .contact-list {
+    ul {
+      li {
+        @extend %d-flex, %item-center;
+        gap: 20px;
+        color: $color-paragraph;
+        font-weight: 600;
+        text-transform: capitalize;
+
+        a {
+          color: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+          text-transform: initial;
+        }
+
+        svg,
+        i {
+          @extend %shrink-0;
+          color: $color-primary;
+        }
+
+        &:not(:last-of-type) {
+          padding-bottom: 22px;
+          margin-bottom: 22px;
+          border-bottom: 1.5px solid rgba($color-white, 0.08);
+
+          @include breakpoint(max-xxl) {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.blog-main {
+  &__pagination {
+    .pagination {
+      gap: 10px;
+      .page-item {
+        .page-link {
+          @extend %shrink-0, %d-grid, %place-center, %text-capitalize;
+          width: 55px;
+          height: 50px;
+          border: 1px solid rgba($color-white, 0.08);
+          overflow: hidden;
+          border-radius: 15px;
+          background-color: transparent;
+          color: $color-white;
+          font-family: $ff-title;
+          font-weight: 700;
+          letter-spacing: 0.72px;
+
+          font-size: $fs-h6;
+          // $fs-h6: 24px;
+
+          @include breakpoint(max-xxl) {
+            font-size: calc($fs-h5 - 1px); // 23px
+          }
+          @include breakpoint(max-xl) {
+            font-size: calc($fs-h5 - 2px); // 22px
+          }
+          @include breakpoint(max-lg) {
+            font-size: calc($fs-h5 - 3px); // 21px
+          }
+          @include breakpoint(max-md) {
+            font-size: calc($fs-h5 - 3.5px); // 20.5px
+            width: 50px;
+            height: 50px;
+          }
+          @include breakpoint(max-sm) {
+            font-size: calc($fs-h5 - 4px); // 20px
+          }
+        }
+
+        &.active {
+          .page-link {
+            color: $color-primary;
+            background-color: $color-1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog-box {
+  .blog-thumb {
+    border: 1.5px solid rgba($color-white, 0.08);
+    border-radius: 15px;
+    overflow: hidden;
+
+    img {
+      @include transition($transition);
+    }
+  }
+  .blog-content {
+    padding-block: 35.5px 27.5px;
+    border-bottom: 1.5px solid rgba($color-white, 0.08);
+
+    @include breakpoint(max-xxl) {
+      padding-block: 25px 20px;
+    }
+    .blog-meta {
+      @extend %d-flex, %item-center;
+      gap: 40px;
+
+      span {
+        @extend %d-inline-block, %text-uppercase, %p-relative;
+        color: $color-paragraph;
+        font-weight: 600;
+        line-height: 1;
+
+        &.blog-date {
+          color: $color-primary;
+        }
+
+        &:not(:last-of-type) {
+          &::after {
+            @extend %p-absolute;
+            width: 7px;
+            height: 7px;
+            top: 50%;
+            right: -20px;
+            background-color: $color-paragraph;
+            border-radius: 50%;
+            @include transform(translateY(-50%));
+          }
+        }
+      }
+    }
+    .blog-title {
+      @extend %text-capitalize;
+      margin-block: 18px;
+
+      @include breakpoint(max-xxl) {
+        margin-block: 10px;
+      }
+    }
+    p {
+      @extend %text-capitalize;
+      color: $color-paragraph;
+      font-weight: 500;
+    }
+  }
+  .blog-footer {
+    @extend %d-flex, %justify-between, %item-center, %flex-wrap;
+    padding-top: 35px;
+
+    @include breakpoint(max-xxl) {
+      padding-top: 25px;
+    }
+    .btn-primary {
+      .btn-wrapper {
+        @include breakpoint(max-sm) {
+          line-height: 280%;
+          padding-inline: 15px;
+        }
+      }
+    }
+
+    .blog-share {
+      @extend %d-flex, %item-center;
+      gap: 12px;
+      .title {
+        @include transition($transition);
+        color: $color-paragraph;
+        font-family: $ff-title;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.48px;
+        text-transform: uppercase;
+
+        @include breakpoint(max-sm) {
+          font-size: $fs-14;
+        }
+      }
+      .share-list {
+        @extend %d-flex;
+        gap: 10px;
+
+        @include breakpoint(max-sm) {
+          gap: 5px;
+        }
+
+        a {
+          @include transition($transition);
+          color: $color-paragraph;
+          font-family: $ff-title;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: 0.48px;
+          text-transform: uppercase;
+
+          @include breakpoint(max-sm) {
+            font-size: $fs-14;
+          }
+
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .blog-thumb {
+      img {
+        @include transform(scale(1.1) rotate(3deg));
+      }
+    }
+  }
+}

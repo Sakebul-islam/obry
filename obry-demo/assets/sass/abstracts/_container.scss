@@ -1,0 +1,57 @@
+@use "extend" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container {
+  @include breakpoint(xxl) {
+    max-width: $main-container + $container-gutters;
+    padding-left: $container-padding-left;
+    padding-right: $container-padding-right;
+  }
+}
+
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container {
+  @include breakpoint(xxl) {
+    max-width: $main-container + $container-gutters;
+    padding-left: $container-padding-left;
+    padding-right: $container-padding-right;
+  }
+  &.header {
+    @include breakpoint(xxl) {
+      max-width: 1620px + $container-gutters;
+      padding-left: $container-padding-left;
+      padding-right: $container-padding-right;
+    }
+  }
+  &.container-testimonial {
+    @include breakpoint(xxl) {
+      max-width: 1440px + $container-gutters;
+      padding-left: $container-padding-left;
+      padding-right: $container-padding-right;
+    }
+  }
+  &.hero-container {
+    @include breakpoint(xxl) {
+      max-width: 1646px + $container-gutters;
+      padding-left: $container-padding-left;
+      padding-right: $container-padding-right;
+    }
+  }
+  &.header-container,&.hero-two-container {
+    @include breakpoint(xxl) {
+      max-width: 1520px + $container-gutters;
+      padding-left: $container-padding-left;
+      padding-right: $container-padding-right;
+    }
+  }
+}

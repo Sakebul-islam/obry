@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Fonts
+# Configuration
+# Normalize
+# Typography
+# Global CSS
+# Layout CSS
+# Components CSS
+# Pages CSS
+--------------------------------------------------------------*/
+
+@charset "UTF-8";
+
+// 1.Fonts
+@use "base/fonts";
+
+// 2.configuration and helpers
+@use "abstracts/variables";
+@use "abstracts/mixins";
+@use "abstracts/container";
+@use "abstracts/extend";
+
+//3.vendors
+@use "vendors/normalize";
+
+//4.Base stuff
+@use "base/typography";
+@use "base/common";
+@use "base/animation";
+@use "base/section-gap";
+
+// 5.layout-related section
+@use "layout/header";
+@use "layout/menus";
+@use "layout/breadcrumb";
+@use "layout/hero";
+@use "layout/footer";
+
+// 6.components
+@use "components/preloader";
+@use "components/button";
+@use "components/popup-search";
+@use "components/about";
+@use "components/experienceTab";
+@use "components/educationTab";
+@use "components/skillsTab";
+@use "components/contact";
+@use "components/video";
+@use "components/brands";
+@use "components/pricing";
+@use "components/news";
+@use "components/blog";
+@use "components/testimonial";
+@use "components/team";
+@use "components/portfolio";
+@use "components/music";
+@use "components/music-player";
+@use "components/quote";
+@use "components/statistic";
+@use "components/skills";
+@use "components/faq";
+@use "components/work";
+@use "components/service";
+@use "components/widget";
+@use "components/instagram";
+@use "components/error";
+@use "components/BackToTop";
+
+// 7. Page-specific styles
+@use "pages/portfolio-details";
+@use "pages/blog-details";
+@use "pages/service-details";
+@use "pages/work-details";
+@use "pages/team-details";
+
+//4.Helpers CSS
+@use "base/helpers";

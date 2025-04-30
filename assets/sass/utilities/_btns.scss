@@ -1,0 +1,137 @@
+// Primary Button
+.vs-btn {
+  position: relative;
+  display: inline-block;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--theme-color);
+  color: var(--black-color);
+  font-family: var(--title-font);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 15px 20px;
+  border-radius: 5px;
+  z-index: 1;
+  overflow: hidden;
+  &.style2 {
+    background-color: var(--theme-color);
+    color: var(--black-color);
+    &:hover {
+      color: $white-color;
+      background-color: $black-color;
+    }
+  }
+  &.style3 {
+    background-color: var(--theme-color);
+    color: var(--white-color);
+    padding: 14px 23.5px;
+    &.active {
+      background-color: $black-color;
+      color: $white-color;
+    }
+  }
+  &:hover {
+    background-color: $black-color;
+    color: $white-color;
+  }
+  @include ml {
+    padding: 14.5px 20px;
+    letter-spacing: unset;
+  }
+}
+
+// Scroll To Top
+.scroll-btn {
+  position: fixed;
+  bottom: 300px;
+  right: 30px;
+  z-index: 94;
+  opacity: 0;
+  visibility: hidden;
+  display: inline-block;
+  border-radius: 50%;
+
+  i {
+    display: inline-block;
+    background-color: $theme-color;
+    color: $black-color;
+    text-align: center;
+    font-size: 16px;
+    width: var(--btn-size, 50px);
+    height: var(--btn-size, 50px);
+    line-height: var(--btn-size, 50px);
+    z-index: 2;
+    border-radius: inherit;
+    position: relative;
+    transition: all ease 0.8s;
+    box-shadow: 0 0 20px 0 rgba(#000, 0.02);
+    border: 2px solid $theme-color;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: var(--extra-shape, -6px);
+    top: var(--extra-shape, -6px);
+    right: var(--extra-shape, -6px);
+    bottom: var(--extra-shape, -6px);
+    background-color: transparent;
+    border-radius: inherit;
+    z-index: 1;
+    border: 2px dashed $secondary-color;
+    transition: all ease 0.4s;
+    animation: spin 13s infinite linear;
+  }
+
+  &:focus,
+  &:hover {
+    i {
+      background-color: $white-color;
+      color: $black-color;
+      border: 2px solid $theme-color;
+    }
+
+    &:before {
+      border-color: $theme-color;
+    }
+  }
+
+  &.show {
+    bottom: 120px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include sm {
+    --btn-size: 40px;
+    --extra-shape: -4px;
+    right: 15px;
+    bottom: 50px;
+
+    &.show {
+      bottom: 15px;
+    }
+  }
+}
+.scroll-btn2 {
+  display: block;
+  animation: bounce 1s infinite;
+}
+
+.scrollToTop {
+  position: fixed;
+  right: 60px;
+  bottom: 500px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.4s;
+  z-index: 96;
+
+  &.show {
+    bottom: 60px;
+    opacity: 1;
+    visibility: visible;
+  }
+}

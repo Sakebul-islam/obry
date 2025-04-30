@@ -1,0 +1,116 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.error {
+  &.section {
+    @extend %p-relative;
+    z-index: 2;
+  }
+  &__content {
+    @extend %text-center;
+
+    .sub-title {
+      @extend %d-inline-block, %p-relative, %text-uppercase;
+      line-height: 1;
+
+      &::before,
+      &::after {
+        @extend %p-absolute;
+        width: 60px;
+        height: 3px;
+        background: $color-10;
+        bottom: 3px;
+      }
+
+      &::before {
+        left: -77px;
+      }
+      &::after {
+        right: -77px;
+      }
+    }
+
+    .title {
+      @extend %d-flex, %justify-center, %item-center;
+      margin-top: 40px;
+      gap: 25px;
+      line-height: 0;
+      font-size: 380px;
+      color: $color-primary;
+      font-style: normal;
+      font-weight: 300;
+      text-transform: uppercase;
+      
+      @include breakpoint(max-xxl) {
+        font-size: 350px;
+      }
+      @include breakpoint(max-xl) {
+        font-size: 320px;
+      }
+      @include breakpoint(max-lg) {
+        font-size: 300px;
+      }
+      @include breakpoint(max-md) {
+        font-size: 250px;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      @include breakpoint(max-sm) {
+        font-size: 160px;
+        gap: 10px;
+      }
+
+      .right {
+        @include transform(scaleX(-1));
+      }
+
+      .error-shape {
+        line-height: 0;
+
+        svg {
+          height: auto;
+          @include breakpoint(max-xxl) {
+            max-width: 175px;
+          }
+          @include breakpoint(max-xl) {
+            max-width: 165px;
+          }
+          @include breakpoint(max-lg) {
+            max-width: 150px;
+          }
+          @include breakpoint(max-md) {
+            max-width: 125px;
+          }
+          @include breakpoint(max-sm) {
+            max-width: 80px;
+          }
+        }
+      }
+    }
+
+    .error-info {
+      font-weight: 400;
+      text-transform: capitalize;
+      margin-top: 25px;
+
+      @include breakpoint(max-md) {
+        margin-top: 15px;
+      }
+
+      span {
+        color: $color-primary;
+      }
+    }
+
+    a {
+      margin-top: 30px;
+
+      @include breakpoint(max-md) {
+        margin-top: 20px;
+      }
+
+    }
+  }
+}

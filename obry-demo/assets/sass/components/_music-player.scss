@@ -1,0 +1,196 @@
+@use "../abstracts/extend" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/container" as *;
+
+.music-player {
+  &.section {
+  }
+
+  &__player {
+    @extend %d-flex, %item-center;
+
+    @include breakpoint(max-md) {
+      padding-block: 20px;
+    }
+    @include breakpoint(max-sm) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+      align-items: baseline;
+      gap: 20px;
+    }
+    .play-btn {
+      @extend %shrink-0, %d-grid, %place-center;
+      background-color: $color-primary;
+      width: 119px;
+      height: 140px;
+      font-size: 45px;
+      color: $color-1;
+      border: none;
+
+      @include breakpoint(max-sm) {
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+      }
+
+      &.now-play{
+        i {
+          --fa:"\f04c";
+        }
+      }
+    }
+
+    .music-player {
+      padding-left: 30px;
+      @extend %d-flex, %flex-1, %item-center;
+
+      @include breakpoint(max-md) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+        gap: 15px;
+      }
+      @include breakpoint(max-sm) {
+        padding-left: 0;
+        width: 100%;
+      }
+
+      .music-info {
+        padding-right: 80px;
+
+        @include breakpoint(max-lg) {
+          padding-right: 40px;
+        }
+        @include breakpoint(max-md) {
+          padding-right: 0px;
+          width: 100%;
+        }
+
+        .music-name {
+          font-size: 20px;
+          font-weight: 800;
+          text-transform: uppercase;
+        }
+        .singer {
+          color: $color-paragraph;
+          font-family: $ff-title;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+
+      .music-controller {
+        @extend %d-flex, %flex-1;
+        width: 100%;
+
+        .music-length,
+        .music-duration {
+          @extend %d-inline-block, %p-relative;
+          width: 100%;
+          min-width: 45px;
+          max-width: 50px;
+          color: $color-white;
+          font-family: $ff-title;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-align: center;
+          user-select: none;
+
+          span {
+            @extend %p-absolute;
+            left: 50%;
+            top: 50%;
+            @include transform(translate(-50%, -50%));
+            @include transition($transition);
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+          }
+        }
+        .music-track {
+          @extend %flex-1;
+          background: rgba($color-white, 0.1);
+          height: 7px;
+          margin-inline: 13px;
+          cursor: pointer;
+
+          .music-progress {
+            width: 0%;
+            height: 100%;
+            background-color: $color-primary;
+            @include transition($transition);
+          }
+        }
+      }
+      .volume-controller {
+        @extend %d-flex, %item-center;
+
+        @include breakpoint(max-md) {
+          width: 100%;
+        }
+        @include breakpoint(max-sm) {
+          gap: 20px;
+        }
+
+        .music-velum {
+          width: 48px;
+          height: 48px;
+          @extend %d-grid, %place-center, %shrink-0;
+          border-radius: 100%;
+          background-color: $color-body;
+          border: 2px solid rgba($color-white, 0.1);
+          box-shadow: 0px 4px 4px 0px $color-black inset;
+          font-size: 14px;
+          color: $color-primary;
+          margin-inline: 28px 10px;
+          cursor: pointer;
+
+          @include breakpoint(max-md) {
+            margin-left: 0;
+          }
+          @include breakpoint(max-sm) {
+            margin: 0;
+          }
+          &.muted{
+            i {
+              --fa: '\f6a9';
+            }
+          }
+        }
+        .voluom-track {
+          @extend %shrink-0;
+          width: 37px;
+          height: 3px;
+          border-radius: 3px;
+          background: rgba($color-white, 0.1);
+          overflow: hidden;
+          cursor: pointer;
+
+          @include breakpoint(max-md) {
+            width: 120px;
+          }
+
+          .voluom-progress {
+            width: 100%;
+            height: 100%;
+            background-color: $color-primary;
+            border-radius: 3px;
+            @include transition($transition);
+          }
+        }
+      }
+    }
+  }
+}
