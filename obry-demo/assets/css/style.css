@@ -2362,6 +2362,7 @@ body::-webkit-scrollbar-thumb {
   line-height: 190.909%;
   letter-spacing: 0.66px;
   text-transform: capitalize;
+  transition: all 0.3s;
 }
 .footer__center.common .footer-info .contact-info .contact a:hover {
   color: #e2c55d;
@@ -2577,6 +2578,10 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   letter-spacing: 0.45px;
   text-transform: capitalize;
+  transition: all 0.3s;
+}
+.footer-links ul li a:hover {
+  color: #e2c55d;
 }
 .footer-links ul li a i {
   color: #e2c55d;
@@ -2624,6 +2629,10 @@ body::-webkit-scrollbar-thumb {
 .footer-widgets .contact-info a {
   color: #9d9d9d;
   font-weight: 600;
+  transition: all 0.3s;
+}
+.footer-widgets .contact-info a:hover {
+  color: #e2c55d;
 }
 .footer-widgets .contact-info a[href^="tel:"] {
   font-weight: 700;

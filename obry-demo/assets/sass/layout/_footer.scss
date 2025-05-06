@@ -65,6 +65,7 @@
               line-height: 190.909%;
               letter-spacing: 0.66px;
               text-transform: capitalize;
+              transition: all .3s;
               &:hover{
                 color: $color-primary;
               }
@@ -332,6 +333,10 @@
         font-weight: 500;
         letter-spacing: 0.45px;
         text-transform: capitalize;
+        transition: all .3s;
+        &:hover{
+          color: $color-primary;
+        }
 
         i {
           color: $color-primary;
@@ -402,6 +407,10 @@
     a {
       color: $color-paragraph;
       font-weight: 600;
+      transition: all .3s;
+      &:hover{
+        color: $color-primary;
+      }
 
       &[href^="tel:"] {
         font-weight: 700;
