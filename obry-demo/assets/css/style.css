@@ -2363,6 +2363,9 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.66px;
   text-transform: capitalize;
 }
+.footer__center.common .footer-info .contact-info .contact a:hover {
+  color: #e2c55d;
+}
 @media only screen and (max-width: 767.98px) {
   .footer__center.common .footer-info .contact-info .contact a {
     font-size: 18px;

@@ -65,6 +65,10 @@
               line-height: 190.909%;
               letter-spacing: 0.66px;
               text-transform: capitalize;
+              &:hover{
+                color: $color-primary;
+              }
+              
 
               @include breakpoint(max-md) {
                 font-size: 18px;
