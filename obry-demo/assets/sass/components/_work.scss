@@ -58,9 +58,9 @@
         gap: 10px;
         overflow: hidden;
         padding-inline: 18px;
-        color: $color-paragraph;
-        background: $color-1;
-        border: 1px solid $color-5;
+        color: var(--color-paragraph);
+        background: var(--color-1);
+        border: 1px solid var(--color-5);
         border-radius: 30px;
         font-family: $ff-rubik;
         font-weight: 700;
@@ -71,7 +71,7 @@
         &:focus,
         &:focus-visible,
         &:hover {
-          border-color: $color-5;
+          border-color: var(--color-5);
         }
 
         .dot {
@@ -79,21 +79,21 @@
           width: 10px;
           height: 10px;
           border-radius: 100%;
-          background-color: $color-body;
-          border: 1.5px solid $color-7;
+          background-color: var(--color-body);
+          border: 1.5px solid var(--color-7);
         }
         @include breakpoint(max-sm) {
           font-size: 12px;
         }
 
         &.active {
-          border-color: $color-5;
-          color: $color-paragraph;
-          background-color: $color-1;
+          border-color: var(--color-5);
+          color: var(--color-paragraph);
+          background-color: var(--color-1);
 
           .dot {
-            background-color: $color-primary;
-            border-color: $color-primary;
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
           }
         }
       }
@@ -114,29 +114,29 @@
 
 .work-masonry {
   &__filter {
-    @extend %d-flex, %justify-center, %item-center,%flex-wrap;
+    @extend %d-flex, %justify-center, %item-center, %flex-wrap;
     column-gap: 48px;
     row-gap: 15px;
     .vs-btn {
       border: none;
       padding: 0;
       background-color: transparent;
-      color: $color-white;
+      color: var(--color-white);
       font-family: $ff-title;
       font-size: 16px;
       font-weight: 800;
       text-transform: uppercase;
 
       &.active {
-        color: $color-primary;
+        color: var(--color-primary);
       }
     }
   }
 }
 
 .work-box {
-  background-color: $color-1;
-  border: 1.5px solid rgba($color-white, 0.08);
+  background-color: var(--color-1);
+  border: 1.5px solid rgba(var(--color-white-rgb), 0.08);
   border-radius: 25px;
   overflow: hidden;
   padding-inline: 25px;
@@ -167,7 +167,7 @@
       @extend %p-absolute, %d-grid, %place-center;
       inset: 0;
       border-radius: 25px;
-      background: rgba($color-primary, 0.7);
+      background: rgba(var(--color-primary-rgb), 0.7);
       opacity: 0;
       @include transform(scale(0.4));
       @include transition($transition);
@@ -177,7 +177,7 @@
         width: 85px;
         height: 85px;
         border-radius: 100%;
-        background-color: rgba($color-body, 0.96);
+        background-color: rgba(var(--color-body-rgb), 0.96);
         font-size: 23px;
       }
     }
@@ -189,7 +189,7 @@
     .work-info {
       .sub-title {
         @extend %d-inline-block;
-        color: $color-paragraph;
+        color: var(--color-paragraph);
         font-family: $ff-title;
         font-size: $fs-base;
         font-weight: 700;
@@ -205,9 +205,9 @@
       width: 55px;
       height: 55px;
       border-radius: 100%;
-      border: 2px solid rgba($color-white, 0.1);
-      color: $color-primary;
-      background-color: $color-body;
+      border: 2px solid rgba(var(--color-white-rgb), 0.1);
+      color: var(--color-primary);
+      background-color: var(--color-body);
       overflow: hidden;
 
       svg {
@@ -239,7 +239,7 @@
     .work-content {
       .work-info {
         .sub-title {
-          color: $color-primary;
+          color: var(--color-primary);
         }
       }
       .work-link {
@@ -274,7 +274,7 @@
         @extend %p-absolute;
         width: 100%;
         height: 100%;
-        background: rgba($color-primary, 0.65);
+        background: rgba(var(--color-primary-rgb), 0.65);
         opacity: 0;
         z-index: 1;
         @include transition($transition);

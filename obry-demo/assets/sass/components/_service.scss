@@ -16,12 +16,12 @@
     img {
       animation: forward-backward 1s linear infinite alternate;
     }
-    
-    @include breakpoint(max-xl){
+
+    @include breakpoint(max-xl) {
       top: -50px;
       left: 200px;
     }
-    @include breakpoint(max-lg){
+    @include breakpoint(max-lg) {
       display: none;
     }
   }
@@ -33,7 +33,7 @@
   }
   &__shapes {
     @extend %d-flex, %flex-col;
-    color: $color-primary;
+    color: var(--color-primary);
     svg {
       &:first-of-type {
         margin-left: 20px;
@@ -56,7 +56,7 @@
   &.section {
     @extend %p-relative;
     overflow: hidden;
-    border-bottom: 1px double rgba($color-10, 0.12);
+    border-bottom: 1px double rgba(var(--color-10-rgb), 0.12);
     z-index: 2;
   }
 
@@ -71,8 +71,8 @@
       &:nth-child(2) {
         .service-box2 {
           @include breakpoint(md) {
-            border-left: 1px solid rgba($color-10, 0.1);
-            border-right: 1px solid rgba($color-10, 0.1);
+            border-left: 1px solid rgba(var(--color-10-rgb), 0.1);
+            border-right: 1px solid rgba(var(--color-10-rgb), 0.1);
           }
         }
       }
@@ -85,7 +85,7 @@
     z-index: 2;
     gap: 25px;
     overflow: hidden;
-    background-color: $color-primary;
+    background-color: var(--color-primary);
     height: 100%;
     padding: 40px;
 
@@ -104,8 +104,8 @@
       border-radius: 100%;
       width: 96px;
       height: 96px;
-      background-color: $color-1;
-      border: 3px dashed $color-primary;
+      background-color: var(--color-1);
+      border: 3px dashed var(--color-primary);
       cursor: pointer;
 
       i {
@@ -116,7 +116,7 @@
     .info {
       .sub-title {
         @extend %d-inline-block, %text-uppercase, %p-relative;
-        color: $color-body;
+        color: var(--color-body);
         font-family: $ff-title;
         font-size: 18px;
         font-weight: 700;
@@ -129,13 +129,13 @@
           width: 42px;
           height: 3.004px;
           border-radius: 5px;
-          background-color: $color-body;
+          background-color: var(--color-body);
         }
       }
       .title {
         @extend %text-uppercase;
         max-width: 284px;
-        color: $color-body;
+        color: var(--color-body);
       }
     }
 
@@ -153,7 +153,7 @@
   padding-inline: 33px;
   padding-block: 35px 48px;
   border-radius: 22px;
-  border: 1.5px solid rgba($color-white, 0.08);
+  border: 1.5px solid rgba(var(--color-white-rgb), 0.08);
 
   background-image: url("../images/service/service-box-bg-1-1.png");
   background-position: center center;
@@ -164,7 +164,7 @@
     @extend %d-flex, %justify-between, %item-center;
     gap: 15px;
     .service-icon {
-      color: $color-primary;
+      color: var(--color-primary);
 
       svg {
         width: 75px;
@@ -177,7 +177,7 @@
       }
     }
     .service-number {
-      color: $color-primary;
+      color: var(--color-primary);
       font-family: $ff-title;
       font-size: 16px;
       font-weight: 700;
@@ -206,15 +206,15 @@
       width: 41px;
       height: 41px;
       border-radius: 100%;
-      border: 2px solid rgba($color-white, 0.2);
-      color: $color-primary;
+      border: 2px solid rgba(var(--color-white-rgb), 0.2);
+      color: var(--color-primary);
       @include transition($transition);
     }
     .line {
       @extend %d-inline-block;
       width: 100%;
       height: 2px;
-      background: rgba($color-10, 0.2);
+      background: rgba(var(--color-10-rgb), 0.2);
     }
   }
 
@@ -224,9 +224,9 @@
       gap: 17px;
 
       .circle {
-        color: $color-1;
-        background-color: $color-primary;
-        border-color: rgba($color-primary, 0.2);
+        color: var(--color-1);
+        background-color: var(--color-primary);
+        border-color: rgba(var(--color-primary-rgb), 0.2);
       }
     }
   }
@@ -235,7 +235,7 @@
     @extend %d-flex;
     padding: 0;
     border-radius: 21px;
-    border: 1.5px solid $color-5;
+    border: 1.5px solid var(--color-5);
     overflow: hidden;
 
     @include breakpoint(max-md) {
@@ -256,21 +256,21 @@
       }
     }
     .service-content {
-      background: $color-primary;
-      border-left: 1.5px solid $color-5;
+      background: var(--color-primary);
+      border-left: 1.5px solid var(--color-5);
       padding-inline: 43px 33px;
       padding-block: 50px 42px;
 
       .service-header {
         .service-number {
-          color: $color-6;
+          color: var(--color-6);
         }
       }
 
       .service-body {
         .title,
         p {
-          color: $color-6;
+          color: var(--color-6);
         }
         .title {
           a {
@@ -285,11 +285,11 @@
         margin-top: 25px;
 
         .circle {
-          border: 2px solid rgba($color-white, 0.2);
-          background-color: $color-6;
+          border: 2px solid rgba(var(--color-white-rgb), 0.2);
+          background-color: var(--color-6);
         }
         .line {
-          background: $color-6;
+          background: var(--color-6);
         }
       }
 
@@ -303,7 +303,7 @@
       .service-content {
         .service-footer {
           .circle {
-            color: $color-primary;
+            color: var(--color-primary);
           }
         }
       }
@@ -316,11 +316,11 @@
   @include transition($transition);
   padding-block: 60px;
   padding-inline: 20px;
-  
-  @include breakpoint(max-xxl){
+
+  @include breakpoint(max-xxl) {
     padding-block: 30px;
   }
-  @include breakpoint(max-md){
+  @include breakpoint(max-md) {
     padding-block: 20px;
   }
   .icon {
@@ -329,13 +329,13 @@
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    background-color: $color-1;
-    border: 2px dashed rgba($color-primary, 0.4);
+    background-color: var(--color-1);
+    border: 2px dashed rgba(var(--color-primary-rgb), 0.4);
     margin-inline: auto;
 
     i,
     svg {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
   .service-content {
@@ -350,7 +350,7 @@
   }
 
   &:hover {
-    background: rgba($color-1, 0.3);
+    background: rgba(var(--color-1-rgb), 0.3);
     .icon {
       background-color: transparent;
     }

@@ -254,15 +254,15 @@
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
 %white-color {
-  color: $color-white;
+  color: var(--color-white);
 }
 
 %black-color {
-  color: $color-black;
+  color: var(--color-black);
 }
 
 %bg-white {
-  background-color: $color-white;
+  background-color: var(--color-white);
 }
 
 //  border

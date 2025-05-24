@@ -5,51 +5,52 @@
 // --------------------------------------------------
 // Colors
 // --------------------------------------------------
+:root {
+  --color-primary: #e2c55d;
+  --color-primary-rgb: 226, 197, 93;
 
-$color-primary: #e2c55d;
-$color-primary-rgb: 226, 197, 93;
+  --color-body: #0e0e0e;
+  --color-body-rgb: 14, 14, 14;
+  --color-paragraph: #9d9d9d;
+  --color-paragraph-rgb: 157, 157, 157;
+  --color-1: #171a1b;
+  --color-1-rgb: 23, 26, 27;
+  --color-2: #171a1b;
+  --color-2-rgb: 23, 27, 28;
+  --color-3: #141617;
+  --color-3-rgb: 20, 22, 23;
+  --color-4: #141514;
+  --color-4-rgb: 20, 21, 20;
+  --color-5: #2a2e30;
+  --color-5-rgb: 42, 46, 48;
+  --color-6: #1d2021;
+  --color-6-rgb: 29, 32, 33;
+  --color-7: #292929;
+  --color-7-rgb: 41, 41, 41;
+  --color-8: #1a1a1a;
+  --color-8-rgb: 26, 26, 26;
+  --color-9: #9f9f9f;
+  --color-9-rgb: 159, 159, 159;
+  --color-10: #d9d9d9;
+  --color-10-rgb: 217, 217, 217;
+  --color-11: #101111;
+  --color-11-rgb: 16, 17, 17;
+  --color-12: #101111;
+  --color-12-rgb: 16, 17, 17;
+  --color-13: #121314;
+  --color-13-rgb: 18, 19, 20;
+  --color-14: #e2c55d;
+  --color-14-rgb: 226, 197, 93;
+  --color-15: #7c6c33;
+  --color-15-rgb: 124, 108, 51;
+  --color-16: #1e2225;
+  --color-16-rgb: 30, 34, 37;
 
-$color-body: #0e0e0e;
-$color-body-rgb: 14, 14, 14;
-$color-paragraph: #9d9d9d;
-$color-paragraph-rgb: 157, 157, 157;
-$color-1: #171a1b;
-$color-1-rgb: 23, 26, 27;
-$color-2: #171a1b;
-$color-2-rgb: 23, 27, 28;
-$color-3: #141617;
-$color-3-rgb: 20, 22, 23;
-$color-4: #141514;
-$color-4-rgb: 20, 21, 20;
-$color-5: #2a2e30;
-$color-5-rgb: 42, 46, 48;
-$color-6: #1d2021;
-$color-6-rgb: 29, 32, 33;
-$color-7: #292929;
-$color-7-rgb: 41, 41, 41;
-$color-8: #1a1a1a;
-$color-8-rgb: 26, 26, 26;
-$color-9: #9F9F9F;
-$color-9-rgb: 159, 159, 159;
-$color-10: #d9d9d9;
-$color-10-rgb: 217, 217, 217;
-$color-11: #101111;
-$color-11-rgb: 16, 17, 17;
-$color-12: #101111;
-$color-12-rgb: 16, 17, 17;
-$color-13: #121314;
-$color-13-rgb: 18, 19, 20;
-$color-14: #E2C55D;
-$color-14-rgb: 226, 197, 93;
-$color-15: #7c6c33;
-$color-15-rgb: 124, 108, 51;
-$color-16: #1e2225;
-$color-16-rgb: 30, 34, 37;
-
-$color-white: #ffffff;
-$color-white-rgb: 255, 255, 255;
-$color-black: #000;
-$color-black-rgb: 0, 0, 0;
+  --color-white: #ffffff;
+  --color-white-rgb: 255, 255, 255;
+  --color-black: #000;
+  --color-black-rgb: 0, 0, 0;
+}
 
 // Social icon colors
 $facebook: #3b5998;

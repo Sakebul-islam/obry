@@ -20,10 +20,10 @@
     border: none;
     display: inline-block;
     background-color: transparent;
-    color: $color-white;
+    color: var(--color-white);
     border-radius: 5px;
     &:hover {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
   .header-right {
@@ -35,12 +35,12 @@
     }
 
     .search-btn {
-      color: $color-primary;
-      background-color: $color-body;
+      color: var(--color-primary);
+      background-color: var(--color-body);
       border: none;
       padding: 18.5px 26px;
       border-radius: 30px;
-      box-shadow: 1px 1px 2px 0px rgba($color-white, 0.1);
+      box-shadow: 1px 1px 2px 0px rgba(var(--color-white-rgb), 0.1);
 
       @include breakpoint(max-xxl) {
         padding: 15px 20px;
@@ -64,9 +64,9 @@
 
 .header-sticky {
   &.sticky-active {
-    background-color: rgba($color-body, 0.8) !important;
+    background-color: rgba(var(--color-body-rgb), 0.8) !important;
     backdrop-filter: blur(20px);
-    box-shadow: 0 8px 20px rgba($color-white, 0.03);
+    box-shadow: 0 8px 20px rgba(var(--color-white-rgb), 0.03);
 
     .main-menu {
       > ul {
@@ -91,8 +91,8 @@
     // .moblide-header {
     //   .header-right {
     //     .search-btn {
-    //       background-color: $color-white;
-    //       color: $color-body;
+    //       background-color: var(--color-white);
+    //       color: var(--color-body);
     //     }
     //   }
     // }
@@ -109,7 +109,7 @@
     position: relative;
     font-weight: 700;
     font-size: $fs-base;
-    color: $color-white;
+    color: var(--color-white);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.48px;
@@ -132,7 +132,7 @@
       & > a {
         @extend %p-relative;
         padding: 55px 0;
-        color: $color-white;
+        color: var(--color-white);
 
         @include breakpoint(max-xl) {
           padding: 30px 0;
@@ -158,7 +158,7 @@
       &:hover,
       &.active {
         > a {
-          color: $color-primary;
+          color: var(--color-primary);
         }
 
         svg {
@@ -221,7 +221,7 @@
     text-align: left;
     top: 150%;
     left: 0;
-    background-color: $color-1;
+    background-color: var(--color-1);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     visibility: hidden;
     min-width: 190px;
@@ -231,7 +231,7 @@
     margin-top: 0px;
     opacity: 0;
     z-index: -1;
-    border-bottom: 3px solid $color-primary;
+    border-bottom: 3px solid var(--color-primary);
     box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.09),
       0px 3px 0px 0px rgba(231, 13, 60, 0.004);
     transform-origin: top center;
@@ -359,9 +359,9 @@
         text-transform: capitalize;
         letter-spacing: 1px;
         font-weight: 700;
-        // color: $color-body;
-        color: $color-white;
-        border-color: $color-primary;
+        // color: var(--color-body);
+        color: var(--color-white);
+        border-color: var(--color-primary);
 
         &::after,
         &::before {
@@ -371,7 +371,7 @@
           left: 0;
           width: 15px;
           height: 1px;
-          background-color: $color-primary;
+          background-color: var(--color-primary);
         }
 
         &::after {

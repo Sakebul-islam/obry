@@ -4,19 +4,23 @@
 @use "../abstracts/container" as *;
 
 .btn-primary {
-  @extend %d-inline-flex, %text-center,%p-relative;
+  @extend %d-inline-flex, %text-center, %p-relative;
   border-radius: 50px;
   padding: 3px;
-  background: linear-gradient(to right, $color-primary, $color-white);
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-white)
+  );
   overflow: hidden;
   border: none;
 
   .btn-wrapper {
-    @extend %d-flex, %item-center,%p-relative;
+    @extend %d-flex, %item-center, %p-relative;
     gap: 12px;
     border-radius: 50px;
-    background: $color-primary;
-    color: $color-2;
+    background: var(--color-primary);
+    color: var(--color-2);
     overflow: hidden;
     font-family: $ff-title;
     font-weight: 800;
@@ -26,28 +30,27 @@
     z-index: 1;
 
     &.v2 {
-      background: linear-gradient(90deg, $color-14 0%, #8e7d3f 100%);
-      
+      background: linear-gradient(90deg, var(--color-14) 0%, #8e7d3f 100%);
+
       &::before {
         @extend %p-absolute;
         inset: 0;
-        background: linear-gradient(90deg, #8e7d3f 0%, $color-14 100%);
+        background: linear-gradient(90deg, #8e7d3f 0%, var(--color-14) 100%);
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
         z-index: -1;
       }
     }
-    &:not(.v2){
+    &:not(.v2) {
       &::before {
         @extend %p-absolute;
         inset: 0;
-        background: linear-gradient(90deg, $color-14 0%, #8e7d3f 100%);
+        background: linear-gradient(90deg, var(--color-14) 0%, #8e7d3f 100%);
         // background: linear-gradient(90deg, #8e7d3f 0%, $color-14 100%);
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
         z-index: -1;
       }
-    
     }
     span {
       @extend %p-relative, %d-inline-flex, %justify-center, %item-center;
@@ -97,7 +100,7 @@
           opacity: 1;
         }
       }
-      &:not(.v2){
+      &:not(.v2) {
         &::before {
           opacity: 1;
         }

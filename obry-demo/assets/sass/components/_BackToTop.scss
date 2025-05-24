@@ -16,8 +16,8 @@
 
   i {
     display: inline-block;
-    background-color: $color-primary;
-    color: $color-body;
+    background-color: var(--color-primary);
+    color: var(--color-body);
     text-align: center;
     font-size: 16px;
     width: var(--btn-size, 50px);
@@ -39,15 +39,15 @@
     background-color: transparent;
     border-radius: inherit;
     z-index: 1;
-    border: 2px dashed $color-primary;
+    border: 2px dashed var(--color-primary);
     animation: spin 13s infinite linear;
   }
 
   &:focus,
   &:hover {
     i {
-      background-color: $color-15;
-      color: $color-white;
+      background-color: var(--color-15);
+      color: var(--color-white);
     }
   }
 

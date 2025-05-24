@@ -12,7 +12,7 @@
       text-transform: capitalize;
       margin-bottom: 25px;
       padding-bottom: 10px;
-      border-bottom: 1.5px solid rgba($color-white, 0.08);
+      border-bottom: 1.5px solid rgba(var(--color-white-rgb), 0.08);
 
       @include breakpoint(max-lg) {
         row-gap: 8px;
@@ -25,9 +25,9 @@
         a {
           @extend %p-relative, %d-flex;
           border-radius: 30px;
-          border: 1px solid $color-5;
-          background: $color-1;
-          color: $color-paragraph;
+          border: 1px solid var(--color-5);
+          background: var(--color-1);
+          color: var(--color-paragraph);
           font-family: $ff-rubik;
           font-size: $fs-base;
           font-weight: 700;
@@ -52,7 +52,7 @@
             height: 10px;
             border-radius: 100%;
             box-shadow: 0 0 0 1.5px #292929;
-            background-color: $color-body;
+            background-color: var(--color-body);
 
             @include breakpoint(max-lg) {
               width: 6px;
@@ -64,7 +64,7 @@
           &.active {
             &::before {
               box-shadow: none;
-              background-color: $color-primary;
+              background-color: var(--color-primary);
             }
           }
         }
@@ -120,7 +120,7 @@
           }
 
           &:not(:last-of-type) {
-            border-bottom: 2px solid $color-primary;
+            border-bottom: 2px solid var(--color-primary);
             padding-bottom: 28px;
 
             @include breakpoint(max-lg) {
@@ -139,7 +139,7 @@
           gap: 40px;
           background-color: transparent;
           padding: 0;
-          color: $color-white;
+          color: var(--color-white);
           font-family: $ff-title;
           font-size: 20px;
           font-weight: 700;
@@ -156,7 +156,7 @@
           &:not(.collapsed) {
             box-shadow: none;
             padding-bottom: 10px;
-            color: $color-primary;
+            color: var(--color-primary);
 
             @include breakpoint(max-lg) {
               padding-bottom: 5px;
@@ -182,7 +182,7 @@
           @extend %d-flex, %item-center;
           gap: 40px;
           padding: 0;
-          color: $color-paragraph;
+          color: var(--color-paragraph);
           font-size: 15px;
           font-weight: 500;
           text-transform: capitalize;

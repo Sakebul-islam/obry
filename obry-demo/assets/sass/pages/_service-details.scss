@@ -47,7 +47,7 @@
         li {
           @extend %d-flex, %item-center, %text-capitalize;
           gap: 10px;
-          color: $color-paragraph;
+          color: var(--color-paragraph);
 
           &:not(:last-of-type) {
             margin-bottom: 3px;
@@ -55,7 +55,7 @@
 
           i,
           svg {
-            color: $color-primary;
+            color: var(--color-primary);
           }
         }
       }
@@ -91,8 +91,8 @@
         width: 130px;
         height: 130px;
         border-radius: 100%;
-        color: $color-white;
-        background-color: rgba($color-primary, 0.2);
+        color: var(--color-white);
+        background-color: rgba(var(--color-primary-rgb), 0.2);
         backdrop-filter: blur(45px);
         @include transform(translate(-50%, -50%) scale(1));
         @include transition($transition);
@@ -139,7 +139,7 @@
 
 .share-links {
   padding-top: 27px;
-  border-top: 4px double rgba($color-white, 0.15);
+  border-top: 4px double rgba(var(--color-white-rgb), 0.15);
   margin-top: 85px;
 
   @include breakpoint(max-xl) {
@@ -152,7 +152,7 @@
     @extend %d-flex, %item-center;
     gap: 12px;
     .title {
-      color: $color-primary;
+      color: var(--color-primary);
       font-family: $ff-title;
       font-size: 16px;
       font-weight: 700;
@@ -168,7 +168,7 @@
       gap: 10px;
 
       a {
-        color: $color-paragraph;
+        color: var(--color-paragraph);
         font-family: $ff-title;
         font-size: 16px;
         font-weight: 700;
@@ -180,7 +180,7 @@
         }
 
         &:hover {
-          color: $color-primary;
+          color: var(--color-primary);
         }
       }
     }
@@ -190,7 +190,7 @@
     gap: 12px;
     .title {
       @include transition($transition);
-      color: $color-paragraph;
+      color: var(--color-paragraph);
       font-family: $ff-title;
       font-size: 16px;
       font-weight: 700;
@@ -207,7 +207,7 @@
 
       a {
         @include transition($transition);
-        color: $color-paragraph;
+        color: var(--color-paragraph);
         font-family: $ff-title;
         font-size: 16px;
         font-weight: 700;
@@ -219,7 +219,7 @@
         }
 
         &:hover {
-          color: $color-primary;
+          color: var(--color-primary);
         }
       }
     }

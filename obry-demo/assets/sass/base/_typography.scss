@@ -11,12 +11,12 @@ html {
 }
 body {
   @extend %text-regular;
-  color: $color-white;
+  color: var(--color-white);
   font-size: $fs-base;
   line-height: 1.75;
   font-family: $ff-body;
   font-weight: 400;
-  background: $color-body;
+  background: var(--color-body);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 
@@ -35,7 +35,7 @@ h6 {
   @include transition($transition);
   margin: 0;
   font-family: $ff-title;
-  color: $color-white;
+  color: var(--color-white);
 }
 
 h1 {
@@ -170,7 +170,7 @@ img {
 }
 
 a {
-  color: $color-white;
+  color: var(--color-white);
   text-decoration: none;
   transition: $transition-3;
 
@@ -185,7 +185,7 @@ p {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  color: $color-paragraph;
+  color: var(--color-paragraph);
 }
 ul {
   @extend %p-0;

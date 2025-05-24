@@ -20,12 +20,12 @@
 .music-box {
   @extend %d-flex;
   border-radius: 10px;
-  border: 1px solid rgba($color-white, 0.05);
-  background: $color-1;
+  border: 1px solid rgba(var(--color-white-rgb), 0.05);
+  background: var(--color-1);
   overflow: hidden;
   gap: 30px;
-  
-  @include breakpoint(max-lg){
+
+  @include breakpoint(max-lg) {
     gap: 20px;
   }
 
@@ -76,21 +76,21 @@
           font-size: 14px;
           font-weight: 700;
           text-transform: uppercase;
-          color: $color-paragraph;
+          color: var(--color-paragraph);
         }
       }
 
       .music-buy {
         @extend %d-flex, %justify-between, %item-center;
         gap: 9px;
-        color: $color-white;
+        color: var(--color-white);
         font-family: $ff-title;
         font-weight: 800;
         text-transform: uppercase;
         @include transition($transition);
 
         i {
-          color: $color-primary;
+          color: var(--color-primary);
         }
 
         @include breakpoint(max-sm) {
@@ -105,7 +105,7 @@
     }
     .music-divider {
       height: 6px;
-      border: 1px solid rgba($color-white, 0.06);
+      border: 1px solid rgba(var(--color-white-rgb), 0.06);
       background: #0e0e0e;
       box-shadow: 0px 4px 4px 0px rgba(23, 23, 23, 0.25) inset;
       margin-block: 30px 20px;
@@ -126,11 +126,11 @@
         width: 42px;
         height: 42px;
         border-radius: 100%;
-        background-color: rgba($color-white, 0.85);
+        background-color: rgba(var(--color-white-rgb), 0.85);
         @include transition($transition);
         border: none;
         margin-right: 15px;
-        
+
         @include breakpoint(max-sm) {
           margin: 0;
         }
@@ -142,11 +142,11 @@
           @include transition($transition);
           font-size: 14px;
         }
-        &.now-play{
-          background-color: $color-primary;
+        &.now-play {
+          background-color: var(--color-primary);
           i {
-            &::before{
-              --fa: '\f04b';
+            &::before {
+              --fa: "\f04b";
             }
           }
         }
@@ -158,7 +158,7 @@
         width: 100%;
         min-width: 45px;
         max-width: 50px;
-        color: $color-white;
+        color: var(--color-white);
         font-family: $ff-title;
         font-size: 14px;
         font-weight: 700;
@@ -180,7 +180,7 @@
       }
       .music-track {
         @extend %flex-1;
-        background: rgba($color-white, 0.1);
+        background: rgba(var(--color-white-rgb), 0.1);
         height: 7px;
         margin-inline: 13px;
         cursor: pointer;
@@ -188,7 +188,7 @@
         .music-progress {
           width: 0px;
           height: 100%;
-          background-color: $color-primary;
+          background-color: var(--color-primary);
           @include transition($transition);
         }
       }
@@ -198,11 +198,11 @@
         height: 48px;
         @extend %d-grid, %place-center, %shrink-0;
         border-radius: 100%;
-        background-color: $color-body;
-        border: 2px solid rgba($color-white, 0.1);
-        box-shadow: 0px 4px 4px 0px $color-black inset;
+        background-color: var(--color-body);
+        border: 2px solid rgba(var(--color-white-rgb), 0.1);
+        box-shadow: 0px 4px 4px 0px var(--color-black) inset;
         font-size: 14px;
-        color: $color-primary;
+        color: var(--color-primary);
         margin-inline: 28px 10px;
         cursor: pointer;
 
@@ -210,9 +210,9 @@
           margin: 0;
         }
 
-        &.muted{
+        &.muted {
           i {
-            --fa: '\f6a9';
+            --fa: "\f6a9";
           }
         }
       }
@@ -221,7 +221,7 @@
         width: 37px;
         height: 3px;
         border-radius: 3px;
-        background: rgba($color-white, 0.1);
+        background: rgba(var(--color-white-rgb), 0.1);
         overflow: hidden;
         cursor: pointer;
 
@@ -232,7 +232,7 @@
         .voluom-progress {
           width: 100%;
           height: 100%;
-          background-color: $color-primary;
+          background-color: var(--color-primary);
           border-radius: 3px;
           @include transition($transition);
         }
@@ -256,10 +256,10 @@
     .music-content {
       .music-heder {
         .music-buy {
-          color: $color-primary;
+          color: var(--color-primary);
 
           i {
-            color: $color-primary;
+            color: var(--color-primary);
           }
         }
       }

@@ -9,29 +9,29 @@
   }
   &__slider {
     border-radius: 20px;
-    background: $color-1;
+    background: var(--color-1);
     overflow: hidden;
     padding: 67px 47px;
     @extend %d-grid;
     column-gap: 20px;
     row-gap: 10px;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    
-    @include breakpoint(max-xl){
+
+    @include breakpoint(max-xl) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
       padding: 40px;
     }
-    @include breakpoint(max-md){
+    @include breakpoint(max-md) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       padding: 30px;
     }
-    @include breakpoint(max-sm){
+    @include breakpoint(max-sm) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       padding: 30px;
     }
-    
-    .brand-slide{
-      @extend %d-grid,%place-center;
+
+    .brand-slide {
+      @extend %d-grid, %place-center;
       img {
         @extend %flex-1;
       }

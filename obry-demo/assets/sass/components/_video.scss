@@ -15,15 +15,15 @@
       object-fit: cover;
     }
     .popup-youtube {
-      @extend %p-absolute,%d-grid,%place-center;
+      @extend %p-absolute, %d-grid, %place-center;
       top: 50%;
       left: 50%;
       width: 92px;
       height: 92px;
       border-radius: 100%;
-      background-color: rgba($color-primary, 0.4);
-      border: 5px dashed $color-white;
-      color: $color-white;
+      background-color: rgba(var(--color-primary-rgb), 0.4);
+      border: 5px dashed var(--color-white);
+      color: var(--color-white);
       font-size: 25px;
       @include transform(translate(-50%, -50%));
 

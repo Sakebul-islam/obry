@@ -19,7 +19,7 @@
           object-fit: cover;
         }
       }
-      
+
       img {
         border-radius: 20px;
         @include breakpoint(max-xl) {
@@ -61,10 +61,10 @@
       .skill {
         &.v2 {
           .title {
-            color: $color-white;
+            color: var(--color-white);
           }
           .skill-bar {
-            border: 1.5px solid $color-14;
+            border: 1.5px solid var(--color-14);
             border-radius: 0;
 
             .skill-progress {
@@ -75,7 +75,7 @@
               @include transform(translateY(0));
 
               .skill-count {
-                color: $color-14;
+                color: var(--color-14);
               }
             }
           }

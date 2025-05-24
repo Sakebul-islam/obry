@@ -19,7 +19,7 @@
     @include transition($transition);
     inset: 0;
     border-radius: 15px;
-    background: rgba($color-primary, 0.4);
+    background: rgba(var(--color-primary-rgb), 0.4);
     opacity: 0;
 
     a {
@@ -34,7 +34,7 @@
         @extend %d-grid, %place-center;
         width: 110px;
         height: 110px;
-        background-color: rgba($color-1, 0.9);
+        background-color: rgba(var(--color-1-rgb), 0.9);
         border-radius: 100%;
       }
     }
@@ -48,14 +48,14 @@
     bottom: -200px;
     @include transform(translateX(-50%));
     @include transition($transition);
-    color: $color-primary;
+    color: var(--color-primary);
     text-align: center;
     font-family: $ff-title;
     font-size: 18px;
     font-weight: 800;
     text-transform: uppercase;
     border-radius: 10px 10px 0px 0px;
-    background: rgba($color-1, 0.98);
+    background: rgba(var(--color-1-rgb), 0.98);
     padding: 9px;
   }
   &:hover {

@@ -8,8 +8,8 @@
   }
   &__wrapper {
     border-radius: 40px 10px 10px 10px;
-    border: 2px solid rgba($color-white, 0.3);
-    background: $color-4;
+    border: 2px solid rgba(var(--color-white-rgb), 0.3);
+    background: var(--color-4);
     overflow: hidden;
     padding-block: 9px;
     padding-inline-end: 9px;
@@ -19,7 +19,7 @@
   &__slider {
     margin-left: -2px;
     border-radius: 40px 10px 10px 10px;
-    border: 2px solid rgba($color-white, 0.3);
+    border: 2px solid rgba(var(--color-white-rgb), 0.3);
     .quote-box {
     }
 
@@ -34,7 +34,7 @@
         background-color: #9d9d9d;
         opacity: 1;
         &.swiper-pagination-bullet-active {
-          background-color: $color-primary;
+          background-color: var(--color-primary);
         }
       }
 
@@ -58,7 +58,7 @@
     padding: 30px;
   }
   .quote-icon {
-    color: $color-white;
+    color: var(--color-white);
     font-family: $ff-title;
     font-size: 80px;
     font-style: normal;
@@ -85,7 +85,7 @@
     }
   }
   .quote {
-    color: $color-white;
+    color: var(--color-white);
     font-weight: 600;
     line-height: 153.846%;
     letter-spacing: 0.78px;
@@ -93,7 +93,7 @@
   }
   .quote-footer {
     margin-top: 30px;
-    @include breakpoint(max-lg){
+    @include breakpoint(max-lg) {
       margin-top: 20px;
     }
     .author {
@@ -105,7 +105,7 @@
         height: 60px;
         border-radius: 100%;
         overflow: hidden;
-        border: 2px solid rgba($color-primary, 0.7);
+        border: 2px solid rgba(var(--color-primary-rgb), 0.7);
 
         img {
           object-fit: cover;
@@ -114,14 +114,14 @@
 
       .author-content {
         .author-name {
-          color: $color-paragraph;
+          color: var(--color-paragraph);
           font-size: $fs-16;
           font-weight: 800;
           line-height: 1;
           text-transform: capitalize;
         }
         .author-designation {
-          color: $color-white;
+          color: var(--color-white);
           font-weight: 700;
           text-transform: capitalize;
           margin-top: 3px;

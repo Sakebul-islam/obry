@@ -7,14 +7,14 @@
   &.section {
     padding-block: 250px 185px;
     margin: 0;
-    
-    @include breakpoint(max-xl){
-        padding-block: 200px 130px;
-        background-position: left;
+
+    @include breakpoint(max-xl) {
+      padding-block: 200px 130px;
+      background-position: left;
     }
-    @include breakpoint(max-md){
-        padding-block: 150px 100px;
-        background-position: right center;
+    @include breakpoint(max-md) {
+      padding-block: 150px 100px;
+      background-position: right center;
     }
   }
   &-title {
@@ -42,7 +42,7 @@
   &-nav {
     .breadcrumb {
       li {
-        color: $color-paragraph;
+        color: var(--color-paragraph);
         font-family: $ff-title;
         font-size: 18px;
         font-weight: 800;
@@ -51,12 +51,12 @@
         a {
           @include transition($transition);
           &:hover {
-            color: $color-primary;
+            color: var(--color-primary);
           }
         }
 
         &.active {
-          color: $color-primary;
+          color: var(--color-primary);
         }
       }
     }

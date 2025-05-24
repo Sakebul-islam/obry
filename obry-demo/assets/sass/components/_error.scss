@@ -20,7 +20,7 @@
         @extend %p-absolute;
         width: 60px;
         height: 3px;
-        background: $color-10;
+        background: var(--color-10);
         bottom: 3px;
       }
 
@@ -38,11 +38,11 @@
       gap: 25px;
       line-height: 0;
       font-size: 380px;
-      color: $color-primary;
+      color: var(--color-primary);
       font-style: normal;
       font-weight: 300;
       text-transform: uppercase;
-      
+
       @include breakpoint(max-xxl) {
         font-size: 350px;
       }
@@ -100,7 +100,7 @@
       }
 
       span {
-        color: $color-primary;
+        color: var(--color-primary);
       }
     }
 
@@ -110,7 +110,6 @@
       @include breakpoint(max-md) {
         margin-top: 20px;
       }
-
     }
   }
 }

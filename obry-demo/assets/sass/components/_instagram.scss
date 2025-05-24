@@ -12,7 +12,7 @@
       content: "";
       width: 100%;
       height: 8px;
-      background: linear-gradient(90deg, $color-primary 0%, #8e7d3f 100%);
+      background: linear-gradient(90deg, var(--color-primary) 0%, #8e7d3f 100%);
       left: 0;
       bottom: 0;
       z-index: 1;
@@ -31,17 +31,17 @@
     z-index: 2;
     width: 163px;
     height: 163px;
-    background-color: $color-primary;
+    background-color: var(--color-primary);
     border-radius: 100%;
     gap: 15px;
     line-height: 1;
-    color: $color-body;
+    color: var(--color-body);
     font-family: $ff-title;
     font-weight: 700;
     letter-spacing: 1.6px;
 
     i {
-      color: $color-body;
+      color: var(--color-body);
       font-size: 24px;
       font-weight: 400;
       letter-spacing: 2.4px;
@@ -67,8 +67,8 @@
     width: 100%;
     position: relative;
     padding: 164px 0;
-    
-    @include breakpoint(max-md){
+
+    @include breakpoint(max-md) {
       padding: 150px 0;
     }
   }

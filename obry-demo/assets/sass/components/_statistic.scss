@@ -22,7 +22,7 @@
       @extend %shrink-0, %d-grid, %place-center;
       width: 95px;
       height: 95px;
-      color: $color-white;
+      color: var(--color-white);
       @include transition($transition);
 
       @include breakpoint(max-xl) {
@@ -43,7 +43,7 @@
     .content {
       .counter-item {
         @extend %d-flex, %item-center;
-        color: $color-3;
+        color: var(--color-3);
         line-height: 1;
         > * {
           font-size: inherit;
@@ -52,7 +52,7 @@
       }
       .info {
         @extend %d-inline-block;
-        color: $color-3;
+        color: var(--color-3);
         line-height: 1;
         font-weight: 700;
         font-family: $ff-title;
@@ -65,7 +65,7 @@
 
     &:hover {
       .icon-box {
-        color: $color-primary;
+        color: var(--color-primary);
       }
     }
   }
@@ -82,30 +82,30 @@
       top: 0;
       width: 20px;
       height: 20px;
-      background-color: $color-primary;
+      background-color: var(--color-primary);
       border-radius: 100%;
       opacity: 0;
       @include transition($transition);
-      
-      @include breakpoint(max-md){
+
+      @include breakpoint(max-md) {
         left: calc(100% + 10px);
         width: 15px;
         height: 15px;
       }
-      @include breakpoint(max-sm){
+      @include breakpoint(max-sm) {
         width: 12px;
         height: 12px;
       }
     }
   }
   .info {
-    color: $color-paragraph;
+    color: var(--color-paragraph);
     font-family: $ff-body;
     font-size: 18px;
     font-weight: 600;
     text-transform: capitalize;
 
-    @include breakpoint(max-md){
+    @include breakpoint(max-md) {
       font-size: $fs-base;
     }
   }
@@ -113,7 +113,7 @@
   &:hover,
   &.active {
     .counter-item {
-      color: $color-primary;
+      color: var(--color-primary);
 
       &::before {
         opacity: 1;

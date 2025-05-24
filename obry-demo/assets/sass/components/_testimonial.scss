@@ -12,7 +12,7 @@
         bottom: -120px;
         width: 80px;
         height: 12px;
-        background-color: $color-primary;
+        background-color: var(--color-primary);
 
         @include breakpoint(max-md) {
           bottom: -60px;
@@ -26,7 +26,7 @@
     top: 0;
     right: 63px;
     animation: rotate 4.5s linear infinite;
-    
+
     @include breakpoint(max-lg) {
       display: none;
     }
@@ -55,7 +55,7 @@
       right: -20px;
       width: 177px;
       height: 153px;
-      background-color: $color-primary;
+      background-color: var(--color-primary);
       z-index: -1;
       @include breakpoint(max-xxl) {
         bottom: -15px;
@@ -78,12 +78,12 @@
     .swiper-pagination-bullet {
       width: 19px;
       height: 6px;
-      background-color: rgba($color-white, 0.7);
+      background-color: rgba(var(--color-white-rgb), 0.7);
       opacity: 1;
       border-radius: 0;
 
       &.swiper-pagination-bullet-active {
-        background-color: $color-primary;
+        background-color: var(--color-primary);
       }
     }
   }
@@ -103,11 +103,11 @@
       width: 50px;
       height: 50px;
       border-radius: 100%;
-      background-color: rgba($color-white, 0.8);
-      color: $color-body;
+      background-color: rgba(var(--color-white-rgb), 0.8);
+      color: var(--color-body);
 
       &.active {
-        background-color: $color-primary;
+        background-color: var(--color-primary);
       }
 
       @include breakpoint(max-sm) {
@@ -126,7 +126,7 @@
   }
   p {
     max-width: 497px;
-    color: $color-paragraph;
+    color: var(--color-paragraph);
     font-size: 20px;
     font-style: italic;
     font-weight: 500;
@@ -136,7 +136,7 @@
   .author {
     @extend %shrink-0, %w-content;
     img {
-      border: 4px solid $color-primary;
+      border: 4px solid var(--color-primary);
     }
   }
 }
@@ -145,7 +145,7 @@
   @extend %d-flex, %flex-col, %item-center;
   text-align: center;
   .quote-shape {
-    color: $color-primary;
+    color: var(--color-primary);
     margin-bottom: 43px;
   }
 
@@ -156,7 +156,7 @@
     line-height: 153.846%;
 
     .quote-icon {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
 
@@ -181,7 +181,7 @@
         inset: 0px;
         background-color: transparent;
         border-radius: 100%;
-        border: 4px solid $color-primary;
+        border: 4px solid var(--color-primary);
         border-top-color: transparent;
         border-left-color: transparent;
         @include transform(rotate(45deg));
@@ -196,7 +196,7 @@
       }
       .designation {
         @extend %d-block;
-        color: $color-primary;
+        color: var(--color-primary);
         font-size: 16px;
         font-style: normal;
         font-weight: 600;

@@ -12,11 +12,11 @@
           @extend %shrink-0, %d-grid, %place-center, %text-capitalize;
           width: 55px;
           height: 50px;
-          border: 1px solid rgba($color-white, 0.08);
+          border: 1px solid rgba(var(--color-white-rgb), 0.08);
           overflow: hidden;
           border-radius: 15px;
           background-color: transparent;
-          color: $color-white;
+          color: var(--color-white);
           font-family: $ff-title;
           font-weight: 700;
           letter-spacing: 0.72px;
@@ -45,8 +45,8 @@
 
         &.active {
           .page-link {
-            color: $color-primary;
-            background-color: $color-1;
+            color: var(--color-primary);
+            background-color: var(--color-1);
           }
         }
       }
@@ -56,7 +56,7 @@
 
 .blog-box {
   .blog-thumb {
-    border: 1.5px solid rgba($color-white, 0.08);
+    border: 1.5px solid rgba(var(--color-white-rgb), 0.08);
     border-radius: 15px;
     overflow: hidden;
 
@@ -66,7 +66,7 @@
   }
   .blog-content {
     padding-block: 35.5px 27.5px;
-    border-bottom: 1.5px solid rgba($color-white, 0.08);
+    border-bottom: 1.5px solid rgba(var(--color-white-rgb), 0.08);
 
     @include breakpoint(max-xxl) {
       padding-block: 25px 20px;
@@ -77,12 +77,12 @@
 
       span {
         @extend %d-inline-block, %text-uppercase, %p-relative;
-        color: $color-paragraph;
+        color: var(--color-paragraph);
         font-weight: 600;
         line-height: 1;
 
         &.blog-date {
-          color: $color-primary;
+          color: var(--color-primary);
         }
 
         &:not(:last-of-type) {
@@ -92,7 +92,7 @@
             height: 7px;
             top: 50%;
             right: -20px;
-            background-color: $color-paragraph;
+            background-color: var(--color-paragraph);
             border-radius: 50%;
             @include transform(translateY(-50%));
           }
@@ -109,7 +109,7 @@
     }
     p {
       @extend %text-capitalize;
-      color: $color-paragraph;
+      color: var(--color-paragraph);
       font-weight: 500;
     }
   }
@@ -134,7 +134,7 @@
       gap: 12px;
       .title {
         @include transition($transition);
-        color: $color-paragraph;
+        color: var(--color-paragraph);
         font-family: $ff-title;
         font-size: 16px;
         font-weight: 700;
@@ -155,7 +155,7 @@
 
         a {
           @include transition($transition);
-          color: $color-paragraph;
+          color: var(--color-paragraph);
           font-family: $ff-title;
           font-size: 16px;
           font-weight: 700;
@@ -167,7 +167,7 @@
           }
 
           &:hover {
-            color: $color-primary;
+            color: var(--color-primary);
           }
         }
       }
